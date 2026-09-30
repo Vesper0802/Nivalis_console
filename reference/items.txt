@@ -1,0 +1,1317 @@
+﻿Nivalis Nights item types — 1313 entries
+Use the CODE with: give <code> <amount>   or   iteminfo <code>
+
+CODE    	ASSET NAME	DISPLAY NAME	PRICE	FLAGS
+20455fb6	Absinthe	苦艾烈酒 	800	ingredient
+f7864490	Accordion Potatoes	风琴土豆	0	meal,useable,NOT-STORABLE
+ec0c9172	Advanced Grinder	MG-16 高级研磨机	40000	furniture
+48ffd2fa	Advanced_Blender	高级搅拌机	40000	furniture
+1b3ab909	Advanced_Cooker	高级炉灶	45000	furniture
+865f97a3	Advanced_Deep_Fryer	高级炸锅	45000	furniture
+816acd63	Advanced_Grill	高级烤架	60000	furniture
+a164b699	AG's Compendium	AG 的作品集	5000	
+d1fa8616	AG's Jukebox	AG 的点唱机	500000	
+c2c2ad47	Agar	琼脂	220	ingredient
+74571517	AlfiZitaAudioLog	艾尔菲·齐塔音频记录	2000	
+998ea7f7	Algae Infusion	海藻精泡 	500	
+8094d4f8	Alia's Confession	阿莉雅的供状 	0	
+8f7e24b8	Almond Crusted Zander	杏仁鲈鱼	0	meal,useable,NOT-STORABLE
+eef42888	Almonds	杏仁	300	ingredient
+ab38b127	Aloe Vera	芦荟	300	ingredient
+1e4dcc59	Amaro	阿马罗酒	800	ingredient
+d653dba0	Ana-Blog No. 1	模拟生活博客第 1 期	0	
+a8ce1dbd	Ana-Blog No. 2	模拟生活博客第 2 期	0	
+21fb488e	Ana-Blog No. 3	模拟生活博客第 3 期	0	
+83a5490b	Anchor Pin	锚形徽章	10000	
+396697cb	Ancient Computer Chip	古代电脑芯片	200	
+be0d992e	Andrea's Lyrics	安德莉亚的歌词	0	
+5ce24741	Android Hand	仿生人手	200	
+4384ce08	Antique Computer Chip	古董电脑芯片	200	
+6f856168	Antique Lamp	古董吊灯	200	
+fdc02bc9	AntiqueTrainTimetable	古董列车时间表	80000	
+0b646e90	Apartment_Bed_01	双人床	150000	furniture
+3ac6cfdf	Apartment_DeskLamp	桌灯	17500	furniture
+27d07ecf	Apartment_Desk_1	书桌	75000	furniture
+12e4c7a2	Apartment_Desk_2	书桌	30000	furniture
+a51f3fd8	Apartment_Desk_3	书桌	20000	furniture
+63c6399e	Apartment_Fan	吊扇	40000	furniture
+512281f7	Apartment_kitchen	橱柜	100000	furniture
+34a13e6e	Apartment_kitchenLight	吊灯	22000	furniture
+05dd135d	Apartment_picture	狗狗挂画	5000	furniture
+42623e74	Apartment_tv	壁挂式电视	100000	furniture
+05272a09	Apple Pie	苹果派	0	meal,useable,NOT-STORABLE
+04f867e4	Apples	苹果	300	ingredient,plant,seed
+6fb0aac9	Aqua Freeze	水凝冰爽	0	meal,drink,NOT-STORABLE
+4c74e1b5	Archlight	弧光灯	21500	furniture
+89047705	Armchair_1	设计师扶手椅	10000	furniture
+82b5c495	Armchair_2	扶手椅	25000	furniture
+446c71c5	Armchair_3	扶手椅	10000	furniture
+d6fd6b6a	Aromatic Oil	芳香油	150	ingredient
+5e545d6d	Aseptic Victim Audio Log	净痕者受害人音频记录 	0	
+37aec8a2	Aseptic_Wanted_poster_1		100000	
+1da303a4	Aseptic_Wanted_poster_1_half		100000	
+3f38f148	Aseptic_Wanted_poster_2		100000	
+67ac8d91	Aseptic_Wanted_poster_2_half		100000	
+fa41a57d	Asparagus	芦笋	500	ingredient,plant
+df243db3	Asparagus Seeds	芦笋种子	1000	seed
+de2c623d	Aura Cocktail	波光鸡尾酒	1200	
+7a43c9be	Aurora	极光	0	meal,drink,NOT-STORABLE
+a1f1ea49	Avocados	牛油果	400	ingredient,plant,seed
+87bcbe35	Azores Chicharros	亚速尔炸鱼	0	meal,useable,NOT-STORABLE
+c69dff4e	Azure Powder	天青粉	500	
+d324bbb6	Bacon	培根	300	ingredient
+5b5f9453	Bacon Avocado Salad	培根牛油果沙拉	0	meal,NOT-STORABLE
+2dd067c9	Bacon Bloody Mary	培根味血腥玛丽	0	meal,drink,NOT-STORABLE
+cda1a757	Bad Seaweed	坏海苔	200	
+d7979740	Bait3000FishingRod	诱饵 3000 型	120000	equippable
+349097ce	Baked Ide	烤雅罗鱼	0	meal,useable,NOT-STORABLE
+5e952215	Balut	毛鸭蛋	0	meal,useable,NOT-STORABLE
+a25c1ddd	Bamboo	竹笋	300	ingredient,plant
+c7a816aa	Bamboo Seeds	竹笋种子	1000	seed
+b9008ec4	Banana	香蕉	300	ingredient
+132f6e8d	Barbudian Fish Wata	马鲅鱼烩	0	meal,useable,NOT-STORABLE
+4a6f354a	Barstool_1	吧台椅	3000	furniture
+bbbb5210	Barstool_2	吧台椅	3000	furniture
+d11bca95	Barstool_3	吧台椅	3000	furniture
+ff882a07	Barstool_4	吧台椅	3000	furniture
+93237b00	Barstool_5	吧台椅	3000	furniture
+517dcac1	Bar_Counter_1	酒吧柜台	120000	furniture
+6ea3e0eb	Bar_Counter_2	酒吧柜台	90000	furniture
+8616fab0	Base_Cabinet_Corner_90cm_Set_01	厨房橱柜内角柜	10000	furniture
+f4a46249	Base_Cabinet_Corner_90cm_Set_02	厨房橱柜内角柜	10000	furniture
+0c7ee3cd	Base_Cabinet_Corner_90cm_wGlass_Set_01	厨房橱柜内角柜	10000	furniture
+80ada825	Base_Cabinet_Corner_90cm_wGlass_Set_03	厨房橱柜内角柜	10000	furniture
+43bc57e7	Base_Cabinet_W40cm_1DoorwGlass_Set_01	开门式厨房橱柜	10000	furniture
+22435f00	Base_Cabinet_W40cm_1Door_Set_01	开门式厨房橱柜	10000	furniture
+57e90b4d	Base_Cabinet_W40cm_1Door_Set_02	开门式厨房橱柜	10000	furniture
+6a17b31b	Base_Cabinet_W40cm_1Door_Set_03	开门式厨房橱柜	10000	furniture
+09987c4c	Base_Cabinet_W40cm_2Drawer_Set_01	抽屉式厨房橱柜	10000	furniture
+b6283b91	Base_Cabinet_W40cm_2Drawer_Set_02	抽屉式厨房橱柜	10000	furniture
+a7d5826a	Base_Cabinet_W40cm_2Drawer_Set_03	抽屉式厨房橱柜	10000	furniture
+a8b91557	Base_Cabinet_W40cm_3Drawer_Set_01	抽屉式厨房橱柜	10000	furniture
+474902d2	Base_Cabinet_W40cm_3Drawer_Set_02	抽屉式厨房橱柜	10000	furniture
+720c1eb9	Base_Cabinet_W40cm_3Drawer_Set_03	抽屉式厨房橱柜	10000	furniture
+692ece52	Base_Cabinet_W60cm_1DoorwGlass_Set_01	开门式厨房橱柜	10000	furniture
+bae1bb77	Base_Cabinet_W60cm_1Door_Set_01	开门式厨房橱柜	10000	furniture
+772bdecd	Base_Cabinet_W60cm_1Door_Set_02	开门式厨房橱柜	10000	furniture
+36c8e8cb	Base_Cabinet_W60cm_1Door_Set_03	开门式厨房橱柜	10000	furniture
+da7a2cf9	Base_Cabinet_W60cm_1Drawer_1Door_Set_01	抽屉式厨房橱柜	10000	furniture
+bc9061bd	Base_Cabinet_W60cm_1Drawer_1Door_Set_02	抽屉式厨房橱柜	10000	furniture
+d1ad6ab3	Base_Cabinet_W60cm_1Drawer_1Door_Set_03	抽屉式厨房橱柜	10000	furniture
+f20264fe	Base_Cabinet_W60cm_3Drawer_Set_01	抽屉式厨房橱柜	10000	furniture
+2f2bfe09	Base_Cabinet_W60cm_3Drawer_Set_02	抽屉式厨房橱柜	10000	furniture
+340cae45	Base_Cabinet_W60cm_3Drawer_Set_03	抽屉式厨房橱柜	10000	furniture
+4948e04f	Base_Cabinet_W90cm_1Drawer_2Door_Set_01	抽屉式厨房橱柜	10000	furniture
+60d1e321	Base_Cabinet_W90cm_1Drawer_2Door_Set_02	抽屉式厨房橱柜	10000	furniture
+d09c91e0	Base_Cabinet_W90cm_1Drawer_2Door_Set_03	抽屉式厨房橱柜	10000	furniture
+1a5553c4	Base_Cabinet_W90cm_2Door_Set_01	开门式厨房橱柜	10000	furniture
+14f1755b	Base_Cabinet_W90cm_2Door_Set_02	开门式厨房橱柜	10000	furniture
+ead937e2	Base_Cabinet_W90cm_2Door_Set_03	开门式厨房橱柜	10000	furniture
+5305e845	Base_Cabinet_W90cm_2Drawer_2Door_Set_01	抽屉式厨房橱柜	10000	furniture
+41f91a8d	Base_Cabinet_W90cm_2Drawer_2Door_Set_02	抽屉式厨房橱柜	10000	furniture
+7cfea878	Base_Cabinet_W90cm_2Drawer_2Door_Set_03	抽屉式厨房橱柜	10000	furniture
+4020cc6f	Base_Cabinet_W90cm_3Drawer_1DoorwGlass_Set_01	抽屉式厨房橱柜	10000	furniture
+4f272a1e	Base_Cabinet_W90cm_3Drawer_1Door_Set_01	抽屉式厨房橱柜	10000	furniture
+1d89c4a6	Base_Cabinet_W90cm_3Drawer_1Door_Set_02	抽屉式厨房橱柜	10000	furniture
+a2d9a19b	Base_Cabinet_W90cm_3Drawer_1Door_Set_03	抽屉式厨房橱柜	10000	furniture
+3c9ab9a1	Base_Cabinet_W90cm_Sink_Set_01	水槽	20000	furniture
+b222b225	Base_Cabinet_W90cm_Sink_Set_02	水槽	20000	furniture
+263c136a	Base_Cabinet_W90cm_Sink_Set_03	水槽	20000	furniture
+4f32eef3	Basil	罗勒	180	ingredient,plant
+44e6d6e3	Basil Seeds	罗勒种子	1000	seed
+695b744b	Bath	浴缸	160000	furniture
+96033c13	Bathroom_Carpet	洗浴地毯	10000	furniture
+9a6e841b	Bathroom_Trash-Bin_Small_01	私人垃圾桶	5000	furniture
+a9b9d45d	Bathroom_Trash-Bin_Small_02	私人垃圾桶	3000	furniture
+d1f211c7	Bathroom_Vanity_1	浴室梳妆台	30000	furniture
+9df67002	Bathroom_Vanity_1_3	浴室梳妆台	40000	furniture
+ed76f5b1	Bathroom_Vanity_2	浴室梳妆台	20000	furniture
+739fce2a	Bathroom_Vanity_3	浴室梳妆台	20000	furniture
+aef29507	Bathroom_Vanity_3_3	浴室梳妆台	30000	furniture
+3830f71a	Bathroom_Vanity_Sergey_Apartment	双人盥洗台	50000	furniture
+c6ae2bc5	Bathroom_Vanity_V1-Large	浴室梳妆台	36000	furniture
+2081061c	Bathroom_Vanity_V1-Small	浴室梳妆台	30000	furniture
+810baced	Bathroom_Vanity_V2-Large	浴室梳妆台	35000	furniture
+8d98bd5b	Bathroom_Vanity_V2-Small	浴室梳妆台	30000	furniture
+0e71db90	Bathroom_Vanity_V3-Large	浴室梳妆台	35000	furniture
+3aaa9a17	Bathroom_Vanity_V3-Small	浴室梳妆台	30000	furniture
+b2adefe6	Bean Sprouts	豆芽	300	ingredient,plant
+111fc168	Bean Sprouts Seeds	豆芽种子	1000	seed
+07fb6f3c	Beauty_Products-1	美妆产品	1500	furniture
+151e1bbb	Beauty_Products-10	美妆产品	1500	furniture
+7988a251	Beauty_Products-2	美妆产品	1500	furniture
+42194239	Beauty_Products-3	美妆产品	1500	furniture
+737e7af0	Beauty_Products-4	美妆产品	1500	furniture
+c12105bf	Beauty_Products-5	美妆产品	1500	furniture
+24f97209	Beauty_Products-6	美妆产品	1500	furniture
+38e5a8e9	Beauty_Products-7	美妆产品	1500	furniture
+9985ed0b	Beauty_Products-8	美妆产品	1500	furniture
+11ed684d	Beauty_Products-9	美妆产品	1500	furniture
+0ecd905e	Beef	牛肉	700	ingredient,plant
+26cffe5b	Beef Ramen	牛肉拉面	0	meal,useable,NOT-STORABLE
+90c2a630	Beef Resin Pellets	牛肉胶颗粒	3000	seed
+b2cfe44b	Beer	啤酒	0	meal,drink,NOT-STORABLE
+7b36dfcc	Beer Soup	啤酒汤	0	meal,useable,NOT-STORABLE
+03481c5a	Beet Pickled Deviled Eggs	腌甜菜魔鬼蛋	0	meal,useable,NOT-STORABLE
+c44c63c7	Beetroots	甜菜	250	ingredient,plant
+72d23855	Beetroots Seeds	甜菜种子	1000	seed
+efcd0a30	Bench_1	长凳	10000	furniture
+d420a1ff	Bench_2	长凳	10000	furniture
+a8a595e0	Bench_2_2	长凳	10000	furniture
+706fcf77	Bench_3	长凳	10000	furniture
+d3fd4564	Beondegi Soup	蚕蛹汤	0	meal,useable,NOT-STORABLE
+bc94bf9a	Bin	小垃圾桶	2000	furniture
+b7b568c4	Biox50	BioX-50 药盒	150000	
+49816089	Bird's Nest	大杂烩	0	meal,NOT-STORABLE
+1b4bf21a	Biscuits	饼干	230	ingredient
+88f2c6ba	Black Moss	发菜	250	ingredient,plant
+bd6cd663	Black Moss Seeds	发菜种子	1000	seed
+c8e8f02d	Black Mushroom	黑蘑菇	250	ingredient,plant
+0191f545	Black Mushroom Spores	黑蘑菇孢子	1000	seed
+41385a10	Black Pepper	黑胡椒	150	ingredient
+98435f5a	Black Soda	黑苏打	200	ingredient
+3a0cc329	Black Ultra Grande	超大杯黑咖	800	
+aa5e70a4	Black Widow	黑寡妇	0	meal,drink,NOT-STORABLE
+0c4e4b16	Blackberries	黑莓	600	ingredient
+c275aacd	BlackBox	黑匣子	10000	
+3aa2462b	Blender	搅拌机	30000	furniture
+2c28ec96	Blue Cheese	蓝纹奶酪	350	ingredient,plant
+d6a34147	Blue Cheese Coffee	蓝纹手冲	900	
+05204ef4	Blue Smoothie Bowl	蓝调冰沙	0	meal,useable,NOT-STORABLE
+e59314ad	Blue Taco	蓝色塔可	0	meal,useable,NOT-STORABLE
+05b2b7be	Blueberries	蓝莓	400	ingredient
+450d662f	Blueberry Avocado Smoothie	蓝莓鳄梨奶昔	0	meal,drink,NOT-STORABLE
+5dc36c63	Boat Name Plate	船骸铭牌	10000	
+e0463926	Boba	珍珠粉圆	150	ingredient
+872bf524	Boba Pizza	珍珠披萨	0	meal,useable,NOT-STORABLE
+622a7691	Boba Tea	珍珠奶茶	0	meal,drink,NOT-STORABLE
+fc00b8dd	BodyList	生药公司存储舱货单	0	
+8b34c613	Bok Choy	小白菜	270	ingredient,plant
+b4cf5fca	Bok Choy Seeds	小白菜种子	1000	seed
+0a181804	Bombies	炸蛋	0	meal,useable,NOT-STORABLE
+d76790dd	Bone	骨头	200	
+55579b46	Bone Fragment	骨头碎片	0	
+352bf13f	Bone Fragment 2	骨头碎片	0	
+5595ebdc	Book o'Laughs	欢笑之书	2000	
+ccf4ccb2	Book_Shelf_Living_Room_01_Set_1	书架	10000	furniture
+b170b0c8	Book_Shelf_Living_Room_01_Set_2	书架	20000	furniture
+de9f4d09	Book_Shelf_Living_Room_01_Set_3	书架	20000	furniture
+1ab33caf	Book_Shelf_Living_Room_01_Set_4	书架	45000	furniture
+40bfaf96	Book_Shelf_Living_Room_01_Set_5	书架	10000	furniture
+f745e40c	Book_Shelf_Living_Room_02_Set_1	书架	25000	furniture
+d2b36676	Book_Shelf_Living_Room_02_Set_2	书架	30000	furniture
+58aa4838	Book_Shelf_Living_Room_02_Set_3	书架	35000	furniture
+06a41509	Book_Shelf_Living_Room_02_Set_4	书架	50000	furniture
+4aba420e	Book_Shelf_Living_Room_02_Set_5	书架	10000	furniture
+70af5701	Book_Shelf_Living_Room_03_Set_1	书架	10000	furniture
+a323da1b	Book_Shelf_Living_Room_03_Set_2	书架	20000	furniture
+57feb96d	Book_Shelf_Living_Room_03_Set_3	书架	30000	furniture
+1fa56bc7	Book_Shelf_Living_Room_03_Set_4	书架	50000	furniture
+d7a5a209	Book_Shelf_Living_Room_03_Set_5	书架	10000	furniture
+23c60dcd	Bootleg Nata-Log	运输局日志	6000	
+7265a662	Borsch	罗宋汤	0	meal,useable,NOT-STORABLE
+5755c0a2	Brandy	白兰地	800	ingredient
+a733842f	Bread	面包	100	ingredient
+a3c3ff8f	Breakfast Salad	早餐沙拉	0	meal,NOT-STORABLE
+cd38eada	Bream	鳊鱼	500	ingredient,fish
+c48bf972	Broccoli	西兰花	350	ingredient,plant
+fc82667a	Broccoli Seeds	西兰花种子	1000	seed
+23feb86b	Broken Fishing Rod	坏掉的鱼竿	200	
+56834573	Broken Wireless Relay	损坏的无线中继	10000	
+5ce7d040	Brook Trout	溪鳟鱼	500	ingredient,fish
+75d1583b	Brook Trout with Asparagus	芦笋溪鳟	0	meal,useable,NOT-STORABLE
+e430a1f7	Brownie	布朗尼蛋糕	0	meal,useable,NOT-STORABLE
+8e4ee97f	Brownie Milkshake	布朗尼奶昔	0	meal,useable,NOT-STORABLE
+c6a3e177	Buckwheat	荞麦	150	ingredient,plant
+4b874a54	Buckwheat Seeds	荞麦种子	1000	seed
+a507dcfc	Burbot	淡水鳕	400	ingredient,fish
+71530707	Burger Bun	汉堡面包	100	ingredient
+32b6addb	BusinessPermit1	经营许可（1 级）	0	
+5f1de8c3	BusinessPermit2	经营许可（2级）	0	
+f01afe17	BusinessPermit3	经营许可（3级）	0	
+fb69ef1c	BusinessPermit4	经营许可（4级）	0	
+ad584a0b	Butter	黄油	300	ingredient,plant
+911e4cb2	Butterfly Pea Flower	蝶豆花	300	ingredient
+3b488302	Butterscotch Mocha	奶油糖摩卡	500	
+b0484440	Cabbage	卷心菜	150	ingredient,plant
+a52fa496	Cabbage Seeds	卷心菜种子	1000	seed
+7222bd65	Calypso Island Iced Tea	卡吕普索岛冰茶	0	meal,drink,NOT-STORABLE
+574bdbe5	Canapés	开胃饼	0	meal,useable,NOT-STORABLE
+e7cb218a	Carp	鲤鱼	450	ingredient,fish
+6a9392e3	Carpet_1	地毯	70000	furniture
+112a11d4	Carpet_2	地毯	65000	furniture
+e86e9e85	Carpet_3	地毯	130000	furniture
+cf99562f	Carpet_4	地毯	120000	furniture
+24617d45	Carpet_5	地毯	170000	furniture
+32a898ea	Carpet_6	地毯	130000	furniture
+8e4016d3	Carpet_7	地毯	125000	furniture
+b619f7d9	Carpet_8	地毯	160000	furniture
+2653365c	Carrots	胡萝卜	200	ingredient,plant
+b9b2ed10	Carrots Seeds	胡萝卜种子	1000	seed
+67b14a43	Cashew	腰果	300	ingredient
+95dc0f4a	Cash_Register	收银机	10000	furniture
+266cf827	Ceiling-Lamp_01	吸顶灯	48000	furniture
+85a7b036	Ceiling-Lamp_02	吸顶灯	56000	furniture
+5cdb2932	Ceiling-Lamp_03	吸顶灯	79000	furniture
+2969b51f	Ceiling-Lamp_04	吸顶灯	63000	furniture
+5e95b9a4	Ceiling-Lamp_05	吸顶灯	92000	furniture
+abd70b82	Ceiling_Light	吸顶灯	10000	furniture
+ab2f2697	Celery	芹菜	200	ingredient,plant
+5748b91c	Celery Seeds	芹菜种子	1000	seed
+7b881f92	Cendol	煎蕊	0	meal,useable,NOT-STORABLE
+107cf814	CerealsFarmingModuleA	A级谷物种植模块	41000	furniture
+a1fae302	CerealsFarmingModuleB	B级谷物种植模块	21000	furniture
+60412559	CerealsFarmingModuleC	C级谷物种植模块	11000	furniture
+a7559362	Chair_1	高脚凳	3000	furniture
+fb26743f	Chair_2	高脚凳	3000	furniture
+1799c0d1	Chair_3	高脚凳	3000	furniture
+2cbacfef	Chair_4	高脚凳	3000	furniture
+a01e0f72	Chair_5	高脚凳	3000	furniture
+d793de81	Chapulines	蚂蚱	300	ingredient
+5a737ee5	Chapulines Pizza	蚂蚱披萨	0	meal,useable,NOT-STORABLE
+f22c8f89	Chartreuse	查特酒	800	ingredient
+c035beed	Cheddar	切达奶酪	250	ingredient,plant
+bea8d994	Cheese	奶酪	150	ingredient,plant
+992f67d6	Cheese Burger	奶酪汉堡	0	meal,NOT-STORABLE
+24d788d6	Cheese Dream	芝士梦想	0	meal,useable,NOT-STORABLE
+3c07a826	Chef Hugo Ortega’s Mescal Worm Tacos	雨果·奥特加大厨的龙舌兰虫塔可	0	meal,useable,NOT-STORABLE
+f4a425d1	Cherries	车厘子	500	ingredient,plant,seed
+30e0b7cc	Chervil	细叶芹	180	ingredient,plant
+2ec10996	Chervil Seeds	细叶芹种子	1000	seed
+dc05cc17	Chic Salmon and Cucumber Sandwiches	鲜鲑黄瓜三明治	0	meal,useable,NOT-STORABLE
+b29fbd8d	Chicken	鸡肉	500	ingredient,plant
+59bafa9d	Chicken Noodle Soup	鸡肉拉面	0	meal,NOT-STORABLE
+0af04417	Chicken Resin Pellets	鸡肉胶颗粒	300	seed
+6094055d	Chicken Sandwich	鸡肉三明治	0	meal,NOT-STORABLE
+b9317846	Chicken Shake	鸡肉奶昔	0	meal,drink,NOT-STORABLE
+07de58b1	Chickpeas	鹰嘴豆	300	ingredient
+0eca1f8a	Chili	辣椒	150	ingredient,plant
+a5c0d773	Chili Peppers Seeds	辣椒种子	1000	seed
+f166cd3c	Chlorophyll	叶绿素	300	ingredient
+2345f772	Chocolate	巧克力	300	ingredient
+9c51e4cc	Chow Mein	炒面	0	meal,useable,NOT-STORABLE
+f15b244d	Cinnamon	肉桂	150	ingredient
+b92907e6	Citrus Juice	仙人掌果滋	0	meal,drink,NOT-STORABLE
+0636d964	Clam	蛤蜊	500	ingredient,plant,seed
+ab3ed933	ClamZest	鲜蛤风味	0	meal,drink,NOT-STORABLE
+9dec5dac	Clem's Package	克莱姆的包裹	5000	
+51f6635c	Clock_Rectangular	钟表	10000	furniture
+64212725	Clock_Round	钟表	10000	furniture
+00391b06	Cloudplugs	云朵棉	0	meal,useable,NOT-STORABLE
+ee0fbf94	Cockroaches	蟑螂	100	ingredient
+c745cd61	Cocoa Powder	可可粉	150	ingredient
+13c7c08a	Coconut	椰子	400	ingredient
+06b32629	Coffee Beans	咖啡豆	200	ingredient
+67d6ba71	ColaChicken	可乐鸡	0	meal,useable,NOT-STORABLE
+f70a36d0	Composter	堆肥箱	90000	furniture
+ac6f92cf	Computer_with_Monitor_Set_1	电脑	150000	furniture
+73442a79	Computer_with_Monitor_Set_2	电脑	150000	furniture
+031e94ce	Computer_with_Monitor_Set_3	电脑	150000	furniture
+7803b995	Cooker	炉灶	30000	furniture
+3401fb9b	Cooker_Hood	吸风罩 V15	10000	furniture
+842f7d9c	Cooking Wine	料酒	300	ingredient
+08d98da8	Copper Wire	铜线	400	
+85914f1b	Coriander	香菜	180	ingredient,plant
+bbf712a0	Coriander Seeds	香菜种子	1000	seed
+f5017bda	Corn	玉米	150	ingredient,plant
+4e0e5fc7	Corn Bread	玉米面包	200	ingredient
+93dabcd5	Corn Seeds	玉米种子	1000	seed
+036231f1	CorpSec Witness Protection ID	安保集团证人保护 ID	500000	
+f69ad695	Counter_Computer	电脑	90000	furniture
+b0372c7e	CPU	CPU	15000	
+1cc3d846	Crab	螃蟹	700	ingredient
+132626d6	Cranberries	蔓越莓	400	ingredient
+da9d9c02	Cream	奶油	200	ingredient,plant
+5469c2b8	Cream Cheese	奶油芝士	200	ingredient,plant
+734aa71b	Cricket	蟋蟀	300	ingredient
+3d1448d6	Crispy Bugs Platter	脆虫拼盘	0	meal,useable,NOT-STORABLE
+470baec7	Crispy Chicken Burger	脆皮鸡汉堡	0	meal,NOT-STORABLE
+b272683c	Croquettes	可乐饼	0	meal,useable,NOT-STORABLE
+ec574431	Crucian	鲫鱼	450	ingredient,fish
+392046d0	Cucumbers	黄瓜	150	ingredient,plant
+4948f113	Cucumbers Seeds	黄瓜种子	1000	seed
+741cf5c0	Cup of Coffee	一杯咖啡	400	
+ebb71f31	Curry	咖喱	150	ingredient
+7f4e8b96	Cyber Shot	赛博冲击	0	meal,drink,NOT-STORABLE
+0fdebc3b	Dace	鲮鱼	550	ingredient,fish
+ccd8a6a5	Dace Kalatusha	鲮鱼汤	0	meal,useable,NOT-STORABLE
+a58872c3	DairyFarmingModuleA	A级乳品生产模块	41000	furniture
+27ebf872	DairyFarmingModuleB	B级乳品生产模块	21000	furniture
+7d4c6e0c	DairyFarmingModuleC	C级乳品生产模块	11000	furniture
+5ccff628	Dango	日式团子	0	meal,useable,NOT-STORABLE
+afdc82c8	Dark Roast Coffee	深烘咖啡	500	
+503eded3	Dark_Goggles	VR眼镜	120000	furniture
+81215a50	Dark_Headphone	耳机	25000	furniture
+d1473cd4	Dates	枣椰	400	ingredient,plant,seed
+e3269a36	Dead Rat	死老鼠	0	
+fa2c7719	Dee Dees Reply	迪迪的回复	0	
+1ccd7f71	Deep_Freezer	高级冷柜	30000	furniture
+3cfb8da3	Deep_Fryer	炸锅	30000	furniture
+9b227853	Desk_chair_1	办公椅	10000	furniture
+feb810a4	Desk_chair_2_black	办公椅	10000	furniture
+8d8a5767	Desk_chair_2_purple	办公椅	10000	furniture
+daec2452	Desk_chair_2_red	办公椅	10000	furniture
+f9d956d7	Desk_chair_2_white	办公椅	10000	furniture
+584a11a8	Desk_lamp_1	桌灯	10000	furniture
+2b041e66	Desk_lamp_2_blue	台灯	10000	furniture
+5192aea1	Desk_lamp_2_red	台灯	10000	furniture
+490ab97a	Digit-LuxCleaningUnit3000_Base	Digit-Lux 3000 底座	10000	
+995a4fb5	Digit-LuxCleaningUnit3000_glassCase_1	Digit-Lux 3000 外壳（含机头）	25000	
+27ef8e2b	Digit-LuxCleaningUnit3000_glassCase_2	Digit-Lux 3000 外壳	17500	
+01074a20	Digit-LuxCleaningUnit3000_Tank	Digit-Lux 3000 水箱	15000	
+6ce7a82c	Digital Declutterers Code	数字精简事务所激活码	2500	
+56828e2b	DirtyGlass	脏玻璃杯	0	NOT-STORABLE
+d7b7c9c8	DirtyPlate	脏盘子	0	NOT-STORABLE
+09d5b297	Dishwasher_W60cm_Bottom	洗碗机	30000	furniture
+3bb670d3	Dishwasher_W60cm_Bottom_Set_02	洗碗机	30000	furniture
+14dd9946	Dishwasher_W60cm_Bottom_Set_03	洗碗机	30000	furniture
+c45753fd	Donut	甜甜圈	400	
+48b11a55	DoomBowl	厄运之碗	0	
+d5d5992e	Drinks_Machine	酒水机	30000	furniture
+2e6cdb5c	Drunken Master	醉拳宗师	0	meal,drink,NOT-STORABLE
+3e3aa5cd	Duck	鸭肉	600	ingredient,plant
+8ac7e29f	Duck Resin Pellets	鸭肉胶颗粒	300	seed
+ab800cb7	Dumpling Wrappers	饺子皮	200	ingredient
+32c65161	Eastern Salad	东方沙拉	0	meal,useable,NOT-STORABLE
+68ccf1a2	Edison Audio Transcript	爱迪生音频记录	0	
+9aaeeb37	Egg Coffee	蛋香咖啡	0	meal,drink,NOT-STORABLE
+79cacd61	Eggplants	茄子	350	ingredient,plant
+643596e8	Eggplants Seeds	茄子种子	1000	seed
+6a05cecf	Eggs	蛋	220	ingredient
+a7e70070	Empty_Sink		0	furniture,NOT-STORABLE
+dd0f2306	Enchiridion Fragment	万域集碎片	0	
+42f4231c	Encrypted_Chip		6000	
+f242a429	Enoki Mushrooms	金针菇	300	ingredient,plant
+3fb102d2	Enoki Spores	金针菇孢子	1000	seed
+2b6234d1	Espresso Martini	浓咖马天尼	0	meal,drink,NOT-STORABLE
+05e8b614	Eugene's Remains	尤金遗骸	0	
+c15ed9b7	Extra Tall Latte	加高加高拿铁	1000	
+030a42f4	Eyeball Pasta	眼球意面	0	meal,useable,NOT-STORABLE
+b6dde908	Fan_1	吊扇	78000	furniture
+bca50bba	Fan_2	吊扇	60000	furniture
+1dc01cd1	FarmConsole	种植控制台	10500	furniture
+f2db14a7	Fashion Holo	时尚全息	2800	
+9c3fd8d6	Fennel	茴香	180	ingredient,plant
+9cd76927	Fennel Seeds	茴香种子	1000	seed
+08c6cfc9	Fennel Soup with Bacon	茴香培根汤	0	meal,useable,NOT-STORABLE
+343f579f	Feta	菲达羊乳酪	250	ingredient,plant
+a6ca9b57	Fish Burger	鱼肉汉堡	0	meal,NOT-STORABLE
+81a1c2ed	Fish Roe	鱼籽	500	ingredient
+7bd895be	Fish Salad	鱼肉沙拉	0	meal,NOT-STORABLE
+37f18adc	Flask Fizz	充气宝瓶	0	meal,drink,NOT-STORABLE
+91cabef5	Floating_Toilet	浮式马桶	20000	furniture
+69d245a8	Floating_Toilet_01	马桶	25000	furniture
+1224f5d4	Floating_Toilet_01_with_Cistern	马桶	35000	furniture
+b9ef368a	Floating_Toilet_02	马桶	30000	furniture
+19dd033c	Floating_Toilet_02_with_Cistern	马桶	35000	furniture
+e749cbde	Floor-Lamp_01	落地灯	58000	furniture
+f5e90281	Floor-Lamp_02	落地灯	41000	furniture
+46a63448	Floor-Lamp_03	落地灯	38000	furniture
+19181255	Floor-Lamp_04	落地灯	64000	furniture
+da4fec3d	Floor-Lamp_05	落地灯	57900	furniture
+956c0bda	Flour	面粉	80	ingredient
+e26ab665	Flower_1	盆栽	8000	furniture
+55626591	Flower_2	盆栽	15000	furniture
+c532fbcd	Flower_3	盆栽	7000	furniture
+b324a867	Flower_4	仙人掌	10000	furniture
+b389d0a5	Flower_5	盆栽	9000	furniture
+ffa93857	Food_Processor	食材处理器	50000	furniture
+0c888be3	Frame-00_Blademorphic_2.39-1	相框	2000	furniture
+8882aae2	Frame-00_Cinema_1.85-1	相框	2000	furniture
+ad836394	Frame-00_Classic-TV_4-3	相框	2000	furniture
+e86c438c	Frame-00_Ordinary_16-9	相框	2000	furniture
+8cd6a2de	Frame-00_Portrait_9-16	相框	2000	furniture
+4ca45396	Frame-00_Square_1-1	相框	2000	furniture
+2cc83431	Frame-01_Blademorphic_2.39-1	相框	2000	furniture
+ed020617	Frame-01_Cinema_1.85-1	相框	2000	furniture
+c6536814	Frame-01_Classic-TV_4-3	相框	2000	furniture
+1b176476	Frame-01_Ordinary_16-9	相框	2000	furniture
+79a972d7	Frame-01_Portrait_9-16	相框	2000	furniture
+effcf1a6	Frame-01_Square_1-1	相框	2000	furniture
+260854b4	Frame-02_Blademorphic_2.39-1	相框	2000	furniture
+66fc0e0a	Frame-02_Cinema_1.85-1	相框	2000	furniture
+fb6b53bf	Frame-02_Classic-TV_4-3	相框	2000	furniture
+460fb218	Frame-02_Ordinary_16-9	相框	2000	furniture
+5f72e9a1	Frame-02_Portrait_9-16	相框	2000	furniture
+a805452b	Frame-02_Square_1-1	相框	2000	furniture
+a496f4e8	Frame-03_Blademorphic_2.39-1	相框	2000	furniture
+7c09e3e1	Frame-03_Cinema_1.85-1	相框	2000	furniture
+1686348e	Frame-03_Classic-TV_4-3	相框	2000	furniture
+674c0e7c	Frame-03_Ordinary_16-9	相框	2000	furniture
+f0dc49f3	Frame-03_Portrait_9-16	相框	2000	furniture
+ecfeca86	Frame-03_Square_1-1	相框	2000	furniture
+8d752bd7	frame-10inchesx8inches_300vox	相框（10x8）	2000	furniture
+6e76f356	frame-11inchesx14inches_300vox	相框（11x14）	2000	furniture
+d33ff16d	frame-14inchesx11inches_300vox	相框（14x11）	2000	furniture
+5165986d	frame-5inchesx7inches_300vox	相框（5x7）	2000	furniture
+708bea00	frame-7inchesx5inches_300vox	相框（7x5）	2000	furniture
+367961c1	frame-8inchesx10inches_300vox	相框（8x10）	2000	furniture
+dbaa847d	Freezer	冷柜	50000	furniture
+6aa4cc7a	Fried Carp	炸鲤鱼	0	meal,useable,NOT-STORABLE
+6aede13f	Frosted Murder	霜冻杀机	0	meal,drink,NOT-STORABLE
+2faf9db7	FruitFarmingModuleA	A级水果种植模块	41000	furniture
+f04bccf5	FruitFarmingModuleB	B级水果种植模块	21000	furniture
+42bb9a34	FruitFarmingModuleC	C级水果种植模块	11000	furniture
+169d0006	Fruity Burger	果味汉堡	0	meal,useable,NOT-STORABLE
+1f6f88cc	Frushi	水果寿司	0	meal,useable,NOT-STORABLE
+44b04a85	Fuh	芙华	0	meal,drink,NOT-STORABLE
+9bd1a3e1	Furniture_BathTowel01	毛巾架	5000	furniture
+454dfcf2	Furniture_BathTowel02	毛巾架	6000	furniture
+0446767f	Furniture_BathTowel03	毛巾架	5000	furniture
+3cba1c43	Furniture_BathTowel04	毛巾架	5000	furniture
+5e511ba4	Furniture_BathTowel05	毛巾架	5000	furniture
+0f03689a	Furniture_Bed	床	75000	furniture
+f9b1392d	Furniture_BedAbovePiece	高科技设备	50000	furniture
+bf036674	Furniture_bin01Blue	蓝色垃圾桶	3000	furniture
+e231dedf	Furniture_bin01FadedBlue	淡蓝色垃圾桶	3000	furniture
+868f6b47	Furniture_bin01Grey	灰色垃圾桶	3000	furniture
+4b66e018	Furniture_bin01Pink	粉色垃圾桶	3000	furniture
+bb8d7a1b	Furniture_bin01Yellow	黄色垃圾桶	3000	furniture
+f9f937de	Furniture_bin02	垃圾桶	3000	furniture
+1bb3cbb4	Furniture_Carpet01	地毯	70000	furniture
+46d03f5f	Furniture_Carpet02	地毯	150000	furniture
+46ed3368	Furniture_Carpet03	地毯	50000	furniture
+4aa44815	Furniture_Carpet04	地毯	85000	furniture
+1d9aed8d	Furniture_ceilingFan	带篮吊扇	90000	furniture
+fc3a70b8	Furniture_Chair_1	舒适椅子	70000	furniture
+2a252ed4	Furniture_Chair_2	软垫长椅	10000	furniture
+4eb69246	Furniture_Chair_3	脚凳	10000	furniture
+8b485ad3	Furniture_chair_b	高脚凳	3000	furniture
+faa2cd18	Furniture_chair_g	高脚凳	3000	furniture
+69657752	Furniture_chair_w	高脚凳	3000	furniture
+955b527a	Furniture_Computer	电脑	160000	furniture
+039820e0	Furniture_ComputerStation	健身器材	320000	furniture
+982802a8	Furniture_Couch	沙发	100000	furniture
+01943796	Furniture_couch02_Green1	绿色扶手椅	50000	furniture
+b0d07a46	Furniture_couch02_Green2	绿色沙发（两人座）	100000	furniture
+8d969b99	Furniture_couch02_Green3	绿色沙发（三人座）	150000	furniture
+1d729b78	Furniture_couch02_Grey1	灰色扶手椅	50000	furniture
+5042fc4e	Furniture_couch02_Grey2	灰色沙发（两人座）	90000	furniture
+7b396b99	Furniture_couch02_Grey3	灰色沙发（三人座）	130000	furniture
+dec76ff6	Furniture_couch02_Teal1	天青绿扶手椅	50000	furniture
+2e0c081e	Furniture_couch02_Teal2	天青绿沙发（两人座）	100000	furniture
+e701c349	Furniture_couch02_Teal3	天青绿沙发（三人座）	130000	furniture
+0d0511ad	Furniture_cupboard01	餐边柜	40000	furniture
+bf62f49c	Furniture_cupboard02	壁橱	35000	furniture
+32cd957b	Furniture_cupboard03	床头柜	25000	furniture
+48d8ee4e	Furniture_cupboard04	餐边柜	50000	furniture
+995bb5f9	Furniture_cupboard05	餐边柜	80000	furniture
+c9ef6ffe	Furniture_Desk_1	书桌	40000	furniture
+ed1034c4	Furniture_Desk_2	书桌	60000	furniture
+2af7bc17	Furniture_guitar	吉他	85000	furniture
+65aaa56f	Furniture_lamp	桌灯	27500	furniture
+e1a31f5f	Furniture_lamp02	台灯	9000	furniture
+2c134a44	Furniture_lamp03	台灯	11000	furniture
+0e7e157b	Furniture_Low_Table_1	茶几	40000	furniture
+e306ca6d	Furniture_Low_Table_2	茶几	40000	furniture
+27a2b836	Furniture_Low_Table_3	茶几	80000	furniture
+0c8bd29e	Furniture_mirror01	镜子	15000	furniture
+2e743ffb	Furniture_mirror02	镜子	25000	furniture
+dd0220ea	Furniture_Nightstand_Shelf	床头柜	20000	furniture
+0d522fa5	Furniture_Painting01	艺术画	16000	furniture
+6147547b	Furniture_Painting02	艺术画	30000	furniture
+49491994	Furniture_Painting03	艺术画	20000	furniture
+1612ae12	Furniture_Painting04	艺术画	40000	furniture
+f701de3e	Furniture_Painting05	艺术画	19600	furniture
+b2568493	Furniture_Painting06	艺术画	26000	furniture
+547a21ce	Furniture_Painting07	艺术画	30000	furniture
+a7cb1137	Furniture_Painting08	艺术画	35000	furniture
+394aa8f0	Furniture_Painting09	艺术画	40000	furniture
+c85a0a8a	Furniture_Painting10	艺术画	80000	furniture
+8308bd7f	Furniture_Painting11	艺术画	100000	furniture
+9899de31	Furniture_Painting12	艺术画	100000	furniture
+61d9afe5	Furniture_Painting13	艺术画	250000	furniture
+5dc31bf7	Furniture_Painting14	艺术画	260000	furniture
+f06d8672	Furniture_Painting15	艺术画	300000	furniture
+9a7c6879	Furniture_Painting16	艺术画	150000	furniture
+e006659e	Furniture_Painting17	艺术画	100000	furniture
+8c7be9f4	Furniture_Painting18	艺术画	280000	furniture
+9503171c	Furniture_Paravent	屏风	80000	furniture
+6038276d	Furniture_Paravent_illustration	绘画屏风	100000	furniture
+fe85d5ef	Furniture_pinboard	钉板	10000	furniture
+c0f3b929	Furniture_Plant	盆栽	16000	furniture
+e0daecbf	Furniture_Plant02	盆栽	15000	furniture
+58d0517c	Furniture_Pouffe	脚凳	5000	furniture
+91b5a819	Furniture_Radio_80	复古收音机	10000	furniture
+7ef327f4	Furniture_Radio_Cyber	复古收音机	10000	furniture
+f03ecf78	Furniture_Radio_Sturdy	复古收音机	10000	furniture
+67d8d927	Furniture_Radio_Vintage	复古收音机	10000	furniture
+8541b28c	Furniture_shelve01	书架	20000	furniture
+7e62996e	Furniture_shelve02	书架	25000	furniture
+b8eb4df2	Furniture_Shelves	置物墙	80000	furniture
+98dd13d2	Furniture_shower	淋浴舱	100000	furniture
+bda22ec1	Furniture_Toothbrush01	牙刷架	1000	furniture
+92f445f7	Furniture_Toothbrush02	牙刷架	1000	furniture
+41b92e15	Furniture_Toothbrush03	牙刷架	1000	furniture
+2c577374	Furniture_Toothbrush04	牙刷架	1000	furniture
+e9a79b1e	Furniture_Toothbrush05	牙刷架	1000	furniture
+d54686a6	Furniture_VaseWithPlant	花瓶	19000	furniture
+4e458e70	Furniture_VinylRecorder	黑胶唱机	50000	furniture
+9591aeb4	Furniture_wallLamp01	壁灯	12000	furniture
+3dff98cc	Furniture_wallLamp02	壁灯	9000	furniture
+7f4e6e9d	Furniture_wallLamp03	壁灯	12500	furniture
+83749a09	Furniture_wallShelve	挂壁书架	5000	furniture
+1fd5df8a	Furniture_wardrobe	衣柜	90000	furniture
+00fb8a9a	Furniture_washmachine	洗衣机	20000	furniture
+6d6ecda4	Futu-Rice	浮屠饭	0	meal,useable,NOT-STORABLE
+e56e767c	Galaxy Lemonade	银河柠檬水	0	meal,drink,NOT-STORABLE
+c1284b8a	Galician-Style-Octopus	加利西亚风味章鱼	0	meal,useable,NOT-STORABLE
+bb845892	GalvanizedSteel_Plastic	洗衣篮	4000	furniture
+11453194	Garlic	大蒜	150	ingredient,plant
+2be61388	Garlic Seeds	大蒜种子	1000	seed
+e5faac2d	Garlic Soup	大蒜汤	0	meal,useable,NOT-STORABLE
+6cdc2846	Gen Debt IDs	世债证卡	180000	
+c2ac1eb2	GenericFarmingModuleA	A级通用种植模块	41000	furniture
+15aeeb3f	GenericFarmingModuleB	B级通用种植模块	21000	furniture
+ab8d362c	GenericFarmingModuleC	C级通用种植模块	11000	furniture
+5089fec8	Gift Bag	礼品盒	45000	
+c98b5f79	Gin	杜松子酒	800	ingredient
+0cb11043	Ginger	生姜	150	ingredient,plant
+cddafd30	Ginger Lime Espresso Tonic	生姜青柠浓缩汤力	0	meal,drink,NOT-STORABLE
+a33969b4	Ginger Seeds	生姜种子	1000	seed
+5ad05c86	Ginseng	人参	200	ingredient
+9dd1ccee	Golden Rings	黄金圈	0	meal,useable,NOT-STORABLE
+a8f45690	Goulash	匈牙利浓汤	0	meal,useable,NOT-STORABLE
+9a4e3ccd	Grandma's Cake	奶奶的蛋糕	0	meal,useable,NOT-STORABLE
+796d38d9	Grapefruit	西柚	400	ingredient
+89d9a615	Grapes	葡萄	400	ingredient,plant,seed
+424a71bd	Grasshopers	蝗虫	400	ingredient
+469f282b	Grayling	茴鱼	550	ingredient,fish
+ad96d849	Great Green Salad	蔬菜荟萃	0	meal,NOT-STORABLE
+cc985f95	Green Beans	绿豆角	300	ingredient,plant
+0a895255	Green Beans Seeds	绿豆角种子	1000	seed
+a35919e8	Green Essence	绿色本源	0	meal,drink,NOT-STORABLE
+8c95c3b9	Green Reeker Cheese	绿色臭鼬	3500	
+8dfb04dd	Green Snake	青蛇	0	meal,drink,NOT-STORABLE
+2b4bef6b	Grill	烤架	30000	furniture
+195d35a0	Grinder	MG-15 研磨机	20000	furniture
+88432365	Grocery_Shelves_V1_L_1-sided	食杂货架	10000	furniture
+d648cd67	Grocery_Shelves_V1_L_2-sided	食杂货架	30000	furniture
+7e14fb82	Grocery_Shelves_V1_S_1-sided	食杂货架	15000	furniture
+4f1eaadf	Grocery_Shelves_V1_S_2-sided	食杂货架	20000	furniture
+71e00926	Grocery_Shelves_V2_L_1-sided	食杂货架	10000	furniture
+e6b7bbc7	Grocery_Shelves_V2_L_2-sided	食杂货架	30000	furniture
+d766518f	Grocery_Shelves_V2_S_1-sided	食杂货架	10000	furniture
+89719daf	Grocery_Shelves_V2_S_2-sided	食杂货架	20000	furniture
+614a997e	Grocery_Shelves_V3_L_1-sided	食杂货架	10000	furniture
+1335ca9d	Grocery_Shelves_V3_L_2-sided	食杂货架	30000	furniture
+b186e897	Grocery_Shelves_V3_S_1-sided	食杂货架	10000	furniture
+d9be0b55	Grocery_Shelves_V3_S_2-sided	食杂货架	25000	furniture
+eb2b197d	Grub	食物	200	ingredient
+f6ec6730	Gyudon	牛丼饭	0	meal,useable,NOT-STORABLE
+b82ae2dc	Hanging_Lights_Cool-1	吊灯	46500	furniture
+d097e01a	Hanging_Lights_Cool-2	吊灯	23000	furniture
+fbaebf15	Hanging_Lights_Cool-3	吊灯	69000	furniture
+fb6bc744	Hanging_Lights_Warm-1	吊灯	57000	furniture
+cf87c67a	Hanging_Lights_Warm-2	吊灯	33000	furniture
+9d3c0578	Hanging_Lights_Warm-3	吊灯	67000	furniture
+34ba2eee	Hawaiian Pizza	夏威夷披萨	0	meal,useable,NOT-STORABLE
+74364705	HerbsFarmingModuleA	A级香草种植模块	41000	furniture
+83d1989e	HerbsFarmingModuleB	B级香草种植模块	21000	furniture
+086fd72e	HerbsFarmingModuleC	C级香草种植模块	11000	furniture
+28a7d0b2	Hibiscus Flower	芙蓉花	300	ingredient
+1dd1660d	High_Shelf_01-with-Towel-Bar	带毛巾架的金属挂架	10000	furniture
+473c2aec	High_Shelf_02-with-Towel-Bar	带毛巾架的金属挂架	10000	furniture
+e01aaa37	High_Shelf_03-with-Towel-Bar	带毛巾架的金属挂架	10000	furniture
+bb768ab7	High_Shelf_04-Items	摆满东西的浴室储物架	10000	furniture
+37463abc	High_Shelf_05-Items_withTowelBar	带毛巾架并摆满东西的浴室挂架	15000	furniture
+4c805ed0	Holo Flyers (Inventory)	全息广告	500	
+029814ae	Holocropolis Pass	全息墓园通行证	11000	
+ee2a3b5d	Hologram_Singer	全息歌手	45000	furniture
+f0cdc2fc	Honey	蜂蜜	300	ingredient
+bc2b422a	Honey Marinated Sabrefish	蜜汁黑鳕鱼	0	meal,useable,NOT-STORABLE
+fceed9ba	HooverBot_blue	扫地机器人（蓝色）	100000	
+6715ba1a	HooverBot_red	扫地机器人（红色）	100000	
+743766bb	HooverBot_white	扫地机器人（奶油色）	100000	
+bc84289e	HooverBot_yellow	扫地机器人（青绿色）	100000	
+2c6fbad6	Hot Dog Bun	热狗面包	100	ingredient
+e4441997	Hotate Nigiri	鲜贝手握寿司	0	meal,NOT-STORABLE
+33738dee	Hova Fuel	飞车燃料	100	ingredient
+1a5312df	HOVA part	飞车部件	1500	
+272386a8	Huckstash Apology Letter	哈克斯塔什的信件	0	
+7791afaf	HydroFarmingModuleA	A级水培种植模块	41000	furniture
+ad353390	HydroFarmingModuleB	B级水培种植模块	21000	furniture
+b7c9dd13	HydroFarmingModuleC	C级水培种植模块	11000	furniture
+0deb7ea1	I.M.P.U.N.E	I.M.P.U.N.E 调查令	135000	
+51e0fc2e	Ice Cream Burger	冰淇淋堡	0	meal,useable,NOT-STORABLE
+c8c85c01	Ide	雅罗鱼	450	ingredient,fish
+28b58fa6	Ika Nigiri	鱿鱼手握寿司	0	meal,NOT-STORABLE
+c4f753ff	Ikasumi	墨汁嚢	0	meal,drink,NOT-STORABLE
+9864a8a1	Immortalitea	永生之茶	0	meal,drink,NOT-STORABLE
+51746add	Insect Milkshake	昆虫奶昔	0	meal,drink,NOT-STORABLE
+c04bb804	Insect Sushi	昆虫寿司	0	meal,useable,NOT-STORABLE
+8448c464	IronCastSFishingRod	生锈的鱼竿	50000	equippable
+01c81d12	Island_W270CM_Set_01	厨房中央岛台	110000	furniture
+62787fe9	Island_W270CM_Set_02	厨房中央岛台	125000	furniture
+fd6cbbd3	Island_W270cm_Set_03	厨房中央岛台	100000	furniture
+2f491bd2	Item_Highboard_1	立柜	85000	furniture
+c9d2778f	Item_Highboard_2	立柜	75000	furniture
+643c9684	Item_Highboard_3	立柜	68000	furniture
+c1dd04dc	Item_Lowboards_1	矮柜	60000	furniture
+06f1fc29	Item_Lowboards_2	矮柜	80000	furniture
+a6ac19e4	Item_Lowboards_3	矮柜	70000	furniture
+7722e338	Item_Vending_Chips	薯片	500	ingredient
+3a67b9e2	Item_Vending_Doshirakus	多食乐便当（小）	800	ingredient
+709e2134	Item_Vending_Doshirakus_2	多食乐便当（大）	1500	ingredient
+f1f6a8e9	Item_Vending_Nyaco_Cola	尼亚科可乐	400	ingredient
+8af12678	Item_Vending_Shlepa_Dumplings	什列帕饺子	1000	ingredient
+f32ecad0	Item_Vending_Space_Cola	太空可乐	400	ingredient
+dd5b224a	Jalapeno Juice	墨西哥辣椒汁	0	meal,drink,NOT-STORABLE
+84f63cb6	Jasmine	茉莉	300	ingredient
+9de9e236	Jellied Volga Zander	伏尔加梭鲈鱼冻	0	meal,useable,NOT-STORABLE
+17ec7c4f	Jujube	枣子	400	ingredient
+931d8e53	Jukebox	点唱机	170000	furniture
+cb353738	k20 Tumbler	k20 保温杯	500	
+b68cd2c3	Kahlua	咖啡酒	800	ingredient
+d57e62c2	Kaisen Don	海鲜丼	0	meal,useable,NOT-STORABLE
+fdf2601a	Katsu Ika Odori Don	活乌贼丼	0	meal,useable,NOT-STORABLE
+4c1b9047	King Mushroom	杏鲍菇	400	ingredient,plant
+7d9f9502	King Mushroom Spores	杏鲍菇孢子	1000	seed
+4c7fe2e3	King Mushroom Steak	杏鲍菇排	0	meal,useable,NOT-STORABLE
+fe1f1d7f	King_bed_1	超豪华双人床	150000	furniture
+9bb60668	King_bed_2	超豪华双人床	120000	furniture
+25a17204	Kitchen_Base_Cabinet_OuterCorner_Set_01	厨房橱柜外角	10000	furniture
+926ecf77	Kitchen_Base_Cabinet_OuterCorner_Set_02	厨房橱柜外角	10000	furniture
+65bd1f81	Kitchen_Buffet	自助餐台	100000	furniture
+44069b00	Kitchen_Cabinet_OuterCorner_Set_03	厨房橱柜外角	10000	furniture
+b892fe42	Kitchen_CoffeeMachine	咖啡机	30000	furniture
+d710c0ed	Kitchen_CoffeeMug	咖啡杯	1000	furniture
+5a6a601b	Kitchen_Counter_Cabinet_01	桃木厨房	137000	furniture
+f065bffc	Kitchen_Dish_Rack_01	碗架	8000	furniture
+5b5ce1b2	Kitchen_Dish_Rack_02	大号碗架	12000	furniture
+74d503a7	Kitchen_Dish_Rack_03	大号金属碗架	21000	furniture
+7f872126	Kitchen_ElectricStove_Range	电炉	60000	furniture
+60a0542b	Kitchen_Elevator		0	furniture,NOT-STORABLE
+92e94b64	Kitchen_Fridge01	冰箱	60000	furniture
+125a7290	Kitchen_Fridge02	冰箱	60000	furniture
+0522891c	Kitchen_InductionStove	电磁炉	50000	furniture
+09f60ca1	Kitchen_Knives_Set_1	刀具套装（陶瓷）	15000	furniture
+12c3d1ae	Kitchen_Knives_Set_2	刀具套装（不锈钢）	10000	furniture
+6e9d2996	Kitchen_Knives_Set_3	刀具套装（木质）	20000	furniture
+7e4ab521	Kitchen_Oil_Bottle_Set_01	油瓶多件套	4500	furniture
+26c80ae7	Kitchen_SingleSink_Set_01	水槽	17000	furniture
+add09c9d	Kitchen_SingleSink_Set_02	水槽	17000	furniture
+c2e9882f	Kitchen_SingleSink_Set_03	水槽	17000	furniture
+2a10d850	Kitchen_Toaster	烤面包机	10000	furniture
+557fbd18	Kitchen_Trash-Bin_Large_01	厨房垃圾桶	5000	furniture
+1d7eb231	Kitchen_Trash-Bin_Large_02	厨房垃圾桶	7000	furniture
+af7e9b0c	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_01	壁挂式外角橱柜（40×40）	10000	furniture
+21faec9a	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_02	壁挂式外角橱柜（40×40）	10000	furniture
+d82584f3	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_03	壁挂式外角橱柜（40×40）	10000	furniture
+0af56707	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_01	壁挂式外角橱柜（40×60）	10000	furniture
+57424650	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_02	壁挂式外角橱柜（40×60）	10000	furniture
+c48a1f51	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_03	壁挂式外角橱柜（40×60）	10000	furniture
+821f83f6	Kiwi	猕猴桃	400	ingredient
+a3824b67	Kombucha	康普茶	300	ingredient
+515d5da3	Kompot	原汁果片	0	meal,drink,NOT-STORABLE
+21d3ce91	KoreChant Codex	柯颂参典	9500	
+1745598c	Kumquat	金橘	400	ingredient
+568cabf1	Kung Pao Chicken	宫保鸡丁	0	meal,useable,NOT-STORABLE
+2498979c	Kushiyaki	日式串烧	0	meal,useable,NOT-STORABLE
+6e4e7ee9	Kvass	格瓦斯	0	meal,drink,NOT-STORABLE
+30f08f31	Kvass	格瓦斯	300	ingredient
+9c75d9c3	Lake Trout	湖鲑鱼	450	ingredient,fish
+de7bb5b4	Lamb	羊羔肉	700	ingredient
+daede5f7	Lamp_Apt_Central_Market_1	吊灯	18000	furniture
+3ef19342	Lamp_Apt_Central_Market_2	吸顶灯	10000	furniture
+cfecf4c7	Lamp_Apt_Central_Market_3	吊灯	19000	furniture
+78a4de21	Large_Fridge_with_Groceries	大号冰箱	60000	furniture
+97ec31a8	Leeks	韭葱	170	ingredient,plant
+7e15ebf8	Leeks Seeds	韭葱种子	1000	seed
+76120e4d	Lemon Soda	柠檬苏打	200	ingredient
+1cdedd63	Lemongrass	柠檬草	180	ingredient,plant
+d8316bb7	Lemongrass Seeds	柠檬草种子	1000	seed
+c1632b80	Lemons	柠檬	200	ingredient,plant,seed
+27d1499e	Lettuce	生菜	200	ingredient,plant
+242dc33d	Lettuce Seeds	生菜种子	1000	seed
+8d6ee0d4	Level Up! Patch	“升级！”贴片	680000	
+9d72d7a2	Light Bar	条状灯带	15000	furniture
+5b31640a	Light_Goggles	VR眼镜	120000	furniture
+fb6b6505	Light_Headphone	耳机	30000	furniture
+9d12265b	Lime	青柠	200	ingredient
+828c21c1	Liquid Nitrogen	液氮	300	ingredient
+6caf6e59	Lizard	蜥蜴	600	ingredient
+8571c83f	Lizard Tonic	蜥蜴汤力	0	meal,drink,NOT-STORABLE
+59c5060e	Logic Relay	逻辑中继	75000	
+03fb06e8	Lost Bracelet	丢失的手镯	3500	
+da45fd1e	Lost Earring	丢失的耳环	1500	
+b1ca1557	Lost Necklace	丢失的项链	5000	
+bd545c30	Lost Ring	丢失的戒指	2000	
+cd2dfdd7	Lotus Leaves	荷叶	300	ingredient
+3d6074a9	Lotus Roots	藕	400	ingredient,plant
+3b0fc0bd	Lotus Roots Seeds	莲藕种子	1000	seed
+77e35270	Low_Shelf_01	浴室架	15000	furniture
+740c07ae	Low_Shelf_02	浴室架	20000	furniture
+2ae0da64	Low_Shelf_03	浴室架	20000	furniture
+22ccab41	Low_Shelf_04	浴室架	20000	furniture
+b6668cf5	Low_Shelf_Corner	浴室墙角架	15000	furniture
+17a80424	Luxury Island Flower	岛屿花	300	ingredient
+7055b8ab	Ma Gomba's Morels	菇妈的羊肚菌	900	ingredient,plant
+6583d874	Magic Mushrooms	迷幻蘑菇	600	ingredient,plant
+a36b55ce	Magic Potion	魔法药水	0	meal,useable,NOT-STORABLE
+60a237ca	Mango	芒果	400	ingredient
+b5f27dca	Marjorie's Chip	生药公司旧记录	0	
+9e4ac97b	Matcha Powder	抹茶粉	300	ingredient
+1f55703a	Mayonnaise	蛋黄酱	150	ingredient
+5a358dd3	Mealworms	面包虫	100	ingredient
+d5a0d23a	MeatFarmingModuleA	A级肉类打印模块	41000	furniture
+11456bc4	MeatFarmingModuleB	B级肉类打印模块	21000	furniture
+6ef3c905	MeatFarmingModuleC	C级肉类打印模块	11000	furniture
+cfdae31e	Mei Ling	美铃	0	meal,drink,NOT-STORABLE
+f0611750	Melon	香瓜	400	ingredient
+20ee14a3	Meridian Pizza	子午披萨	0	meal,useable,NOT-STORABLE
+a1f34129	Micronutrient Premix	微量元素混合剂	300	ingredient
+cb0da62a	Milk	鲜奶	150	ingredient
+6775cbbf	Mini Hotpot	小火锅	0	meal,useable,NOT-STORABLE
+8539d27f	Mint	薄荷	180	ingredient,plant
+a7a5a396	Mint Mojito Iced Coffee	薄荷莫吉托冰咖啡	0	meal,drink,NOT-STORABLE
+433a4577	Mint Seeds	薄荷种子	1000	seed
+8a65e26c	Molotov Cocktail	莫洛托夫鸡尾酒	0	meal,drink,NOT-STORABLE
+3fc8edd3	Morels Spores	羊肚菌孢子	0	seed
+2a7e3d10	Motherboard	主板	55000	
+df44e164	Mountain Flower	山花	300	ingredient,plant
+7e0ff501	Mountain Flower Seeds	山花种子	1000	seed
+142955ac	Mozarella	马苏里拉奶酪	250	ingredient,plant
+9d55c222	Mushroom Hot Cocoa	蘑菇热可可	0	meal,drink,NOT-STORABLE
+f385f71c	Mushroom Mocha	菌菇抹茶	1100	
+9c2b9469	MushroomsFarmingModuleA	A级菌菇种植模块	41000	furniture
+9dd8c8bb	MushroomsFarmingModuleB	B级菌菇种植模块	21000	furniture
+89297756	MushroomsFarmingModuleC	C级菌菇种植模块	11000	furniture
+75e4b7bb	Muskmelon	甜瓜	400	ingredient
+2af340f7	Mussels	贻贝	500	ingredient,plant,seed
+7337364f	Mustard	芥末酱	100	ingredient
+16d21c7d	Mutant Burger	变种汉堡	0	meal,useable,NOT-STORABLE
+1d6f0471	Mystery Spores	神秘孢子	500	seed
+d91d7083	Nata-Log	运输局日志	7900	
+ffd9cb86	Neon Tubes	霓虹灯管	2000	
+c03a7425	NeonSign	霓虹灯招牌	100000	
+261b9698	Nettle	荨麻	180	ingredient,plant
+7fbf4259	Nettle Seeds	荨麻种子	1000	seed
+3f035c70	Neutral Oil	中性油	100	ingredient
+d2a63935	Nitro Espresso Tonic	氮气浓缩汤力	0	meal,drink,NOT-STORABLE
+4dd5233b	Nivalis	尼瓦利斯	0	meal,drink,NOT-STORABLE
+aaa2d300	Nivalis Sunset	尼瓦利斯日落	0	meal,drink,NOT-STORABLE
+3e82d754	Nivalis Times	尼亚利斯时报	0	equippable
+0e5b25a6	Nivalis-Brochette	尼瓦利斯串烧	0	meal,useable,NOT-STORABLE
+de26cb88	Nutmeg	肉豆蔻	150	ingredient
+b78a9953	Oatstraw	燕麦草	180	ingredient,plant
+c7c7facd	Oatstraw Seeds	燕麦草种子	1000	seed
+2be3662c	Object_tableLamp01	桌灯	4000	furniture
+e78a1770	Object_tableLamp02	桌灯	4000	furniture
+02287269	Ocean Latte	海洋拿铁	0	meal,drink,NOT-STORABLE
+634f802a	Octo-Shot Espresso	八倍浓缩咖啡	1500	
+1c5d348d	Okra	秋葵	200	ingredient,plant
+34ecf656	Okra Seeds	秋葵种子	1000	seed
+301b0f6d	Okroshka	俄罗斯冻汤	0	meal,useable,NOT-STORABLE
+a49d498d	Old Android Body	旧仿生人躯体	5000	
+4ff398dc	Old Android CPU	旧仿生人处理器	30000	
+39ed4182	Old Android Head	旧仿生人头	50000	
+c7a833f1	Old Boot	旧靴子	200	
+b20d654b	Old Hat	旧帽子	300	
+efbbb2b0	Old LifeCorp Records	生药公司旧记录	100000	
+4dc7052e	OldFishingRod	老旧的鱼竿	10000	equippable
+85238e26	Olive Oil	橄榄油	200	ingredient
+00e34e65	Olives	橄榄	200	ingredient,plant,seed
+e78caf26	Olivier Salad	奥利维耶沙拉	0	meal,useable,NOT-STORABLE
+0389888b	Onigiri	手握饭团	0	meal,useable,NOT-STORABLE
+eeee8b7f	Onion Rings	洋葱圈	0	meal,useable,NOT-STORABLE
+2e3eaf49	Onion Soup	洋葱汤	0	meal,useable,NOT-STORABLE
+eb80b458	Onions	洋葱	150	ingredient,plant
+95370af8	Onions Seeds	洋葱种子	1000	seed
+b3eb807d	Oolong	乌龙茶	300	ingredient
+43ee58b0	Orange Avocado Dream	梦幻橙味牛油果	0	meal,NOT-STORABLE
+784c29e7	Orange Creme Caramel	橘子焦糖布丁	0	meal,useable,NOT-STORABLE
+f382953f	Oranges	橙子	250	ingredient,plant,seed
+838c9ff7	Osmanthus	桂花	180	ingredient,plant
+2dec3c38	Osmanthus Seeds	桂花种子	1000	seed
+cb71333f	Oven	烤炉	60000	furniture
+ebf9a0d0	Oyster Shooter	牡蛎子弹酒	0	meal,drink,NOT-STORABLE
+2afd5b50	Oysters	牡蛎	500	ingredient,plant,seed
+fc8bf0d3	Package for Sage	赛吉的包裹	10000	
+3b35357f	Pan	平底锅	10000	furniture
+d9afd113	Pancake Coffee	煎饼咖啡	1800	
+a63e717d	Paprika	红辣椒	170	ingredient
+17527816	Parmesan	帕尔马干酪	300	ingredient,plant
+3d6d9fb8	Parmesan Crumbled Whitefish	帕尔马酪白鲑鱼	0	meal,useable,NOT-STORABLE
+8307f23a	Parsley	香芹	180	ingredient,plant
+7368e768	Parsley Seeds	香芹种子	1000	seed
+217549e5	PB&J	花生酱果冻三明治	0	meal,drink,NOT-STORABLE
+b7ae9346	Peach	桃子	350	ingredient
+065db0aa	Peanuts	花生	300	ingredient
+bdbb303a	Pearl Barley	大麦米	150	ingredient,plant
+7250d4b2	Pearl Barley Seeds	大麦米种子	1000	seed
+e1b66af0	Peas	豌豆	150	ingredient,plant
+f08002b0	Peas Seeds	豌豆种子	1000	seed
+9e264e40	Pemmican	干肉饼	0	meal,useable,NOT-STORABLE
+c79f7ee5	Pepperoni	意式辣肠	200	ingredient
+0eab5d19	Peppers	胡椒粉	350	ingredient,plant
+0cdb8e67	Peppers Seeds	胡椒种子	1000	seed
+0379a22a	Perch	河鲈	550	ingredient,fish
+869a09af	Photos of Eldridge	埃尔德里奇的照片	10000	
+d6a08f85	Pi Pa	枇杷	0	meal,drink,NOT-STORABLE
+8171b1c1	Pi Pa Gao	枇杷膏	300	ingredient
+66287ba5	Pickle Corn Dog	腌菜玉米肠	0	meal,useable,NOT-STORABLE
+09768d14	Picture_Apt_Central_Market_1	抽象绘画	60000	furniture
+4a7810ee	Picture_Apt_Central_Market_2	抽象绘画	105000	furniture
+c587cfa6	Picture_Apt_Central_Market_3	抽象绘画	90000	furniture
+9717b9c5	Picture_Apt_Central_Market_4	抽象绘画	90000	furniture
+46bba7fa	Picture_Apt_Central_Market_5	抽象绘画	200000	furniture
+1adfbeab	Pike	梭子鱼	400	ingredient,fish
+84682823	Pike Poke	梭子鱼波奇饭	0	meal,useable,NOT-STORABLE
+746d5f94	Pina Colada	凤梨椰香朗姆	0	meal,drink,NOT-STORABLE
+83238263	Pineapple	菠萝	400	ingredient
+a03c9820	Pineapple Fried Rice	菠萝炒饭	0	meal,useable,NOT-STORABLE
+da3adfee	Pissoir_Urinal	小便池	40000	furniture
+ebbda66d	Pizza Cocktail	披萨鸡尾酒	0	meal,drink,NOT-STORABLE
+58525ffd	Pizza Creativo	创意米兰披萨	0	meal,useable,NOT-STORABLE
+94a08c93	Pizza Dough	披萨面团	100	ingredient
+f1e61a7d	Pizza Frutti di Mare	海鲜披萨	0	meal,useable,NOT-STORABLE
+4b4934e7	Pizza Napoli	那不勒斯比萨	0	meal,useable,NOT-STORABLE
+f7655dc4	Pizza Speciale	精选披萨	0	meal,useable,NOT-STORABLE
+3a3bf83a	Plaque_1		100000	
+af98ad8f	Plaque_1_aged		100000	
+d3b93433	Plaque_2		100000	
+9adad126	Plaque_2_aged		100000	
+5b6ae5e0	Plaque_3		100000	
+8232526d	Plaque_3_aged		100000	
+0ba5b365	Plaque_4		100000	
+6906e92a	Plaque_4_aged		100000	
+7fc779f5	Plaque_5		100000	
+1a36e743	Plaque_5_aged		100000	
+9b4ebf03	Plaque_6		100000	
+1759a738	Plaque_6_aged		100000	
+65c57d02	Plasteel Junk	塑钢破烂	200	
+7393e14a	Plunger	皮搋子	2000	furniture
+4acd034c	Poached Roaches	白灼蟑螂	0	meal,useable,NOT-STORABLE
+32f6aae8	Poison Pill Bottle	毒药瓶	8500	
+001088d5	Poison-Pill-Bottle		100000	
+24814b80	Pork	猪肉	300	ingredient,plant
+135fcb0c	Pork Belly	五花肉	300	ingredient,plant
+d52ec7c3	Pork Belly Resin Pellets	五花肉胶颗粒	300	seed
+14ab611a	Pork Resin Pellets	猪肉胶颗粒	300	seed
+545b2c85	Portable_Toilet	便携式马桶	120000	furniture
+2a3f3573	Post-Apocalypse	后启示录	15000	
+086b2c01	Potato Mushroom Salad	土豆蘑菇沙拉	0	meal,NOT-STORABLE
+e4508389	Potatoes	土豆	250	ingredient,plant
+41cd4665	Potatoes Seeds	土豆种茎	1000	seed
+ec1a0a2b	Pot_1	盆栽	12000	furniture
+03184c1b	Pot_10	盆栽	11000	furniture
+7f0c9f78	Pot_11	盆栽	16500	furniture
+bd5440c9	Pot_12	盆栽	23000	furniture
+7dd91823	Pot_13	盆栽	13000	furniture
+73d7c2b2	Pot_14	盆栽	10000	furniture
+f7415b59	Pot_15	盆栽	9000	furniture
+c3cb879a	Pot_16	壁挂盆栽	8000	furniture
+85c9fec8	Pot_17	壁挂盆栽	5000	furniture
+33d671d3	Pot_18	壁挂盆栽	6000	furniture
+cbbf1436	Pot_19	悬挂盆栽	8000	furniture
+09307913	Pot_2	盆栽	15000	furniture
+c417b353	Pot_3	盆栽	18500	furniture
+5035067e	Pot_4	盆栽	16000	furniture
+385f23b8	Pot_5	盆栽	20000	furniture
+d71cb2ec	Pot_6	盆栽	21000	furniture
+5b82a1fd	Pot_7	盆栽	22000	furniture
+ace50429	Pot_8	盆栽	25000	furniture
+0d1e7767	Pot_9	盆栽	10000	furniture
+04265fec	Prawns	大虾	700	ingredient
+b2c56a2e	Prosciutto	意式火腿	600	ingredient
+502c6ff5	Protein Powder	蛋白粉	200	ingredient
+9671f2b7	Pumpkin	南瓜	300	ingredient
+098129fa	Pumpkin Juice	南瓜汁	0	meal,drink,NOT-STORABLE
+b74e2a12	Purple Magic	紫色魔法	0	meal,drink,NOT-STORABLE
+154684e3	Purple Potato Bombs	紫薯球	0	meal,useable,NOT-STORABLE
+46e563b8	Purple Processing Card	紫色处理卡	6500	
+d7447d87	Queen_bed_1	带绿植豪华双人床	80000	furniture
+e9747337	Queen_bed_1_2	带绿植豪华双人床	80000	furniture
+1f0ebd64	Queen_bed_2	豪华双人床	80000	furniture
+a5a32611	Radish Seeds	红萝卜种子	1000	seed
+0ed5ae0a	Radishes	红萝卜	300	ingredient,plant
+d0435686	Rain Drop Cake	水信玄饼	0	meal,useable,NOT-STORABLE
+855162ed	Rainbow Trout	彩虹鳟	700	ingredient,fish
+7c937602	Ramen Burger	拉面汉堡	0	meal,useable,NOT-STORABLE
+14bd1be0	Ramen Noodles	拉面面条	150	ingredient
+c5b8be81	Rangehood_W90cm	厨房一体式抽油烟机	20000	furniture
+fcd75e5a	Rangehood_W90cm_Set_02	厨房一体式抽油烟机	20000	furniture
+417606b0	Rangehood_W90cm_Set_03	厨房一体式抽油烟机	20000	furniture
+2ceadaa3	Range_W90cm	厨房灶台	60000	furniture
+2ca4420d	Range_W90cm_Set_02	厨房灶台	60000	furniture
+2c2a2868	Range_W90cm_Set_03	厨房灶台	60000	furniture
+5e89beef	Raspberries	覆盆子	400	ingredient
+8e77ed67	Rassolnik Soup	酸黄瓜汤	0	meal,useable,NOT-STORABLE
+21dafa13	Rat Meat	鼠肉	600	ingredient
+71e37b8b	Rattan_Steel	藤编洗衣篮	4000	furniture
+a3f8b93c	Raw Milk	生牛乳	1000	seed
+56b00669	Red Beans	红豆	400	ingredient,plant
+fe4653e8	Red Beans Seeds	红豆种子	1000	seed
+8e2d4a5c	Red Wire	红色电线	500	
+376fb302	Regular_Trash-Bin_Medium_01	垃圾桶	8000	furniture
+88355026	Regular_Trash-Bin_Medium_02	垃圾桶	8000	furniture
+1d67c461	Remote Access Chip	远程访问芯片	9000	
+3737b892	Reservation Chip	预订芯片	8000	
+0d508f54	Restaurant_bench_1_blue	霓虹长凳	10000	furniture
+f0029840	Restaurant_bench_1_red	红色长凳	10000	furniture
+446c97c3	Restaurant_bench_2	蓝色木长凳	10000	furniture
+86ba1d41	Restaurant_bench_3_blue	配底灯蓝长凳	10000	furniture
+01f2e907	Restaurant_bench_3_white	配底灯白长凳	10000	furniture
+465c2633	Restaurant_chair_1_black	高脚凳	3000	furniture
+88e0067e	Restaurant_chair_1_blue	高脚凳	3000	furniture
+96191b6c	Restaurant_chair_1_red	高脚凳	3000	furniture
+af0875a4	Restaurant_chair_2	用餐椅	4000	furniture
+7cbf93aa	Restaurant_chair_3	用餐椅	5000	furniture
+e2458d95	Restaurant_chair_4_blue	木制凳	2000	furniture
+272452d3	Restaurant_chair_4_white	木制凳	2000	furniture
+67c4d105	Restaurant_Chair_5	椅子	3000	furniture
+eb7bc728	Restaurant_Chair_6	时尚椅子	4000	furniture
+af82ce38	Restaurant_High_Chair	吧台椅	3000	furniture
+3b7e2c59	Restaurant_High_Table_1	高脚桌	15000	furniture
+af4393ce	Restaurant_High_Table_2	高脚桌	15000	furniture
+59796bf6	Restaurant_Long_Table_1	长桌	30000	furniture
+cf2ef61f	Restaurant_Long_Table_2	长桌	30000	furniture
+35c17306	Restaurant_Long_Table_3	长桌	30000	furniture
+334311a8	Restaurant_Long_Table_4	长桌	25000	furniture
+a75b8d2a	Restaurant_Table_1	桌子	7000	furniture
+1096fca4	Restaurant_Table_2_black	桌子	8000	furniture
+fd6d5aa5	Restaurant_Table_2_white	桌子	8000	furniture
+00fe950a	Restaurant_Table_3	桌子	8000	furniture
+fdc1f46c	Restaurant_Table_4	桌子	8000	furniture
+d2496f7a	Restaurant_Table_5	桌子	9000	furniture
+2d698140	Retraction Pill	清醒药丸	7000	
+81b8a64b	Retro_Arcade_Invaders	复古街机《侵略者》	150000	furniture
+e458b8df	Rheno's Confession	雷诺的供状	0	
+ab47d0d7	Rice	大米	100	ingredient,plant
+b545e629	Rice Noodles	米线	150	ingredient
+bff925b0	Rice Seeds	水稻种子	1000	seed
+88c97dd7	Rice Wine	米酒	200	ingredient
+0eb4bdd1	Roach	拟鲤	600	ingredient,fish
+9acc53f3	Roasted Crucian in Sour Cream Sauce	酸奶油酱烤鲫鱼	0	meal,useable,NOT-STORABLE
+34be8bd2	Roasted Tofu Lollipops with Pesto	香蒜沙司烤豆腐棒棒糖	0	meal,useable,NOT-STORABLE
+e0d6af2f	Roasted Yam Seaweed Salad	烤山药海苔沙拉	0	meal,NOT-STORABLE
+629d4ff8	RootFarmingModuleA	A级块根种植模块	41000	furniture
+4436429f	RootFarmingModuleB	B级块根种植模块	21000	furniture
+28026d0f	RootFarmingModuleC	C级块根种植模块	11000	furniture
+36925fa9	Rosemary	迷迭香	180	ingredient,plant
+d1461cd0	Rosemary Seeds	迷迭香种子	1000	seed
+9291a6c9	Roses	玫瑰	300	ingredient
+c2b12218	RottenFood	腐坏的食物	0	
+72e119e9	Roxi Fynx Jersey	罗克西·芬克斯的战衣	25000	
+a8e0ac37	Ruby Red	红色刚玉	0	meal,drink,NOT-STORABLE
+cdb69461	Rudd	赤睛鱼	450	ingredient,fish
+4d09d0db	Rudd Kebab	赤睛鱼烤串	0	meal,useable,NOT-STORABLE
+a42de709	Ruffe	梅花鲈	600	ingredient,fish
+3734bb6d	Rum	朗姆酒	400	ingredient
+20202e8e	Rust Remover	除锈剂	200	
+b5c05c62	Rusty Wire	锈蚀电线	200	
+382b86fc	RustyFishingRod	生锈的鱼竿	20000	equippable
+e22b436d	Rye	黑麦	150	ingredient,plant
+ef76d0c2	Rye Seeds	黑麦种子	1000	seed
+adb032c0	SabreFish	黑鳕鱼	600	ingredient,fish
+468140f2	Sailor Soup	水手汤	0	meal,useable,NOT-STORABLE
+3733a90a	Sake Maki	三文鱼寿司卷	0	meal,NOT-STORABLE
+7020205c	Sake Nigiri	三文鱼手握寿司	0	meal,NOT-STORABLE
+c400d114	Sal's Recipe Book	萨尔的食谱秘籍	19000	
+96fc3365	Salmon	三文鱼	500	ingredient,fish
+07c2c4e8	Salted Taimen	盐渍哲罗鲑	0	meal,useable,NOT-STORABLE
+ae37779b	Sample Mushroom Spores	样本孢子	2000	
+b96a661e	Sashimi Plate	刺身拼盘	0	meal,NOT-STORABLE
+75056d4b	Sausage	香肠	300	ingredient
+d1ea099a	Sautéed Grayling with Pasta Carbonara	煎茴鱼肉酱面	0	meal,useable,NOT-STORABLE
+cacf8ef9	Scallops	瑶柱	600	ingredient,plant,seed
+8445d92f	Scarlet Shot	猩红子弹	0	meal,drink,NOT-STORABLE
+598253c1	Scorpion Shimmer Chip	闪光蝎子芯片	40000	
+05b75cc2	Sculpture_Bionic_Bone	仿生骨骼雕塑	200000	furniture
+a3660993	Sculpture_Bluescraper	蓝厦雕塑	180000	furniture
+aa476681	Sculpture_CarvedStone	玻璃雕塑	100000	furniture
+77658694	Sculpture_CarvedStone_mossy	象棋雕像	100000	furniture
+e4f44250	Sculpture_Liquid_Server	液态服务器雕塑	500000	furniture
+dacdb78d	Sculpture_Singularity	奇点雕塑	100000	furniture
+2925d432	Sculpture_Thermic_High	热力雕塑	100000	furniture
+1f657bca	Sea Urchin Guacamole Tacos	鳄梨海胆塔可	0	meal,useable,NOT-STORABLE
+63c8b504	Sea Urchins	海胆	800	ingredient,plant,seed
+8b50e1a1	Seashell	海贝	200	
+621d65c1	Seaweed	海苔	150	ingredient,plant
+ef44735b	Seaweed Seeds	海苔种子	1000	seed
+3ec155b7	Serenity	清逸安宁	0	meal,drink,NOT-STORABLE
+5880223f	Sesame Oil	芝麻油	150	ingredient
+64fcf8f0	Sewers Chip	下水道芯片	8000	
+10f52706	Shcherba	月桂鲈鱼汤	0	meal,useable,NOT-STORABLE
+c52f9dc2	Sheet Music	活页乐谱	90000	
+f98b12b8	Shelf_Board_V1_Large	大型木制架子	8000	furniture
+4d77d00a	Shelf_Board_V1_Medium	中型木制架子	6000	furniture
+70eec08d	Shelf_Board_V1_Small	小型木制架子	5000	furniture
+82f371d8	Shelf_Board_V2_Large	大型霓虹架子	8000	furniture
+c2962eca	Shelf_Board_V2_Medium	中型霓虹架子	6000	furniture
+87a9b010	Shelf_Board_V2_Small	小型霓虹架子	5000	furniture
+ab030953	Shelf_Board_V3_Large	大型金属架子	9000	furniture
+7dc47270	Shelf_Board_V3_Medium	中型金属架子	7000	furniture
+6065ee26	Shelf_Board_V3_Small	小型金属架子	6000	furniture
+934c0957	Shelf_Board_V4_Large	大型蓝色架子	10000	furniture
+8a8c2a7b	Shelf_Board_V4_Medium	中型蓝色架子	8000	furniture
+0e9b04ed	Shelf_Board_V4_Small	小型蓝色架子	7000	furniture
+c2150cfd	Shelf_Decoration_02_Camera_V1	装饰相机	80000	furniture
+261c3522	Shelf_Decoration_02_Camera_V2	装饰相机	80000	furniture
+ea12dc88	Shelf_Decoration_02_Hourglass	沙漏	80000	furniture
+0e35e686	Shelf_Decoration_03_Neon_Box_Sign	霓虹灯箱标志	20000	furniture
+65a246da	Shelf_Decoration_05_Maneki_Neko_V1	招财猫	10000	furniture
+2c7dd2bd	Shelf_Decoration_05_Maneki_Neko_V2	招财猫	10000	furniture
+0b4b682d	Shellfish	贝类	400	ingredient,plant,seed
+8ba397c8	Shiitake	香菇	450	ingredient,plant
+17bdf2e5	Shiitake Spores	香菇孢子	1000	seed
+90fb0f48	Shimmer Sage Look-a-Like	乍看像闪光鼠尾草	500	
+aff4a9bb	Shower_Cabin_01_Small	狭小淋浴舱	100000	furniture
+1957fd70	Shower_Cabin_02_Normal	大型淋浴舱	200000	furniture
+a83db8c3	Shower_Cabin_03_Luxury	奢华淋浴舱	300000	furniture
+093651db	Shrimp	虾	450	ingredient
+3e68eb79	Shroom Soup	蘑菇汤	0	meal,useable,NOT-STORABLE
+702255f2	Silkworm Pupae	蚕蛹	400	ingredient
+f7639a42	Single-Door-Fridge_1	小号冰箱	40000	furniture
+cfd327a9	Single-Door-Fridge_2	小号冰箱	40000	furniture
+8e8f5332	Single_Bed_01	单人床	50000	furniture
+cb406178	Single_Bed_02	单人床	50000	furniture
+67f4bf46	Single_bed_1	悬浮单人床	50000	furniture
+6bebabbc	Single_bed_2	悬浮单人床	50000	furniture
+c0be540a	Sizzling Beef Rice	铁板牛肉饭	0	meal,useable,NOT-STORABLE
+e3d76d96	Small-Jukebox	小型点唱机	115000	furniture
+a010d176	Small_Button_Rectangular-Large	矩形按钮	2000	furniture
+94db633e	Small_Button_Round-1	圆形按钮	2000	furniture
+6aabf8a9	Small_Button_Round-2	圆形按钮	2000	furniture
+dbc89c2d	Small_Button_Square-1	方形按钮	2000	furniture
+ad429c50	Small_Button_Square-2	方形按钮	2000	furniture
+8743ba60	Small_Button_Square-Large	方形按钮	2000	furniture
+7352e43f	Smoked Salmon Cupcake	熏鲑鱼杯子蛋糕	0	meal,useable,NOT-STORABLE
+94d38a0d	Snake	蛇肉	600	ingredient
+6cf755a0	Snake Soup	蛇肉汤	0	meal,useable,NOT-STORABLE
+77d8604d	Snake Wine	蛇酒	800	ingredient
+31029c39	Solyanka Soup	酸辣浓汤	0	meal,useable,NOT-STORABLE
+84f98526	Sour Cream	酸奶油	200	ingredient,plant
+bebc958f	Soy Beans	大豆	150	ingredient,plant
+8a103854	Soy Beans Seeds	大豆种子	1000	seed
+b049a90e	Soy Pellets	大豆饲料	1000	seed
+7a682a14	Soy Sauce	酱油	70	ingredient
+85b1e947	SoyBoost	豆志昂扬	0	meal,drink,NOT-STORABLE
+34423e6b	Spaghetti Noodles	意大利面	150	ingredient
+f316e854	Special Bait	特殊诱饵	900	
+669abd4d	Spiced Shroom Coffee	五香蘑菇咖啡	0	meal,drink,NOT-STORABLE
+cc41ad04	Spicy Lemon Chicken Feet Salad	酸辣柠檬凤爪沙拉	0	meal,useable,NOT-STORABLE
+585360cd	Spider Roll	蜘蛛卷	0	meal,NOT-STORABLE
+c349a0ba	Spinach	菠菜	320	ingredient,plant
+b202a026	Spinach Apple Salad	菠菜苹果沙拉	0	meal,NOT-STORABLE
+d3613416	Spinach Seeds	菠菜种子	1000	seed
+fe7f242f	Spirulina	螺旋藻	300	ingredient
+f1125497	Spring Roll Wrappers	春卷皮	150	ingredient
+941fb886	Squid	鱿鱼	500	ingredient
+40f76c19	Squid Ink	墨鱼汁	500	
+a12cb773	Squid Ink Pasta with Shrimp and Scallop	扇贝虾墨鱼汁意面	0	meal,useable,NOT-STORABLE
+6560e98e	Squid Stuffed with Rice	鱿鱼酿饭	0	meal,useable,NOT-STORABLE
+a752500c	Stacks	叠叠堡	0	meal,useable,NOT-STORABLE
+019f8e32	Standard_Plastic	塑料洗衣篮	2000	furniture
+bff5f208	Standing_Lamp_1	落地灯	22000	furniture
+1b384ce7	Standing_Lamp_2	落地灯	31000	furniture
+d6535cfa	Standing_Lamp_3	落地灯	29000	furniture
+3920b66d	Star Anise	八角茴香	150	ingredient
+8dff137b	Static_High_Table		0	furniture,NOT-STORABLE
+cb90c604	Static_Low_Table		0	furniture,NOT-STORABLE
+ccf98014	Static_Low_Table_Corner		0	furniture,NOT-STORABLE
+3ec6c929	Steak	肉排	0	meal,useable,NOT-STORABLE
+4b989cf1	Steamed Sticky Rice with Crab	糯米蟹	0	meal,useable,NOT-STORABLE
+dd76aa0d	Steamed Tench	清蒸丁鲷	0	meal,useable,NOT-STORABLE
+c29626b7	Stickleback	棘鱼	400	ingredient,fish
+7bc78206	Stinky Tofu	臭豆腐	0	meal,useable,NOT-STORABLE
+0432e9bf	Straw Mushrooms	草菇	300	ingredient,plant
+78dda06e	Straw Mushrooms Spores	草菇孢子	1000	seed
+f38d6eba	Strawberries	草莓	500	ingredient
+1b6a727a	Strawberry Bomb Coffee	草莓蛋糕咖啡	1300	
+4dd53112	Strawberry Stinger	草莓毒刺	0	meal,drink,NOT-STORABLE
+362225bf	Subland	次味园	0	meal,useable,NOT-STORABLE
+1d2e1184	Sugar	食糖	50	ingredient
+b31eb46f	Summer Salad	夏季沙拉	0	meal,NOT-STORABLE
+026ce9eb	Sunflower Oil	葵花籽油	100	ingredient
+b79ca7c6	Sunrise	日出	0	meal,useable,NOT-STORABLE
+bb8c2667	Sushi_Counter	寿司柜台	49000	furniture
+99575783	Sweet Peppers	尖椒	350	ingredient,plant
+4e7def60	Sweet Peppers Seeds	甜椒种子	1000	seed
+41f9dbd6	Sweet Potatoes	红薯	300	ingredient,plant
+a51f1055	Sweet Potatoes Seeds	红薯种子	1000	seed
+fbe4a162	Sweet Waffle	甜华夫饼	0	meal,useable,NOT-STORABLE
+dc4f3b7a	Synectar	仿生琼浆	0	meal,drink,NOT-STORABLE
+686a6f50	Synthetic Alcohol	合成酒精	300	ingredient
+1802e0f1	Table_Menu	平板菜单	15000	furniture
+38fe4db4	Table_Umbrella_Round	餐桌遮伞（圆）	10000	furniture
+cb942674	Table_Umbrella_Square	餐桌遮伞（方）	10000	furniture
+723457c3	Taimen	哲罗鲑	650	ingredient,fish
+26845206	Taiyaki	鲷鱼烧	0	meal,useable,NOT-STORABLE
+95df626b	Tapioca Milk and Strawberries	草莓珍珠奶茶	0	meal,useable,NOT-STORABLE
+989ce5b9	Tarantula	狼蛛	400	ingredient
+cafb298e	Tarantula Burger	狼蛛汉堡	0	meal,useable,NOT-STORABLE
+8e364fd2	Taro Roots	芋头	450	ingredient,plant
+49d7b613	Taro Roots Seeds	芋头种子	1000	seed
+db7321eb	Taste of Lobster	龙虾之味	0	meal,useable,NOT-STORABLE
+cc207e9d	Tea Leafs	茶叶	300	ingredient
+725db9fd	Tech_Gadgets_Cam_V1	摄像系统	60000	furniture
+43afb593	Tech_Gadgets_Cam_V2	摄像系统	60000	furniture
+590da50e	Tench	丁鲷	500	ingredient,fish
+81300832	Tendon	天丼	0	meal,useable,NOT-STORABLE
+90db8ff5	Tequila	龙舌兰酒	800	ingredient
+983305e2	Tequila Corretto	龙舌兰烈酒咖	1700	
+413b7bf4	Tereré	巴拉圭凉茶	0	meal,drink,NOT-STORABLE
+493bb460	Teriyaki Rainbow Trout	照烧彩虹鳟	0	meal,useable,NOT-STORABLE
+96e0229e	TherapayBotSafia6819_clean		100000	
+51824753	TherapayBotSafia6819_decayed		100000	
+9520171c	TherapayBotSafia6819_rusty		100000	
+9e983fe6	Thyme	百里香	180	ingredient,plant
+a23f3134	Thyme Seeds	百里香种子	1000	seed
+e68b3f1d	Toast	面包	100	ingredient
+5d45978d	Tofu	豆腐	220	ingredient,plant
+a5331e23	Toilet_Paper	厕纸	1000	furniture
+d8c83415	Tomatoes	番茄	350	ingredient,plant
+9a5980d8	Tomatoes Seeds	番茄种子	1000	seed
+082a5489	Tongue Twister	绕舌酱 	4000	
+0fa07d9f	Tonic Water	汤力水	250	ingredient
+f8762dfe	Tonkotsu Ramen	豚骨拉面	0	meal,NOT-STORABLE
+c5d430b3	Towel_Bar_Bath_Towel	毛巾架	6000	furniture
+2a909ac5	Towel_Rack	毛巾架	10000	furniture
+1e1677fb	Trailer_Grill	铁板烧	60000	furniture
+cfd54ec5	Trailer_Shelve_1	工业冷藏柜	45000	furniture
+5fa11f70	Trailer_Shelve_2	壁挂储物柜	25000	furniture
+3050c2c8	Trailer_Sink	大号水槽	40000	furniture
+efba13b0	Tray_Basic		0	NOT-STORABLE
+a0972930	Triangle Light	三角形灯	13000	furniture
+7e671d11	Trout with Garlic Lemon Butter Herb Sauce	蒜香柠檬黄油鲑鱼	0	meal,useable,NOT-STORABLE
+c1f37e54	TrueCast7XFishingRod	抛必中7X	140000	equippable
+b379b9f0	TV_Stand_Set_1	电视	50000	furniture
+6e982dfa	TV_Stand_Set_2	电视	60000	furniture
+bdb33671	TV_Stand_Set_3	电视	70000	furniture
+3fa3e486	TV_Stand_Set_4	电视	80000	furniture
+cfb4ea32	Udon Noodles	乌冬面	150	ingredient
+0669c3d3	Ultra 64	奥特 64	0	meal,drink,NOT-STORABLE
+b2cd6086	V1_Keyboard	键盘	10000	furniture
+7def2c72	V1_Mouse	鼠标	6000	furniture
+3ce1829c	V2_Keyboard	键盘	15000	furniture
+d9bf2e11	V2_Mouse	鼠标	7000	furniture
+f1770fe0	V3_Keyboard	键盘	12000	furniture
+c392e63f	V3_Mouse	鼠标	5000	furniture
+6ef367fc	Vanilla	香草	150	ingredient
+e3cd2511	VapoBooze	蒸酿酒醇	0	meal,drink,NOT-STORABLE
+8da8dcfc	Veal	小牛肉	700	ingredient
+930125c3	Veal Orloff	奥尔洛夫牛肉	0	meal,useable,NOT-STORABLE
+e2210121	VegCoffee	蔬萃咖啡	0	meal,drink,NOT-STORABLE
+67f115d1	Vege Burger	蔬菜汉堡	0	meal,useable,NOT-STORABLE
+9a3b2240	Veggie Roll	蔬菜寿司卷	0	meal,NOT-STORABLE
+bfacec7c	Vending_Machine_Beverage	自动售货机	100000	furniture
+cc13cc08	Vending_Machine_Blue	自动售货机	140000	furniture
+7604d37f	Vending_Machine_Drinks	自动售货机	100000	furniture
+dc11f744	Vending_Machine_Japanese	自动售货机	160000	furniture
+7cd3f9a7	Vending_Machine_Orange	自动售货机	130000	furniture
+525879ea	Vending_Machine_Scoop	自动售货机	100000	furniture
+f0d13a6b	Vending_Machine_Sunrice	自动售货机	100000	furniture
+9270f7fb	Vermouth	味美思酒	800	ingredient
+4529bad8	Vinegar	食醋	100	ingredient
+2acda945	Vinegret Salad	甜菜沙拉	0	meal,useable,NOT-STORABLE
+6fc2b3a7	VM_Bottle_1	瓶装汽水	300	NOT-STORABLE
+097c383c	VM_Bottle_2	瓶装汽水	300	NOT-STORABLE
+2774eb76	VM_Bottle_3	瓶装汽水	300	NOT-STORABLE
+80312117	VM_Bottle_4	瓶装汽水	300	NOT-STORABLE
+adbbf405	VM_Bottle_5	咖啡因水	300	NOT-STORABLE
+f5a704c9	VM_Bottle_6	柠檬气泡水	300	NOT-STORABLE
+3e551d7d	VM_Bottle_7	橙子气泡水	300	NOT-STORABLE
+a58d60f8	VM_Candy_Bar	块状糖	200	NOT-STORABLE
+239a6af1	VM_Chips_1	薯片	500	NOT-STORABLE
+6bc2f24a	VM_Chips_2	薯片	500	NOT-STORABLE
+ec2cb558	VM_Noodles	方便面	800	NOT-STORABLE
+145312bd	Vodka	伏特加	600	ingredient
+b766462a	Volga Zander	伏尔加梭鲈	450	ingredient,fish
+8d483ced	Waffle	华夫饼	200	ingredient
+a528f38b	Wall-Lamp_01	壁灯	15000	furniture
+9f82f891	Wall-Lamp_02	壁灯	16900	furniture
+84ae4c95	Wall-Lamp_03	壁灯	28000	furniture
+7b34fe0f	Wall-Lamp_04	壁灯	26000	furniture
+6095112f	Wall-Lamp_05	壁灯	11000	furniture
+bc96013f	Wall-Mounted_Air-Conditioner_01	空调	100000	furniture
+dd75da68	Wall-Mounted_Air-Conditioner_02	空调	87000	furniture
+163a4aed	Wall_Cabinet_Corner_W60cm_H40cm_Set_02	转角壁柜	10000	furniture
+cc065069	Wall_Cabinet_Corner_W60cm_H60cm_Set_02	转角壁柜	10000	furniture
+612dd38a	Wall_Cabinet_W40cm_H40cm_1DoorwGlass_Set_01	壁挂式橱柜（40×40）	10000	furniture
+e76b8c70	Wall_Cabinet_W40cm_H40cm_1Door_Set_01	壁挂式橱柜（40×40）	10000	furniture
+1c23902a	Wall_Cabinet_W40cm_H40cm_1Door_Set_02	单开门壁柜（40x40）	10000	furniture
+04f739c3	Wall_Cabinet_W40cm_H40cm_1Door_Set_03	壁挂式橱柜（40×40）	10000	furniture
+811c69fe	Wall_Cabinet_W40cm_H60cm_1DoorwGlass_Set_01	壁挂式橱柜（40×60）	10000	furniture
+07cc0dbb	Wall_Cabinet_W40cm_H60cm_1Door_Set_01	壁挂式橱柜（40×60）	10000	furniture
+f768ce37	Wall_Cabinet_W40cm_H60cm_1Door_Set_02	单开门壁柜（40x60）	10000	furniture
+25cae3b4	Wall_Cabinet_W40cm_H60cm_1Door_Set_03	壁挂式橱柜（40×60）	10000	furniture
+a6bb2c3b	Wall_Cabinet_W60cm_H40cm_1DoorwGlass_Set_01	壁挂式橱柜（60×40）	10000	furniture
+b1dbbcf5	Wall_Cabinet_W60cm_H40cm_1Door_Set_01	壁挂式橱柜（60×40）	10000	furniture
+7b798612	Wall_Cabinet_W60cm_H40cm_1Door_Set_02	壁挂式橱柜（60×40）	10000	furniture
+a848e85f	Wall_Cabinet_W60cm_H40cm_1Door_Set_03	壁挂式橱柜（60×40）	10000	furniture
+12cad6e0	Wall_Cabinet_W60cm_H40cm_Corner_1_Set_01	壁挂式转角橱柜（60×40）	10000	furniture
+1d43c3e3	Wall_Cabinet_W60cm_H40cm_Corner_Set_01	壁挂式转角（60×40）	10000	furniture
+ef231f87	Wall_Cabinet_W60cm_H40cm_Corner_Set_03	壁挂式转角（60×40）	10000	furniture
+c0e6fbcd	Wall_Cabinet_W60cm_H60cm_1DoorwGlass_Set_01	壁挂式橱柜（60×60）	10000	furniture
+ab96ba52	Wall_Cabinet_W60cm_H60cm_1Door_Set_01	壁挂式橱柜（60×60）	10000	furniture
+e587213c	Wall_Cabinet_W60cm_H60cm_1Door_Set_02	壁挂式橱柜（60×60）	10000	furniture
+5de97694	Wall_Cabinet_W60cm_H60cm_1Door_Set_03	壁挂式橱柜（60×60）	10000	furniture
+71d0179d	Wall_Cabinet_W60cm_H60cm_2Door_Set_01	壁挂式橱柜（60×60）	10000	furniture
+ba5ea5b8	Wall_Cabinet_W60cm_H60cm_2Door_Set_02	壁挂式橱柜（60×60）	10000	furniture
+0326afd5	Wall_Cabinet_W60cm_H60cm_2Door_Set_03	壁挂式橱柜（60×60）	10000	furniture
+03f35144	Wall_Cabinet_W60cm_H60cm_Corner_1_Set_01	壁挂式转角橱柜（60×60）	10000	furniture
+8064ce2b	Wall_Cabinet_W60cm_H60cm_Corner_Set_01	转角壁柜（60x60）	10000	furniture
+4560adac	Wall_Cabinet_W60cm_H60cm_Corner_Set_03	转角壁柜（60x60）	10000	furniture
+f5c9f717	Wall_Cabinet_W90cm_H40cm_2Door_Set_01	壁挂式橱柜（90×40）	10000	furniture
+bb58856e	Wall_Cabinet_W90cm_H40cm_2Door_Set_02	壁挂式橱柜（90×40）	10000	furniture
+c5579928	Wall_Cabinet_W90cm_H40cm_2Door_Set_03	壁挂式橱柜（90×40）	10000	furniture
+f7825780	Wall_Cabinet_W90cm_H40cm_3Door_Set_01	壁挂式橱柜（90×40）	10000	furniture
+8738c314	Wall_Cabinet_W90cm_H40cm_3Door_Set_02	壁挂式橱柜（90×40）	10000	furniture
+ad3b9b38	Wall_Cabinet_W90cm_H40cm_3Door_Set_03	壁挂式橱柜（90×40）	10000	furniture
+21bb5171	Wall_Cabinet_W90cm_H60cm_2Door_Set_01	壁挂式橱柜（90×60）	10000	furniture
+c564866e	Wall_Cabinet_W90cm_H60cm_2Door_Set_02	壁挂式橱柜（90×60）	10000	furniture
+89acc0c7	Wall_Cabinet_W90cm_H60cm_2Door_Set_03	壁挂式橱柜（90×60）	10000	furniture
+a6548fb7	Wall_Cabinet_W90cm_H60cm_3Door_Set_01	壁挂式橱柜（90×60）	10000	furniture
+3029cbfd	Wall_Cabinet_W90cm_H60cm_3Door_Set_02	壁挂式橱柜（90×60）	10000	furniture
+5f1e39da	Wall_Cabinet_W90cm_H60cm_3Door_Set_03	壁挂式橱柜（90×60）	10000	furniture
+f8a47c8e	Wall_Flat_TV_Set_1	壁挂式电视	140000	furniture
+42408cef	Wall_Flat_TV_Set_2	壁挂式电视	140000	furniture
+2c713351	Wall_Flat_TV_Set_3	壁挂式电视	150000	furniture
+122c6637	Wall_Flat_TV_Set_4	壁挂式电视	150000	furniture
+40c22175	Wall_Light	壁灯	10000	furniture
+c214adc3	Walnuts	核桃	300	ingredient
+21fa8803	Wasabi	山葵	100	ingredient
+a417b3c7	Washing_Machine	洗衣机	40000	furniture
+1e45cc94	Watch_01	手表	80000	furniture
+2fc42f80	Watch_02	手表	70000	furniture
+fc4ef647	Watch_03	手表	75000	furniture
+abc3f2d4	Water Chestnut	荸荠	300	ingredient,plant
+f5f0666a	Water Chestnuts Seeds	荸荠种子	1000	seed
+dc165658	Watermelon	西瓜	300	ingredient
+924d7756	Watermelon Pizza	西瓜披萨	0	meal,useable,NOT-STORABLE
+058e15a7	Webcam_01	直播摄像头	10000	furniture
+36ffe55d	Webcam_02	直播摄像头	10000	furniture
+e5b47d31	Weird Statue	奇怪雕像	200	
+e8f95954	Wheat	小麦	100	ingredient,plant
+80a10ce6	Wheat Bread	小麦面包	100	ingredient
+42b44a5d	Wheat Flour	小麦面粉	80	ingredient
+4c262202	Wheat Seeds	小麦种子	1000	seed
+325d50cd	Whipped Cream	发泡奶油	200	ingredient,plant
+5c022546	Whiskey	威士忌	800	ingredient
+7dab0a19	White Lithium Coffee	白锂咖啡	1500	
+470d6342	WhiteFish	白鲑鱼	700	ingredient,fish
+29fe8697	Windowpane Lager	玻璃窗牌拉格啤酒	1200	
+066d1d0a	Wireless Relay	无线中继	62000	
+eee0ff97	Wolfberries	枸杞	400	ingredient
+56d4e965	Wooden_High_Shelf_01-with-Towel-Bar	带毛巾架的木制挂架	10000	furniture
+e30a57f9	Wooden_High_Shelf_02-with-Towel-Bar	带毛巾架的木制挂架	10000	furniture
+57e80537	Wooden_High_Shelf_03-with-Towel-Bar	带毛巾架的木制挂架	10000	furniture
+051d9e51	Wooden_High_Shelf_04-Items	摆满东西的木制挂架	10000	furniture
+c9e015d5	Wooden_High_Shelf_05-Items_withTowelBar	带毛巾架并摆满东西的木制挂架	15000	furniture
+5efb57cc	Wooden_Low_Shelf_01	木制浴室储物架	20000	furniture
+f76ad93b	Wooden_Low_Shelf_02	木制浴室储物架	20000	furniture
+4c2c25fd	Wooden_Low_Shelf_03	木制浴室储物架	20000	furniture
+0652a4ee	Wooden_Low_Shelf_04	木制浴室储物架	20000	furniture
+b1c504d9	Wooden_Low_Shelf_Corner	木制浴室储物架	20000	furniture
+a3485a75	Wooden_Towel_Bar_Bath_Towel	木制毛巾架	10000	furniture
+ea75732b	Yam	山药	400	ingredient,plant
+619ac1ec	Yam Seeds	山药种子	1000	seed
+f85b9257	Yeast	酵母	150	ingredient
+e6e6ab44	Yerba Mate	马黛茶	450	ingredient
+8dd2c34d	Yoghurt	酸奶	180	ingredient,plant
+166cdb19	Your Photographs	你的照片	1000	
+d1e9dc3c	Zander	梭鲈	650	ingredient,fish
+a7f609eb	Zope	上口欧鳊	650	ingredient,fish
+f96f2cc5	Zope with Cherry Salsa	樱桃莎莎酱欧鳊鱼	0	meal,useable,NOT-STORABLE

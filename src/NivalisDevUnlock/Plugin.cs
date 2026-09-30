@@ -18,6 +18,7 @@ public class Plugin : BasePlugin
     internal static Plugin Instance;
     internal static ConfigEntry<Key> ToggleKey;
     internal static ConfigEntry<bool> PauseWhileOpen;
+    internal static ConfigEntry<bool> BlockGameInput;
     internal static ConfigEntry<float> UiScale;
 
     public override void Load()
@@ -29,6 +30,9 @@ public class Plugin : BasePlugin
         PauseWhileOpen = Config.Bind("Console", "PauseWhileOpen", true,
             "Sets Time.timeScale to 0 while the console is open. This also stops the " +
             "player from walking around as you type, since movement is time-scaled.");
+        BlockGameInput = Config.Bind("Console", "BlockGameInput", true,
+            "Disables the game's input action maps while the console is open, so typing a " +
+            "command does not also trigger interactions like E.");
         UiScale = Config.Bind("Console", "UiScale", 2f,
             "Magnification of the console overlay. Applied through GUI.matrix, so the " +
             "whole panel scales rather than just the text.");

@@ -1,3 +1,6 @@
+using System.IO;
+using System.Text;
+using BepInEx;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using Nivalis.DevOptions;
 using UnityEngine;
@@ -307,6 +310,61 @@ internal static class Commands
         {
             GameRefs.InvalidateItemCache();
             print($"{GameRefs.ItemTypes(true).Length} item types loaded.");
+        });
+
+        Add("dumpitems", "dumpitems [filename]", "Writes every item type to a text file.", (args, print) =>
+        {
+            var name = args.Length > 0 ? args[0] : "nivalis-items.txt";
+            var path = Path.Combine(Paths.BepInExRootPath, name);
+            var items = GameRefs.ItemTypes();
+
+            var sb = new StringBuilder();
+            sb.AppendLine($"Nivalis Nights item types — {items.Length} entries");
+            sb.AppendLine("Use the CODE with: give <code> <amount>   or   iteminfo <code>");
+            sb.AppendLine();
+            sb.AppendLine("CODE    \tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
+
+            foreach (var item in items)
+            {
+                var flags = new List<string>();
+                try
+                {
+                    if (item.IsFurniture) flags.Add("furniture");
+                    if (item.IsIngredient) flags.Add("ingredient");
+                    if (item.IsMeal) flags.Add("meal");
+                    if (item.IsDrink) flags.Add("drink");
+                    if (item.IsFish) flags.Add("fish");
+                    if (item.IsPlant) flags.Add("plant");
+                    if (item.IsSeed) flags.Add("seed");
+                    if (item.IsUseable) flags.Add("useable");
+                    if (item.IsEquippable) flags.Add("equippable");
+                    if (!item.IsPlayerStorable) flags.Add("NOT-STORABLE");
+                }
+                catch
+                {
+                    flags.Add("?");
+                }
+
+                var price = "?";
+                try { price = item.BasePrice.ToString(); } catch { }
+
+                sb.Append(GameRefs.ShortGuid(item)).Append('\t')
+                  .Append(GameRefs.AssetName(item)).Append('\t')
+                  .Append(GameRefs.DisplayName(item)).Append('\t')
+                  .Append(price).Append('\t')
+                  .Append(string.Join(",", flags))
+                  .AppendLine();
+            }
+
+            try
+            {
+                File.WriteAllText(path, sb.ToString(), new UTF8Encoding(true));
+                print($"Wrote {items.Length} items to {path}");
+            }
+            catch (Exception e)
+            {
+                print($"Could not write the file: {e.Message}");
+            }
         });
 
         Add("copylog", "copylog", "Copies the whole console output to the clipboard.", (args, print) =>

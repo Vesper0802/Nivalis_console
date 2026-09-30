@@ -174,10 +174,16 @@ public class ConsoleWindow : MonoBehaviour
                 _savedTimeScale = Time.timeScale;
                 Time.timeScale = 0f;
             }
+
+            if (Plugin.BlockGameInput.Value)
+                GameInput.Suspend();
         }
-        else if (Plugin.PauseWhileOpen.Value)
+        else
         {
-            Time.timeScale = _savedTimeScale;
+            if (Plugin.PauseWhileOpen.Value)
+                Time.timeScale = _savedTimeScale;
+
+            GameInput.Resume();
         }
     }
 
