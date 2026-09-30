@@ -320,9 +320,11 @@ internal static class Commands
 
             var sb = new StringBuilder();
             sb.AppendLine($"Nivalis Nights item types — {items.Length} entries");
-            sb.AppendLine("Use the CODE with: give <code> <amount>   or   iteminfo <code>");
+            sb.AppendLine("Paste a COMMAND cell into the console and press Enter; change the trailing number for a different amount.");
+            sb.AppendLine("For details run iteminfo with the same code, e.g. iteminfo 04f867e4");
+            sb.AppendLine("Rows flagged NOT-STORABLE cannot be placed in the player inventory.");
             sb.AppendLine();
-            sb.AppendLine("CODE    \tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
+            sb.AppendLine("COMMAND\tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
 
             foreach (var item in items)
             {
@@ -348,7 +350,7 @@ internal static class Commands
                 var price = "?";
                 try { price = item.BasePrice.ToString(); } catch { }
 
-                sb.Append(GameRefs.ShortGuid(item)).Append('\t')
+                sb.Append("give ").Append(GameRefs.ShortGuid(item)).Append(" 1").Append('\t')
                   .Append(GameRefs.AssetName(item)).Append('\t')
                   .Append(GameRefs.DisplayName(item)).Append('\t')
                   .Append(price).Append('\t')
