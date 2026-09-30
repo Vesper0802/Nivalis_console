@@ -1,0 +1,2483 @@
+﻿// Assembly-CSharp: 94 matching types
+
+=== Articy.Nivalis.ArticyValueInventoryItem  (base: Articy.Unity.ArticyValue`1<Articy.Nivalis.InventoryItem>) ===
+  method Void .ctor()
+  method static Void .cctor()
+
+=== Articy.Nivalis.ArticyValueInventoryItemTemplate  (base: Articy.Unity.ArticyValue`1<Articy.Nivalis.Templates.InventoryItemTemplate>) ===
+  method Void .ctor()
+  method static Void .cctor()
+
+=== Articy.Nivalis.GlobalVariables.GlobalInventory  (base: Il2CppSystem.Object) ===
+  prop   Articy.Unity.BaseGlobalVariables _VariableStorage { get; set; }
+  prop   Boolean RatMeat { get; set; }
+  prop   Boolean LogicRelay { get; set; }
+  prop   Boolean DeeDeesReply { get; set; }
+  prop   Boolean Donut { get; set; }
+  prop   Boolean Biox50 { get; set; }
+  prop   Boolean RustRemover { get; set; }
+  prop   Boolean ScorpionShimmerChip { get; set; }
+  prop   Int32 k20Tumbler { get; set; }
+  prop   Int32 Lims { get; set; }
+  prop   Boolean RustyFishingRod { get; set; }
+  prop   Int32 Fish { get; set; }
+  prop   Boolean AuraCocktail { get; set; }
+  prop   Boolean EldridgePhotos { get; set; }
+  prop   Int32 BokChoy { get; set; }
+  prop   Int32 Onion { get; set; }
+  prop   Int32 Cabbage { get; set; }
+  prop   Int32 EnchiridionFragment { get; set; }
+  prop   Int32 Cherries { get; set; }
+  prop   Int32 Vodka { get; set; }
+  prop   Int32 LiquidNitrogen { get; set; }
+  prop   Int32 Potatoes { get; set; }
+  prop   Boolean BlackMossMushroomSpores { get; set; }
+  prop   Int32 Enoki { get; set; }
+  prop   Int32 Shiitake { get; set; }
+  prop   Int32 KingMushroom { get; set; }
+  prop   Boolean ClemPackage { get; set; }
+  prop   Boolean RareTrainTimetable { get; set; }
+  prop   Int32 AntiqueComputerChip { get; set; }
+  prop   Int32 AncientComputerChip { get; set; }
+  prop   Boolean SeafaringTreasure1 { get; set; }
+  prop   Boolean SeafaringTreasure2 { get; set; }
+  prop   Boolean SeafaringTreasure3 { get; set; }
+  prop   Int32 HoloFlyer { get; set; }
+  prop   Int32 InventorySeats { get; set; }
+  prop   Int32 InventoryFridge { get; set; }
+  prop   Int32 InventoryStorage { get; set; }
+  prop   Int32 InventoryTables { get; set; }
+  prop   Boolean BoatNamePlate { get; set; }
+  prop   Boolean AnchorPin { get; set; }
+  prop   Int32 Mustard { get; set; }
+  prop   Int32 Bread { get; set; }
+  prop   Int32 Toast { get; set; }
+  prop   Int32 WheatBread { get; set; }
+  prop   Int32 BokChoySeeds { get; set; }
+  prop   Int32 OnionSeeds { get; set; }
+  prop   Int32 CabbageSeeds { get; set; }
+  prop   Boolean BusinessPermit1 { get; set; }
+  prop   Boolean BusinessPermit2 { get; set; }
+  prop   Boolean BusinessPermit3 { get; set; }
+  prop   Boolean BusinessPermit4 { get; set; }
+  prop   Int32 MysterySpores { get; set; }
+  prop   Boolean DeadRat { get; set; }
+  prop   Int32 Beef { get; set; }
+  prop   Boolean BodyList { get; set; }
+  prop   Boolean AvaBlackBox { get; set; }
+  prop   Int32 Apple { get; set; }
+  prop   Int32 Orange { get; set; }
+  prop   Int32 MagicMushrooms { get; set; }
+  prop   Int32 NeonTubes { get; set; }
+  prop   Int32 VendingMachine { get; set; }
+  method Boolean get_RatMeat()
+  method Void set_RatMeat(Boolean value)
+  method Boolean get_LogicRelay()
+  method Void set_LogicRelay(Boolean value)
+  method Boolean get_DeeDeesReply()
+  method Void set_DeeDeesReply(Boolean value)
+  method Boolean get_Donut()
+  method Void set_Donut(Boolean value)
+  method Boolean get_Biox50()
+  method Void set_Biox50(Boolean value)
+  method Boolean get_RustRemover()
+  method Void set_RustRemover(Boolean value)
+  method Boolean get_ScorpionShimmerChip()
+  method Void set_ScorpionShimmerChip(Boolean value)
+  method Int32 get_k20Tumbler()
+  method Void set_k20Tumbler(Int32 value)
+  method Int32 get_Lims()
+  method Void set_Lims(Int32 value)
+  method Boolean get_RustyFishingRod()
+  method Void set_RustyFishingRod(Boolean value)
+  method Int32 get_Fish()
+  method Void set_Fish(Int32 value)
+  method Boolean get_AuraCocktail()
+  method Void set_AuraCocktail(Boolean value)
+  method Boolean get_EldridgePhotos()
+  method Void set_EldridgePhotos(Boolean value)
+  method Int32 get_BokChoy()
+  method Void set_BokChoy(Int32 value)
+  method Int32 get_Onion()
+  method Void set_Onion(Int32 value)
+  method Int32 get_Cabbage()
+  method Void set_Cabbage(Int32 value)
+  method Int32 get_EnchiridionFragment()
+  method Void set_EnchiridionFragment(Int32 value)
+  method Int32 get_Cherries()
+  method Void set_Cherries(Int32 value)
+  method Int32 get_Vodka()
+  method Void set_Vodka(Int32 value)
+  method Int32 get_LiquidNitrogen()
+  method Void set_LiquidNitrogen(Int32 value)
+  method Int32 get_Potatoes()
+  method Void set_Potatoes(Int32 value)
+  method Boolean get_BlackMossMushroomSpores()
+  method Void set_BlackMossMushroomSpores(Boolean value)
+  method Int32 get_Enoki()
+  method Void set_Enoki(Int32 value)
+  method Int32 get_Shiitake()
+  method Void set_Shiitake(Int32 value)
+  method Int32 get_KingMushroom()
+  method Void set_KingMushroom(Int32 value)
+  method Boolean get_ClemPackage()
+  method Void set_ClemPackage(Boolean value)
+  method Boolean get_RareTrainTimetable()
+  method Void set_RareTrainTimetable(Boolean value)
+  method Int32 get_AntiqueComputerChip()
+  method Void set_AntiqueComputerChip(Int32 value)
+  method Int32 get_AncientComputerChip()
+  method Void set_AncientComputerChip(Int32 value)
+  method Boolean get_SeafaringTreasure1()
+  method Void set_SeafaringTreasure1(Boolean value)
+  method Boolean get_SeafaringTreasure2()
+  method Void set_SeafaringTreasure2(Boolean value)
+  method Boolean get_SeafaringTreasure3()
+  method Void set_SeafaringTreasure3(Boolean value)
+  method Int32 get_HoloFlyer()
+  method Void set_HoloFlyer(Int32 value)
+  method Int32 get_InventorySeats()
+  method Void set_InventorySeats(Int32 value)
+  method Int32 get_InventoryFridge()
+  method Void set_InventoryFridge(Int32 value)
+  method Int32 get_InventoryStorage()
+  method Void set_InventoryStorage(Int32 value)
+  method Int32 get_InventoryTables()
+  method Void set_InventoryTables(Int32 value)
+  method Boolean get_BoatNamePlate()
+  method Void set_BoatNamePlate(Boolean value)
+  method Boolean get_AnchorPin()
+  method Void set_AnchorPin(Boolean value)
+  method Int32 get_Mustard()
+  method Void set_Mustard(Int32 value)
+  method Int32 get_Bread()
+  method Void set_Bread(Int32 value)
+  method Int32 get_Toast()
+  method Void set_Toast(Int32 value)
+  method Int32 get_WheatBread()
+  method Void set_WheatBread(Int32 value)
+  method Int32 get_BokChoySeeds()
+  method Void set_BokChoySeeds(Int32 value)
+  method Int32 get_OnionSeeds()
+  method Void set_OnionSeeds(Int32 value)
+  method Int32 get_CabbageSeeds()
+  method Void set_CabbageSeeds(Int32 value)
+  method Boolean get_BusinessPermit1()
+  method Void set_BusinessPermit1(Boolean value)
+  method Boolean get_BusinessPermit2()
+  method Void set_BusinessPermit2(Boolean value)
+  method Boolean get_BusinessPermit3()
+  method Void set_BusinessPermit3(Boolean value)
+  method Boolean get_BusinessPermit4()
+  method Void set_BusinessPermit4(Boolean value)
+  method Int32 get_MysterySpores()
+  method Void set_MysterySpores(Int32 value)
+  method Boolean get_DeadRat()
+  method Void set_DeadRat(Boolean value)
+  method Int32 get_Beef()
+  method Void set_Beef(Int32 value)
+  method Boolean get_BodyList()
+  method Void set_BodyList(Boolean value)
+  method Boolean get_AvaBlackBox()
+  method Void set_AvaBlackBox(Boolean value)
+  method Int32 get_Apple()
+  method Void set_Apple(Int32 value)
+  method Int32 get_Orange()
+  method Void set_Orange(Int32 value)
+  method Int32 get_MagicMushrooms()
+  method Void set_MagicMushrooms(Int32 value)
+  method Int32 get_NeonTubes()
+  method Void set_NeonTubes(Int32 value)
+  method Int32 get_VendingMachine()
+  method Void set_VendingMachine(Int32 value)
+  method Void RegisterVariables(Articy.Unity.BaseGlobalVariables aStorage)
+  method Void .ctor()
+  method static Void .cctor()
+  method Articy.Unity.BaseGlobalVariables get__VariableStorage()
+  method Void set__VariableStorage(Articy.Unity.BaseGlobalVariables )
+
+=== Articy.Nivalis.GlobalVariables.GlobalInventory_NoodleBar  (base: Il2CppSystem.Object) ===
+  prop   Articy.Unity.BaseGlobalVariables _VariableStorage { get; set; }
+  prop   Int32 Bread { get; set; }
+  prop   Int32 Toast { get; set; }
+  prop   Int32 WheatBread { get; set; }
+  prop   Int32 Mustard { get; set; }
+  method Int32 get_Bread()
+  method Void set_Bread(Int32 value)
+  method Int32 get_Toast()
+  method Void set_Toast(Int32 value)
+  method Int32 get_WheatBread()
+  method Void set_WheatBread(Int32 value)
+  method Int32 get_Mustard()
+  method Void set_Mustard(Int32 value)
+  method Void RegisterVariables(Articy.Unity.BaseGlobalVariables aStorage)
+  method Void .ctor()
+  method static Void .cctor()
+  method Articy.Unity.BaseGlobalVariables get__VariableStorage()
+  method Void set__VariableStorage(Articy.Unity.BaseGlobalVariables )
+
+=== Articy.Nivalis.InventoryItem  (base: Articy.Nivalis.Entity) ===
+  prop   Articy.Nivalis.ArticyValueInventoryItemTemplate mTemplate { get; set; }
+  prop   Articy.Nivalis.Templates.InventoryItemTemplateConstraint mConstraints { get; set; }
+  prop   Articy.Nivalis.Templates.InventoryItemTemplate Template { get; set; }
+  prop   Articy.Nivalis.Templates.InventoryItemTemplateConstraint Constraints { get; }
+  method Articy.Nivalis.Templates.InventoryItemTemplate get_Template()
+  method Void set_Template(Articy.Nivalis.Templates.InventoryItemTemplate value)
+  method static Articy.Nivalis.Templates.InventoryItemTemplateConstraint get_Constraints()
+  method Articy.Nivalis.Features.ItemFeature GetFeatureItem()
+  method Void CloneProperties(Object aClone, Articy.Unity.ArticyObject aFirstClassParent)
+  method Boolean IsLocalizedPropertyOverwritten(String aProperty)
+  method Void setProp(String aProperty, Object aValue)
+  method Articy.Unity.Interfaces.ScriptDataProxy getProp(String aProperty)
+  method Void .ctor()
+  method static Void .cctor()
+  method Articy.Nivalis.ArticyValueInventoryItemTemplate get_mTemplate()
+  method Void set_mTemplate(Articy.Nivalis.ArticyValueInventoryItemTemplate )
+  method static Articy.Nivalis.Templates.InventoryItemTemplateConstraint get_mConstraints()
+  method static Void set_mConstraints(Articy.Nivalis.Templates.InventoryItemTemplateConstraint )
+
+=== Articy.Nivalis.Templates.InventoryItemTemplate  (base: Il2CppSystem.Object) ===
+  prop   Articy.Nivalis.ArticyValueItemFeature mItem { get; set; }
+  prop   UInt64 mOwnerId { get; set; }
+  prop   UInt32 mOwnerInstanceId { get; set; }
+  prop   Articy.Nivalis.Features.ItemFeature Item { get; set; }
+  prop   UInt64 OwnerId { get; set; }
+  prop   UInt32 OwnerInstanceId { get; set; }
+  method Articy.Nivalis.Features.ItemFeature get_Item()
+  method Void set_Item(Articy.Nivalis.Features.ItemFeature value)
+  method UInt64 get_OwnerId()
+  method Void set_OwnerId(UInt64 value)
+  method UInt32 get_OwnerInstanceId()
+  method Void set_OwnerInstanceId(UInt32 value)
+  method Void CloneProperties(Object aClone, Articy.Unity.ArticyObject aFirstClassParent)
+  method Object CloneObject(Object aParent, Articy.Unity.ArticyObject aFirstClassParent)
+  method Boolean IsLocalizedPropertyOverwritten(String aProperty)
+  method Void setProp(String aProperty, Object aValue)
+  method Articy.Unity.Interfaces.ScriptDataProxy getProp(String aProperty)
+  method Void .ctor()
+  method static Void .cctor()
+  method Articy.Nivalis.ArticyValueItemFeature get_mItem()
+  method Void set_mItem(Articy.Nivalis.ArticyValueItemFeature )
+  method UInt64 get_mOwnerId()
+  method Void set_mOwnerId(UInt64 )
+  method UInt32 get_mOwnerInstanceId()
+  method Void set_mOwnerInstanceId(UInt32 )
+
+=== Articy.Nivalis.Templates.InventoryItemTemplateConstraint  (base: Il2CppSystem.Object) ===
+  prop   Articy.Nivalis.Features.ItemFeatureConstraint mItem { get; set; }
+  prop   Articy.Nivalis.Features.ItemFeatureConstraint Item { get; }
+  method Articy.Nivalis.Features.ItemFeatureConstraint get_Item()
+  method Void .ctor()
+  method static Void .cctor()
+  method Articy.Nivalis.Features.ItemFeatureConstraint get_mItem()
+  method Void set_mItem(Articy.Nivalis.Features.ItemFeatureConstraint )
+
+=== GlobalInventoryLinkError  (base: ArticyErrorBase) ===
+  prop   String variableName { get; set; }
+  prop   Nivalis.InventoryItemType reassignedItem { get; set; }
+  prop   Nivalis.InventoryObjectTag reassignedTag { get; set; }
+  prop   Articy.Unity.ArticyObject ArticyObject { get; set; }
+  method Articy.Unity.ArticyObject get_ArticyObject()
+  method Void set_ArticyObject(Articy.Unity.ArticyObject value)
+  method Void RenderGui(Collections.Generic.Dictionary`2<ArticyErrorBase,Action> pendingFixes)
+  method Void .ctor()
+  method static Void .cctor()
+  method String get_variableName()
+  method Void set_variableName(String )
+  method Nivalis.InventoryItemType get_reassignedItem()
+  method Void set_reassignedItem(Nivalis.InventoryItemType )
+  method Nivalis.InventoryObjectTag get_reassignedTag()
+  method Void set_reassignedTag(Nivalis.InventoryObjectTag )
+
+=== Nivalis.Dialogue.ArticyGlobalInventoryImporter  (base: Il2CppSystem.Object) ===
+  prop   String LINKER_PATH { get; set; }
+  prop   Nivalis.Dialogue.ArticyGlobalInventoryLinker _globalInventoryLinkerInstance { get; set; }
+  prop   Nivalis.Dialogue.ArticyGlobalInventoryLinker GlobalInventoryLinkerInstance { get; }
+  method static Nivalis.Dialogue.ArticyGlobalInventoryLinker get_GlobalInventoryLinkerInstance()
+  method Void LinkGlobalInventoryVariables()
+  method Void .ctor()
+  method static Void .cctor()
+  method static String get_LINKER_PATH()
+  method static Void set_LINKER_PATH(String )
+  method static Nivalis.Dialogue.ArticyGlobalInventoryLinker get__globalInventoryLinkerInstance()
+  method static Void set__globalInventoryLinkerInstance(Nivalis.Dialogue.ArticyGlobalInventoryLinker )
+
+=== Nivalis.Dialogue.ArticyGlobalInventoryImporter/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Dialogue.ArticyGlobalInventoryImporter/__c __9 { get; set; }
+  prop   Func`2<Collections.Generic.KeyValuePair`2<String,Object>,Boolean> __9__4_0 { get; set; }
+  prop   Func`2<Collections.Generic.KeyValuePair`2<String,Object>,ValueTuple`2<String,Object>> __9__4_1 { get; set; }
+  method Void .ctor()
+  method Boolean _LinkGlobalInventoryVariables_b__4_0(Collections.Generic.KeyValuePair`2<String,Object> kvp)
+  method ValueTuple`2<String,Object> _LinkGlobalInventoryVariables_b__4_1(Collections.Generic.KeyValuePair`2<String,Object> kvp)
+  method static Void .cctor()
+  method static Nivalis.Dialogue.ArticyGlobalInventoryImporter/__c get___9()
+  method static Void set___9(Nivalis.Dialogue.ArticyGlobalInventoryImporter/__c )
+  method static Func`2<Collections.Generic.KeyValuePair`2<String,Object>,Boolean> get___9__4_0()
+  method static Void set___9__4_0(Func`2<Collections.Generic.KeyValuePair`2<String,Object>,Boolean> )
+  method static Func`2<Collections.Generic.KeyValuePair`2<String,Object>,ValueTuple`2<String,Object>> get___9__4_1()
+  method static Void set___9__4_1(Func`2<Collections.Generic.KeyValuePair`2<String,Object>,ValueTuple`2<String,Object>> )
+
+=== Nivalis.Dialogue.ArticyGlobalInventoryLinker  (base: Nivalis.Singleton`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker>) ===
+  prop   Action`1<Change`1<Int32>> OnPlayerMoneyChangedByStory { get; set; }
+  prop   Action`2<Nivalis.InventoryItemType,Change`1<Int32>> OnPlayerItemsChangedByStory { get; set; }
+  prop   Nivalis.GhostCustomerLoop.Venue NoodleBarVenue { get; set; }
+  prop   String NoodleBarVenueInventorySetName { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableItemPair> linkPairs { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableTagPair> linkTagPairs { get; set; }
+  prop   Boolean _limsEditingCallbackProtection { get; set; }
+  prop   Collections.Generic.HashSet`1<Nivalis.InventoryItemType> _multiCallProtection { get; set; }
+  prop   Type ConfigurationType { get; }
+  prop   Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableItemPair> Links { get; }
+  method Void add_OnPlayerMoneyChangedByStory(Action`1<Change`1<Int32>> value)
+  method Void remove_OnPlayerMoneyChangedByStory(Action`1<Change`1<Int32>> value)
+  method Void add_OnPlayerItemsChangedByStory(Action`2<Nivalis.InventoryItemType,Change`1<Int32>> value)
+  method Void remove_OnPlayerItemsChangedByStory(Action`2<Nivalis.InventoryItemType,Change`1<Int32>> value)
+  method Type get_ConfigurationType()
+  method Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableItemPair> get_Links()
+  method Void SetGlobalVariableBoolean(String globalVariableName, Boolean value)
+  method Void SetGlobalVariableInteger(String globalVariableName, Int32 value)
+  method Void GetGlobalVariable(String globalVariableName)
+  method Void LogMissingVariables()
+  method Void InitializeInternal(Nivalis.ManagerConfiguration configuration, Nivalis.ISavePacket saveReader)
+  method Nivalis.ISavePacket CreatePacket()
+  method Void WriteToPacket(Nivalis.ISavePacket packet)
+  method Void InitializeExternal()
+  method Void OnLinkedVenueInventoryChanged(Nivalis.InventoryItemTypeCountChange change)
+  method Void OnPlayerMoneyChanged(Int32 arg1, Int32 finalValue)
+  method Void OnGlobalInventoryLimsChanged(String arg1, Object arg2)
+  method Void OnDestroyInternal()
+  method Void OnPlayerInventoryChanged(Nivalis.InventoryIItemContainer inventory, Nivalis.InventoryItemTypeCountChange change)
+  method Void ExternallyReportStoryItemChange(Nivalis.InventoryItemType type, Change`1<Int32> change)
+  method Void OnLinkedVariableChanged(String variableName, Object value)
+  method Void OnLinkedVenueVariableChanged(String variableName, Object value)
+  method Nivalis.InventoryItemType GetLinkForVariable(String variableName)
+  method Void AddPair(String variableName, Nivalis.InventoryItemType itemType)
+  method Void AddTagPair(String variableName, Nivalis.InventoryObjectTag tag)
+  method Void .ctor()
+  method Void _InitializeExternal_b__24_0(Nivalis.InventoryIItemContainer _, Nivalis.InventoryItemTypeCountChange change)
+  method Void _OnDestroyInternal_b__29_0(Nivalis.InventoryIItemContainer _, Nivalis.InventoryItemTypeCountChange change)
+  method static Void .cctor()
+  method Action`1<Change`1<Int32>> get_OnPlayerMoneyChangedByStory()
+  method Void set_OnPlayerMoneyChangedByStory(Action`1<Change`1<Int32>> )
+  method Action`2<Nivalis.InventoryItemType,Change`1<Int32>> get_OnPlayerItemsChangedByStory()
+  method Void set_OnPlayerItemsChangedByStory(Action`2<Nivalis.InventoryItemType,Change`1<Int32>> )
+  method Nivalis.GhostCustomerLoop.Venue get_NoodleBarVenue()
+  method Void set_NoodleBarVenue(Nivalis.GhostCustomerLoop.Venue )
+  method String get_NoodleBarVenueInventorySetName()
+  method Void set_NoodleBarVenueInventorySetName(String )
+  method Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableItemPair> get_linkPairs()
+  method Void set_linkPairs(Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableItemPair> )
+  method Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableTagPair> get_linkTagPairs()
+  method Void set_linkTagPairs(Collections.Generic.List`1<Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableTagPair> )
+  method Boolean get__limsEditingCallbackProtection()
+  method Void set__limsEditingCallbackProtection(Boolean )
+  method Collections.Generic.HashSet`1<Nivalis.InventoryItemType> get__multiCallProtection()
+  method Void set__multiCallProtection(Collections.Generic.HashSet`1<Nivalis.InventoryItemType> )
+
+=== Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableItemPair  (base: Il2CppSystem.Object) ===
+  prop   String VariableName { get; set; }
+  prop   Nivalis.InventoryItemType ItemType { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method String get_VariableName()
+  method Void set_VariableName(String )
+  method Nivalis.InventoryItemType get_ItemType()
+  method Void set_ItemType(Nivalis.InventoryItemType )
+
+=== Nivalis.Dialogue.ArticyGlobalInventoryLinker/VariableTagPair  (base: Il2CppSystem.Object) ===
+  prop   String VariableName { get; set; }
+  prop   Nivalis.InventoryObjectTag Tag { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method String get_VariableName()
+  method Void set_VariableName(String )
+  method Nivalis.InventoryObjectTag get_Tag()
+  method Void set_Tag(Nivalis.InventoryObjectTag )
+
+=== Nivalis.Dialogue.ArticyGlobalInventoryLinker/VenueVariableSetPairs  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.GhostCustomerLoop.Venue Venue { get; set; }
+  prop   String VariableSetName { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.GhostCustomerLoop.Venue get_Venue()
+  method Void set_Venue(Nivalis.GhostCustomerLoop.Venue )
+  method String get_VariableSetName()
+  method Void set_VariableSetName(String )
+
+=== Nivalis.Dialogue.ArticyInventoryItemImporter  (base: Il2CppSystem.Object) ===
+  method Void ImportInventoryItem(Articy.Nivalis.Entity worldObjEntity, Nivalis.Dialogue.ArticyToUnityDataProvider dataProvider)
+  method Void .ctor()
+  method static Void .cctor()
+
+=== Nivalis.GhostSystem.CustomerLoop.VenueInventory  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemContainer _NormalInventory_k__BackingField { get; set; }
+  prop   Nivalis.InventoryItemContainer _RefridgeratedInventory_k__BackingField { get; set; }
+  prop   Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> onContentsChanged { get; set; }
+  prop   Nullable`1<Int32> RefridgeratedCapacity { get; set; }
+  prop   Nullable`1<Int32> NormalCapacity { get; set; }
+  prop   Int32 RefridgeratedCount { get; }
+  prop   Int32 NormalCount { get; }
+  prop   Nivalis.InventoryItemContainer NormalInventory { get; set; }
+  prop   Nivalis.InventoryItemContainer RefridgeratedInventory { get; set; }
+  prop   Int32 ItemCount { get; }
+  prop   Int32 StackCount { get; }
+  prop   Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange> OnContentsChanged { get; }
+  method Nullable`1<Int32> get_RefridgeratedCapacity()
+  method Void set_RefridgeratedCapacity(Nullable`1<Int32> value)
+  method Nullable`1<Int32> get_NormalCapacity()
+  method Void set_NormalCapacity(Nullable`1<Int32> value)
+  method Int32 get_RefridgeratedCount()
+  method Int32 get_NormalCount()
+  method Nivalis.InventoryItemContainer get_NormalInventory()
+  method Void set_NormalInventory(Nivalis.InventoryItemContainer value)
+  method Nivalis.InventoryItemContainer get_RefridgeratedInventory()
+  method Void set_RefridgeratedInventory(Nivalis.InventoryItemContainer value)
+  method Void .ctor(String id, Int32 normalCapacity, Int32 refridgeratedCapacity)
+  method Void Finalize()
+  method Void ContentsChangedListener(Nivalis.InventoryIItemContainer container, Nivalis.InventoryItemTypeCountChange change)
+  method Collections.Generic.IEnumerator`1<Nivalis.InventoryItemStack> GetEnumerator()
+  method Collections.IEnumerator System_Collections_IEnumerable_GetEnumerator()
+  method Int32 get_ItemCount()
+  method Int32 get_StackCount()
+  method Void Clear()
+  method Int32 GetItemCount(Nivalis.InventoryItemType type, Boolean& hasUnRefridgeratedItems)
+  method Int32 GetItemCountByTag(Nivalis.InventoryObjectTag tag)
+  method Int32 GetItemCount(Nivalis.InventoryItemType type)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemInstanceData itemInstance)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemType type, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> items)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemStack item)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemStack/BasicTemp& tempItem)
+  method Nivalis.InventoryItemStack TryTake(Nivalis.InventoryItemStack specificStack)
+  method Nivalis.InventoryItemStack TryTake(Nivalis.InventoryItemStack specificStack, Int32 amountToTake)
+  method Boolean TryTake(Nivalis.InventoryItemStack specificStack, Nivalis.InventoryItemInstanceData instance)
+  method Boolean TryTake(Nivalis.InventoryItemInstanceData specificInstance)
+  method Boolean TakeByType(Nivalis.InventoryItemType type, Int32 amount, Collections.Generic.IList`1<Nivalis.InventoryItemInstanceData> outInstances)
+  method Boolean TryRemoveSpecificItems(Nivalis.InventoryItemStack specificItems)
+  method Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange> get_OnContentsChanged()
+  method Boolean AcceptsItemType(Nivalis.InventoryItemType type)
+  method Void Refresh()
+  method Boolean ContainsSpecificStack(Nivalis.InventoryItemStack stack)
+  method static Void .cctor()
+  method Nivalis.InventoryItemContainer get__NormalInventory_k__BackingField()
+  method Void set__NormalInventory_k__BackingField(Nivalis.InventoryItemContainer )
+  method Nivalis.InventoryItemContainer get__RefridgeratedInventory_k__BackingField()
+  method Void set__RefridgeratedInventory_k__BackingField(Nivalis.InventoryItemContainer )
+  method Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> get_onContentsChanged()
+  method Void set_onContentsChanged(Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> )
+
+=== Nivalis.InventoryChangedByStoryNotificationHandler  (base: UnityEngine.MonoBehaviour) ===
+  prop   Type _ConfigurationType_k__BackingField { get; set; }
+  prop   String lostLimsNotificationId { get; set; }
+  prop   String gainedLimsNotificationId { get; set; }
+  prop   String itemAddedNotificationId { get; set; }
+  prop   String itemsAddedNotificationId { get; set; }
+  prop   String itemRemovedNotificationId { get; set; }
+  prop   String itemsRemovedNotificationId { get; set; }
+  prop   Type ConfigurationType { get; }
+  method Type get_ConfigurationType()
+  method Void InitializeInternal(Nivalis.ManagerConfiguration configuration, Nivalis.ISavePacket savePacket)
+  method Void InitializeExternal()
+  method Void PlayerItemsChangedByStoryListener(Nivalis.InventoryItemType item, Change`1<Int32> change)
+  method Void PlayerMoneyChangedByStoryListener(Change`1<Int32> change)
+  method Void OnDestroy()
+  method Nivalis.ISavePacket CreatePacket()
+  method Void WriteToPacket(Nivalis.ISavePacket packet)
+  method Void .ctor()
+  method static Void .cctor()
+  method Type get__ConfigurationType_k__BackingField()
+  method Void set__ConfigurationType_k__BackingField(Type )
+  method String get_lostLimsNotificationId()
+  method Void set_lostLimsNotificationId(String )
+  method String get_gainedLimsNotificationId()
+  method Void set_gainedLimsNotificationId(String )
+  method String get_itemAddedNotificationId()
+  method Void set_itemAddedNotificationId(String )
+  method String get_itemsAddedNotificationId()
+  method Void set_itemsAddedNotificationId(String )
+  method String get_itemRemovedNotificationId()
+  method Void set_itemRemovedNotificationId(String )
+  method String get_itemsRemovedNotificationId()
+  method Void set_itemsRemovedNotificationId(String )
+
+=== Nivalis.InventorySystem.FishItemData  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Fishing.FishInstance instancePrefab { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WorldLocation> locations { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Fishing.FishTime> times { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WeatherForecastType> weathers { get; set; }
+  prop   Single minSize { get; set; }
+  prop   Single maxSize { get; set; }
+  prop   Int32 minYield { get; set; }
+  prop   Int32 maxYield { get; set; }
+  prop   Color color { get; set; }
+  prop   Nivalis.Fishing.FishInstance InstancePrefab { get; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WorldLocation> Locations { get; }
+  prop   Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Fishing.FishTime> Times { get; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WeatherForecastType> Weathers { get; }
+  prop   Single MinSize { get; }
+  prop   Single MaxSize { get; }
+  prop   Single MinYield { get; }
+  prop   Single MaxYield { get; }
+  prop   Color Color { get; }
+  method Nivalis.Fishing.FishInstance get_InstancePrefab()
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WorldLocation> get_Locations()
+  method Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Fishing.FishTime> get_Times()
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WeatherForecastType> get_Weathers()
+  method Single get_MinSize()
+  method Single get_MaxSize()
+  method Single get_MinYield()
+  method Single get_MaxYield()
+  method Color get_Color()
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.Fishing.FishInstance get_instancePrefab()
+  method Void set_instancePrefab(Nivalis.Fishing.FishInstance )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WorldLocation> get_locations()
+  method Void set_locations(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WorldLocation> )
+  method Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Fishing.FishTime> get_times()
+  method Void set_times(Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Fishing.FishTime> )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WeatherForecastType> get_weathers()
+  method Void set_weathers(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.WeatherForecastType> )
+  method Single get_minSize()
+  method Void set_minSize(Single )
+  method Single get_maxSize()
+  method Void set_maxSize(Single )
+  method Int32 get_minYield()
+  method Void set_minYield(Int32 )
+  method Int32 get_maxYield()
+  method Void set_maxYield(Int32 )
+  method Color get_color()
+  method Void set_color(Color )
+
+=== Nivalis.InventorySystem.FoodFreshness  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryFoodFreshness Fresh
+  field  static public Nivalis.InventoryFoodFreshness Aging
+  field  static public Nivalis.InventoryFoodFreshness Spoiled
+
+=== Nivalis.InventorySystem.FoodItemType  (base: Nivalis.InventorySystem.ItemType) ===
+  prop   Nivalis.CraftingMealRecipeDefinition recipe { get; set; }
+  prop   Int32 consumeTime { get; set; }
+  prop   Nivalis.CraftingMealRecipeDefinition RecipeDefinition { get; }
+  prop   Int32 ConsumeTime { get; }
+  prop   Single ingredientsPrice { get; }
+  prop   Single cookPrice { get; }
+  prop   Single finalPrice { get; }
+  method Nivalis.CraftingMealRecipeDefinition get_RecipeDefinition()
+  method Int32 get_ConsumeTime()
+  method Single get_ingredientsPrice()
+  method Single get_cookPrice()
+  method Single get_finalPrice()
+  method static Void CheckAllMealsHavePrefabs()
+  method static Void CheckAllMealsPrice()
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.CraftingMealRecipeDefinition get_recipe()
+  method Void set_recipe(Nivalis.CraftingMealRecipeDefinition )
+  method Int32 get_consumeTime()
+  method Void set_consumeTime(Int32 )
+
+=== Nivalis.InventorySystem.FreshnessUtility  (base: Il2CppSystem.Object) ===
+  method static Nivalis.InventoryFoodFreshness GetFreshnes(Int32 freshCount, Int32 agingCount, Int32 spoiledCount)
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.FurnitureCategory  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryFurnitureCategory None
+  field  static public Nivalis.InventoryFurnitureCategory Comfortables
+  field  static public Nivalis.InventoryFurnitureCategory Lighting
+  field  static public Nivalis.InventoryFurnitureCategory Decorations
+  field  static public Nivalis.InventoryFurnitureCategory Kitchen
+  field  static public Nivalis.InventoryFurnitureCategory Toilet
+  field  static public Nivalis.InventoryFurnitureCategory Storage
+  field  static public Nivalis.InventoryFurnitureCategory Base
+  field  static public Nivalis.InventoryFurnitureCategory All
+
+=== Nivalis.InventorySystem.FurnitureProperty  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryFurnitureProperty None
+  field  static public Nivalis.InventoryFurnitureProperty Venue
+  field  static public Nivalis.InventoryFurnitureProperty Apartment
+  field  static public Nivalis.InventoryFurnitureProperty Greenhouse
+  field  static public Nivalis.InventoryFurnitureProperty All
+
+=== Nivalis.InventorySystem.FurnitureStyle  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryFurnitureStyle None
+  field  static public Nivalis.InventoryFurnitureStyle ArtDeco
+  field  static public Nivalis.InventoryFurnitureStyle Contemporary
+  field  static public Nivalis.InventoryFurnitureStyle Industrial
+  field  static public Nivalis.InventoryFurnitureStyle Traditional
+
+=== Nivalis.InventorySystem.IInventory  (base: Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase) ===
+  prop   Nivalis.InventoryItemContainer Items { get; }
+  method Nivalis.InventoryItemContainer get_Items()
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.IItemContainer  (base: Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase) ===
+  prop   Int32 RefridgeratedCount { get; }
+  prop   Nullable`1<Int32> RefridgeratedCapacity { get; }
+  prop   Int32 NormalCount { get; }
+  prop   Nullable`1<Int32> NormalCapacity { get; }
+  prop   Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange> OnContentsChanged { get; }
+  method Int32 get_RefridgeratedCount()
+  method Nullable`1<Int32> get_RefridgeratedCapacity()
+  method Int32 get_NormalCount()
+  method Nullable`1<Int32> get_NormalCapacity()
+  method Int32 GetItemCount(Nivalis.InventoryItemType type, Boolean& hasUnRefridgeratedItems)
+  method Int32 GetItemCountByTag(Nivalis.InventoryObjectTag tag)
+  method Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange> get_OnContentsChanged()
+  method Boolean AcceptsItemType(Nivalis.InventoryItemType type)
+  method Void Refresh()
+  method Boolean ContainsSpecificStack(Nivalis.InventoryItemStack stack)
+  method Boolean TryTake(Nivalis.InventoryItemStack specificStack, Nivalis.InventoryItemInstanceData instance)
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.IItemInstanceCollection  (base: Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase) ===
+  prop   Int32 ItemCount { get; }
+  prop   Int32 StackCount { get; }
+  method Int32 get_ItemCount()
+  method Int32 get_StackCount()
+  method Void Clear()
+  method Int32 GetItemCount(Nivalis.InventoryItemType type)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemInstanceData itemInstance)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemType type, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> items)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemStack item)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemStack/BasicTemp& tempItem)
+  method Nivalis.InventoryItemStack TryTake(Nivalis.InventoryItemStack specificStack)
+  method Nivalis.InventoryItemStack TryTake(Nivalis.InventoryItemStack specificStack, Int32 amountToTake)
+  method Boolean TryTake(Nivalis.InventoryItemInstanceData specificInstance)
+  method Boolean TakeByType(Nivalis.InventoryItemType type, Int32 amount, Collections.Generic.IList`1<Nivalis.InventoryItemInstanceData> outInstances)
+  method Boolean TryRemoveSpecificItems(Nivalis.InventoryItemStack specificItems)
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.IItemStackOwner  (base: Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase) ===
+  prop   Nivalis.InventoryItemStack ItemStack { get; }
+  method Nivalis.InventoryItemStack get_ItemStack()
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.IMoneyContainer  (base: Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase) ===
+  prop   Nivalis.ActionNonAlloc`2<Int32,Int32> OnMoneyChanged { get; }
+  prop   Int32 Money { get; set; }
+  method Nivalis.ActionNonAlloc`2<Int32,Int32> get_OnMoneyChanged()
+  method Int32 get_Money()
+  method Void set_Money(Int32 value)
+  method Void ChangeMoneyWithoutReceipt(Int32 amount)
+  method Void ChangeMoneyWithReceipt(T& receipt, Boolean disposeReceiptIfMerged)
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.IMoneyContainer/MethodInfoStoreGeneric_ChangeMoneyWithReceipt_Public_Abstract_Virtual_New_Void_byref_T_Boolean_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.IngredientMealSlot  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryIngredientMealSlot Main
+  field  static public Nivalis.InventoryIngredientMealSlot Topping
+  field  static public Nivalis.InventoryIngredientMealSlot Seasoning
+  field  static public Nivalis.InventoryIngredientMealSlot Sides
+  field  static public Nivalis.InventoryIngredientMealSlot Sauce
+
+=== Nivalis.InventorySystem.InventoriesManager  (base: Nivalis.Singleton`1<Nivalis.InventorySystem.InventoriesManager>) ===
+  prop   Type _ConfigurationType_k__BackingField { get; set; }
+  prop   Collections.Generic.Dictionary`2<String,Nivalis.InventoryItemContainer> _inventoriesById { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemContainer> _inventories { get; set; }
+  prop   Type ConfigurationType { get; }
+  method Type get_ConfigurationType()
+  method Void InitializeInternal(Nivalis.ManagerConfiguration configuration, Nivalis.ISavePacket savePacket)
+  method Void InitializeExternal()
+  method Nivalis.ISavePacket CreatePacket()
+  method Void WriteToPacket(Nivalis.ISavePacket packet)
+  method Void OnDestroyInternal()
+  method Void DayChangeListener()
+  method Nivalis.InventoryItemContainer GetOrCreateInventory(String id, Boolean isRefridgerated, Nivalis.InventoryItemContainerRestriction restriction, Boolean isManuallyUpdated)
+  method Void .ctor()
+  method static Void .cctor()
+  method Type get__ConfigurationType_k__BackingField()
+  method Void set__ConfigurationType_k__BackingField(Type )
+  method Collections.Generic.Dictionary`2<String,Nivalis.InventoryItemContainer> get__inventoriesById()
+  method Void set__inventoriesById(Collections.Generic.Dictionary`2<String,Nivalis.InventoryItemContainer> )
+  method Collections.Generic.List`1<Nivalis.InventoryItemContainer> get__inventories()
+  method Void set__inventories(Collections.Generic.List`1<Nivalis.InventoryItemContainer> )
+
+=== Nivalis.InventorySystem.InventoriesManager/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryInventoriesManager/__c __9 { get; set; }
+  prop   Func`2<Collections.Generic.KeyValuePair`2<String,Nivalis.InventoryItemContainer>,ValueTuple`2<String,Nivalis.InventoryInventorySave>> __9__8_0 { get; set; }
+  method Void .ctor()
+  method ValueTuple`2<String,Nivalis.InventoryInventorySave> _WriteToPacket_b__8_0(Collections.Generic.KeyValuePair`2<String,Nivalis.InventoryItemContainer> kvp)
+  method static Void .cctor()
+  method static Nivalis.InventoryInventoriesManager/__c get___9()
+  method static Void set___9(Nivalis.InventoryInventoriesManager/__c )
+  method static Func`2<Collections.Generic.KeyValuePair`2<String,Nivalis.InventoryItemContainer>,ValueTuple`2<String,Nivalis.InventoryInventorySave>> get___9__8_0()
+  method static Void set___9__8_0(Func`2<Collections.Generic.KeyValuePair`2<String,Nivalis.InventoryItemContainer>,ValueTuple`2<String,Nivalis.InventoryInventorySave>> )
+
+=== Nivalis.InventorySystem.InventoriesSave  (base: Il2CppSystem.Object) ===
+  prop   Collections.Generic.List`1<ValueTuple`2<String,Nivalis.InventoryInventorySave>> Inventories { get; set; }
+  prop   String Guid { get; }
+  prop   Type ManagerType { get; }
+  method String get_Guid()
+  method Type get_ManagerType()
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method Void Clear()
+  method Void .ctor()
+  method static Void .cctor()
+  method Collections.Generic.List`1<ValueTuple`2<String,Nivalis.InventoryInventorySave>> get_Inventories()
+  method Void set_Inventories(Collections.Generic.List`1<ValueTuple`2<String,Nivalis.InventoryInventorySave>> )
+
+=== Nivalis.InventorySystem.InventoryData  (base: Il2CppSystem.Object) ===
+  prop   Func`1<String> getName { get; set; }
+  prop   Nivalis.InventoryIItemContainer itemContainer { get; set; }
+  prop   Nivalis.InventoryIItemContainer furnitureContainer { get; set; }
+  method Nivalis.InventoryIItemContainer GetDestinationContainerForItemType(Nivalis.InventoryItemType type)
+  method Void .ctor()
+  method static Void .cctor()
+  method Func`1<String> get_getName()
+  method Void set_getName(Func`1<String> )
+  method Nivalis.InventoryIItemContainer get_itemContainer()
+  method Void set_itemContainer(Nivalis.InventoryIItemContainer )
+  method Nivalis.InventoryIItemContainer get_furnitureContainer()
+  method Void set_furnitureContainer(Nivalis.InventoryIItemContainer )
+
+=== Nivalis.InventorySystem.InventorySave  (base: Il2CppSystem.Object) ===
+  prop   Boolean IsManuallyUpdated { get; set; }
+  prop   Boolean IsRefridgerated { get; set; }
+  prop   Collections.Generic.Dictionary`2<String,Collections.Generic.List`1<ValueTuple`4<Int32,Int32,Int32,Int32>>> PerTypeInstances { get; set; }
+  prop   Nivalis.OptionalInt MaxItems { get; set; }
+  prop   Nivalis.OptionalInt MaxSlots { get; set; }
+  prop   String TagFilterGuid { get; set; }
+  prop   Boolean AcceptsIngredients { get; set; }
+  method Void Add(Nivalis.InventoryItemInstanceData itemInstance)
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method Void .ctor()
+  method static Void .cctor()
+  method Boolean get_IsManuallyUpdated()
+  method Void set_IsManuallyUpdated(Boolean )
+  method Boolean get_IsRefridgerated()
+  method Void set_IsRefridgerated(Boolean )
+  method Collections.Generic.Dictionary`2<String,Collections.Generic.List`1<ValueTuple`4<Int32,Int32,Int32,Int32>>> get_PerTypeInstances()
+  method Void set_PerTypeInstances(Collections.Generic.Dictionary`2<String,Collections.Generic.List`1<ValueTuple`4<Int32,Int32,Int32,Int32>>> )
+  method Nivalis.OptionalInt get_MaxItems()
+  method Void set_MaxItems(Nivalis.OptionalInt )
+  method Nivalis.OptionalInt get_MaxSlots()
+  method Void set_MaxSlots(Nivalis.OptionalInt )
+  method String get_TagFilterGuid()
+  method Void set_TagFilterGuid(String )
+  method Boolean get_AcceptsIngredients()
+  method Void set_AcceptsIngredients(Boolean )
+
+=== Nivalis.InventorySystem.ItemCollectionOperationResult  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryItemCollectionOperationResult Failed
+  field  static public Nivalis.InventoryItemCollectionOperationResult Partial
+  field  static public Nivalis.InventoryItemCollectionOperationResult Succeeded
+
+=== Nivalis.InventorySystem.ItemContainer  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> onContentsChanged { get; set; }
+  prop   Boolean _IsRefridgerated_k__BackingField { get; set; }
+  prop   Boolean _IsManuallyUpdated_k__BackingField { get; set; }
+  prop   Nivalis.MultiDictionary`2<Nivalis.InventoryItemType,Collections.Generic.LinkedListNode`1<Nivalis.InventoryItemStack>> _typeMap { get; set; }
+  prop   Collections.Generic.LinkedList`1<Nivalis.InventoryItemStack> _items { get; set; }
+  prop   Nivalis.InventoryItemContainerRestriction _restriction { get; set; }
+  prop   Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange> OnContentsChanged { get; }
+  prop   Boolean IsRefridgerated { get; set; }
+  prop   Nullable`1<Int32> RefridgeratedCapacity { get; }
+  prop   Nullable`1<Int32> NormalCapacity { get; }
+  prop   Boolean IsManuallyUpdated { get; set; }
+  prop   Int32 RefridgeratedCount { get; }
+  prop   Int32 NormalCount { get; }
+  prop   Int32 StackCount { get; }
+  prop   Int32 ItemCount { get; }
+  prop   Single AverageFreshness { get; }
+  prop   Boolean HasItems { get; }
+  prop   Nivalis.MultiDictionary`2<Nivalis.InventoryItemType,Collections.Generic.LinkedListNode`1<Nivalis.InventoryItemStack>> TypeMap { get; }
+  prop   Nivalis.InventoryItemContainerRestriction Restriction { get; }
+  prop   Nivalis.InventoryItemType RandomItem { get; }
+  method Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange> get_OnContentsChanged()
+  method Boolean get_IsRefridgerated()
+  method Void set_IsRefridgerated(Boolean value)
+  method Nullable`1<Int32> get_RefridgeratedCapacity()
+  method Nullable`1<Int32> get_NormalCapacity()
+  method Boolean get_IsManuallyUpdated()
+  method Void set_IsManuallyUpdated(Boolean value)
+  method Int32 get_RefridgeratedCount()
+  method Int32 get_NormalCount()
+  method Int32 get_StackCount()
+  method Int32 get_ItemCount()
+  method Single get_AverageFreshness()
+  method Boolean get_HasItems()
+  method Nivalis.MultiDictionary`2<Nivalis.InventoryItemType,Collections.Generic.LinkedListNode`1<Nivalis.InventoryItemStack>> get_TypeMap()
+  method Nivalis.InventoryItemContainerRestriction get_Restriction()
+  method Nivalis.InventoryItemType get_RandomItem()
+  method Boolean TryPickRandomItem(Nivalis.InventoryItemType& picked)
+  method Void UpdateRestriction(Nivalis.InventoryItemContainer overflowInventory)
+  method Void .ctor(Boolean isManuallyUpdated, Boolean isRefridgerated, Nivalis.InventoryItemContainerRestriction restriction)
+  method Int32 UpdateItemDecay(Boolean createRottenFood, Int32 day)
+  method Int32 GetItemCount(Nivalis.InventoryItemType type, Boolean& hasUnRefridgeratedItems)
+  method Boolean HasItem(Nivalis.InventoryItemType type)
+  method Boolean ContainsFurniture()
+  method Int32 GetItemCount(Nivalis.InventoryItemType type)
+  method Int32 GetItemCountByTag(Nivalis.InventoryObjectTag itemTag)
+  method Void TryAdd(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemTypeAmount> items)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemStack item)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemType itemType, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> tempItems)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemStack/BasicTemp& tempItem)
+  method Nivalis.InventoryItemCollectionOperationResult TryAdd(Nivalis.InventoryItemInstanceData itemInstance)
+  method Nivalis.InventoryItemCollectionOperationResult TryCreateInInventory(Nivalis.InventoryItemType data, Int32 amount, Int32 pricePerItem)
+  method Nivalis.InventoryItemStack TryTake(Nivalis.InventoryItemStack specificStack, Int32 amountToTake)
+  method Boolean TryTake(Nivalis.InventoryItemStack specificStack, Nivalis.InventoryItemInstanceData instance)
+  method Boolean TryRemoveSpecificItems(Nivalis.InventoryItemStack specificItems)
+  method Boolean TryTake(Nivalis.InventoryItemInstanceData itemInstanceData)
+  method Boolean ContainsSpecificStack(Nivalis.InventoryItemStack stack)
+  method Nivalis.InventoryItemStack TryTake(Nivalis.InventoryItemStack specificStack)
+  method Nivalis.InventoryItemStack TakeOne(Nivalis.InventoryItemType type)
+  method Void GiveOne(Nivalis.InventoryItemType type, Int32 value)
+  method Boolean TakeAllByType(Nivalis.InventoryItemType type)
+  method Boolean TakeByType(Nivalis.InventoryItemType type, Int32 amount, Collections.Generic.IList`1<Nivalis.InventoryItemInstanceData> outInstances)
+  method Void Clear()
+  method Collections.Generic.IEnumerator`1<Nivalis.InventoryItemStack> GetEnumerator()
+  method Collections.IEnumerator System_Collections_IEnumerable_GetEnumerator()
+  method Boolean AcceptsItemType(Nivalis.InventoryItemType type)
+  method Nivalis.InventoryItemStack GetStack(Nivalis.InventoryItemType item)
+  method Void Refresh()
+  method Nivalis.InventoryInventorySave CreateSaveData()
+  method Void LoadFromSaveData(Nivalis.InventoryInventorySave saveData)
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method static Void .cctor()
+  method Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> get_onContentsChanged()
+  method Void set_onContentsChanged(Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> )
+  method Boolean get__IsRefridgerated_k__BackingField()
+  method Void set__IsRefridgerated_k__BackingField(Boolean )
+  method Boolean get__IsManuallyUpdated_k__BackingField()
+  method Void set__IsManuallyUpdated_k__BackingField(Boolean )
+  method Nivalis.MultiDictionary`2<Nivalis.InventoryItemType,Collections.Generic.LinkedListNode`1<Nivalis.InventoryItemStack>> get__typeMap()
+  method Void set__typeMap(Nivalis.MultiDictionary`2<Nivalis.InventoryItemType,Collections.Generic.LinkedListNode`1<Nivalis.InventoryItemStack>> )
+  method Collections.Generic.LinkedList`1<Nivalis.InventoryItemStack> get__items()
+  method Void set__items(Collections.Generic.LinkedList`1<Nivalis.InventoryItemStack> )
+  method Nivalis.InventoryItemContainerRestriction get__restriction()
+  method Void set__restriction(Nivalis.InventoryItemContainerRestriction )
+
+=== Nivalis.InventorySystem.ItemContainerFilterView  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemFilter _filter { get; set; }
+  prop   Nivalis.InventoryIItemContainer _target { get; set; }
+  method Void .ctor(Nivalis.InventoryItemFilter filter, Nivalis.InventoryIItemContainer target)
+  method Collections.Generic.IEnumerator`1<Nivalis.InventoryItemStack> GetEnumerator()
+  method Collections.IEnumerator System_Collections_IEnumerable_GetEnumerator()
+  method static Void .cctor()
+  method Nivalis.InventoryItemFilter get__filter()
+  method Void set__filter(Nivalis.InventoryItemFilter )
+  method Nivalis.InventoryIItemContainer get__target()
+  method Void set__target(Nivalis.InventoryIItemContainer )
+
+=== Nivalis.InventorySystem.ItemContainerFilterView/Enumerator  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemContainerFilterView _filterView { get; set; }
+  prop   Nivalis.InventoryItemStack _Current_k__BackingField { get; set; }
+  prop   Collections.Generic.IEnumerator`1<Nivalis.InventoryItemStack> _backingEnumerator { get; set; }
+  prop   Nivalis.InventoryItemStack Current { get; set; }
+  prop   Object System.Collections.IEnumerator.Current { get; }
+  method Nivalis.InventoryItemStack get_Current()
+  method Void set_Current(Nivalis.InventoryItemStack value)
+  method Object System_Collections_IEnumerator_get_Current()
+  method Void .ctor(Nivalis.InventoryItemContainerFilterView filterView)
+  method Void Dispose()
+  method Boolean MoveNext()
+  method Void Reset()
+  method static Void .cctor()
+  method Nivalis.InventoryItemContainerFilterView get__filterView()
+  method Void set__filterView(Nivalis.InventoryItemContainerFilterView )
+  method Nivalis.InventoryItemStack get__Current_k__BackingField()
+  method Void set__Current_k__BackingField(Nivalis.InventoryItemStack )
+  method Collections.Generic.IEnumerator`1<Nivalis.InventoryItemStack> get__backingEnumerator()
+  method Void set__backingEnumerator(Collections.Generic.IEnumerator`1<Nivalis.InventoryItemStack> )
+
+=== Nivalis.InventorySystem.ItemContainerRestriction  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.OptionalInt MaxItems { get; set; }
+  prop   Nivalis.OptionalInt MaxSlots { get; set; }
+  prop   Nivalis.InventoryObjectTag TagFilter { get; set; }
+  prop   Boolean AcceptsIngredients { get; set; }
+  method Boolean CanAddItem(Nivalis.InventoryItemContainer toContainer, Nivalis.InventoryItemStack item)
+  method Boolean CanAddItem(Nivalis.InventoryItemContainer toContainer, Nivalis.InventoryItemStack/BasicTemp& tempItemStack)
+  method Boolean CanAddItem(Nivalis.InventoryItemContainer toContainer, Nivalis.InventoryItemType itemType, Int32 count)
+  method Boolean CanAddItemType(Nivalis.InventoryItemType type)
+  method Boolean CanAddItem(Nivalis.InventoryItemContainer toContainer, Nivalis.InventoryItemInstanceData data)
+  method Boolean CanAddSlot(Nivalis.InventoryItemContainer toContainer)
+  method static Nivalis.InventoryItemContainerRestriction AllowAll()
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.OptionalInt get_MaxItems()
+  method Void set_MaxItems(Nivalis.OptionalInt )
+  method Nivalis.OptionalInt get_MaxSlots()
+  method Void set_MaxSlots(Nivalis.OptionalInt )
+  method Nivalis.InventoryObjectTag get_TagFilter()
+  method Void set_TagFilter(Nivalis.InventoryObjectTag )
+  method Boolean get_AcceptsIngredients()
+  method Void set_AcceptsIngredients(Boolean )
+
+=== Nivalis.InventorySystem.ItemCostDisplay  (base: System.ValueType) ===
+  field  public Int32 Price
+  field  public Boolean Available
+  method static Void .cctor()
+  method Object BoxIl2CppObject()
+
+=== Nivalis.InventorySystem.ItemDisplayData  (base: Il2CppSystem.ValueType) ===
+  prop   String DisplayName { get; set; }
+  prop   String Description { get; set; }
+  prop   Sprite Icon { get; set; }
+  prop   Int32 StackCount { get; set; }
+  prop   Nullable`1<Nivalis.InventoryItemCostDisplay> Cost { get; set; }
+  method String ToString()
+  method static Void .cctor()
+  method Void .ctor()
+  method String get_DisplayName()
+  method Void set_DisplayName(String )
+  method String get_Description()
+  method Void set_Description(String )
+  method Sprite get_Icon()
+  method Void set_Icon(Sprite )
+  method Int32 get_StackCount()
+  method Void set_StackCount(Int32 )
+  method Nullable`1<Nivalis.InventoryItemCostDisplay> get_Cost()
+  method Void set_Cost(Nullable`1<Nivalis.InventoryItemCostDisplay> )
+
+=== Nivalis.InventorySystem.ItemEntity  (base: UnityEngine.MonoBehaviour) ===
+  prop   Nivalis.InventoryItemType data { get; set; }
+  prop   Nivalis.InventoryItemStack _item { get; set; }
+  prop   String FocusName { get; }
+  prop   Nivalis.InventoryItemStack Item { get; set; }
+  prop   Boolean IsPlayerStorable { get; }
+  prop   Nivalis.InventoryItemType Data { get; }
+  method String get_FocusName()
+  method Void EDITOR_SelectItemTypeInProject()
+  method Void EDITOR_CreateDataObject()
+  method Void EDITOR_AssignDataObject()
+  method Nivalis.InventoryItemStack get_Item()
+  method Void set_Item(Nivalis.InventoryItemStack value)
+  method Boolean get_IsPlayerStorable()
+  method Nivalis.InventoryItemType get_Data()
+  method Boolean Store(Nivalis.InventoryIItemContainer inventory)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.InventoryItemType get_data()
+  method Void set_data(Nivalis.InventoryItemType )
+  method Nivalis.InventoryItemStack get__item()
+  method Void set__item(Nivalis.InventoryItemStack )
+
+=== Nivalis.InventorySystem.ItemFilter  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemFilter/PropertyFilter _propertyFilter { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryObjectTag> AllowedTags { get; set; }
+  prop   Predicate`1<Nivalis.InventoryItemStack> PerItemFilter { get; set; }
+  prop   Collections.Generic.HashSet`1<Int32> allowedTagsHashSet { get; set; }
+  prop   Boolean OnlyPriced { get; }
+  prop   Boolean OnlyEntities { get; }
+  prop   Collections.Generic.HashSet`1<Int32> AllowedTagsHashSet { get; }
+  method Boolean get_OnlyPriced()
+  method Boolean get_OnlyEntities()
+  method Collections.Generic.HashSet`1<Int32> get_AllowedTagsHashSet()
+  method Boolean Filter(Nivalis.InventoryItemStack item)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.InventoryItemFilter/PropertyFilter get__propertyFilter()
+  method Void set__propertyFilter(Nivalis.InventoryItemFilter/PropertyFilter )
+  method Collections.Generic.List`1<Nivalis.InventoryObjectTag> get_AllowedTags()
+  method Void set_AllowedTags(Collections.Generic.List`1<Nivalis.InventoryObjectTag> )
+  method Predicate`1<Nivalis.InventoryItemStack> get_PerItemFilter()
+  method Void set_PerItemFilter(Predicate`1<Nivalis.InventoryItemStack> )
+  method Collections.Generic.HashSet`1<Int32> get_allowedTagsHashSet()
+  method Void set_allowedTagsHashSet(Collections.Generic.HashSet`1<Int32> )
+
+=== Nivalis.InventorySystem.ItemFilter/PropertyFilter  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryItemFilter/PropertyFilter OnlyPriced
+  field  static public Nivalis.InventoryItemFilter/PropertyFilter OnlyEntities
+
+=== Nivalis.InventorySystem.ItemInstanceCollectionExtensions  (base: Il2CppSystem.Object) ===
+  method static Collections.Generic.IEnumerable`1<Nivalis.InventoryItemTypeAmount> GroupCountByType(Nivalis.InventoryIItemInstanceCollection collection)
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.ItemInstanceData  (base: Il2CppSystem.Object) ===
+  prop   Int32 AgingDurationInDays { get; set; }
+  prop   Nivalis.InventoryItemType type { get; set; }
+  prop   Int32 value { get; set; }
+  prop   Int32 creationDay { get; set; }
+  prop   Int32 remainingDecayTime { get; set; }
+  prop   Int32 lastUpdateDay { get; set; }
+  prop   Nivalis.InventoryItemType Type { get; }
+  prop   Int32 Value { get; }
+  prop   Int32 CreationDay { get; }
+  prop   Int32 RemainingDecayTime { get; }
+  prop   Int32 LastUpdateDay { get; }
+  prop   Int32 AgeInDays { get; }
+  prop   Int32 DayOfSpoilage { get; }
+  prop   Nivalis.TimeOfDayManager/TimeStamp TimeOfSpoilage { get; }
+  prop   Single FreshnessFactor { get; }
+  prop   Nivalis.InventoryFoodFreshness Freshness { get; }
+  method Nivalis.InventoryItemType get_Type()
+  method Int32 get_Value()
+  method Int32 get_CreationDay()
+  method Int32 get_RemainingDecayTime()
+  method Int32 get_LastUpdateDay()
+  method Int32 get_AgeInDays()
+  method Void .ctor()
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 value)
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 creationDay, Int32 value, Int32 remainingDecayTime)
+  method Int32 get_DayOfSpoilage()
+  method Nivalis.TimeOfDayManager/TimeStamp get_TimeOfSpoilage()
+  method Single get_FreshnessFactor()
+  method Nivalis.InventoryFoodFreshness get_Freshness()
+  method Void UpdateDecay(Boolean isRefridgerated, Int32 day)
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method static Void .cctor()
+  method static Int32 get_AgingDurationInDays()
+  method static Void set_AgingDurationInDays(Int32 )
+  method Nivalis.InventoryItemType get_type()
+  method Void set_type(Nivalis.InventoryItemType )
+  method Int32 get_value()
+  method Void set_value(Int32 )
+  method Int32 get_creationDay()
+  method Void set_creationDay(Int32 )
+  method Int32 get_remainingDecayTime()
+  method Void set_remainingDecayTime(Int32 )
+  method Int32 get_lastUpdateDay()
+  method Void set_lastUpdateDay(Int32 )
+
+=== Nivalis.InventorySystem.ItemRarity  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryItemRarity Common
+  field  static public Nivalis.InventoryItemRarity Uncommon
+  field  static public Nivalis.InventoryItemRarity Rare
+  field  static public Nivalis.InventoryItemRarity Legendary
+  field  static public Nivalis.InventoryItemRarity Unique
+
+=== Nivalis.InventorySystem.ItemStack  (base: Il2CppSystem.Object) ===
+  prop   Int32 _lastUpdateTime { get; set; }
+  prop   Nivalis.InventoryItemType _type { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> _instanceData { get; set; }
+  prop   Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemInstanceData> Instances { get; }
+  prop   Nivalis.InventoryItemType Type { get; }
+  prop   Int32 StackCount { get; }
+  prop   Int32 LastUpdateTime { get; }
+  prop   Nivalis.InventoryFoodFreshness Freshness { get; }
+  prop   Single FreshnessFactor { get; }
+  prop   Nivalis.InventoryItemStack Nivalis.InventorySystem.IItemStackOwner.ItemStack { get; }
+  method Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemInstanceData> get_Instances()
+  method Nivalis.InventoryItemType get_Type()
+  method Int32 get_StackCount()
+  method Int32 get_LastUpdateTime()
+  method Nivalis.InventoryFoodFreshness get_Freshness()
+  method Single get_FreshnessFactor()
+  method static Nivalis.InventoryItemStack SafeCreate(Nivalis.InventoryItemType type, Int32 stackSize, Int32 pricePerItem)
+  method static Nivalis.InventoryItemStack SafeCreate(Nivalis.InventoryItemType type, Nivalis.InventoryItemInstanceData instance)
+  method static Nivalis.InventoryItemStack SafeCreateEmpty(Nivalis.InventoryItemType type, Int32 capacity)
+  method static Nivalis.InventoryItemStack SafeCreate(Nivalis.InventoryItemType type, Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemInstanceData> instances)
+  method static Nivalis.InventoryItemStack SafeCreate(Nivalis.InventoryItemType type, Collections.Generic.IEnumerable`1<Nivalis.InventoryItemInstanceData> instances, Int32 count)
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 stackSize, Int32 pricePerItem)
+  method Void .ctor(Nivalis.InventoryItemType type, Nivalis.InventoryItemInstanceData instance)
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 capacity)
+  method Void .ctor(Nivalis.InventoryItemType type, Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemInstanceData> instances)
+  method Void .ctor(Nivalis.InventoryItemType type, Collections.Generic.IEnumerable`1<Nivalis.InventoryItemInstanceData> instances, Int32 count)
+  method Void AddInstance(Nivalis.InventoryItemInstanceData instance)
+  method Void AddInstances(Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemInstanceData> instances)
+  method Void TryMerge(Nivalis.InventoryItemStack other)
+  method Void TryMerge(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> other)
+  method Void TryMerge(Nivalis.InventoryItemStack/BasicTemp& other)
+  method Void TryMerge(Nivalis.InventoryItemStack other, Int32 amount)
+  method Void TryMerge(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> other, Int32 amount)
+  method Void TryMerge(Nivalis.InventoryItemStack/BasicTemp& other, Int32 amount)
+  method Boolean RemoveFromStack(Int32 amount, Nivalis.InventoryItemStack& split)
+  method Boolean RemoveFromStack(Int32 amount)
+  method Void RemoveFromStackInto(Int32 amount, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> targets)
+  method static Void RemoveFromInto(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> source, Int32 amount, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> targets)
+  method Nivalis.InventoryItemDisplayData GetDisplayData()
+  method Nivalis.InventoryItemInstanceData GetFirstItem()
+  method String ToString()
+  method Void PopItems(Int32 count)
+  method Void PopItemsInto(Int32 count, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> target)
+  method static Void MoveItemsInto(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> source, Int32 count, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> target)
+  method Void AddToStackInternal(Nivalis.InventoryItemInstanceData instance)
+  method Void Clear()
+  method Boolean RemoveFromStack(Nivalis.InventoryItemInstanceData itemInstanceData)
+  method Boolean RemoveFromStack(Collections.Generic.IEnumerable`1<Nivalis.InventoryItemInstanceData> itemInstanceData)
+  method Void .ctor()
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method Int32 RemoveStaleItems()
+  method Void UpdateItemDecay(Boolean isRefridgerated, Int32 day)
+  method Nivalis.InventoryItemStack Nivalis_InventorySystem_IItemStackOwner_get_ItemStack()
+  method static Void .cctor()
+  method Int32 get__lastUpdateTime()
+  method Void set__lastUpdateTime(Int32 )
+  method Nivalis.InventoryItemType get__type()
+  method Void set__type(Nivalis.InventoryItemType )
+  method Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> get__instanceData()
+  method Void set__instanceData(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> )
+
+=== Nivalis.InventorySystem.ItemStack/BasicTemp  (base: Il2CppSystem.ValueType) ===
+  prop   Nivalis.InventoryItemType Type { get; set; }
+  prop   Int32 PricePerItem { get; set; }
+  prop   Int32 StackCount { get; set; }
+  prop   Boolean IsNull { get; }
+  method Boolean get_IsNull()
+  method static Boolean SafeCreate(Nivalis.InventoryItemType type, Int32 stackSize, Int32 pricePerItem, Nivalis.InventoryItemStack/BasicTemp& basicTemp)
+  method static Boolean SafeCreate(Nivalis.InventoryItemType type, Int32 stackSize, Nivalis.InventoryItemStack/BasicTemp& basicTemp)
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 stackSize, Int32 pricePerItem)
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 stackSize)
+  method Boolean RemoveFromStack(Int32 amount)
+  method Boolean RemoveFromStack(Int32 amount, Nivalis.InventoryItemStack/BasicTemp& split)
+  method Void RemoveFromStackInto(Int32 amount, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> targets)
+  method Nivalis.InventoryItemDisplayData GetDisplayData()
+  method String ToString()
+  method Void PopItems(Int32 count)
+  method Void PopItemsInto(Int32 count, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> target)
+  method Void PopItemsInto(Int32 count, Nivalis.InventoryItemStack/BasicTemp& target)
+  method Void Clear()
+  method Nivalis.InventoryItemStack ToItemStack()
+  method static Void .cctor()
+  method Void .ctor()
+  method Nivalis.InventoryItemType get_Type()
+  method Void set_Type(Nivalis.InventoryItemType )
+  method Int32 get_PricePerItem()
+  method Void set_PricePerItem(Int32 )
+  method Int32 get_StackCount()
+  method Void set_StackCount(Int32 )
+
+=== Nivalis.InventorySystem.ItemType  (base: UnityEngine.ScriptableObject) ===
+  prop   Text.StringBuilder str { get; set; }
+  prop   Nivalis.SerializableGuid guid { get; set; }
+  prop   String ArticyGuid { get; set; }
+  prop   Sprite icon { get; set; }
+  prop   Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain> locObjRef { get; set; }
+  prop   Single basePrice { get; set; }
+  prop   Int32 minStockPerVendor { get; set; }
+  prop   Int32 maxStockPerVendor { get; set; }
+  prop   Boolean allowBuying { get; set; }
+  prop   Boolean allowSelling { get; set; }
+  prop   Boolean allowDailyDeal { get; set; }
+  prop   Single timedStockPriceModifier { get; set; }
+  prop   Int32 baseMarketPrice { get; set; }
+  prop   BasePriceCurve basePriceCurve { get; set; }
+  prop   Single minMealPrice { get; set; }
+  prop   Single maxMealPrice { get; set; }
+  prop   Boolean isPlayerStorable { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryObjectTag> tags { get; set; }
+  prop   String storeAchievementId { get; set; }
+  prop   Collections.Generic.HashSet`1<Int32> tagsHashSet { get; set; }
+  prop   Nivalis.InventoryItemEntity entityPrefab { get; set; }
+  prop   Boolean isEquippable { get; set; }
+  prop   Boolean isIngredient { get; set; }
+  prop   Int32 decayTimeInDays { get; set; }
+  prop   Boolean requiresRefrigeration { get; set; }
+  prop   Nivalis.CraftingIngredientProcessingType allowedProcessingTypes { get; set; }
+  prop   Int32 calories { get; set; }
+  prop   Single exclusivity { get; set; }
+  prop   Boolean _isPlant { get; set; }
+  prop   Nivalis.InventoryItemType _seeds { get; set; }
+  prop   GameObject _plantPrefab { get; set; }
+  prop   Int32 _yield { get; set; }
+  prop   Single _growthDuration { get; set; }
+  prop   Int32 _optimalTemperature { get; set; }
+  prop   Int32 _optimalHumidity { get; set; }
+  prop   Int32 _optimalLightness { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> seedPlants { get; set; }
+  prop   Boolean _isFarmingModule { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> plants { get; set; }
+  prop   Single yieldBonus { get; set; }
+  prop   Single growthSpeedBonus { get; set; }
+  prop   Int32 requiredFarmingLevel { get; set; }
+  prop   Boolean _isFishingRod { get; set; }
+  prop   Single throwRange { get; set; }
+  prop   Single lureRange { get; set; }
+  prop   Single luck { get; set; }
+  prop   Boolean isUseable { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemType/StatChange> onUseStatChanges { get; set; }
+  prop   Boolean _isCamera { get; set; }
+  prop   Boolean isFish { get; set; }
+  prop   Nivalis.InventoryFishItemData fishData { get; set; }
+  prop   Boolean isFurniture { get; set; }
+  prop   Nivalis.InventoryFurnitureCategory furnitureCategories { get; set; }
+  prop   Nivalis.InventoryFurnitureProperty propertyCategories { get; set; }
+  prop   Nivalis.InventoryFurnitureStyle furnitureStyle { get; set; }
+  prop   Nivalis.PhotoMode.PhotoFrameSize photoFrameSize { get; set; }
+  prop   Int32 comfort { get; set; }
+  prop   Int32 basicStorage { get; set; }
+  prop   Int32 refridgeratedStorage { get; set; }
+  prop   Boolean staticFurniture { get; set; }
+  prop   Single furnitureExclusivity { get; set; }
+  prop   Int32 vendingMachineCapacity { get; set; }
+  prop   Nivalis.InventoryItemType/SlotType slot { get; set; }
+  prop   String Guid { get; }
+  prop   String Name { get; }
+  prop   String ShortName { get; }
+  prop   Sprite Icon { get; }
+  prop   Boolean IsPlayerStorable { get; }
+  prop   Int32 BaseMarketPrice { get; }
+  prop   Int32 BasePrice { get; }
+  prop   Int32 MinStockPerVendor { get; }
+  prop   Int32 MaxStockPerVendor { get; }
+  prop   Boolean AllowBuying { get; }
+  prop   Boolean AllowSelling { get; }
+  prop   Boolean CanBeTraded { get; }
+  prop   Boolean AllowDailyDeal { get; }
+  prop   Single TimedStockPriceModifier { get; }
+  prop   BasePriceCurve BasePriceCurve { get; }
+  prop   Nivalis.InventoryItemEntity EntityPrefab { get; }
+  prop   Collections.Generic.IReadOnlyList`1<Nivalis.InventoryObjectTag> Tags { get; }
+  prop   Int32 DecayTime { get; }
+  prop   Boolean IsUseable { get; }
+  prop   Boolean IsEquippable { get; }
+  prop   Nivalis.Localization.LocObjPlain LocObj { get; }
+  prop   Nivalis.Localization.LocObjRef Nivalis.Localization.ILocalizable.locObjRef { get; }
+  prop   Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain> LocObjRef { get; }
+  prop   Int32 MinMealPrice { get; }
+  prop   Int32 MaxMealPrice { get; }
+  prop   Collections.Generic.HashSet`1<Int32> TagsHashSet { get; }
+  prop   Boolean IsIngredient { get; }
+  prop   Boolean HasDecay { get; }
+  prop   Boolean RequiresRefridgeration { get; }
+  prop   Nivalis.CraftingIngredientProcessingType AllowedProcessingTypes { get; }
+  prop   Single Calories { get; }
+  prop   Single Exclusivity { get; }
+  prop   Boolean IsPlant { get; }
+  prop   Nivalis.InventoryItemType Seeds { get; }
+  prop   GameObject PlantPrefab { get; }
+  prop   Int32 Yield { get; }
+  prop   Single GrowthDuration { get; }
+  prop   Int32 OptimalTemperature { get; }
+  prop   Int32 OptimalHumidity { get; }
+  prop   Int32 OptimalLightness { get; }
+  prop   Boolean IsSeed { get; }
+  prop   Boolean IsFarmingModule { get; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> Plants { get; }
+  prop   Single YieldBonus { get; }
+  prop   Single GrowthSpeedBonus { get; }
+  prop   Int32 RequiredFarmingLevel { get; }
+  prop   Boolean IsFishingRod { get; }
+  prop   Single ThrowRange { get; }
+  prop   Single LureRange { get; }
+  prop   Single Luck { get; }
+  prop   Boolean IsCamera { get; }
+  prop   Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemType/StatChange> OnUseStatChanges { get; }
+  prop   Boolean IsFurniture { get; }
+  prop   Boolean IsPhotoFrame { get; }
+  prop   Boolean IsMeal { get; }
+  prop   Boolean IsConsumable { get; }
+  prop   Boolean IsDrink { get; }
+  prop   Nivalis.InventoryFurnitureCategory FurnitureCategory { get; }
+  prop   Nivalis.PhotoMode.PhotoFrameSize PhotoFrameSize { get; }
+  prop   Nivalis.InventoryFishItemData FishData { get; }
+  prop   Boolean IsFish { get; }
+  prop   Boolean StaticFurniture { get; }
+  prop   Nivalis.InventoryFurnitureProperty PropertyCategories { get; }
+  prop   Nivalis.InventoryFurnitureStyle FurnitureStyle { get; }
+  prop   Single FurnitureExclusivity { get; }
+  prop   Int32 VendingMachineCapacity { get; }
+  prop   Nivalis.InventoryItemType/SlotType Slot { get; }
+  prop   Int32 Comfort { get; }
+  prop   Single ComfortFraction { get; }
+  prop   Int32 BasicStorage { get; }
+  prop   Int32 RefrigeratedStorage { get; }
+  method String get_Guid()
+  method Void GenerateNewGuid()
+  method String get_Name()
+  method String get_ShortName()
+  method Sprite get_Icon()
+  method Boolean get_IsPlayerStorable()
+  method Int32 get_BaseMarketPrice()
+  method Int32 get_BasePrice()
+  method Int32 get_MinStockPerVendor()
+  method Int32 get_MaxStockPerVendor()
+  method Boolean get_AllowBuying()
+  method Boolean get_AllowSelling()
+  method Boolean get_CanBeTraded()
+  method Boolean get_AllowDailyDeal()
+  method Single get_TimedStockPriceModifier()
+  method BasePriceCurve get_BasePriceCurve()
+  method Nivalis.InventoryItemEntity get_EntityPrefab()
+  method Collections.Generic.IReadOnlyList`1<Nivalis.InventoryObjectTag> get_Tags()
+  method Int32 get_DecayTime()
+  method Boolean get_IsUseable()
+  method Boolean get_IsEquippable()
+  method Nivalis.Localization.LocObjPlain get_LocObj()
+  method Nivalis.Localization.LocObjRef Nivalis_Localization_ILocalizable_get_locObjRef()
+  method Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain> get_LocObjRef()
+  method Int32 get_MinMealPrice()
+  method Int32 get_MaxMealPrice()
+  method Collections.Generic.HashSet`1<Int32> get_TagsHashSet()
+  method Boolean get_IsIngredient()
+  method Boolean get_HasDecay()
+  method Boolean get_RequiresRefridgeration()
+  method Nivalis.CraftingIngredientProcessingType get_AllowedProcessingTypes()
+  method Single get_Calories()
+  method Single get_Exclusivity()
+  method Boolean get_IsPlant()
+  method Nivalis.InventoryItemType get_Seeds()
+  method GameObject get_PlantPrefab()
+  method Int32 get_Yield()
+  method Single get_GrowthDuration()
+  method Int32 get_OptimalTemperature()
+  method Int32 get_OptimalHumidity()
+  method Int32 get_OptimalLightness()
+  method Boolean get_IsSeed()
+  method Boolean get_IsFarmingModule()
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> get_Plants()
+  method Single get_YieldBonus()
+  method Single get_GrowthSpeedBonus()
+  method Int32 get_RequiredFarmingLevel()
+  method Boolean get_IsFishingRod()
+  method Single get_ThrowRange()
+  method Single get_LureRange()
+  method Single get_Luck()
+  method Boolean get_IsCamera()
+  method Collections.Generic.IReadOnlyList`1<Nivalis.InventoryItemType/StatChange> get_OnUseStatChanges()
+  method Boolean get_IsFurniture()
+  method Boolean get_IsPhotoFrame()
+  method Boolean get_IsMeal()
+  method Boolean get_IsConsumable()
+  method Boolean get_IsDrink()
+  method Nivalis.InventoryFurnitureCategory get_FurnitureCategory()
+  method Nivalis.PhotoMode.PhotoFrameSize get_PhotoFrameSize()
+  method Nivalis.InventoryFishItemData get_FishData()
+  method Boolean get_IsFish()
+  method Boolean get_StaticFurniture()
+  method Nivalis.InventoryFurnitureProperty get_PropertyCategories()
+  method Nivalis.InventoryFurnitureStyle get_FurnitureStyle()
+  method Single get_FurnitureExclusivity()
+  method Int32 get_VendingMachineCapacity()
+  method Nivalis.InventoryItemType/SlotType get_Slot()
+  method Int32 get_Comfort()
+  method Single get_ComfortFraction()
+  method Int32 get_BasicStorage()
+  method Int32 get_RefrigeratedStorage()
+  method Boolean CreateStack(Int32 amount, Int32 value, Nivalis.InventoryItemStack/BasicTemp& tempItemStack)
+  method Void SetBaseMarketPrice(Int32 baseMarketPrice)
+  method Void InitEconomyData()
+  method String GetShortDescription()
+  method String GetFullDescription()
+  method String GetFullDescription(Nivalis.InventoryFoodFreshness freshness)
+  method String GetFullDescription(Nivalis.InventoryFoodFreshness freshness, Boolean showFreshness)
+  method Void AddStat(Text.StringBuilder str, String label, Single value, String unit)
+  method Void AddStat(Text.StringBuilder str, String label, Int32 value, String unit)
+  method Void AddStatNoLabel(Text.StringBuilder str, String value, String unit)
+  method Void AddStat(Text.StringBuilder str, String label, String value, String unit)
+  method Void EDITOR_TryAssignSprite()
+  method Void EDITOR_CreateRecipeObject()
+  method Void AddToInventory()
+  method Void Nivalis_Localization_ILocalizable_GenerateFreshLocObjData()
+  method Void .ctor()
+  method static Void .cctor()
+  method static Text.StringBuilder get_str()
+  method static Void set_str(Text.StringBuilder )
+  method Nivalis.SerializableGuid get_guid()
+  method Void set_guid(Nivalis.SerializableGuid )
+  method String get_ArticyGuid()
+  method Void set_ArticyGuid(String )
+  method Sprite get_icon()
+  method Void set_icon(Sprite )
+  method Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain> get_locObjRef()
+  method Void set_locObjRef(Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain> )
+  method Single get_basePrice()
+  method Void set_basePrice(Single )
+  method Int32 get_minStockPerVendor()
+  method Void set_minStockPerVendor(Int32 )
+  method Int32 get_maxStockPerVendor()
+  method Void set_maxStockPerVendor(Int32 )
+  method Boolean get_allowBuying()
+  method Void set_allowBuying(Boolean )
+  method Boolean get_allowSelling()
+  method Void set_allowSelling(Boolean )
+  method Boolean get_allowDailyDeal()
+  method Void set_allowDailyDeal(Boolean )
+  method Single get_timedStockPriceModifier()
+  method Void set_timedStockPriceModifier(Single )
+  method Int32 get_baseMarketPrice()
+  method Void set_baseMarketPrice(Int32 )
+  method BasePriceCurve get_basePriceCurve()
+  method Void set_basePriceCurve(BasePriceCurve )
+  method Single get_minMealPrice()
+  method Void set_minMealPrice(Single )
+  method Single get_maxMealPrice()
+  method Void set_maxMealPrice(Single )
+  method Boolean get_isPlayerStorable()
+  method Void set_isPlayerStorable(Boolean )
+  method Collections.Generic.List`1<Nivalis.InventoryObjectTag> get_tags()
+  method Void set_tags(Collections.Generic.List`1<Nivalis.InventoryObjectTag> )
+  method String get_storeAchievementId()
+  method Void set_storeAchievementId(String )
+  method Collections.Generic.HashSet`1<Int32> get_tagsHashSet()
+  method Void set_tagsHashSet(Collections.Generic.HashSet`1<Int32> )
+  method Nivalis.InventoryItemEntity get_entityPrefab()
+  method Void set_entityPrefab(Nivalis.InventoryItemEntity )
+  method Boolean get_isEquippable()
+  method Void set_isEquippable(Boolean )
+  method Boolean get_isIngredient()
+  method Void set_isIngredient(Boolean )
+  method Int32 get_decayTimeInDays()
+  method Void set_decayTimeInDays(Int32 )
+  method Boolean get_requiresRefrigeration()
+  method Void set_requiresRefrigeration(Boolean )
+  method Nivalis.CraftingIngredientProcessingType get_allowedProcessingTypes()
+  method Void set_allowedProcessingTypes(Nivalis.CraftingIngredientProcessingType )
+  method Int32 get_calories()
+  method Void set_calories(Int32 )
+  method Single get_exclusivity()
+  method Void set_exclusivity(Single )
+  method Boolean get__isPlant()
+  method Void set__isPlant(Boolean )
+  method Nivalis.InventoryItemType get__seeds()
+  method Void set__seeds(Nivalis.InventoryItemType )
+  method GameObject get__plantPrefab()
+  method Void set__plantPrefab(GameObject )
+  method Int32 get__yield()
+  method Void set__yield(Int32 )
+  method Single get__growthDuration()
+  method Void set__growthDuration(Single )
+  method Int32 get__optimalTemperature()
+  method Void set__optimalTemperature(Int32 )
+  method Int32 get__optimalHumidity()
+  method Void set__optimalHumidity(Int32 )
+  method Int32 get__optimalLightness()
+  method Void set__optimalLightness(Int32 )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> get_seedPlants()
+  method Void set_seedPlants(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> )
+  method Boolean get__isFarmingModule()
+  method Void set__isFarmingModule(Boolean )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> get_plants()
+  method Void set_plants(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryItemType> )
+  method Single get_yieldBonus()
+  method Void set_yieldBonus(Single )
+  method Single get_growthSpeedBonus()
+  method Void set_growthSpeedBonus(Single )
+  method Int32 get_requiredFarmingLevel()
+  method Void set_requiredFarmingLevel(Int32 )
+  method Boolean get__isFishingRod()
+  method Void set__isFishingRod(Boolean )
+  method Single get_throwRange()
+  method Void set_throwRange(Single )
+  method Single get_lureRange()
+  method Void set_lureRange(Single )
+  method Single get_luck()
+  method Void set_luck(Single )
+  method Boolean get_isUseable()
+  method Void set_isUseable(Boolean )
+  method Collections.Generic.List`1<Nivalis.InventoryItemType/StatChange> get_onUseStatChanges()
+  method Void set_onUseStatChanges(Collections.Generic.List`1<Nivalis.InventoryItemType/StatChange> )
+  method Boolean get__isCamera()
+  method Void set__isCamera(Boolean )
+  method Boolean get_isFish()
+  method Void set_isFish(Boolean )
+  method Nivalis.InventoryFishItemData get_fishData()
+  method Void set_fishData(Nivalis.InventoryFishItemData )
+  method Boolean get_isFurniture()
+  method Void set_isFurniture(Boolean )
+  method Nivalis.InventoryFurnitureCategory get_furnitureCategories()
+  method Void set_furnitureCategories(Nivalis.InventoryFurnitureCategory )
+  method Nivalis.InventoryFurnitureProperty get_propertyCategories()
+  method Void set_propertyCategories(Nivalis.InventoryFurnitureProperty )
+  method Nivalis.InventoryFurnitureStyle get_furnitureStyle()
+  method Void set_furnitureStyle(Nivalis.InventoryFurnitureStyle )
+  method Nivalis.PhotoMode.PhotoFrameSize get_photoFrameSize()
+  method Void set_photoFrameSize(Nivalis.PhotoMode.PhotoFrameSize )
+  method Int32 get_comfort()
+  method Void set_comfort(Int32 )
+  method Int32 get_basicStorage()
+  method Void set_basicStorage(Int32 )
+  method Int32 get_refridgeratedStorage()
+  method Void set_refridgeratedStorage(Int32 )
+  method Boolean get_staticFurniture()
+  method Void set_staticFurniture(Boolean )
+  method Single get_furnitureExclusivity()
+  method Void set_furnitureExclusivity(Single )
+  method Int32 get_vendingMachineCapacity()
+  method Void set_vendingMachineCapacity(Int32 )
+  method Nivalis.InventoryItemType/SlotType get_slot()
+  method Void set_slot(Nivalis.InventoryItemType/SlotType )
+
+=== Nivalis.InventorySystem.ItemType/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemType/__c __9 { get; set; }
+  prop   Func`2<Nivalis.InventoryItemType,String> __9__214_0 { get; set; }
+  prop   Func`2<Nivalis.InventoryItemType,String> __9__214_1 { get; set; }
+  prop   Func`2<Nivalis.InventoryItemType,String> __9__214_2 { get; set; }
+  prop   Func`2<Nivalis.InventoryItemType,String> __9__214_3 { get; set; }
+  method Void .ctor()
+  method String _GetFullDescription_b__214_0(Nivalis.InventoryItemType p)
+  method String _GetFullDescription_b__214_1(Nivalis.InventoryItemType p)
+  method String _GetFullDescription_b__214_2(Nivalis.InventoryItemType p)
+  method String _GetFullDescription_b__214_3(Nivalis.InventoryItemType p)
+  method static Void .cctor()
+  method static Nivalis.InventoryItemType/__c get___9()
+  method static Void set___9(Nivalis.InventoryItemType/__c )
+  method static Func`2<Nivalis.InventoryItemType,String> get___9__214_0()
+  method static Void set___9__214_0(Func`2<Nivalis.InventoryItemType,String> )
+  method static Func`2<Nivalis.InventoryItemType,String> get___9__214_1()
+  method static Void set___9__214_1(Func`2<Nivalis.InventoryItemType,String> )
+  method static Func`2<Nivalis.InventoryItemType,String> get___9__214_2()
+  method static Void set___9__214_2(Func`2<Nivalis.InventoryItemType,String> )
+  method static Func`2<Nivalis.InventoryItemType,String> get___9__214_3()
+  method static Void set___9__214_3(Func`2<Nivalis.InventoryItemType,String> )
+
+=== Nivalis.InventorySystem.ItemType/SlotType  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryItemType/SlotType None
+  field  static public Nivalis.InventoryItemType/SlotType TableCover
+  field  static public Nivalis.InventoryItemType/SlotType TableMenu
+  field  static public Nivalis.InventoryItemType/SlotType KitchenTool
+  field  static public Nivalis.InventoryItemType/SlotType OvenTool
+  field  static public Nivalis.InventoryItemType/SlotType Decor
+  field  static public Nivalis.InventoryItemType/SlotType Chair
+  field  static public Nivalis.InventoryItemType/SlotType KitchenModule
+  field  static public Nivalis.InventoryItemType/SlotType HighChair
+  field  static public Nivalis.InventoryItemType/SlotType Bench
+
+=== Nivalis.InventorySystem.ItemType/StatChange  (base: Il2CppSystem.ValueType) ===
+  prop   Nivalis.PlayerStat Stat { get; set; }
+  prop   Single Change { get; set; }
+  method static Void .cctor()
+  method Void .ctor()
+  method Nivalis.PlayerStat get_Stat()
+  method Void set_Stat(Nivalis.PlayerStat )
+  method Single get_Change()
+  method Void set_Change(Single )
+
+=== Nivalis.InventorySystem.ItemTypeAmount  (base: Il2CppSystem.ValueType) ===
+  prop   Nivalis.InventoryItemType type { get; set; }
+  prop   Int32 amount { get; set; }
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 amount)
+  method Void Save(Nivalis.ISaveWriter saveWriter)
+  method Void Load(Nivalis.SaveReader saveReader)
+  method static Void .cctor()
+  method Void .ctor()
+  method Nivalis.InventoryItemType get_type()
+  method Void set_type(Nivalis.InventoryItemType )
+  method Int32 get_amount()
+  method Void set_amount(Int32 )
+
+=== Nivalis.InventorySystem.ItemTypeCountChange  (base: Il2CppSystem.ValueType) ===
+  prop   Nivalis.InventoryItemType Type { get; set; }
+  prop   Int32 CountChange { get; set; }
+  method Void .ctor(Nivalis.InventoryItemType type, Int32 change)
+  method static Void .cctor()
+  method Void .ctor()
+  method Nivalis.InventoryItemType get_Type()
+  method Void set_Type(Nivalis.InventoryItemType )
+  method Int32 get_CountChange()
+  method Void set_CountChange(Int32 )
+
+=== Nivalis.InventorySystem.ObjectTag  (base: UnityEngine.ScriptableObject) ===
+  prop   Nullable`1<Int32> hashCode { get; set; }
+  prop   Nivalis.SerializableGuid guid { get; set; }
+  prop   Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle> name { get; set; }
+  prop   Boolean allowShortage { get; set; }
+  prop   Boolean allowAbundance { get; set; }
+  prop   Boolean isIngredientTag { get; set; }
+  prop   Sprite icon { get; set; }
+  prop   Nivalis.InventoryTagGroupAdditionType additionType { get; set; }
+  prop   Color tagTint { get; set; }
+  prop   Color tagTintBackground { get; set; }
+  prop   Sprite displayImage { get; set; }
+  prop   String Guid { get; }
+  prop   Sprite Icon { get; }
+  prop   Sprite DisplayImage { get; }
+  prop   String DisplayName { get; }
+  prop   Boolean AllowShortage { get; }
+  prop   Boolean AllowAbundance { get; }
+  prop   Nivalis.InventoryTagGroupAdditionType AdditionType { get; }
+  prop   Color TagTint { get; }
+  prop   Color TagBackground { get; }
+  prop   Boolean IsIngredientTag { get; }
+  prop   Int32 HashCode { get; }
+  method String get_Guid()
+  method Sprite get_Icon()
+  method Sprite get_DisplayImage()
+  method String get_DisplayName()
+  method Boolean get_AllowShortage()
+  method Boolean get_AllowAbundance()
+  method Nivalis.InventoryTagGroupAdditionType get_AdditionType()
+  method Color get_TagTint()
+  method Color get_TagBackground()
+  method Boolean get_IsIngredientTag()
+  method Int32 get_HashCode()
+  method static String ToString(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.InventoryObjectTag> tags)
+  method static String ToString(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> objects)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nullable`1<Int32> get_hashCode()
+  method Void set_hashCode(Nullable`1<Int32> )
+  method Nivalis.SerializableGuid get_guid()
+  method Void set_guid(Nivalis.SerializableGuid )
+  method Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle> get_name()
+  method Void set_name(Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle> )
+  method Boolean get_allowShortage()
+  method Void set_allowShortage(Boolean )
+  method Boolean get_allowAbundance()
+  method Void set_allowAbundance(Boolean )
+  method Boolean get_isIngredientTag()
+  method Void set_isIngredientTag(Boolean )
+  method Sprite get_icon()
+  method Void set_icon(Sprite )
+  method Nivalis.InventoryTagGroupAdditionType get_additionType()
+  method Void set_additionType(Nivalis.InventoryTagGroupAdditionType )
+  method Color get_tagTint()
+  method Void set_tagTint(Color )
+  method Color get_tagTintBackground()
+  method Void set_tagTintBackground(Color )
+  method Sprite get_displayImage()
+  method Void set_displayImage(Sprite )
+
+=== Nivalis.InventorySystem.ObjectTagAmount  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryObjectTag tag { get; set; }
+  prop   Int32 amount { get; set; }
+  method Void .ctor(Nivalis.InventoryObjectTag tag, Int32 amount)
+  method static Void .cctor()
+  method Nivalis.InventoryObjectTag get_tag()
+  method Void set_tag(Nivalis.InventoryObjectTag )
+  method Int32 get_amount()
+  method Void set_amount(Int32 )
+
+=== Nivalis.InventorySystem.ObjectTagExtension  (base: Il2CppSystem.Object) ===
+  method static Int32 SafeHashCode(Nivalis.InventoryObjectTag objectTag)
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.ObjectTagSet  (base: Il2CppSystem.Object) ===
+  prop   Collections.Generic.List`1<Nivalis.InventoryObjectTag> tags { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method Collections.Generic.List`1<Nivalis.InventoryObjectTag> get_tags()
+  method Void set_tags(Collections.Generic.List`1<Nivalis.InventoryObjectTag> )
+
+=== Nivalis.InventorySystem.PlayerInventory  (base: UnityEngine.MonoBehaviour) ===
+  prop   Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Int32,Int32>> onMoneyChanged { get; set; }
+  prop   Nullable`1<Int32> lockedMoneyEventPreviousValue { get; set; }
+  prop   Nivalis.OverrideableBool moneyChangeEventLock { get; set; }
+  prop   Int32 _money { get; set; }
+  prop   Nivalis.InventoryItemContainer _items { get; set; }
+  prop   Nivalis.InventoryInventoryData _InventoryData_k__BackingField { get; set; }
+  prop   Nivalis.ActionNonAlloc`2<Int32,Int32> OnMoneyChanged { get; }
+  prop   Nivalis.OverrideableBool MoneyChangeEventLock { get; }
+  prop   Int32 Money { get; set; }
+  prop   Nivalis.InventoryItemContainer Items { get; }
+  prop   Nivalis.InventoryInventoryData InventoryData { get; set; }
+  method Nivalis.ActionNonAlloc`2<Int32,Int32> get_OnMoneyChanged()
+  method Nivalis.OverrideableBool get_MoneyChangeEventLock()
+  method Int32 get_Money()
+  method Void set_Money(Int32 value)
+  method Nivalis.InventoryItemContainer get_Items()
+  method Nivalis.InventoryInventoryData get_InventoryData()
+  method Void set_InventoryData(Nivalis.InventoryInventoryData value)
+  method Void Awake()
+  method Void OnMoneyEventLockChanged()
+  method Void Start()
+  method Void ChangeMoneyWithoutReceipt(Int32 amount)
+  method Void ChangeMoneyWithReceipt(T& receipt, Boolean disposeReceiptIfMerged)
+  method Void AddItem(Nivalis.InventoryItemType type, Int32 amount)
+  method Void AddAllFurniture()
+  method Void ClearItems()
+  method Void ReceiveMoney(Int32 amount)
+  method Void TakeMoney(Int32 amount)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Int32,Int32>> get_onMoneyChanged()
+  method Void set_onMoneyChanged(Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Int32,Int32>> )
+  method Nullable`1<Int32> get_lockedMoneyEventPreviousValue()
+  method Void set_lockedMoneyEventPreviousValue(Nullable`1<Int32> )
+  method Nivalis.OverrideableBool get_moneyChangeEventLock()
+  method Void set_moneyChangeEventLock(Nivalis.OverrideableBool )
+  method Int32 get__money()
+  method Void set__money(Int32 )
+  method Nivalis.InventoryItemContainer get__items()
+  method Void set__items(Nivalis.InventoryItemContainer )
+  method Nivalis.InventoryInventoryData get__InventoryData_k__BackingField()
+  method Void set__InventoryData_k__BackingField(Nivalis.InventoryInventoryData )
+
+=== Nivalis.InventorySystem.PlayerInventory/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryPlayerInventory/__c __9 { get; set; }
+  prop   Func`1<String> __9__18_0 { get; set; }
+  prop   Func`2<Nivalis.InventoryItemType,Boolean> __9__24_0 { get; set; }
+  prop   Func`2<Nivalis.InventoryItemType,Nivalis.InventoryItemTypeAmount> __9__24_1 { get; set; }
+  method Void .ctor()
+  method String _Awake_b__18_0()
+  method Boolean _AddAllFurniture_b__24_0(Nivalis.InventoryItemType it)
+  method Nivalis.InventoryItemTypeAmount _AddAllFurniture_b__24_1(Nivalis.InventoryItemType it)
+  method static Void .cctor()
+  method static Nivalis.InventoryPlayerInventory/__c get___9()
+  method static Void set___9(Nivalis.InventoryPlayerInventory/__c )
+  method static Func`1<String> get___9__18_0()
+  method static Void set___9__18_0(Func`1<String> )
+  method static Func`2<Nivalis.InventoryItemType,Boolean> get___9__24_0()
+  method static Void set___9__24_0(Func`2<Nivalis.InventoryItemType,Boolean> )
+  method static Func`2<Nivalis.InventoryItemType,Nivalis.InventoryItemTypeAmount> get___9__24_1()
+  method static Void set___9__24_1(Func`2<Nivalis.InventoryItemType,Nivalis.InventoryItemTypeAmount> )
+
+=== Nivalis.InventorySystem.PlayerInventory/MethodInfoStoreGeneric_ChangeMoneyWithReceipt_Public_Virtual_Final_New_Void_byref_T_Boolean_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.InventorySystem.TagGroupAdditionType  (base: System.Enum) ===
+  field  public Int32 value__
+  field  static public Nivalis.InventoryTagGroupAdditionType Or
+  field  static public Nivalis.InventoryTagGroupAdditionType And
+
+=== Nivalis.Locale.UI.InventoryItemDetailsActivityGroup  (base: Il2CppSystem.ValueType) ===
+  prop   GameObject activeObject { get; set; }
+  prop   TMPro.TextMeshProUGUI venueNameLabel { get; set; }
+  prop   UI.Button increaseAmountButton { get; set; }
+  prop   UI.Button decreaseAmountButton { get; set; }
+  prop   TMPro.TextMeshProUGUI transferAmountLabel { get; set; }
+  prop   TMPro.TextMeshProUGUI transferAmountLabelGood { get; set; }
+  prop   TMPro.TextMeshProUGUI transferAmountLabelOk { get; set; }
+  prop   TMPro.TextMeshProUGUI transferAmountLabelBad { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI infoUiForTransferToGroup { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI infoUiForTransferToGroupOk { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI infoUiForTransferToGroupBad { get; set; }
+  prop   TMPro.TMP_Text totalAmountGroupGood { get; set; }
+  prop   TMPro.TMP_Text totalAmountGroupOk { get; set; }
+  prop   TMPro.TMP_Text totalAmountGroupBad { get; set; }
+  prop   UI.Button increaseAmountButtonOk { get; set; }
+  prop   UI.Button decreaseAmountButtonOk { get; set; }
+  prop   UI.Button increaseAmountButtonBad { get; set; }
+  prop   UI.Button decreaseAmountButtonBad { get; set; }
+  prop   TMPro.TextMeshProUGUI goodQualityFromAmount { get; set; }
+  prop   TMPro.TextMeshProUGUI mediumQualityFromAmount { get; set; }
+  prop   TMPro.TextMeshProUGUI lowQualityFromAmount { get; set; }
+  prop   TMPro.TextMeshProUGUI goodPriceLabel { get; set; }
+  prop   TMPro.TextMeshProUGUI okPriceLabel { get; set; }
+  prop   TMPro.TextMeshProUGUI badPriceLabel { get; set; }
+  prop   GameObject transferGoodAmountHolder { get; set; }
+  prop   GameObject transferOkAmountHolder { get; set; }
+  prop   GameObject transferBadAmountHolder { get; set; }
+  method Void SetupPriceDisplay(Nivalis.Economy.Vendor vendor, Boolean isBuying, Nivalis.InventoryItemStack item)
+  method static Void .cctor()
+  method Void .ctor()
+  method GameObject get_activeObject()
+  method Void set_activeObject(GameObject )
+  method TMPro.TextMeshProUGUI get_venueNameLabel()
+  method Void set_venueNameLabel(TMPro.TextMeshProUGUI )
+  method UI.Button get_increaseAmountButton()
+  method Void set_increaseAmountButton(UI.Button )
+  method UI.Button get_decreaseAmountButton()
+  method Void set_decreaseAmountButton(UI.Button )
+  method TMPro.TextMeshProUGUI get_transferAmountLabel()
+  method Void set_transferAmountLabel(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_transferAmountLabelGood()
+  method Void set_transferAmountLabelGood(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_transferAmountLabelOk()
+  method Void set_transferAmountLabelOk(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_transferAmountLabelBad()
+  method Void set_transferAmountLabelBad(TMPro.TextMeshProUGUI )
+  method Nivalis.UI.ItemBaseInfoUI get_infoUiForTransferToGroup()
+  method Void set_infoUiForTransferToGroup(Nivalis.UI.ItemBaseInfoUI )
+  method Nivalis.UI.ItemBaseInfoUI get_infoUiForTransferToGroupOk()
+  method Void set_infoUiForTransferToGroupOk(Nivalis.UI.ItemBaseInfoUI )
+  method Nivalis.UI.ItemBaseInfoUI get_infoUiForTransferToGroupBad()
+  method Void set_infoUiForTransferToGroupBad(Nivalis.UI.ItemBaseInfoUI )
+  method TMPro.TMP_Text get_totalAmountGroupGood()
+  method Void set_totalAmountGroupGood(TMPro.TMP_Text )
+  method TMPro.TMP_Text get_totalAmountGroupOk()
+  method Void set_totalAmountGroupOk(TMPro.TMP_Text )
+  method TMPro.TMP_Text get_totalAmountGroupBad()
+  method Void set_totalAmountGroupBad(TMPro.TMP_Text )
+  method UI.Button get_increaseAmountButtonOk()
+  method Void set_increaseAmountButtonOk(UI.Button )
+  method UI.Button get_decreaseAmountButtonOk()
+  method Void set_decreaseAmountButtonOk(UI.Button )
+  method UI.Button get_increaseAmountButtonBad()
+  method Void set_increaseAmountButtonBad(UI.Button )
+  method UI.Button get_decreaseAmountButtonBad()
+  method Void set_decreaseAmountButtonBad(UI.Button )
+  method TMPro.TextMeshProUGUI get_goodQualityFromAmount()
+  method Void set_goodQualityFromAmount(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_mediumQualityFromAmount()
+  method Void set_mediumQualityFromAmount(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_lowQualityFromAmount()
+  method Void set_lowQualityFromAmount(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_goodPriceLabel()
+  method Void set_goodPriceLabel(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_okPriceLabel()
+  method Void set_okPriceLabel(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_badPriceLabel()
+  method Void set_badPriceLabel(TMPro.TextMeshProUGUI )
+  method GameObject get_transferGoodAmountHolder()
+  method Void set_transferGoodAmountHolder(GameObject )
+  method GameObject get_transferOkAmountHolder()
+  method Void set_transferOkAmountHolder(GameObject )
+  method GameObject get_transferBadAmountHolder()
+  method Void set_transferBadAmountHolder(GameObject )
+
+=== Nivalis.Locale.UI.InventoryItemDetailsDisplay  (base: UnityEngine.MonoBehaviour) ===
+  prop   Action`1<Nivalis.InventoryItemStack> OnPlacementModeButtonClick { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI baseInfo { get; set; }
+  prop   SimpleDecayStatusUI decayStatus { get; set; }
+  prop   CanvasGroup detailsDisplay { get; set; }
+  prop   CanvasGroup transferGroup { get; set; }
+  prop   GameObject transferButtons { get; set; }
+  prop   TMPro.TextMeshProUGUI descriptionUi { get; set; }
+  prop   UI.Button holdButton { get; set; }
+  prop   UI.Button placementButton { get; set; }
+  prop   UI.Button transferModeButton { get; set; }
+  prop   UI.Button transferButton { get; set; }
+  prop   UI.Button cancelButton { get; set; }
+  prop   TMPro.TextMeshProUGUI transferingAmountLabel { get; set; }
+  prop   TMPro.TextMeshProUGUI amountInAllStoragesLabel { get; set; }
+  prop   Nivalis.UI.ItemListUI transferUiList { get; set; }
+  prop   Nivalis.InventoryItemStack _stack { get; set; }
+  prop   Nivalis.InventoryIItemContainer _fromContainer { get; set; }
+  prop   Nivalis.InventoryInventoryData _inventoryData { get; set; }
+  prop   Nivalis.InventoryItemStack Stack { get; }
+  method Void add_OnPlacementModeButtonClick(Action`1<Nivalis.InventoryItemStack> value)
+  method Void remove_OnPlacementModeButtonClick(Action`1<Nivalis.InventoryItemStack> value)
+  method Nivalis.InventoryItemStack get_Stack()
+  method Void Awake()
+  method Void TransferModeClicked()
+  method Void TurnOffTransferGroup(Boolean isImmediate)
+  method Void OnPlacementButtonClicked()
+  method Void OnHoldButtonClicked()
+  method Void CancelTransfers()
+  method Void OnTransferButtonClicked()
+  method Void Initialize(Nivalis.InventoryItemStack stack, Nivalis.InventoryInventoryData inventoryData)
+  method Void Initialize(Nivalis.InventoryItemStack stack, Nivalis.InventoryInventoryData inventoryData, Nivalis.InventoryIItemContainer container)
+  method Void Refresh()
+  method Int32 ComparisonTransferUiSort(Nivalis.InventoryInventoryData x, Nivalis.InventoryInventoryData y)
+  method Void RefreshTransferUi()
+  method Void OnCountChanged(Nivalis.InventoryItemStack stack)
+  method Void Hide()
+  method Void .ctor()
+  method Void _RefreshTransferUi_b__33_0()
+  method static Void .cctor()
+  method Action`1<Nivalis.InventoryItemStack> get_OnPlacementModeButtonClick()
+  method Void set_OnPlacementModeButtonClick(Action`1<Nivalis.InventoryItemStack> )
+  method Nivalis.UI.ItemBaseInfoUI get_baseInfo()
+  method Void set_baseInfo(Nivalis.UI.ItemBaseInfoUI )
+  method SimpleDecayStatusUI get_decayStatus()
+  method Void set_decayStatus(SimpleDecayStatusUI )
+  method CanvasGroup get_detailsDisplay()
+  method Void set_detailsDisplay(CanvasGroup )
+  method CanvasGroup get_transferGroup()
+  method Void set_transferGroup(CanvasGroup )
+  method GameObject get_transferButtons()
+  method Void set_transferButtons(GameObject )
+  method TMPro.TextMeshProUGUI get_descriptionUi()
+  method Void set_descriptionUi(TMPro.TextMeshProUGUI )
+  method UI.Button get_holdButton()
+  method Void set_holdButton(UI.Button )
+  method UI.Button get_placementButton()
+  method Void set_placementButton(UI.Button )
+  method UI.Button get_transferModeButton()
+  method Void set_transferModeButton(UI.Button )
+  method UI.Button get_transferButton()
+  method Void set_transferButton(UI.Button )
+  method UI.Button get_cancelButton()
+  method Void set_cancelButton(UI.Button )
+  method TMPro.TextMeshProUGUI get_transferingAmountLabel()
+  method Void set_transferingAmountLabel(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_amountInAllStoragesLabel()
+  method Void set_amountInAllStoragesLabel(TMPro.TextMeshProUGUI )
+  method Nivalis.UI.ItemListUI get_transferUiList()
+  method Void set_transferUiList(Nivalis.UI.ItemListUI )
+  method Nivalis.InventoryItemStack get__stack()
+  method Void set__stack(Nivalis.InventoryItemStack )
+  method Nivalis.InventoryIItemContainer get__fromContainer()
+  method Void set__fromContainer(Nivalis.InventoryIItemContainer )
+  method Nivalis.InventoryInventoryData get__inventoryData()
+  method Void set__inventoryData(Nivalis.InventoryInventoryData )
+
+=== Nivalis.Locale.UI.InventoryItemDetailsVenueTransferUi  (base: UnityEngine.MonoBehaviour) ===
+  prop   Action OnCountChanged { get; set; }
+  prop   Action OnTransfered { get; set; }
+  prop   Nivalis.InventoryIItemContainer _SourceContainer_k__BackingField { get; set; }
+  prop   Nivalis.InventoryIItemContainer _DestinationContainer_k__BackingField { get; set; }
+  prop   UI.Toggle toggle { get; set; }
+  prop   TMPro.TextMeshProUGUI storageStateDisplayLabel { get; set; }
+  prop   TMPro.TextMeshProUGUI storageStateRefridgeratedDisplayLabel { get; set; }
+  prop   Color wasChangedColor { get; set; }
+  prop   Color notChangedColor { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemDetailsActivityGroup notTransferingGroup { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemDetailsActivityGroup transferingInactiveGroup { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemDetailsActivityGroup transferingActiveGroup { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> _inTransfer { get; set; }
+  prop   Nivalis.InventoryItemStack _item { get; set; }
+  prop   Boolean _IsFlippedTransfer_k__BackingField { get; set; }
+  prop   GameObject GameObject { get; }
+  prop   Int32 CurrentTransferCount { get; }
+  prop   Collections.Generic.IEnumerable`1<Nivalis.InventoryItemInstanceData> TransferItems { get; }
+  prop   Nivalis.InventoryIItemContainer SourceContainer { get; set; }
+  prop   Nivalis.InventoryIItemContainer DestinationContainer { get; set; }
+  prop   Boolean IsFlippedTransfer { get; set; }
+  prop   Nivalis.InventoryIItemContainer ActualDestinationContainer { get; }
+  prop   Nivalis.InventoryIItemContainer ActualSourceContainer { get; }
+  prop   Nivalis.InventoryIItemContainer PlayerContainer { get; }
+  prop   Boolean IsAtCapacity { get; }
+  method Void add_OnCountChanged(Action value)
+  method Void remove_OnCountChanged(Action value)
+  method Void add_OnTransfered(Action value)
+  method Void remove_OnTransfered(Action value)
+  method GameObject get_GameObject()
+  method Int32 get_CurrentTransferCount()
+  method Collections.Generic.IEnumerable`1<Nivalis.InventoryItemInstanceData> get_TransferItems()
+  method Nivalis.InventoryIItemContainer get_SourceContainer()
+  method Void set_SourceContainer(Nivalis.InventoryIItemContainer value)
+  method Nivalis.InventoryIItemContainer get_DestinationContainer()
+  method Void set_DestinationContainer(Nivalis.InventoryIItemContainer value)
+  method Boolean get_IsFlippedTransfer()
+  method Void set_IsFlippedTransfer(Boolean value)
+  method Nivalis.InventoryIItemContainer get_ActualDestinationContainer()
+  method Nivalis.InventoryIItemContainer get_ActualSourceContainer()
+  method Nivalis.InventoryIItemContainer get_PlayerContainer()
+  method Boolean get_IsAtCapacity()
+  method Void Awake()
+  method Void ToggleListener(Boolean isOn)
+  method Void BindButtons(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup group)
+  method Void InitializeForShop(Nivalis.Economy.Vendor vendor, Boolean isBuying, Nivalis.InventoryItemStack item, Nivalis.InventoryIItemContainer fromContainer, Nivalis.InventoryIItemContainer destination, String label, Boolean flipMode)
+  method Void Initialize(Nivalis.InventoryItemStack item, Nivalis.InventoryIItemContainer fromContainer, Nivalis.InventoryIItemContainer destination, String label, Boolean flipMode)
+  method Void Initialize(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup group, Nivalis.InventoryItemStack stack, String label)
+  method Void UpdateButtonInteractability()
+  method Void UpdateButtonInteractability(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup group)
+  method Void UpdateCountTexts()
+  method Void UpdateCountTexts(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup inventoryItemDetailsActivityGroup)
+  method Void Transfer()
+  method Void CancelNoReturn()
+  method Void Cancel()
+  method Void IncreaseItemAmountGood()
+  method Void DecreaseItemAmountGood()
+  method Void IncreaseItemAmountOk()
+  method Void DecreaseItemAmountOk()
+  method Void IncreaseItemAmount(Nivalis.InventoryFoodFreshness freshness)
+  method Void DecreaseItemAmount(Nivalis.InventoryFoodFreshness freshness)
+  method Void ClearListeners()
+  method Void .ctor()
+  method Boolean _UpdateCountTexts_b__51_0(Nivalis.InventoryItemStack st)
+  method static Void .cctor()
+  method Action get_OnCountChanged()
+  method Void set_OnCountChanged(Action )
+  method Action get_OnTransfered()
+  method Void set_OnTransfered(Action )
+  method Nivalis.InventoryIItemContainer get__SourceContainer_k__BackingField()
+  method Void set__SourceContainer_k__BackingField(Nivalis.InventoryIItemContainer )
+  method Nivalis.InventoryIItemContainer get__DestinationContainer_k__BackingField()
+  method Void set__DestinationContainer_k__BackingField(Nivalis.InventoryIItemContainer )
+  method UI.Toggle get_toggle()
+  method Void set_toggle(UI.Toggle )
+  method TMPro.TextMeshProUGUI get_storageStateDisplayLabel()
+  method Void set_storageStateDisplayLabel(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_storageStateRefridgeratedDisplayLabel()
+  method Void set_storageStateRefridgeratedDisplayLabel(TMPro.TextMeshProUGUI )
+  method Color get_wasChangedColor()
+  method Void set_wasChangedColor(Color )
+  method Color get_notChangedColor()
+  method Void set_notChangedColor(Color )
+  method Nivalis.Locale.UI.InventoryItemDetailsActivityGroup get_notTransferingGroup()
+  method Void set_notTransferingGroup(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup )
+  method Nivalis.Locale.UI.InventoryItemDetailsActivityGroup get_transferingInactiveGroup()
+  method Void set_transferingInactiveGroup(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup )
+  method Nivalis.Locale.UI.InventoryItemDetailsActivityGroup get_transferingActiveGroup()
+  method Void set_transferingActiveGroup(Nivalis.Locale.UI.InventoryItemDetailsActivityGroup )
+  method Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> get__inTransfer()
+  method Void set__inTransfer(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> )
+  method Nivalis.InventoryItemStack get__item()
+  method Void set__item(Nivalis.InventoryItemStack )
+  method Boolean get__IsFlippedTransfer_k__BackingField()
+  method Void set__IsFlippedTransfer_k__BackingField(Boolean )
+
+=== Nivalis.Locale.UI.InventoryItemDetailsVenueTransferUi/__c__DisplayClass47_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemStack stack { get; set; }
+  method Void .ctor()
+  method Boolean _Initialize_b__0(Nivalis.InventoryItemStack st)
+  method static Void .cctor()
+  method Nivalis.InventoryItemStack get_stack()
+  method Void set_stack(Nivalis.InventoryItemStack )
+
+=== Nivalis.Locale.UI.InventoryItemDetailsVenueTransferUi/__c__DisplayClass60_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryFoodFreshness freshness { get; set; }
+  method Void .ctor()
+  method Boolean _DecreaseItemAmount_b__0(Nivalis.InventoryItemInstanceData iid)
+  method static Void .cctor()
+  method Nivalis.InventoryFoodFreshness get_freshness()
+  method Void set_freshness(Nivalis.InventoryFoodFreshness )
+
+=== Nivalis.Locale.UI.InventoryItemDetailsVenueTransferUiQuality  (base: UnityEngine.MonoBehaviour) ===
+  prop   Nivalis.UI.ItemBaseInfoUI infoUiForTransferToGroup { get; set; }
+  prop   UI.Button increaseAmountButton { get; set; }
+  prop   UI.Button decreaseAmountButton { get; set; }
+  prop   TMPro.TextMeshProUGUI transferAmountLabel { get; set; }
+  prop   TMPro.TextMeshProUGUI targetInventoryAmount { get; set; }
+  prop   TMPro.TextMeshProUGUI priceLabel { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.UI.ItemBaseInfoUI get_infoUiForTransferToGroup()
+  method Void set_infoUiForTransferToGroup(Nivalis.UI.ItemBaseInfoUI )
+  method UI.Button get_increaseAmountButton()
+  method Void set_increaseAmountButton(UI.Button )
+  method UI.Button get_decreaseAmountButton()
+  method Void set_decreaseAmountButton(UI.Button )
+  method TMPro.TextMeshProUGUI get_transferAmountLabel()
+  method Void set_transferAmountLabel(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_targetInventoryAmount()
+  method Void set_targetInventoryAmount(TMPro.TextMeshProUGUI )
+  method TMPro.TextMeshProUGUI get_priceLabel()
+  method Void set_priceLabel(TMPro.TextMeshProUGUI )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi  (base: UnityEngine.MonoBehaviour) ===
+  prop   Action OnFilterChanged { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Locale.UI.InventoryItemFilteringUi/SortingPair> sortingValues { get; set; }
+  prop   TMPro.TMP_Dropdown sortingDropdown { get; set; }
+  prop   TMPro.TMP_InputField searchField { get; set; }
+  prop   UI.Selectable SearchInputSelectable { get; }
+  prop   TMPro.TMP_Dropdown SortingDropdown { get; }
+  method Void add_OnFilterChanged(Action value)
+  method Void remove_OnFilterChanged(Action value)
+  method UI.Selectable get_SearchInputSelectable()
+  method TMPro.TMP_Dropdown get_SortingDropdown()
+  method Void FilterResult(Collections.Generic.List`1<T> items, Nivalis.GhostCustomerLoop.Venue forVenue)
+  method Collections.Generic.IEnumerable`1<T> FilterResult(Collections.Generic.IReadOnlyList`1<T> items, Func`2<T,Nivalis.InventoryItemTypeAmount> typeAmountGetter, Func`2<T,Int32> priceGetter, Func`2<T,Nivalis.TimeOfDayManager/TimeStamp> updateTimeGetter)
+  method Void Clear()
+  method Void Awake()
+  method Void OnDestroy()
+  method Void CreateOptions()
+  method Void OnSearchFieldChanged(String arg0)
+  method Void OnSortingValueChanged(Int32 arg0)
+  method Void .ctor()
+  method static Void .cctor()
+  method Action get_OnFilterChanged()
+  method Void set_OnFilterChanged(Action )
+  method Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Locale.UI.InventoryItemFilteringUi/SortingPair> get_sortingValues()
+  method Void set_sortingValues(Interop.Runtime.InteropTypes.Arrays.StructArray`1<Nivalis.Locale.UI.InventoryItemFilteringUi/SortingPair> )
+  method TMPro.TMP_Dropdown get_sortingDropdown()
+  method Void set_sortingDropdown(TMPro.TMP_Dropdown )
+  method TMPro.TMP_InputField get_searchField()
+  method Void set_searchField(TMPro.TMP_InputField )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/__c__DisplayClass17_0`1  (base: Il2CppSystem.Object) ===
+  prop   Func`2<T,Nivalis.InventoryItemTypeAmount> typeAmountGetter { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi __4__this { get; set; }
+  prop   Func`2<T,Nivalis.TimeOfDayManager/TimeStamp> updateTimeGetter { get; set; }
+  prop   Func`2<T,Int32> priceGetter { get; set; }
+  method Void .ctor()
+  method Boolean _FilterResult_b__0(T pair)
+  method String _FilterResult_b__1(T pair)
+  method Int32 _FilterResult_b__2(T pair)
+  method Int32 _FilterResult_b__3(T pair)
+  method Int32 _FilterResult_b__4(T pair)
+  method static Void .cctor()
+  method Func`2<T,Nivalis.InventoryItemTypeAmount> get_typeAmountGetter()
+  method Void set_typeAmountGetter(Func`2<T,Nivalis.InventoryItemTypeAmount> )
+  method Nivalis.Locale.UI.InventoryItemFilteringUi get___4__this()
+  method Void set___4__this(Nivalis.Locale.UI.InventoryItemFilteringUi )
+  method Func`2<T,Nivalis.TimeOfDayManager/TimeStamp> get_updateTimeGetter()
+  method Void set_updateTimeGetter(Func`2<T,Nivalis.TimeOfDayManager/TimeStamp> )
+  method Func`2<T,Int32> get_priceGetter()
+  method Void set_priceGetter(Func`2<T,Int32> )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackAlphabeticalSorter`1  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackAlphabeticalSorter`1<T> instance { get; set; }
+  method Int32 System_Collections_Generic_IComparer_T__Compare(T x, T y)
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackAlphabeticalSorter`1<T> get_instance()
+  method static Void set_instance(Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackAlphabeticalSorter`1<T> )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackCountSorter`1  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackCountSorter`1<T> instance { get; set; }
+  method Int32 System_Collections_Generic_IComparer_T__Compare(T x, T y)
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackCountSorter`1<T> get_instance()
+  method static Void set_instance(Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackCountSorter`1<T> )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackLastUpdateTimeSorter`1  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackLastUpdateTimeSorter`1<T> instance { get; set; }
+  method Int32 System_Collections_Generic_IComparer_T__Compare(T x, T y)
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackLastUpdateTimeSorter`1<T> get_instance()
+  method static Void set_instance(Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackLastUpdateTimeSorter`1<T> )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackPriceSorter`1  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackPriceSorter`1<T> instance { get; set; }
+  method Int32 System_Collections_Generic_IComparer_T__Compare(T x, T y)
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackPriceSorter`1<T> get_instance()
+  method static Void set_instance(Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackPriceSorter`1<T> )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackUsageSorter`1  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackUsageSorter`1<T> instance { get; set; }
+  prop   Collections.Generic.HashSet`1<Nivalis.InventoryItemType> usedItems { get; set; }
+  method static Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackUsageSorter`1<T> GetInstance(Nivalis.GhostCustomerLoop.Venue forVenue)
+  method Void Init(Nivalis.GhostCustomerLoop.Venue forVenue)
+  method Int32 System_Collections_Generic_IComparer_T__Compare(T x, T y)
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackUsageSorter`1<T> get_instance()
+  method static Void set_instance(Nivalis.Locale.UI.InventoryItemFilteringUi/ItemStackUsageSorter`1<T> )
+  method Collections.Generic.HashSet`1<Nivalis.InventoryItemType> get_usedItems()
+  method Void set_usedItems(Collections.Generic.HashSet`1<Nivalis.InventoryItemType> )
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/MethodInfoStoreGeneric_FilterResult_Public_IEnumerable_1_T_IReadOnlyList_1_T_Func_2_T_ItemTypeAmount_Func_2_T_Int32_Func_2_T_TimeStamp_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/MethodInfoStoreGeneric_FilterResult_Public_Void_List_1_T_Venue_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.Locale.UI.InventoryItemFilteringUi/SortingPair  (base: System.ValueType) ===
+  field  public Nivalis.Locale.UI.ListSortingOption Ordering
+  field  public Boolean Descending
+  method static Void .cctor()
+  method Object BoxIl2CppObject()
+
+=== Nivalis.Locale.UI.VenueInventoryTab  (base: Nivalis.Locale.UI.VenueOverviewUiTab) ===
+  prop   Nivalis.UI.ItemListUI inventoryItems { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi itemFiltering { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI baseInfoUI { get; set; }
+  prop   GameObject detailsParent { get; set; }
+  prop   GameObject nothingSelectedParent { get; set; }
+  prop   GameObject amoutTextParent { get; set; }
+  prop   SwitchableToggleGroup toggleGroup { get; set; }
+  prop   UI.ScrollRect scrollRect { get; set; }
+  prop   Nivalis.GhostCustomerLoop.Venue _venue { get; set; }
+  method Void Awake()
+  method Void Initialize(Nivalis.GhostCustomerLoop.Venue venue)
+  method Void OnControllerConnected()
+  method Void SetInvisibleImmediate()
+  method Void SetVisibleImmediate()
+  method Void MenuOnOnValueChanged(ScriptableObjectCollection/ChangeType arg1, Int32 arg2)
+  method Void OnFiltersChanged()
+  method Void OnInventoryChanged(Nivalis.InventoryIItemContainer arg1, Nivalis.InventoryItemTypeCountChange arg2)
+  method Void RefreshInventoryDisplay()
+  method Void RefreshDetails(Nivalis.InventoryItemStack itemStack, Nivalis.InventoryFoodFreshness freshness, Nivalis.UI.GenericInventoryItemDisplayUI element)
+  method Void ToggleNonSelectedPanels(Boolean somethingSelected)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.UI.ItemListUI get_inventoryItems()
+  method Void set_inventoryItems(Nivalis.UI.ItemListUI )
+  method Nivalis.Locale.UI.InventoryItemFilteringUi get_itemFiltering()
+  method Void set_itemFiltering(Nivalis.Locale.UI.InventoryItemFilteringUi )
+  method Nivalis.UI.ItemBaseInfoUI get_baseInfoUI()
+  method Void set_baseInfoUI(Nivalis.UI.ItemBaseInfoUI )
+  method GameObject get_detailsParent()
+  method Void set_detailsParent(GameObject )
+  method GameObject get_nothingSelectedParent()
+  method Void set_nothingSelectedParent(GameObject )
+  method GameObject get_amoutTextParent()
+  method Void set_amoutTextParent(GameObject )
+  method SwitchableToggleGroup get_toggleGroup()
+  method Void set_toggleGroup(SwitchableToggleGroup )
+  method UI.ScrollRect get_scrollRect()
+  method Void set_scrollRect(UI.ScrollRect )
+  method Nivalis.GhostCustomerLoop.Venue get__venue()
+  method Void set__venue(Nivalis.GhostCustomerLoop.Venue )
+
+=== Nivalis.UI.GenericInventoryItemDisplayUI  (base: UnityEngine.MonoBehaviour) ===
+  prop   Action`3<Nivalis.InventoryItemStack,Nivalis.InventoryFoodFreshness,Nivalis.UI.GenericInventoryItemDisplayUI> OnItemSelected { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI baseInfoUI { get; set; }
+  prop   TheraBytes.BetterUi.BetterToggle toggle { get; set; }
+  prop   TMPro.TMP_Text freshnessText { get; set; }
+  prop   SimpleDecayStatusUI decayStatus { get; set; }
+  prop   Nivalis.InventoryItemStack _item { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> _instances { get; set; }
+  prop   Nivalis.InventoryFoodFreshness _freshness { get; set; }
+  prop   GameObject GameObject { get; }
+  prop   Nivalis.InventoryItemStack Item { get; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> Instances { get; }
+  method Void add_OnItemSelected(Action`3<Nivalis.InventoryItemStack,Nivalis.InventoryFoodFreshness,Nivalis.UI.GenericInventoryItemDisplayUI> value)
+  method Void remove_OnItemSelected(Action`3<Nivalis.InventoryItemStack,Nivalis.InventoryFoodFreshness,Nivalis.UI.GenericInventoryItemDisplayUI> value)
+  method GameObject get_GameObject()
+  method Nivalis.InventoryItemStack get_Item()
+  method Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> get_Instances()
+  method Void Awake()
+  method Void OnMainButtonClick(Boolean isOn)
+  method Void Initialize(Nivalis.InventoryItemStack itemStack, Nivalis.InventoryFoodFreshness foodFreshness, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> instances)
+  method Void ClearListeners()
+  method ManualUINavigation GetManualUINavigation()
+  method UI.Selectable GetSelectable()
+  method Void ClickExternal()
+  method Void OnReturnToPool()
+  method Void .ctor()
+  method static Void .cctor()
+  method Action`3<Nivalis.InventoryItemStack,Nivalis.InventoryFoodFreshness,Nivalis.UI.GenericInventoryItemDisplayUI> get_OnItemSelected()
+  method Void set_OnItemSelected(Action`3<Nivalis.InventoryItemStack,Nivalis.InventoryFoodFreshness,Nivalis.UI.GenericInventoryItemDisplayUI> )
+  method Nivalis.UI.ItemBaseInfoUI get_baseInfoUI()
+  method Void set_baseInfoUI(Nivalis.UI.ItemBaseInfoUI )
+  method TheraBytes.BetterUi.BetterToggle get_toggle()
+  method Void set_toggle(TheraBytes.BetterUi.BetterToggle )
+  method TMPro.TMP_Text get_freshnessText()
+  method Void set_freshnessText(TMPro.TMP_Text )
+  method SimpleDecayStatusUI get_decayStatus()
+  method Void set_decayStatus(SimpleDecayStatusUI )
+  method Nivalis.InventoryItemStack get__item()
+  method Void set__item(Nivalis.InventoryItemStack )
+  method Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> get__instances()
+  method Void set__instances(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> )
+  method Nivalis.InventoryFoodFreshness get__freshness()
+  method Void set__freshness(Nivalis.InventoryFoodFreshness )
+
+=== Nivalis.UI.InventoryItemDisplayUI  (base: UnityEngine.MonoBehaviour) ===
+  prop   Nivalis.InventoryItemType _ItemType_k__BackingField { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI baseInfoUI { get; set; }
+  prop   SimpleDecayStatusUI decayStatus { get; set; }
+  prop   UI.Toggle detailsButton { get; set; }
+  prop   UI.Button holdButton { get; set; }
+  prop   GameObject shopRoot { get; set; }
+  prop   TMPro.TextMeshProUGUI priceText { get; set; }
+  prop   Nivalis.InventoryItemStack _stack { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> _items { get; set; }
+  prop   GameObject GameObject { get; }
+  prop   Nivalis.InventoryItemType ItemType { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> Items { get; }
+  method GameObject get_GameObject()
+  method Nivalis.InventoryItemType get_ItemType()
+  method Void set_ItemType(Nivalis.InventoryItemType value)
+  method Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> get_Items()
+  method Void Awake()
+  method Void HoldButtonListener()
+  method Void Initialize(Nivalis.InventoryItemStack item, Int32 price, Events.UnityAction onDetailsClicked)
+  method Void Initialize(Nivalis.InventoryItemType item, Int32 price, Events.UnityAction onDetailsClicked)
+  method Void Initialize(Nivalis.InventoryItemStack item, Events.UnityAction onDetailsClicked, Boolean isUsed)
+  method Void OnToggleOn(Boolean isOn, Events.UnityAction action)
+  method Void OnToggleOn(Boolean isOn, Action action)
+  method Void RefreshHoldButton(Nivalis.InventoryItemStack item)
+  method Void Initialize(Nivalis.InventoryItemStack item, Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> items, Action onDetailsClicked, Boolean isUsed)
+  method Void ClearListeners()
+  method Boolean CanClick()
+  method ManualUINavigation GetManualUINavigation()
+  method UI.Selectable GetSelectable()
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.InventoryItemType get__ItemType_k__BackingField()
+  method Void set__ItemType_k__BackingField(Nivalis.InventoryItemType )
+  method Nivalis.UI.ItemBaseInfoUI get_baseInfoUI()
+  method Void set_baseInfoUI(Nivalis.UI.ItemBaseInfoUI )
+  method SimpleDecayStatusUI get_decayStatus()
+  method Void set_decayStatus(SimpleDecayStatusUI )
+  method UI.Toggle get_detailsButton()
+  method Void set_detailsButton(UI.Toggle )
+  method UI.Button get_holdButton()
+  method Void set_holdButton(UI.Button )
+  method GameObject get_shopRoot()
+  method Void set_shopRoot(GameObject )
+  method TMPro.TextMeshProUGUI get_priceText()
+  method Void set_priceText(TMPro.TextMeshProUGUI )
+  method Nivalis.InventoryItemStack get__stack()
+  method Void set__stack(Nivalis.InventoryItemStack )
+  method Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> get__items()
+  method Void set__items(Collections.Generic.List`1<Nivalis.InventoryItemInstanceData> )
+
+=== Nivalis.UI.InventoryItemDisplayUI/__c__DisplayClass19_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.UI.InventoryItemDisplayUI __4__this { get; set; }
+  prop   Events.UnityAction onDetailsClicked { get; set; }
+  method Void .ctor()
+  method Void _Initialize_b__0(Boolean x)
+  method static Void .cctor()
+  method Nivalis.UI.InventoryItemDisplayUI get___4__this()
+  method Void set___4__this(Nivalis.UI.InventoryItemDisplayUI )
+  method Events.UnityAction get_onDetailsClicked()
+  method Void set_onDetailsClicked(Events.UnityAction )
+
+=== Nivalis.UI.InventoryItemDisplayUI/__c__DisplayClass20_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.UI.InventoryItemDisplayUI __4__this { get; set; }
+  prop   Events.UnityAction onDetailsClicked { get; set; }
+  method Void .ctor()
+  method Void _Initialize_b__0(Boolean x)
+  method static Void .cctor()
+  method Nivalis.UI.InventoryItemDisplayUI get___4__this()
+  method Void set___4__this(Nivalis.UI.InventoryItemDisplayUI )
+  method Events.UnityAction get_onDetailsClicked()
+  method Void set_onDetailsClicked(Events.UnityAction )
+
+=== Nivalis.UI.InventoryItemDisplayUI/__c__DisplayClass24_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.UI.InventoryItemDisplayUI __4__this { get; set; }
+  prop   Action onDetailsClicked { get; set; }
+  method Void .ctor()
+  method Void _Initialize_b__0(Boolean x)
+  method static Void .cctor()
+  method Nivalis.UI.InventoryItemDisplayUI get___4__this()
+  method Void set___4__this(Nivalis.UI.InventoryItemDisplayUI )
+  method Action get_onDetailsClicked()
+  method Void set_onDetailsClicked(Action )
+
+=== Nivalis.UI.PlayerInventoryUI  (base: Nivalis.UISubPanel) ===
+  prop   Nivalis.UI.ItemListUI inventoryItems { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi itemFiltering { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI baseInfoUI { get; set; }
+  prop   SimpleDecayStatusUI decayStatus { get; set; }
+  prop   SwitchableToggleGroup toggleGroup { get; set; }
+  prop   GameObject selectedPanel { get; set; }
+  prop   GameObject nothingSelectedPanel { get; set; }
+  prop   UI.ScrollRect itemListRect { get; set; }
+  prop   Nivalis.InventoryInventoryData _playerItems { get; set; }
+  method Void Awake()
+  method Void BeforeDisplay()
+  method Void OnFiltersChanged()
+  method Void RefreshInventoryDisplay()
+  method Void OnControllerConnected()
+  method Void ItemClickedListener(Nivalis.InventoryItemStack stack, Int32 amount, Nivalis.InventoryFoodFreshness freshness)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.UI.ItemListUI get_inventoryItems()
+  method Void set_inventoryItems(Nivalis.UI.ItemListUI )
+  method Nivalis.Locale.UI.InventoryItemFilteringUi get_itemFiltering()
+  method Void set_itemFiltering(Nivalis.Locale.UI.InventoryItemFilteringUi )
+  method Nivalis.UI.ItemBaseInfoUI get_baseInfoUI()
+  method Void set_baseInfoUI(Nivalis.UI.ItemBaseInfoUI )
+  method SimpleDecayStatusUI get_decayStatus()
+  method Void set_decayStatus(SimpleDecayStatusUI )
+  method SwitchableToggleGroup get_toggleGroup()
+  method Void set_toggleGroup(SwitchableToggleGroup )
+  method GameObject get_selectedPanel()
+  method Void set_selectedPanel(GameObject )
+  method GameObject get_nothingSelectedPanel()
+  method Void set_nothingSelectedPanel(GameObject )
+  method UI.ScrollRect get_itemListRect()
+  method Void set_itemListRect(UI.ScrollRect )
+  method Nivalis.InventoryInventoryData get__playerItems()
+  method Void set__playerItems(Nivalis.InventoryInventoryData )
+
+=== Nivalis.UI.PlayerInventoryUI/__c__DisplayClass12_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemStack itemStack { get; set; }
+  prop   Nivalis.UI.ItemSeparationByQuality separationByQuality { get; set; }
+  prop   Nivalis.UI.PlayerInventoryUI __4__this { get; set; }
+  method Void .ctor()
+  method Void _RefreshInventoryDisplay_b__0()
+  method Void _RefreshInventoryDisplay_b__1()
+  method static Void .cctor()
+  method Nivalis.InventoryItemStack get_itemStack()
+  method Void set_itemStack(Nivalis.InventoryItemStack )
+  method Nivalis.UI.ItemSeparationByQuality get_separationByQuality()
+  method Void set_separationByQuality(Nivalis.UI.ItemSeparationByQuality )
+  method Nivalis.UI.PlayerInventoryUI get___4__this()
+  method Void set___4__this(Nivalis.UI.PlayerInventoryUI )
+
+=== Nivalis.UI.ShopUiInventoryPanel  (base: Nivalis.UISubPanel) ===
+  prop   Action`2<Nivalis.InventoryItemStack,Nivalis.InventoryIItemContainer> OnItemSelected { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi itemFiltering { get; set; }
+  prop   Nivalis.UI.ItemListUI itemsList { get; set; }
+  prop   Nivalis.Economy.Vendor _vendor { get; set; }
+  prop   Boolean _isInBuyMode { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> registeredEvents { get; set; }
+  method Void add_OnItemSelected(Action`2<Nivalis.InventoryItemStack,Nivalis.InventoryIItemContainer> value)
+  method Void remove_OnItemSelected(Action`2<Nivalis.InventoryItemStack,Nivalis.InventoryIItemContainer> value)
+  method Void Awake()
+  method Void ItemFilteringOnOnFilterChanged()
+  method Void Initialize(Nivalis.Economy.Vendor vendor)
+  method Void SetVisibleImmediate()
+  method Void OnOwnedInventoryContentsChanged(Nivalis.InventoryIItemContainer arg1, Nivalis.InventoryItemTypeCountChange arg2)
+  method Void SetInvisibleImmediate()
+  method Void ClearRegisteredEvents()
+  method Void Refresh()
+  method Void ItemClickedListener(Nivalis.InventoryItemStack stack, Nivalis.InventoryIItemContainer container)
+  method Void .ctor()
+  method static Void .cctor()
+  method Action`2<Nivalis.InventoryItemStack,Nivalis.InventoryIItemContainer> get_OnItemSelected()
+  method Void set_OnItemSelected(Action`2<Nivalis.InventoryItemStack,Nivalis.InventoryIItemContainer> )
+  method Nivalis.Locale.UI.InventoryItemFilteringUi get_itemFiltering()
+  method Void set_itemFiltering(Nivalis.Locale.UI.InventoryItemFilteringUi )
+  method Nivalis.UI.ItemListUI get_itemsList()
+  method Void set_itemsList(Nivalis.UI.ItemListUI )
+  method Nivalis.Economy.Vendor get__vendor()
+  method Void set__vendor(Nivalis.Economy.Vendor )
+  method Boolean get__isInBuyMode()
+  method Void set__isInBuyMode(Boolean )
+  method Collections.Generic.List`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> get_registeredEvents()
+  method Void set_registeredEvents(Collections.Generic.List`1<Nivalis.ActionNonAlloc`2<Nivalis.InventoryIItemContainer,Nivalis.InventoryItemTypeCountChange>> )
+
+=== Nivalis.UI.ShopUiInventoryPanel/__c__DisplayClass15_0  (base: Il2CppSystem.Object) ===
+  prop   ContainerItemStack item { get; set; }
+  prop   Nivalis.UI.ShopUiInventoryPanel __4__this { get; set; }
+  method Void .ctor()
+  method Void _Refresh_b__0()
+  method static Void .cctor()
+  method ContainerItemStack get_item()
+  method Void set_item(ContainerItemStack )
+  method Nivalis.UI.ShopUiInventoryPanel get___4__this()
+  method Void set___4__this(Nivalis.UI.ShopUiInventoryPanel )
+
+=== Nivalis.UI.VenueFurnitureInventoryUI  (base: Nivalis.UIWindow) ===
+  prop   Nivalis.UI.ItemListUI inventoryItems { get; set; }
+  prop   Nivalis.Locale.UI.InventoryItemFilteringUi itemFiltering { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI itemBaseInfo { get; set; }
+  prop   UI.Button placementButton { get; set; }
+  prop   UI.ScrollRect scrollRect { get; set; }
+  prop   GameObject detailsParent { get; set; }
+  prop   GameObject nothingSelectedParent { get; set; }
+  prop   SwitchableToggleGroup toggleGroup { get; set; }
+  prop   Nivalis.GhostCustomerLoop.BaseProperty _forVenue { get; set; }
+  prop   Nivalis.InventoryItemStack _stack { get; set; }
+  method Void Awake()
+  method Void OnPlacementModeClicked()
+  method Void Open(Nivalis.GhostCustomerLoop.BaseProperty forVenue)
+  method Void OnControllerConnected()
+  method Void ToggleSelection(Boolean somethingSelected)
+  method Void OnFiltersChanged()
+  method Void RefreshInventoryDisplay()
+  method Void ItemClickedListener(Nivalis.InventoryItemStack stack)
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.UI.ItemListUI get_inventoryItems()
+  method Void set_inventoryItems(Nivalis.UI.ItemListUI )
+  method Nivalis.Locale.UI.InventoryItemFilteringUi get_itemFiltering()
+  method Void set_itemFiltering(Nivalis.Locale.UI.InventoryItemFilteringUi )
+  method Nivalis.UI.ItemBaseInfoUI get_itemBaseInfo()
+  method Void set_itemBaseInfo(Nivalis.UI.ItemBaseInfoUI )
+  method UI.Button get_placementButton()
+  method Void set_placementButton(UI.Button )
+  method UI.ScrollRect get_scrollRect()
+  method Void set_scrollRect(UI.ScrollRect )
+  method GameObject get_detailsParent()
+  method Void set_detailsParent(GameObject )
+  method GameObject get_nothingSelectedParent()
+  method Void set_nothingSelectedParent(GameObject )
+  method SwitchableToggleGroup get_toggleGroup()
+  method Void set_toggleGroup(SwitchableToggleGroup )
+  method Nivalis.GhostCustomerLoop.BaseProperty get__forVenue()
+  method Void set__forVenue(Nivalis.GhostCustomerLoop.BaseProperty )
+  method Nivalis.InventoryItemStack get__stack()
+  method Void set__stack(Nivalis.InventoryItemStack )
+
+=== Nivalis.UI.VenueFurnitureInventoryUI/__c__DisplayClass16_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.InventoryItemStack stack { get; set; }
+  prop   Nivalis.UI.VenueFurnitureInventoryUI __4__this { get; set; }
+  method Void .ctor()
+  method Void _RefreshInventoryDisplay_b__0()
+  method static Void .cctor()
+  method Nivalis.InventoryItemStack get_stack()
+  method Void set_stack(Nivalis.InventoryItemStack )
+  method Nivalis.UI.VenueFurnitureInventoryUI get___4__this()
+  method Void set___4__this(Nivalis.UI.VenueFurnitureInventoryUI )
+
+=== Nivalis.UI.VenueInventoryListItemUi  (base: UnityEngine.MonoBehaviour) ===
+  prop   Action OnSelected { get; set; }
+  prop   UI.Toggle toggle { get; set; }
+  prop   Nivalis.UI.ItemBaseInfoUI baseInfoUi { get; set; }
+  prop   GameObject detailsGroup { get; set; }
+  prop   Nivalis.UI.ItemByQualityCounterUi goodQualityCounter { get; set; }
+  prop   Nivalis.UI.ItemByQualityCounterUi mediumQualityCounter { get; set; }
+  prop   Nivalis.InventoryItemType _ItemType_k__BackingField { get; set; }
+  prop   GameObject GameObject { get; }
+  prop   Nivalis.InventoryItemType ItemType { get; set; }
+  method GameObject get_GameObject()
+  method Void add_OnSelected(Action value)
+  method Void remove_OnSelected(Action value)
+  method Nivalis.InventoryItemType get_ItemType()
+  method Void set_ItemType(Nivalis.InventoryItemType value)
+  method Void Awake()
+  method Void Initialize(Nivalis.InventoryItemStack item, Boolean isUsed)
+  method Void OnToggleValueChanged(Boolean isOn)
+  method Void ClearListeners()
+  method Void .ctor()
+  method static Void .cctor()
+  method Action get_OnSelected()
+  method Void set_OnSelected(Action )
+  method UI.Toggle get_toggle()
+  method Void set_toggle(UI.Toggle )
+  method Nivalis.UI.ItemBaseInfoUI get_baseInfoUi()
+  method Void set_baseInfoUi(Nivalis.UI.ItemBaseInfoUI )
+  method GameObject get_detailsGroup()
+  method Void set_detailsGroup(GameObject )
+  method Nivalis.UI.ItemByQualityCounterUi get_goodQualityCounter()
+  method Void set_goodQualityCounter(Nivalis.UI.ItemByQualityCounterUi )
+  method Nivalis.UI.ItemByQualityCounterUi get_mediumQualityCounter()
+  method Void set_mediumQualityCounter(Nivalis.UI.ItemByQualityCounterUi )
+  method Nivalis.InventoryItemType get__ItemType_k__BackingField()
+  method Void set__ItemType_k__BackingField(Nivalis.InventoryItemType )

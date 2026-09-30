@@ -6,26 +6,28 @@ using Il2CppInterop.Runtime.Injection;
 using Nivalis.DevOptions;
 using Nivalis.UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace NivalisDevUnlock;
 
-[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.1.0")]
+[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.2.0")]
 public class Plugin : BasePlugin
 {
     public const string Guid = "nivalisnights.devunlock";
 
     internal static Plugin Instance;
-    internal static ConfigEntry<KeyCode> OpenMenuKey;
-    internal static ConfigEntry<KeyCode> ListOptionsKey;
+    internal static ConfigEntry<Key> ToggleKey;
+    internal static ConfigEntry<bool> PauseWhileOpen;
 
     public override void Load()
     {
         Instance = this;
 
-        OpenMenuKey = Config.Bind("Hotkeys", "OpenMenu", KeyCode.F1,
-            "Opens the game's built-in developer option menu.");
-        ListOptionsKey = Config.Bind("Hotkeys", "ListOptions", KeyCode.F2,
-            "Writes every discovered dev option to the BepInEx log.");
+        ToggleKey = Config.Bind("Console", "ToggleKey", Key.F1,
+            "Key that opens and closes the console. Uses Input System key names.");
+        PauseWhileOpen = Config.Bind("Console", "PauseWhileOpen", true,
+            "Sets Time.timeScale to 0 while the console is open. This also stops the " +
+            "player from walking around as you type, since movement is time-scaled.");
 
         // DevMode.IsDevMode is a lazy getter over a Nullable<bool> that is filled by
         // RSA-verifying the `token` field in settings.ini. Short-circuit the getter so
@@ -35,14 +37,13 @@ public class Plugin : BasePlugin
         Force(harmony, typeof(DevMode), "get_IsDevMode");
         Force(harmony, typeof(BuildVersionData), "get_AreDevOptionsEnabled");
 
-        ClassInjector.RegisterTypeInIl2Cpp<DevUnlockBehaviour>();
-        var host = new GameObject(nameof(DevUnlockBehaviour));
+        ClassInjector.RegisterTypeInIl2Cpp<ConsoleWindow>();
+        var host = new GameObject(nameof(ConsoleWindow));
         UnityEngine.Object.DontDestroyOnLoad(host);
         host.hideFlags = HideFlags.HideAndDontSave;
-        host.AddComponent<DevUnlockBehaviour>();
+        host.AddComponent<ConsoleWindow>();
 
-        Log.LogInfo($"Dev mode forced on. {OpenMenuKey.Value} opens the dev menu, " +
-                    $"{ListOptionsKey.Value} lists every dev option.");
+        Log.LogInfo($"Dev mode forced on. Press {ToggleKey.Value} in game to open the console.");
     }
 
     private void Force(Harmony harmony, System.Type type, string getter)

@@ -1,0 +1,295 @@
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
+using Nivalis.DevOptions;
+
+namespace NivalisDevUnlock;
+
+internal delegate void CommandHandler(string[] args, Action<string> print);
+
+internal sealed class Command
+{
+    public string Name;
+    public string Usage;
+    public string Help;
+    public CommandHandler Run;
+}
+
+internal static class Commands
+{
+    public static readonly List<Command> All = new();
+
+    static Commands()
+    {
+        Add("help", "help [command]", "Lists commands, or explains one.", (args, print) =>
+        {
+            if (args.Length > 0)
+            {
+                var cmd = Find(args[0]);
+                if (cmd == null)
+                {
+                    print($"No such command '{args[0]}'.");
+                    return;
+                }
+                print($"{cmd.Usage}  —  {cmd.Help}");
+                return;
+            }
+
+            print("Commands (type 'help <name>' for detail):");
+            foreach (var cmd in All)
+                print($"  {cmd.Name.PadRight(12)} {cmd.Help}");
+        });
+
+        Add("items", "items [filter]", "Lists loaded item types, optionally filtered.", (args, print) =>
+        {
+            var filter = args.Length > 0 ? string.Join(" ", args) : null;
+            var items = GameRefs.ItemTypes();
+            var shown = 0;
+
+            foreach (var item in items)
+            {
+                var asset = GameRefs.AssetName(item);
+                var display = GameRefs.DisplayName(item);
+                if (filter != null &&
+                    !asset.Contains(filter, StringComparison.OrdinalIgnoreCase) &&
+                    !display.Contains(filter, StringComparison.OrdinalIgnoreCase))
+                    continue;
+
+                if (shown++ >= 60)
+                {
+                    print("  ... more matches, narrow the filter.");
+                    break;
+                }
+
+                var label = string.IsNullOrEmpty(display) || display == asset ? asset : $"{asset}  ({display})";
+                print($"  {label}");
+            }
+
+            if (shown == 0)
+                print(filter == null ? "No item types loaded yet." : $"Nothing matching '{filter}'.");
+            else
+                print($"{items.Length} item types loaded.");
+        });
+
+        Add("give", "give <item> [amount]", "Adds an item to the player inventory.", (args, print) =>
+        {
+            if (args.Length == 0)
+            {
+                print("Usage: give <item> [amount]");
+                return;
+            }
+
+            var amount = 1;
+            var nameParts = args;
+            if (args.Length > 1 && int.TryParse(args[^1], out var parsed))
+            {
+                amount = parsed;
+                nameParts = args[..^1];
+            }
+
+            if (amount < 1)
+            {
+                print("Amount must be at least 1.");
+                return;
+            }
+
+            var query = string.Join(" ", nameParts);
+            var matches = GameRefs.Resolve(query);
+
+            if (matches.Count == 0)
+            {
+                print($"No item matching '{query}'. Try 'items {query}'.");
+                return;
+            }
+
+            if (matches.Count > 1)
+            {
+                print($"'{query}' is ambiguous, {matches.Count} matches:");
+                for (var i = 0; i < Math.Min(matches.Count, 15); i++)
+                    print($"  {GameRefs.AssetName(matches[i])}");
+                return;
+            }
+
+            var inventory = GameRefs.PlayerInventory;
+            if (inventory == null)
+            {
+                print("No PlayerInventory in the scene — load a save first.");
+                return;
+            }
+
+            var item = matches[0];
+            inventory.AddItem(item, amount);
+            print($"Gave {amount}x {GameRefs.AssetName(item)}.");
+        });
+
+        Add("money", "money [amount]", "Shows money, or sets it. Value is in Lim cents.", (args, print) =>
+        {
+            var inventory = GameRefs.PlayerInventory;
+            if (inventory == null)
+            {
+                print("No PlayerInventory in the scene — load a save first.");
+                return;
+            }
+
+            if (args.Length == 0)
+            {
+                print($"Money: {inventory.Money} cents.");
+                return;
+            }
+
+            if (!int.TryParse(args[0], out var value))
+            {
+                print($"'{args[0]}' is not a number.");
+                return;
+            }
+
+            var before = inventory.Money;
+            inventory.Money = value;
+            print($"Money: {before} -> {inventory.Money} cents.");
+        });
+
+        Add("addmoney", "addmoney <amount>", "Adds (or subtracts) money in Lim cents.", (args, print) =>
+        {
+            var inventory = GameRefs.PlayerInventory;
+            if (inventory == null)
+            {
+                print("No PlayerInventory in the scene — load a save first.");
+                return;
+            }
+
+            if (args.Length == 0 || !int.TryParse(args[0], out var delta))
+            {
+                print("Usage: addmoney <amount>");
+                return;
+            }
+
+            var before = inventory.Money;
+            if (delta >= 0)
+                inventory.ReceiveMoney(delta);
+            else
+                inventory.TakeMoney(-delta);
+            print($"Money: {before} -> {inventory.Money} cents.");
+        });
+
+        Add("furniture", "furniture", "Grants every furniture item (the game's own helper).", (args, print) =>
+        {
+            var inventory = GameRefs.PlayerInventory;
+            if (inventory == null)
+            {
+                print("No PlayerInventory in the scene — load a save first.");
+                return;
+            }
+
+            inventory.AddAllFurniture();
+            print("Called AddAllFurniture().");
+        });
+
+        Add("clearitems", "clearitems", "Empties the player inventory.", (args, print) =>
+        {
+            var inventory = GameRefs.PlayerInventory;
+            if (inventory == null)
+            {
+                print("No PlayerInventory in the scene — load a save first.");
+                return;
+            }
+
+            inventory.ClearItems();
+            print("Inventory cleared.");
+        });
+
+        Add("devmenu", "devmenu", "Opens the game's built-in developer option menu.", (args, print) =>
+        {
+            var menu = DevOptionMenuRevised.Instance;
+            if (menu == null)
+            {
+                print("DevOptionMenuRevised.Instance is null — the UI is not up yet.");
+                return;
+            }
+
+            menu.Open();
+            print("Opened the dev option menu.");
+        });
+
+        Add("dev", "dev list | dev <index>", "Lists or invokes the game's own dev options.", (args, print) =>
+        {
+            var attributes = DevOptionMenuRevised._methodDisplayString;
+            if (attributes == null)
+            {
+                print("Dev options have not been discovered yet.");
+                return;
+            }
+
+            if (args.Length == 0 || args[0] == "list")
+            {
+                print($"{attributes.Length} dev options:");
+                for (var i = 0; i < attributes.Length; i++)
+                {
+                    var attr = attributes[i];
+                    if (attr == null)
+                        continue;
+                    print($"  {i.ToString().PadLeft(3)}  {attr.Name}");
+                }
+                return;
+            }
+
+            if (!int.TryParse(args[0], out var index) || index < 0 || index >= attributes.Length)
+            {
+                print($"Index must be 0..{attributes.Length - 1}. Use 'dev list'.");
+                return;
+            }
+
+            var menu = DevOptionMenuRevised.Instance;
+            if (menu == null)
+            {
+                print("DevOptionMenuRevised.Instance is null — the UI is not up yet.");
+                return;
+            }
+
+            // Only zero-argument options work this way; anything needing parameters has to
+            // go through the real menu UI, which is what the failure message points at.
+            try
+            {
+                menu.InvokeMethod(index, new Il2CppReferenceArray<Il2CppSystem.Object>(0));
+                print($"Invoked dev option {index} ({attributes[index].Name}).");
+            }
+            catch (Exception e)
+            {
+                print($"Invoke failed: {e.Message}");
+                print("It probably takes parameters — use 'devmenu' and run it from the UI.");
+            }
+        });
+
+        Add("refresh", "refresh", "Rebuilds the item type cache.", (args, print) =>
+        {
+            GameRefs.InvalidateItemCache();
+            print($"{GameRefs.ItemTypes(true).Length} item types loaded.");
+        });
+    }
+
+    private static void Add(string name, string usage, string help, CommandHandler run) =>
+        All.Add(new Command { Name = name, Usage = usage, Help = help, Run = run });
+
+    public static Command Find(string name) =>
+        All.FirstOrDefault(c => string.Equals(c.Name, name, StringComparison.OrdinalIgnoreCase));
+
+    public static void Execute(string line, Action<string> print)
+    {
+        var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length == 0)
+            return;
+
+        var cmd = Find(parts[0]);
+        if (cmd == null)
+        {
+            print($"Unknown command '{parts[0]}'. Type 'help'.");
+            return;
+        }
+
+        try
+        {
+            cmd.Run(parts[1..], print);
+        }
+        catch (Exception e)
+        {
+            print($"Error: {e.Message}");
+        }
+    }
+}

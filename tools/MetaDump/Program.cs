@@ -53,7 +53,15 @@ foreach (var t in types)
 
 return 0;
 
-static string Short(TypeReference t) => t.FullName
-    .Replace("Il2Cpp", "")
-    .Replace("System.", "")
-    .Replace("UnityEngine.", "");
+// Only trim well-known leading namespaces. Replacing them anywhere in the string
+// corrupts game type names such as Nivalis.InventorySystem.ItemType.
+static string Short(TypeReference t)
+{
+    var name = t.FullName;
+    foreach (var prefix in new[] { "Il2CppSystem.", "System.", "UnityEngine." })
+    {
+        if (name.StartsWith(prefix, StringComparison.Ordinal))
+            return name.Substring(prefix.Length);
+    }
+    return name;
+}

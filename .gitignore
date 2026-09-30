@@ -2,3 +2,6 @@ bin/
 obj/
 *.user
 .vs/
+
+# Scratch output from ad-hoc MetaDump runs.
+reference/_tmp.txt

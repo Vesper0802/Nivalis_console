@@ -32,6 +32,7 @@
     <Reference Include="UnityEngine.CoreModule"><HintPath>$(BepInExInterop)\UnityEngine.CoreModule.dll</HintPath></Reference>
     <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(BepInExInterop)\UnityEngine.InputLegacyModule.dll</HintPath></Reference>
     <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(BepInExInterop)\UnityEngine.IMGUIModule.dll</HintPath></Reference>
+    <Reference Include="Unity.InputSystem"><HintPath>$(BepInExInterop)\Unity.InputSystem.dll</HintPath></Reference>
   </ItemGroup>
 
   <ItemGroup>
