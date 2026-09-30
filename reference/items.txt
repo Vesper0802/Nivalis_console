@@ -1,4 +1,4 @@
-﻿Nivalis Nights item types - 1313 entries
+﻿Nivalis Nights item types — 1313 entries
 Paste a COMMAND cell into the console and press Enter; change the trailing number for a different amount.
 For details run iteminfo with the same code, e.g. iteminfo 04f867e4
 Rows flagged NOT-STORABLE cannot be placed in the player inventory.
