@@ -1,0 +1,606 @@
+﻿// Assembly-CSharp: 33 matching types
+
+=== Nivalis.DevOptions.DevMenuDefaultAttribute  (base: Il2CppSystem.Attribute) ===
+  prop   Object Value { get; set; }
+  prop   String Getter { get; set; }
+  prop   String GetterMethod { get; set; }
+  method Object ResolveValue(Object selectedMethodTarget)
+  method Void .ctor()
+  method static Void .cctor()
+  method Object get_Value()
+  method Void set_Value(Object )
+  method String get_Getter()
+  method Void set_Getter(String )
+  method String get_GetterMethod()
+  method Void set_GetterMethod(String )
+
+=== Nivalis.DevOptions.DevMenuNameMethod  (base: Il2CppSystem.Attribute) ===
+  prop   String MethodName { get; set; }
+  method Void .ctor(String methodName)
+  method static Void .cctor()
+  method String get_MethodName()
+  method Void set_MethodName(String )
+
+=== Nivalis.DevOptions.DevMenuVO  (base: Nivalis.UIWindow) ===
+  prop   Nivalis.UI.SearchableDropdown speakerSelector { get; set; }
+  prop   Nivalis.UI.SearchableDropdown storyArcSelector { get; set; }
+  prop   Nivalis.UI.SearchableDropdown dialogueSelector { get; set; }
+  prop   UI.Toggle playOnlySelectedSpeaker { get; set; }
+  prop   UI.Button invokeButton { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.GhostAi.Person> _allSpeakers { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.Dialogue.StoryArc> _allStoryArcs { get; set; }
+  prop   Nivalis.Dialogue.IConversation _selectedDialogue { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.Dialogue.StoryArc> _currentStoryArcs { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.Dialogue.IConversation> _currentCoversations { get; set; }
+  method Void OpenDialogueDebug()
+  method Void Awake()
+  method Void PopulateSpeakerSelector()
+  method Void PopulateStoryArcSelector()
+  method Void OnSpeakerSelectedChanged(Int32 arg0)
+  method Void OnStoryArcChanged(Int32 storyArcIndex)
+  method Void PopulateConversationPicker()
+  method Void OnDialogueChanged(Int32 dialogueIndex)
+  method Void RefreshInvokeButton()
+  method Void OnButtonInvoked()
+  method Void .ctor()
+  method static Void .cctor()
+  method Nivalis.UI.SearchableDropdown get_speakerSelector()
+  method Void set_speakerSelector(Nivalis.UI.SearchableDropdown )
+  method Nivalis.UI.SearchableDropdown get_storyArcSelector()
+  method Void set_storyArcSelector(Nivalis.UI.SearchableDropdown )
+  method Nivalis.UI.SearchableDropdown get_dialogueSelector()
+  method Void set_dialogueSelector(Nivalis.UI.SearchableDropdown )
+  method UI.Toggle get_playOnlySelectedSpeaker()
+  method Void set_playOnlySelectedSpeaker(UI.Toggle )
+  method UI.Button get_invokeButton()
+  method Void set_invokeButton(UI.Button )
+  method Collections.Generic.List`1<Nivalis.GhostAi.Person> get__allSpeakers()
+  method Void set__allSpeakers(Collections.Generic.List`1<Nivalis.GhostAi.Person> )
+  method Collections.Generic.List`1<Nivalis.Dialogue.StoryArc> get__allStoryArcs()
+  method Void set__allStoryArcs(Collections.Generic.List`1<Nivalis.Dialogue.StoryArc> )
+  method Nivalis.Dialogue.IConversation get__selectedDialogue()
+  method Void set__selectedDialogue(Nivalis.Dialogue.IConversation )
+  method Collections.Generic.List`1<Nivalis.Dialogue.StoryArc> get__currentStoryArcs()
+  method Void set__currentStoryArcs(Collections.Generic.List`1<Nivalis.Dialogue.StoryArc> )
+  method Collections.Generic.List`1<Nivalis.Dialogue.IConversation> get__currentCoversations()
+  method Void set__currentCoversations(Collections.Generic.List`1<Nivalis.Dialogue.IConversation> )
+
+=== Nivalis.DevOptions.DevMenuVO/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.DevOptions.DevMenuVO/__c __9 { get; set; }
+  prop   Func`2<Nivalis.GhostAi.Person,String> __9__12_0 { get; set; }
+  prop   Func`2<Nivalis.Dialogue.StoryArc,String> __9__13_0 { get; set; }
+  prop   Func`2<Nivalis.Dialogue.IConversation,Boolean> __9__15_0 { get; set; }
+  prop   Func`2<Nivalis.Dialogue.IConversation,String> __9__16_0 { get; set; }
+  method Void .ctor()
+  method String _PopulateSpeakerSelector_b__12_0(Nivalis.GhostAi.Person person)
+  method String _PopulateStoryArcSelector_b__13_0(Nivalis.Dialogue.StoryArc sa)
+  method Boolean _OnStoryArcChanged_b__15_0(Nivalis.Dialogue.IConversation convoNode)
+  method String _PopulateConversationPicker_b__16_0(Nivalis.Dialogue.IConversation conv)
+  method static Void .cctor()
+  method static Nivalis.DevOptions.DevMenuVO/__c get___9()
+  method static Void set___9(Nivalis.DevOptions.DevMenuVO/__c )
+  method static Func`2<Nivalis.GhostAi.Person,String> get___9__12_0()
+  method static Void set___9__12_0(Func`2<Nivalis.GhostAi.Person,String> )
+  method static Func`2<Nivalis.Dialogue.StoryArc,String> get___9__13_0()
+  method static Void set___9__13_0(Func`2<Nivalis.Dialogue.StoryArc,String> )
+  method static Func`2<Nivalis.Dialogue.IConversation,Boolean> get___9__15_0()
+  method static Void set___9__15_0(Func`2<Nivalis.Dialogue.IConversation,Boolean> )
+  method static Func`2<Nivalis.Dialogue.IConversation,String> get___9__16_0()
+  method static Void set___9__16_0(Func`2<Nivalis.Dialogue.IConversation,String> )
+
+=== Nivalis.DevOptions.DevMenuVO/__c__DisplayClass19_0  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.GhostAi.Person filteredSpeaker { get; set; }
+  method Void .ctor()
+  method Boolean _OnButtonInvoked_b__0(Nivalis.Dialogue.IDialogueWithChoices diag)
+  method Boolean _OnButtonInvoked_b__1(Nivalis.Dialogue.IDialogueWithChoices diag)
+  method Boolean _OnButtonInvoked_b__2(Nivalis.Dialogue.IDialogueWithChoices diag)
+  method static Void .cctor()
+  method Nivalis.GhostAi.Person get_filteredSpeaker()
+  method Void set_filteredSpeaker(Nivalis.GhostAi.Person )
+
+=== Nivalis.DevOptions.DevMode  (base: Il2CppSystem.Object) ===
+  prop   String PublicKeyModulusBase64 { get; set; }
+  prop   String PublicKeyExponentBase64 { get; set; }
+  prop   Nullable`1<Boolean> isDevMode { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.StructArray`1<Int32> Base64Lookup { get; set; }
+  prop   Boolean IsDevMode { get; }
+  method static Boolean get_IsDevMode()
+  method static Boolean TryUnlock(String tokenBase64)
+  method static Interop.Runtime.InteropTypes.Arrays.StructArray`1<Byte> ParsePayload(Interop.Runtime.InteropTypes.Arrays.StructArray`1<Byte> tokenBytes, Interop.Runtime.InteropTypes.Arrays.StructArray`1<Byte>& signature)
+  method static Interop.Runtime.InteropTypes.Arrays.StructArray`1<Int32> BuildBase64Lookup()
+  method static Interop.Runtime.InteropTypes.Arrays.StructArray`1<Byte> ManualBase64Decode(String s)
+  method static Boolean ValidatePayload(Interop.Runtime.InteropTypes.Arrays.StructArray`1<Byte> payloadBytes)
+  method static Void .cctor()
+  method static String get_PublicKeyModulusBase64()
+  method static Void set_PublicKeyModulusBase64(String )
+  method static String get_PublicKeyExponentBase64()
+  method static Void set_PublicKeyExponentBase64(String )
+  method static Nullable`1<Boolean> get_isDevMode()
+  method static Void set_isDevMode(Nullable`1<Boolean> )
+  method static Interop.Runtime.InteropTypes.Arrays.StructArray`1<Int32> get_Base64Lookup()
+  method static Void set_Base64Lookup(Interop.Runtime.InteropTypes.Arrays.StructArray`1<Int32> )
+
+=== Nivalis.DevOptions.DevOptionAttribute  (base: Il2CppSystem.Attribute) ===
+  prop   String Name { get; set; }
+  prop   Boolean TargetsMustBePrefabs { get; set; }
+  prop   Boolean SmallWindow { get; set; }
+  prop   Boolean RefreshConstantly { get; set; }
+  prop   KeyCode Shortcut { get; set; }
+  prop   Boolean OnlyInEditor { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method String get_Name()
+  method Void set_Name(String )
+  method Boolean get_TargetsMustBePrefabs()
+  method Void set_TargetsMustBePrefabs(Boolean )
+  method Boolean get_SmallWindow()
+  method Void set_SmallWindow(Boolean )
+  method Boolean get_RefreshConstantly()
+  method Void set_RefreshConstantly(Boolean )
+  method KeyCode get_Shortcut()
+  method Void set_Shortcut(KeyCode )
+  method Boolean get_OnlyInEditor()
+  method Void set_OnlyInEditor(Boolean )
+
+=== Nivalis.DevOptions.DevOptionMenuBoolEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   UI.Toggle toggle { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void Awake()
+  method Void .ctor()
+  method Void _Awake_b__5_0(Boolean s)
+  method static Void .cctor()
+  method UI.Toggle get_toggle()
+  method Void set_toggle(UI.Toggle )
+
+=== Nivalis.DevOptions.DevOptionMenuEnumEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   TMPro.TMP_Dropdown options { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> _targets { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.StringArray _names { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Void Awake()
+  method Void Initialize(Type parameterType, Reflection.ICustomAttributeProvider attributeProvider)
+  method Boolean CanRepresent(Type parameterType, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method Void _Awake_b__6_0(Int32 i)
+  method TMPro.TMP_Dropdown/OptionData _Initialize_b__7_0(Object t, Int32 i)
+  method static Void .cctor()
+  method TMPro.TMP_Dropdown get_options()
+  method Void set_options(TMPro.TMP_Dropdown )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> get__targets()
+  method Void set__targets(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> )
+  method Interop.Runtime.InteropTypes.Arrays.StringArray get__names()
+  method Void set__names(Interop.Runtime.InteropTypes.Arrays.StringArray )
+
+=== Nivalis.DevOptions.DevOptionMenuFloatEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   TMPro.TMP_InputField inputField { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Void Awake()
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method Void _Awake_b__4_0(String s)
+  method static Void .cctor()
+  method TMPro.TMP_InputField get_inputField()
+  method Void set_inputField(TMPro.TMP_InputField )
+
+=== Nivalis.DevOptions.DevOptionMenuFloatRangeEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   UI.Slider slider { get; set; }
+  prop   TMPro.TextMeshProUGUI valueText { get; set; }
+  prop   Vector2 _range { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void Awake()
+  method Void OnSliderValueChanged(Single arg0)
+  method Void Initialize(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method static Void .cctor()
+  method UI.Slider get_slider()
+  method Void set_slider(UI.Slider )
+  method TMPro.TextMeshProUGUI get_valueText()
+  method Void set_valueText(TMPro.TextMeshProUGUI )
+  method Vector2 get__range()
+  method Void set__range(Vector2 )
+
+=== Nivalis.DevOptions.DevOptionMenuFloatRangeEditor/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.DevOptions.DevOptionMenuFloatRangeEditor/__c __9 { get; set; }
+  prop   Func`2<Object,Boolean> __9__6_0 { get; set; }
+  prop   Func`2<Object,Boolean> __9__9_0 { get; set; }
+  method Void .ctor()
+  method Boolean _CanRepresent_b__6_0(Object a)
+  method Boolean _Initialize_b__9_0(Object a)
+  method static Void .cctor()
+  method static Nivalis.DevOptions.DevOptionMenuFloatRangeEditor/__c get___9()
+  method static Void set___9(Nivalis.DevOptions.DevOptionMenuFloatRangeEditor/__c )
+  method static Func`2<Object,Boolean> get___9__6_0()
+  method static Void set___9__6_0(Func`2<Object,Boolean> )
+  method static Func`2<Object,Boolean> get___9__9_0()
+  method static Void set___9__9_0(Func`2<Object,Boolean> )
+
+=== Nivalis.DevOptions.DevOptionMenuIntEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   TMPro.TMP_InputField inputField { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void Awake()
+  method Void .ctor()
+  method Void _Awake_b__5_0(String s)
+  method static Void .cctor()
+  method TMPro.TMP_InputField get_inputField()
+  method Void set_inputField(TMPro.TMP_InputField )
+
+=== Nivalis.DevOptions.DevOptionMenuIntRangeEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   UI.Slider slider { get; set; }
+  prop   TMPro.TextMeshProUGUI valueText { get; set; }
+  prop   Vector2Int _range { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void Awake()
+  method Void OnSliderValueChanged(Single arg0)
+  method Void Initialize(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method static Void .cctor()
+  method UI.Slider get_slider()
+  method Void set_slider(UI.Slider )
+  method TMPro.TextMeshProUGUI get_valueText()
+  method Void set_valueText(TMPro.TextMeshProUGUI )
+  method Vector2Int get__range()
+  method Void set__range(Vector2Int )
+
+=== Nivalis.DevOptions.DevOptionMenuIntRangeEditor/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.DevOptions.DevOptionMenuIntRangeEditor/__c __9 { get; set; }
+  prop   Func`2<Object,Boolean> __9__6_0 { get; set; }
+  prop   Func`2<Object,Boolean> __9__9_0 { get; set; }
+  method Void .ctor()
+  method Boolean _CanRepresent_b__6_0(Object a)
+  method Boolean _Initialize_b__9_0(Object a)
+  method static Void .cctor()
+  method static Nivalis.DevOptions.DevOptionMenuIntRangeEditor/__c get___9()
+  method static Void set___9(Nivalis.DevOptions.DevOptionMenuIntRangeEditor/__c )
+  method static Func`2<Object,Boolean> get___9__6_0()
+  method static Void set___9__6_0(Func`2<Object,Boolean> )
+  method static Func`2<Object,Boolean> get___9__9_0()
+  method static Void set___9__9_0(Func`2<Object,Boolean> )
+
+=== Nivalis.DevOptions.DevOptionMenuObjectEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   TMPro.TMP_Dropdown options { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> _targets { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Void Awake()
+  method Void Initialize(Type parameterType, Reflection.ICustomAttributeProvider attributeProvider)
+  method Boolean CanRepresent(Type parameterType, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method Void _Awake_b__5_0(Int32 s)
+  method static Void .cctor()
+  method TMPro.TMP_Dropdown get_options()
+  method Void set_options(TMPro.TMP_Dropdown )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> get__targets()
+  method Void set__targets(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> )
+
+=== Nivalis.DevOptions.DevOptionMenuObjectEditor/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.DevOptions.DevOptionMenuObjectEditor/__c __9 { get; set; }
+  prop   Func`2<Object,String> __9__6_0 { get; set; }
+  method Void .ctor()
+  method String _Initialize_b__6_0(Object o)
+  method static Void .cctor()
+  method static Nivalis.DevOptions.DevOptionMenuObjectEditor/__c get___9()
+  method static Void set___9(Nivalis.DevOptions.DevOptionMenuObjectEditor/__c )
+  method static Func`2<Object,String> get___9__6_0()
+  method static Void set___9__6_0(Func`2<Object,String> )
+
+=== Nivalis.DevOptions.DevOptionMenuObjectEditor/__c__DisplayClass6_0  (base: Il2CppSystem.Object) ===
+  prop   Func`2<Object,String> nameGetter { get; set; }
+  method Void .ctor()
+  method TMPro.TMP_Dropdown/OptionData _Initialize_b__1(Object t)
+  method static Void .cctor()
+  method Func`2<Object,String> get_nameGetter()
+  method Void set_nameGetter(Func`2<Object,String> )
+
+=== Nivalis.DevOptions.DevOptionMenuObjectEditor/__c__DisplayClass6_1  (base: Il2CppSystem.Object) ===
+  prop   Reflection.MethodInfo method { get; set; }
+  method Void .ctor()
+  method String _Initialize_b__2(Object o)
+  method static Void .cctor()
+  method Reflection.MethodInfo get_method()
+  method Void set_method(Reflection.MethodInfo )
+
+=== Nivalis.DevOptions.DevOptionMenuOptionToggle  (base: UnityEngine.MonoBehaviour) ===
+  prop   UI.Toggle toggle { get; set; }
+  prop   TMPro.TextMeshProUGUI text { get; set; }
+  prop   Action OnSelected { get; set; }
+  prop   String Name { set; }
+  prop   UI.Toggle Toggle { get; }
+  method Void set_Name(String value)
+  method UI.Toggle get_Toggle()
+  method Void add_OnSelected(Action value)
+  method Void remove_OnSelected(Action value)
+  method Void Awake()
+  method Void ToggleValueChangedListener(Boolean arg0)
+  method Void .ctor()
+  method static Void .cctor()
+  method UI.Toggle get_toggle()
+  method Void set_toggle(UI.Toggle )
+  method TMPro.TextMeshProUGUI get_text()
+  method Void set_text(TMPro.TextMeshProUGUI )
+  method Action get_OnSelected()
+  method Void set_OnSelected(Action )
+
+=== Nivalis.DevOptions.DevOptionMenuParameterEditor  (base: UnityEngine.MonoBehaviour) ===
+  prop   Action`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> OnValueChange { get; set; }
+  prop   TMPro.TextMeshProUGUI labelText { get; set; }
+  prop   String Label { set; }
+  prop   Object Value { get; set; }
+  method Void add_OnValueChange(Action`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> value)
+  method Void remove_OnValueChange(Action`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> value)
+  method Void InvokeValueChange()
+  method Void set_Label(String value)
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void Initialize(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method static Void .cctor()
+  method Action`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> get_OnValueChange()
+  method Void set_OnValueChange(Action`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> )
+  method TMPro.TextMeshProUGUI get_labelText()
+  method Void set_labelText(TMPro.TextMeshProUGUI )
+
+=== Nivalis.DevOptions.DevOptionMenuRevised  (base: Nivalis.UIWindow) ===
+  prop   TheraBytes.BetterUi.BetterContentSizeFitter optionsContentSizeFitter { get; set; }
+  prop   RectTransform optionsParentLeft { get; set; }
+  prop   RectTransform optionsParentRight { get; set; }
+  prop   Nivalis.DevOptions.DevOptionMenuOptionToggle optionPrefab { get; set; }
+  prop   TMPro.TextMeshProUGUI labelPrefab { get; set; }
+  prop   RectTransform fullSizeParametersLocation { get; set; }
+  prop   RectTransform smallSizeParametersLocation { get; set; }
+  prop   CanvasGroup parametersGroup { get; set; }
+  prop   TMPro.TMP_Dropdown targetSelection { get; set; }
+  prop   UI.Button resetButton { get; set; }
+  prop   UI.Button invokeButton { get; set; }
+  prop   RectTransform parametersPanel { get; set; }
+  prop   Nivalis.Dialogue.DialogueEvent onDialogue { get; set; }
+  prop   Nivalis.Dialogue.DialogueEvent onDialogueEnd { get; set; }
+  prop   Nivalis.UI.BuildVersionData buildVersionData { get; set; }
+  prop   Boolean dialogueOpen { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> parameterEditorPrefabs { get; set; }
+  prop   Collections.Generic.List`1<TMPro.TextMeshProUGUI> _labelInstances { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.DevOptions.DevOptionMenuOptionToggle> _optionInstances { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> _parameterEditorInstances { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<ValueTuple`2<Type,Reflection.MethodInfo>> _methods { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionAttribute> _methodDisplayString { get; set; }
+  prop   Int32 _selectedMethodIndex { get; set; }
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> _methodTargets { get; set; }
+  prop   Nivalis.DevOptions.DevOptionMenuRevised _Instance_k__BackingField { get; set; }
+  prop   Nivalis.DevOptions.DevOptionMenuRevised Instance { get; set; }
+  method static Nivalis.DevOptions.DevOptionMenuRevised get_Instance()
+  method static Void set_Instance(Nivalis.DevOptions.DevOptionMenuRevised value)
+  method Void OnGUI()
+  method Void Awake()
+  method Void OnDestroy()
+  method Void OnDialogueOpen(Nivalis.Dialogue.DialogueEventArgs change)
+  method Void OnDialogueClose(Nivalis.Dialogue.DialogueEventArgs change)
+  method Void Open()
+  method Collections.IEnumerator RefitLayout()
+  method Void OnResetButtonClicked()
+  method Void OnInvokeButtonClicked()
+  method Void InvokeMethod(Int32 selectedMethodIndex, Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> methodParameters)
+  method Void OptionSelectedListener(Int32 idx)
+  method Void PopulateParameters()
+  method Void OnEditorValueChange(Nivalis.DevOptions.DevOptionMenuParameterEditor parameterEditor)
+  method Void SpawnParameterEditor(Object selectedMethodTarget, Reflection.ParameterInfo parameter)
+  method Void .ctor()
+  method static Void .cctor()
+  method TheraBytes.BetterUi.BetterContentSizeFitter get_optionsContentSizeFitter()
+  method Void set_optionsContentSizeFitter(TheraBytes.BetterUi.BetterContentSizeFitter )
+  method RectTransform get_optionsParentLeft()
+  method Void set_optionsParentLeft(RectTransform )
+  method RectTransform get_optionsParentRight()
+  method Void set_optionsParentRight(RectTransform )
+  method Nivalis.DevOptions.DevOptionMenuOptionToggle get_optionPrefab()
+  method Void set_optionPrefab(Nivalis.DevOptions.DevOptionMenuOptionToggle )
+  method TMPro.TextMeshProUGUI get_labelPrefab()
+  method Void set_labelPrefab(TMPro.TextMeshProUGUI )
+  method RectTransform get_fullSizeParametersLocation()
+  method Void set_fullSizeParametersLocation(RectTransform )
+  method RectTransform get_smallSizeParametersLocation()
+  method Void set_smallSizeParametersLocation(RectTransform )
+  method CanvasGroup get_parametersGroup()
+  method Void set_parametersGroup(CanvasGroup )
+  method TMPro.TMP_Dropdown get_targetSelection()
+  method Void set_targetSelection(TMPro.TMP_Dropdown )
+  method UI.Button get_resetButton()
+  method Void set_resetButton(UI.Button )
+  method UI.Button get_invokeButton()
+  method Void set_invokeButton(UI.Button )
+  method RectTransform get_parametersPanel()
+  method Void set_parametersPanel(RectTransform )
+  method Nivalis.Dialogue.DialogueEvent get_onDialogue()
+  method Void set_onDialogue(Nivalis.Dialogue.DialogueEvent )
+  method Nivalis.Dialogue.DialogueEvent get_onDialogueEnd()
+  method Void set_onDialogueEnd(Nivalis.Dialogue.DialogueEvent )
+  method Nivalis.UI.BuildVersionData get_buildVersionData()
+  method Void set_buildVersionData(Nivalis.UI.BuildVersionData )
+  method Boolean get_dialogueOpen()
+  method Void set_dialogueOpen(Boolean )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> get_parameterEditorPrefabs()
+  method Void set_parameterEditorPrefabs(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> )
+  method Collections.Generic.List`1<TMPro.TextMeshProUGUI> get__labelInstances()
+  method Void set__labelInstances(Collections.Generic.List`1<TMPro.TextMeshProUGUI> )
+  method Collections.Generic.List`1<Nivalis.DevOptions.DevOptionMenuOptionToggle> get__optionInstances()
+  method Void set__optionInstances(Collections.Generic.List`1<Nivalis.DevOptions.DevOptionMenuOptionToggle> )
+  method Collections.Generic.List`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> get__parameterEditorInstances()
+  method Void set__parameterEditorInstances(Collections.Generic.List`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> )
+  method static Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<ValueTuple`2<Type,Reflection.MethodInfo>> get__methods()
+  method static Void set__methods(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<ValueTuple`2<Type,Reflection.MethodInfo>> )
+  method static Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionAttribute> get__methodDisplayString()
+  method static Void set__methodDisplayString(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionAttribute> )
+  method Int32 get__selectedMethodIndex()
+  method Void set__selectedMethodIndex(Int32 )
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> get__methodTargets()
+  method Void set__methodTargets(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Object> )
+  method static Nivalis.DevOptions.DevOptionMenuRevised get__Instance_k__BackingField()
+  method static Void set__Instance_k__BackingField(Nivalis.DevOptions.DevOptionMenuRevised )
+
+=== Nivalis.DevOptions.DevOptionMenuRevised/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.DevOptions.DevOptionMenuRevised/__c __9 { get; set; }
+  prop   Func`2<Type,Boolean> __9__30_0 { get; set; }
+  prop   Func`2<Type,Collections.Generic.IEnumerable`1<Reflection.MethodInfo>> __9__30_1 { get; set; }
+  prop   Func`2<Reflection.MethodInfo,Boolean> __9__30_2 { get; set; }
+  prop   Func`2<Reflection.MethodInfo,ValueTuple`2<Type,Reflection.MethodInfo>> __9__30_3 { get; set; }
+  prop   Func`2<ValueTuple`2<Type,Reflection.MethodInfo>,Nivalis.DevOptions.DevOptionAttribute> __9__30_4 { get; set; }
+  prop   Func`2<Object,TMPro.TMP_Dropdown/OptionData> __9__40_0 { get; set; }
+  method Void .ctor()
+  method Boolean _Awake_b__30_0(Type t)
+  method Collections.Generic.IEnumerable`1<Reflection.MethodInfo> _Awake_b__30_1(Type t)
+  method Boolean _Awake_b__30_2(Reflection.MethodInfo m)
+  method ValueTuple`2<Type,Reflection.MethodInfo> _Awake_b__30_3(Reflection.MethodInfo m)
+  method Nivalis.DevOptions.DevOptionAttribute _Awake_b__30_4(ValueTuple`2<Type,Reflection.MethodInfo> tup)
+  method TMPro.TMP_Dropdown/OptionData _PopulateParameters_b__40_0(Object o)
+  method static Void .cctor()
+  method static Nivalis.DevOptions.DevOptionMenuRevised/__c get___9()
+  method static Void set___9(Nivalis.DevOptions.DevOptionMenuRevised/__c )
+  method static Func`2<Type,Boolean> get___9__30_0()
+  method static Void set___9__30_0(Func`2<Type,Boolean> )
+  method static Func`2<Type,Collections.Generic.IEnumerable`1<Reflection.MethodInfo>> get___9__30_1()
+  method static Void set___9__30_1(Func`2<Type,Collections.Generic.IEnumerable`1<Reflection.MethodInfo>> )
+  method static Func`2<Reflection.MethodInfo,Boolean> get___9__30_2()
+  method static Void set___9__30_2(Func`2<Reflection.MethodInfo,Boolean> )
+  method static Func`2<Reflection.MethodInfo,ValueTuple`2<Type,Reflection.MethodInfo>> get___9__30_3()
+  method static Void set___9__30_3(Func`2<Reflection.MethodInfo,ValueTuple`2<Type,Reflection.MethodInfo>> )
+  method static Func`2<ValueTuple`2<Type,Reflection.MethodInfo>,Nivalis.DevOptions.DevOptionAttribute> get___9__30_4()
+  method static Void set___9__30_4(Func`2<ValueTuple`2<Type,Reflection.MethodInfo>,Nivalis.DevOptions.DevOptionAttribute> )
+  method static Func`2<Object,TMPro.TMP_Dropdown/OptionData> get___9__40_0()
+  method static Void set___9__40_0(Func`2<Object,TMPro.TMP_Dropdown/OptionData> )
+
+=== Nivalis.DevOptions.DevOptionMenuRevised/__c__DisplayClass34_0  (base: Il2CppSystem.Object) ===
+  prop   Int32 idx { get; set; }
+  prop   Nivalis.DevOptions.DevOptionMenuRevised __4__this { get; set; }
+  method Void .ctor()
+  method Void _Open_b__0()
+  method static Void .cctor()
+  method Int32 get_idx()
+  method Void set_idx(Int32 )
+  method Nivalis.DevOptions.DevOptionMenuRevised get___4__this()
+  method Void set___4__this(Nivalis.DevOptions.DevOptionMenuRevised )
+
+=== Nivalis.DevOptions.DevOptionMenuRevised/__c__DisplayClass42_0  (base: Il2CppSystem.Object) ===
+  prop   Type parameterType { get; set; }
+  prop   Reflection.ParameterInfo parameter { get; set; }
+  method Void .ctor()
+  method Boolean _SpawnParameterEditor_b__0(Nivalis.DevOptions.DevOptionMenuParameterEditor p)
+  method static Void .cctor()
+  method Type get_parameterType()
+  method Void set_parameterType(Type )
+  method Reflection.ParameterInfo get_parameter()
+  method Void set_parameter(Reflection.ParameterInfo )
+
+=== Nivalis.DevOptions.DevOptionMenuRevised/_RefitLayout_d__35  (base: Il2CppSystem.Object) ===
+  prop   Int32 __1__state { get; set; }
+  prop   Object __2__current { get; set; }
+  prop   Nivalis.DevOptions.DevOptionMenuRevised __4__this { get; set; }
+  prop   Object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+  prop   Object System.Collections.IEnumerator.Current { get; }
+  method Void .ctor(Int32 <>1__state)
+  method Void System_IDisposable_Dispose()
+  method Boolean MoveNext()
+  method Object System_Collections_Generic_IEnumerator_System_Object__get_Current()
+  method Void System_Collections_IEnumerator_Reset()
+  method Object System_Collections_IEnumerator_get_Current()
+  method static Void .cctor()
+  method Int32 get___1__state()
+  method Void set___1__state(Int32 )
+  method Object get___2__current()
+  method Void set___2__current(Object )
+  method Nivalis.DevOptions.DevOptionMenuRevised get___4__this()
+  method Void set___4__this(Nivalis.DevOptions.DevOptionMenuRevised )
+
+=== Nivalis.DevOptions.DevOptionMenuRevised/EqCmp  (base: Il2CppSystem.Collections.Generic.EqualityComparer`1<Il2CppSystem.ValueTuple`2<Il2CppSystem.Type,Il2CppSystem.Reflection.MethodInfo>>) ===
+  method Boolean Equals(ValueTuple`2<Type,Reflection.MethodInfo> x, ValueTuple`2<Type,Reflection.MethodInfo> y)
+  method Int32 GetHashCode(ValueTuple`2<Type,Reflection.MethodInfo> obj)
+  method Void .ctor()
+  method static Void .cctor()
+
+=== Nivalis.DevOptions.DevOptionMenuStringEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   TMPro.TMP_InputField inputField { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Void Awake()
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method Void _Awake_b__4_0(String s)
+  method static Void .cctor()
+  method TMPro.TMP_InputField get_inputField()
+  method Void set_inputField(TMPro.TMP_InputField )
+
+=== Nivalis.DevOptions.DevOptionMenuStructEditor  (base: Nivalis.DevOptions.DevOptionMenuParameterEditor) ===
+  prop   Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> parameterEditorPrefabs { get; set; }
+  prop   RectTransform editorParent { get; set; }
+  prop   Type _classType { get; set; }
+  prop   Collections.Generic.Dictionary`2<Reflection.FieldInfo,Nivalis.DevOptions.DevOptionMenuParameterEditor> fieldEditors { get; set; }
+  prop   Object Value { get; set; }
+  method Object get_Value()
+  method Void set_Value(Object value)
+  method Void Initialize(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void SubEditorOnValueChange(Nivalis.DevOptions.DevOptionMenuParameterEditor obj)
+  method Boolean CanRepresent(Type type, Reflection.ICustomAttributeProvider attributeProvider)
+  method Void .ctor()
+  method static Void .cctor()
+  method Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> get_parameterEditorPrefabs()
+  method Void set_parameterEditorPrefabs(Interop.Runtime.InteropTypes.Arrays.ReferenceArray`1<Nivalis.DevOptions.DevOptionMenuParameterEditor> )
+  method RectTransform get_editorParent()
+  method Void set_editorParent(RectTransform )
+  method Type get__classType()
+  method Void set__classType(Type )
+  method Collections.Generic.Dictionary`2<Reflection.FieldInfo,Nivalis.DevOptions.DevOptionMenuParameterEditor> get_fieldEditors()
+  method Void set_fieldEditors(Collections.Generic.Dictionary`2<Reflection.FieldInfo,Nivalis.DevOptions.DevOptionMenuParameterEditor> )
+
+=== Nivalis.DevOptions.DevOptionMenuStructEditor/__c__DisplayClass7_0  (base: Il2CppSystem.Object) ===
+  prop   Reflection.FieldInfo childField { get; set; }
+  method Void .ctor()
+  method Boolean _Initialize_b__0(Nivalis.DevOptions.DevOptionMenuParameterEditor e)
+  method static Void .cctor()
+  method Reflection.FieldInfo get_childField()
+  method Void set_childField(Reflection.FieldInfo )
+
+=== Nivalis.DevOptions.DevRangeAttribute  (base: Il2CppSystem.Attribute) ===
+  prop   Single Min { get; set; }
+  prop   Single Max { get; set; }
+  method Void .ctor(Single min, Single max)
+  method static Void .cctor()
+  method Single get_Min()
+  method Void set_Min(Single )
+  method Single get_Max()
+  method Void set_Max(Single )
+
+=== Nivalis.DevOptions.DevTokenContainer  (base: Il2CppSystem.Object) ===
+  prop   String payload { get; set; }
+  prop   String signature { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method String get_payload()
+  method Void set_payload(String )
+  method String get_signature()
+  method Void set_signature(String )
+
+=== Nivalis.DevOptions.DevTokenPayload  (base: Il2CppSystem.Object) ===
+  prop   String expires { get; set; }
+  prop   String issuedTo { get; set; }
+  method Void .ctor()
+  method static Void .cctor()
+  method String get_expires()
+  method Void set_expires(String )
+  method String get_issuedTo()
+  method Void set_issuedTo(String )

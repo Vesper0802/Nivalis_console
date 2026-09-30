@@ -1,0 +1,637 @@
+﻿// Assembly-CSharp: 73 matching types
+
+=== Nivalis.BinarySaveWriter  (base: Il2CppSystem.Object) ===
+  prop   Int32 Version { get; set; }
+  prop   ES2Writer Writer { get; set; }
+  prop   Collections.Generic.Stack`1<ValueTuple`2<String,Int64>> _objectSizeStreamPositions { get; set; }
+  method Void .ctor(Int32 version, ES2Writer writer)
+  method Void Write(T value, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSaveable(T value, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSaveable(T value, Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteObject(T abstractType, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteGuidMappedSaveables(Collections.Generic.IReadOnlyList`1<T> saveables, Func`2<T,String> guidGetter, String fieldName)
+  method Void WriteListPrimitive(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteList(Collections.Generic.IReadOnlyList`1<T> list, Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSOReference(T so, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSOReferenceList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteGhostReference(Nivalis.GhostGhostReference`1<T> reference, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteGhostReferences(Nivalis.GhostGhostReferenceList`1<T> references, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteDebug(String name)
+  method Void WriteObjectStart(String obj)
+  method Void WriteObjectEnd(String obj)
+  method Void WriteReferenceList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method static Void .cctor()
+  method Int32 get_Version()
+  method Void set_Version(Int32 )
+  method ES2Writer get_Writer()
+  method Void set_Writer(ES2Writer )
+  method Collections.Generic.Stack`1<ValueTuple`2<String,Int64>> get__objectSizeStreamPositions()
+  method Void set__objectSizeStreamPositions(Collections.Generic.Stack`1<ValueTuple`2<String,Int64>> )
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_Write_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteGhostReference_Public_Virtual_Final_New_Void_GhostReference_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteGhostReferences_Public_Virtual_Final_New_Void_GhostReferenceList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteGuidMappedSaveables_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Func_2_T_String_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_IFactory_2_T_QEnum_Int32_Int32_String_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteListPrimitive_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteObject_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteReferenceList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteSaveable_Public_Virtual_Final_New_Void_T_IFactory_2_T_QEnum_Int32_Int32_String_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteSaveable_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteSOReference_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.BinarySaveWriter/MethodInfoStoreGeneric_WriteSOReferenceList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter  (base: Il2CppSystem.Object) ===
+  prop   Text.StringBuilder _stringBuilder { get; set; }
+  prop   Int32 _indent { get; set; }
+  method Void AppendIndent(String withString)
+  method Void WriteDebug(String debugString)
+  method Void WriteObjectStart(String obj)
+  method Void WriteObjectEnd(String obj)
+  method Void WriteReferenceList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void Write(T value, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteSaveable(T value, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSaveable(T value, Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteObject(T abstractType, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteGuidMappedSaveables(Collections.Generic.IReadOnlyList`1<T> saveables, Func`2<T,String> guidGetter, String name)
+  method Void WriteListPrimitive(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteList(Collections.Generic.IReadOnlyList`1<T> list, Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSOReference(T so, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteSOReferenceList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteGhostReference(Nivalis.GhostGhostReference`1<T> reference, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteGhostReferences(Nivalis.GhostGhostReferenceList`1<T> references, Int32 firstVersion, Int32 lastVersion, String name)
+  method Void WriteToFile(String savePath)
+  method Void .ctor()
+  method static Void .cctor()
+  method Text.StringBuilder get__stringBuilder()
+  method Void set__stringBuilder(Text.StringBuilder )
+  method Int32 get__indent()
+  method Void set__indent(Int32 )
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_Write_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteGhostReference_Public_Virtual_Final_New_Void_GhostReference_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteGhostReferences_Public_Virtual_Final_New_Void_GhostReferenceList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteGuidMappedSaveables_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Func_2_T_String_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_IFactory_2_T_QEnum_Int32_Int32_String_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteListPrimitive_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteObject_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteReferenceList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteSaveable_Public_Virtual_Final_New_Void_T_IFactory_2_T_QEnum_Int32_Int32_String_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteSaveable_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteSOReference_Public_Virtual_Final_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.DebugTextSaveWriter/MethodInfoStoreGeneric_WriteSOReferenceList_Public_Virtual_Final_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter  (base: Il2CppInterop.Runtime.InteropTypes.Il2CppObjectBase) ===
+  method Void Write(T value, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSaveable(T value, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSaveable(T value, Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteObject(T abstractType, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteGuidMappedSaveables(Collections.Generic.IReadOnlyList`1<T> saveables, Func`2<T,String> guidGetter, String fieldName)
+  method Void WriteListPrimitive(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteList(Collections.Generic.IReadOnlyList`1<T> list, Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSOReference(T so, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteSOReferenceList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteGhostReference(Nivalis.GhostGhostReference`1<T> reference, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteGhostReferences(Nivalis.GhostGhostReferenceList`1<T> references, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method Void WriteDebug(String name)
+  method Void WriteObjectStart(String obj)
+  method Void WriteObjectEnd(String obj)
+  method Void WriteReferenceList(Collections.Generic.IReadOnlyList`1<T> list, Int32 firstVersion, Int32 lastVersion, String fieldName)
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_Write_Public_Abstract_Virtual_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteGhostReference_Public_Abstract_Virtual_New_Void_GhostReference_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteGhostReferences_Public_Abstract_Virtual_New_Void_GhostReferenceList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteGuidMappedSaveables_Public_Abstract_Virtual_New_Void_IReadOnlyList_1_T_Func_2_T_String_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteList_Public_Abstract_Virtual_New_Void_IReadOnlyList_1_T_IFactory_2_T_QEnum_Int32_Int32_String_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteList_Public_Abstract_Virtual_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteListPrimitive_Public_Abstract_Virtual_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteObject_Public_Abstract_Virtual_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteReferenceList_Public_Abstract_Virtual_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteSaveable_Public_Abstract_Virtual_New_Void_T_IFactory_2_T_QEnum_Int32_Int32_String_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteSaveable_Public_Abstract_Virtual_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteSOReference_Public_Abstract_Virtual_New_Void_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.ISaveWriter/MethodInfoStoreGeneric_WriteSOReferenceList_Public_Abstract_Virtual_New_Void_IReadOnlyList_1_T_Int32_Int32_String_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader  (base: Il2CppSystem.Object) ===
+  prop   Int32 Version { get; set; }
+  prop   ES2Reader Reader { get; set; }
+  prop   Collections.Generic.Stack`1<ValueTuple`2<String,Int64>> _objectStack { get; set; }
+  method Void .ctor(Int32 saveVersion, ES2Reader reader)
+  method T Read()
+  method T Read(Int32 firstVersion, T defaultValue)
+  method Void Read(T& value)
+  method Boolean Read(T& value, Int32 firstVersion)
+  method T Read(Int32 firstVersion, Int32 lastVersion, T defaultValue)
+  method T ReadObject()
+  method Void ReadGuidMappedSaveables(Collections.Generic.Dictionary`2<String,T> mappedSaveables)
+  method Collections.Generic.List`1<T> ReadListPrimitive(Int32 firstVersion, Int32 lastVersion)
+  method Collections.Generic.List`1<T> ReadList(Int32 firstVersion, Int32 lastVersion)
+  method Collections.Generic.List`1<T> ReadList(Nivalis.IFactory`2<T,QEnum> factory, Int32 firstVersion, Int32 lastVersion)
+  method Nivalis.GhostGhostReference`1<T> ReadGhostReference(Int32 firstVersion, Int32 lastVersion)
+  method Nivalis.GhostGhostReferenceList`1<T> ReadGhostReferences(Int32 firstVersion, Int32 lastVersion)
+  method Collections.Generic.List`1<T> ReadSOReferenceList(Int32 firstVersion, Int32 lastVersion)
+  method T ReadSOReference(String& guid, Int32 firstVersion, Int32 lastVersion)
+  method T ReadSOReference(Int32 firstVersion, Int32 lastVersion)
+  method Collections.Generic.List`1<T> ReadReferenceList(Int32 firstVersion, Int32 lastVersion)
+  method T ReadSaveable(Int32 firstVersion, Int32 lastVersion)
+  method T ReadSaveable(Nivalis.IFactory`2<T,QEnum> typeFactory, Int32 firstVersion, Int32 lastVersion)
+  method String ReadObjectStart()
+  method Void ReadObjectEnd(String expectedString)
+  method Void SkipObject(String objectName)
+  method Boolean IsVersionMatching(Int32 entryFirstVersion, Int32 entryLastVersion)
+  method static Void .cctor()
+  method Int32 get_Version()
+  method Void set_Version(Int32 )
+  method ES2Reader get_Reader()
+  method Void set_Reader(ES2Reader )
+  method Collections.Generic.Stack`1<ValueTuple`2<String,Int64>> get__objectStack()
+  method Void set__objectStack(Collections.Generic.Stack`1<ValueTuple`2<String,Int64>> )
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_Read_Public_Boolean_byref_T_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_Read_Public_T_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_Read_Public_T_Int32_Int32_T_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_Read_Public_T_Int32_T_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_Read_Public_Void_byref_T_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadGhostReference_Public_GhostReference_1_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadGhostReferences_Public_GhostReferenceList_1_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadGuidMappedSaveables_Public_Void_Dictionary_2_String_T_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadList_Public_List_1_T_IFactory_2_T_QEnum_Int32_Int32_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadList_Public_List_1_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadListPrimitive_Public_List_1_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadObject_Public_T_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadReferenceList_Public_List_1_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadSaveable_Public_T_IFactory_2_T_QEnum_Int32_Int32_0`2  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadSaveable_Public_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadSOReference_Public_T_byref_String_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadSOReference_Public_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SaveReader/MethodInfoStoreGeneric_ReadSOReferenceList_Public_List_1_T_Int32_Int32_0`1  (base: System.Object) ===
+  field  static private IntPtr Pointer
+  method static Void .cctor()
+
+=== Nivalis.SerializationManager  (base: Nivalis.Singleton`1<Nivalis.SerializationManager>) ===
+  prop   Nivalis.ActionNonAlloc OnPreSave { get; set; }
+  prop   Nivalis.ActionNonAlloc OnPostLoad { get; set; }
+  prop   Boolean _IsInitializing_k__BackingField { get; set; }
+  prop   Nivalis.SerializablePrefabs prefabs { get; set; }
+  prop   Collections.Generic.Dictionary`2<String,Nivalis.SavedObject> _savedObjectDictionary { get; set; }
+  prop   Collections.Generic.Dictionary`2<String,Texture2D> _saveScreenshots { get; set; }
+  prop   Vector2Int SAVE_SCREENSHOT_SIZE { get; set; }
+  prop   RenderTexture screenTexture { get; set; }
+  prop   Texture2D renderedTexture { get; set; }
+  prop   Nivalis.SerializablePrefabs Prefabs { get; }
+  prop   Boolean IsInitializing { get; set; }
+  method Nivalis.SerializablePrefabs get_Prefabs()
+  method Boolean get_IsInitializing()
+  method Void set_IsInitializing(Boolean value)
+  method Void PrintAllSavedObjects()
+  method Void Awake()
+  method Void Clear()
+  method Void OnDestroyInternal()
+  method Void RegisterObject(Nivalis.SerializableObject obj)
+  method Void RegisterObject(String guid, Nivalis.SavedObject savedObject)
+  method Nivalis.SavedObject GetSavedObject(String guid)
+  method Void OnSceneLoaded(SceneManagement.Scene scene, SceneManagement.LoadSceneMode mode)
+  method Collections.IEnumerator UpdateSceneObjects(Int32 scene)
+  method Void ForceInitializeSerializedObject(String id, Int32 scene)
+  method Void SaveGlobalSave()
+  method Nivalis.SaveReader GetGlobalSaveReader(Nivalis.SerializationManager/GlobalSaveHeader& saveHeader)
+  method Texture2D LoadScreenshot(String saveName)
+  method Collections.Generic.IEnumerable`1<String> EnumerateSaveFiles()
+  method Boolean HasAnyValidSave()
+  method Nivalis.ListPool`1/Handle<ValueTuple`2<String,Nivalis.SerializationManager/SaveHeader>> GetValidSaves(Collections.Generic.List`1<ValueTuple`2<String,Nivalis.SerializationManager/SaveHeader>>& saves)
+  method Boolean LoadSaveHeader(String saveName, Nivalis.SerializationManager/SaveHeader& saveHeader, Nivalis.SerializationManager/LoadingInfo loadingInfo)
+  method static Void CaptureView(String outputPath)
+  method Boolean Save(String saveName, Boolean isAutoSave)
+  method Void Load(String saveName)
+  method Boolean DoesSaveExist(String saveName)
+  method static Void DeleteSave(Nivalis.SaveSlotUi saveSlotUi, String saveName)
+  method Collections.IEnumerator LoadRoutine(String saveName)
+  method Void DeregisterObject(String ghostViewId)
+  method Void SaveSettingsIfNeeded()
+  method Void LoadSettings()
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.ActionNonAlloc get_OnPreSave()
+  method static Void set_OnPreSave(Nivalis.ActionNonAlloc )
+  method static Nivalis.ActionNonAlloc get_OnPostLoad()
+  method static Void set_OnPostLoad(Nivalis.ActionNonAlloc )
+  method Boolean get__IsInitializing_k__BackingField()
+  method Void set__IsInitializing_k__BackingField(Boolean )
+  method Nivalis.SerializablePrefabs get_prefabs()
+  method Void set_prefabs(Nivalis.SerializablePrefabs )
+  method Collections.Generic.Dictionary`2<String,Nivalis.SavedObject> get__savedObjectDictionary()
+  method Void set__savedObjectDictionary(Collections.Generic.Dictionary`2<String,Nivalis.SavedObject> )
+  method Collections.Generic.Dictionary`2<String,Texture2D> get__saveScreenshots()
+  method Void set__saveScreenshots(Collections.Generic.Dictionary`2<String,Texture2D> )
+  method static Vector2Int get_SAVE_SCREENSHOT_SIZE()
+  method static Void set_SAVE_SCREENSHOT_SIZE(Vector2Int )
+  method static RenderTexture get_screenTexture()
+  method static Void set_screenTexture(RenderTexture )
+  method static Texture2D get_renderedTexture()
+  method static Void set_renderedTexture(Texture2D )
+
+=== Nivalis.SerializationManager/__c  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.SerializationManager/__c __9 { get; set; }
+  prop   Func`2<Nivalis.RuntimeQuest/SubQuestTrackerPair,String> __9__38_1 { get; set; }
+  prop   Func`2<Nivalis.RuntimeQuest,Nivalis.SerializationManager/QuestSaveHeader> __9__38_0 { get; set; }
+  prop   Func`2<Nivalis.Quest,String> __9__42_2 { get; set; }
+  method Void .ctor()
+  method Nivalis.SerializationManager/QuestSaveHeader _Save_b__38_0(Nivalis.RuntimeQuest rq)
+  method String _Save_b__38_1(Nivalis.RuntimeQuest/SubQuestTrackerPair asq)
+  method String _LoadRoutine_b__42_2(Nivalis.Quest p)
+  method static Void .cctor()
+  method static Nivalis.SerializationManager/__c get___9()
+  method static Void set___9(Nivalis.SerializationManager/__c )
+  method static Func`2<Nivalis.RuntimeQuest/SubQuestTrackerPair,String> get___9__38_1()
+  method static Void set___9__38_1(Func`2<Nivalis.RuntimeQuest/SubQuestTrackerPair,String> )
+  method static Func`2<Nivalis.RuntimeQuest,Nivalis.SerializationManager/QuestSaveHeader> get___9__38_0()
+  method static Void set___9__38_0(Func`2<Nivalis.RuntimeQuest,Nivalis.SerializationManager/QuestSaveHeader> )
+  method static Func`2<Nivalis.Quest,String> get___9__42_2()
+  method static Void set___9__42_2(Func`2<Nivalis.Quest,String> )
+
+=== Nivalis.SerializationManager/__c__DisplayClass42_0  (base: Il2CppSystem.Object) ===
+  prop   Boolean loadingScreenIsDoneShowing { get; set; }
+  prop   Boolean isSceneLoadDone { get; set; }
+  method Void .ctor()
+  method Void _LoadRoutine_b__0()
+  method Void _LoadRoutine_b__1()
+  method static Void .cctor()
+  method Boolean get_loadingScreenIsDoneShowing()
+  method Void set_loadingScreenIsDoneShowing(Boolean )
+  method Boolean get_isSceneLoadDone()
+  method Void set_isSceneLoadDone(Boolean )
+
+=== Nivalis.SerializationManager/_LoadRoutine_d__42  (base: Il2CppSystem.Object) ===
+  prop   Int32 __1__state { get; set; }
+  prop   Object __2__current { get; set; }
+  prop   Nivalis.SerializationManager __4__this { get; set; }
+  prop   String saveName { get; set; }
+  prop   Nivalis.SerializationManager/__c__DisplayClass42_0 __8__1 { get; set; }
+  prop   String _path_5__2 { get; set; }
+  prop   String _filename_5__3 { get; set; }
+  prop   ES2Reader _reader_5__4 { get; set; }
+  prop   Int32 _version_5__5 { get; set; }
+  prop   Int32 _sceneID_5__6 { get; set; }
+  prop   Single _timeSinceStart_5__7 { get; set; }
+  prop   Object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+  prop   Object System.Collections.IEnumerator.Current { get; }
+  method Void .ctor(Int32 <>1__state)
+  method Void System_IDisposable_Dispose()
+  method Boolean MoveNext()
+  method Void __m__Finally1()
+  method Object System_Collections_Generic_IEnumerator_System_Object__get_Current()
+  method Void System_Collections_IEnumerator_Reset()
+  method Object System_Collections_IEnumerator_get_Current()
+  method static Void .cctor()
+  method Int32 get___1__state()
+  method Void set___1__state(Int32 )
+  method Object get___2__current()
+  method Void set___2__current(Object )
+  method Nivalis.SerializationManager get___4__this()
+  method Void set___4__this(Nivalis.SerializationManager )
+  method String get_saveName()
+  method Void set_saveName(String )
+  method Nivalis.SerializationManager/__c__DisplayClass42_0 get___8__1()
+  method Void set___8__1(Nivalis.SerializationManager/__c__DisplayClass42_0 )
+  method String get__path_5__2()
+  method Void set__path_5__2(String )
+  method String get__filename_5__3()
+  method Void set__filename_5__3(String )
+  method ES2Reader get__reader_5__4()
+  method Void set__reader_5__4(ES2Reader )
+  method Int32 get__version_5__5()
+  method Void set__version_5__5(Int32 )
+  method Int32 get__sceneID_5__6()
+  method Void set__sceneID_5__6(Int32 )
+  method Single get__timeSinceStart_5__7()
+  method Void set__timeSinceStart_5__7(Single )
+
+=== Nivalis.SerializationManager/_UpdateSceneObjects_d__19  (base: Il2CppSystem.Object) ===
+  prop   Int32 __1__state { get; set; }
+  prop   Object __2__current { get; set; }
+  prop   Int32 scene { get; set; }
+  prop   Nivalis.SerializationManager __4__this { get; set; }
+  prop   Object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+  prop   Object System.Collections.IEnumerator.Current { get; }
+  method Void .ctor(Int32 <>1__state)
+  method Void System_IDisposable_Dispose()
+  method Boolean MoveNext()
+  method Object System_Collections_Generic_IEnumerator_System_Object__get_Current()
+  method Void System_Collections_IEnumerator_Reset()
+  method Object System_Collections_IEnumerator_get_Current()
+  method static Void .cctor()
+  method Int32 get___1__state()
+  method Void set___1__state(Int32 )
+  method Object get___2__current()
+  method Void set___2__current(Object )
+  method Int32 get_scene()
+  method Void set_scene(Int32 )
+  method Nivalis.SerializationManager get___4__this()
+  method Void set___4__this(Nivalis.SerializationManager )
+
+=== Nivalis.SerializationManager/DelayedGroupLogger  (base: Il2CppSystem.Object) ===
+  prop   Single _flushTime { get; set; }
+  prop   Single _lastFlushTime { get; set; }
+  prop   Nivalis.MultiDictionary`2<String,String> messages { get; set; }
+  method Void .ctor(Single flushTime)
+  method Void RegisterLog(String tag, String message)
+  method Void Flush()
+  method Void CheckFlush()
+  method static Void .cctor()
+  method Single get__flushTime()
+  method Void set__flushTime(Single )
+  method Single get__lastFlushTime()
+  method Void set__lastFlushTime(Single )
+  method Nivalis.MultiDictionary`2<String,String> get_messages()
+  method Void set_messages(Nivalis.MultiDictionary`2<String,String> )
+
+=== Nivalis.SerializationManager/GlobalSaveHeader  (base: System.ValueType) ===
+  field  public Int32 Version
+  method static Void .cctor()
+  method Object BoxIl2CppObject()
+
+=== Nivalis.SerializationManager/LoadingInfo  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.SerializationManager/LoadingInfo instance { get; set; }
+  prop   String Path { get; set; }
+  prop   Nivalis.SerializationManagerConfiguration _SerializationManagerConfiguration_k__BackingField { get; set; }
+  prop   Boolean hasDefinedAllProperties { get; set; }
+  prop   Collections.Generic.Dictionary`2<String,Nivalis.GhostCustomerLoop.BaseProperty> allProperties { get; set; }
+  prop   Boolean hasDefinedAllQuests { get; set; }
+  prop   Collections.Generic.Dictionary`2<String,Nivalis.Quest> allQuests { get; set; }
+  prop   Nivalis.SerializationManager/LoadingInfo NewInstance { get; }
+  prop   Nivalis.SerializationManagerConfiguration SerializationManagerConfiguration { get; set; }
+  prop   Collections.Generic.IReadOnlyDictionary`2<String,Nivalis.GhostCustomerLoop.BaseProperty> AllProperties { get; }
+  prop   Collections.Generic.IReadOnlyDictionary`2<String,Nivalis.Quest> AllQuests { get; }
+  method Void .ctor()
+  method static Nivalis.SerializationManager/LoadingInfo get_NewInstance()
+  method Nivalis.SerializationManagerConfiguration get_SerializationManagerConfiguration()
+  method Void set_SerializationManagerConfiguration(Nivalis.SerializationManagerConfiguration value)
+  method Collections.Generic.IReadOnlyDictionary`2<String,Nivalis.GhostCustomerLoop.BaseProperty> get_AllProperties()
+  method Collections.Generic.IReadOnlyDictionary`2<String,Nivalis.Quest> get_AllQuests()
+  method Void Reset()
+  method Void System_IDisposable_Dispose()
+  method static Void .cctor()
+  method static Nivalis.SerializationManager/LoadingInfo get_instance()
+  method static Void set_instance(Nivalis.SerializationManager/LoadingInfo )
+  method String get_Path()
+  method Void set_Path(String )
+  method Nivalis.SerializationManagerConfiguration get__SerializationManagerConfiguration_k__BackingField()
+  method Void set__SerializationManagerConfiguration_k__BackingField(Nivalis.SerializationManagerConfiguration )
+  method Boolean get_hasDefinedAllProperties()
+  method Void set_hasDefinedAllProperties(Boolean )
+  method Collections.Generic.Dictionary`2<String,Nivalis.GhostCustomerLoop.BaseProperty> get_allProperties()
+  method Void set_allProperties(Collections.Generic.Dictionary`2<String,Nivalis.GhostCustomerLoop.BaseProperty> )
+  method Boolean get_hasDefinedAllQuests()
+  method Void set_hasDefinedAllQuests(Boolean )
+  method Collections.Generic.Dictionary`2<String,Nivalis.Quest> get_allQuests()
+  method Void set_allQuests(Collections.Generic.Dictionary`2<String,Nivalis.Quest> )
+
+=== Nivalis.SerializationManager/QuestSaveHeader  (base: Il2CppSystem.ValueType) ===
+  prop   Nivalis.Quest quest { get; set; }
+  prop   Int32 questNumber { get; set; }
+  prop   Collections.Generic.List`1<String> activeSubquests { get; set; }
+  method static Void .cctor()
+  method Void .ctor()
+  method Nivalis.Quest get_quest()
+  method Void set_quest(Nivalis.Quest )
+  method Int32 get_questNumber()
+  method Void set_questNumber(Int32 )
+  method Collections.Generic.List`1<String> get_activeSubquests()
+  method Void set_activeSubquests(Collections.Generic.List`1<String> )
+
+=== Nivalis.SerializationManager/SaveHeader  (base: Il2CppSystem.ValueType) ===
+  prop   Int32 Version { get; set; }
+  prop   Int32 SceneId { get; set; }
+  prop   Single TimeSinceStart { get; set; }
+  prop   Int32 UnixTimestamp { get; set; }
+  prop   Nivalis.TimeOfDayManager/TimeStamp GameTime { get; set; }
+  prop   Int32 CurrentMoneyInLimCents { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.SerializationManager/QuestSaveHeader> ActiveQuests { get; set; }
+  prop   Int32 NumberOfOwnedItems { get; set; }
+  prop   Collections.Generic.List`1<Nivalis.GhostCustomerLoop.BaseProperty> OwnedProperties { get; set; }
+  prop   Boolean IsAutoSave { get; set; }
+  method static Void .cctor()
+  method Void .ctor()
+  method Int32 get_Version()
+  method Void set_Version(Int32 )
+  method Int32 get_SceneId()
+  method Void set_SceneId(Int32 )
+  method Single get_TimeSinceStart()
+  method Void set_TimeSinceStart(Single )
+  method Int32 get_UnixTimestamp()
+  method Void set_UnixTimestamp(Int32 )
+  method Nivalis.TimeOfDayManager/TimeStamp get_GameTime()
+  method Void set_GameTime(Nivalis.TimeOfDayManager/TimeStamp )
+  method Int32 get_CurrentMoneyInLimCents()
+  method Void set_CurrentMoneyInLimCents(Int32 )
+  method Collections.Generic.List`1<Nivalis.SerializationManager/QuestSaveHeader> get_ActiveQuests()
+  method Void set_ActiveQuests(Collections.Generic.List`1<Nivalis.SerializationManager/QuestSaveHeader> )
+  method Int32 get_NumberOfOwnedItems()
+  method Void set_NumberOfOwnedItems(Int32 )
+  method Collections.Generic.List`1<Nivalis.GhostCustomerLoop.BaseProperty> get_OwnedProperties()
+  method Void set_OwnedProperties(Collections.Generic.List`1<Nivalis.GhostCustomerLoop.BaseProperty> )
+  method Boolean get_IsAutoSave()
+  method Void set_IsAutoSave(Boolean )
+
+=== Nivalis.SerializationManager/SavesComparer  (base: Il2CppSystem.Object) ===
+  prop   Nivalis.SerializationManager/SavesComparer Instance { get; set; }
+  method Int32 Method_Private_Virtual_Final_New_Int32_ValueTuple_2_String_SaveHeader_ValueTuple_2_String_SaveHeader_0(ValueTuple`2<String,Nivalis.SerializationManager/SaveHeader> x, ValueTuple`2<String,Nivalis.SerializationManager/SaveHeader> y)
+  method Void .ctor()
+  method static Void .cctor()
+  method static Nivalis.SerializationManager/SavesComparer get_Instance()
+  method static Void set_Instance(Nivalis.SerializationManager/SavesComparer )
+
+=== Nivalis.SerializationManagerConfiguration  (base: UnityEngine.ScriptableObject) ===
+  prop   String RESOURCES_PATH { get; set; }
+  prop   Nivalis.SerializationManagerConfiguration _instance { get; set; }
+  prop   Int32 MinimalSupportedSaveVersion { get; set; }
+  prop   Int32 LatestSaveVersion { get; set; }
+  prop   Int32 MinimalSupportedGlobalSaveVersion { get; set; }
+  prop   Int32 LatestGlobalSaveVersion { get; set; }
+  prop   Nivalis.SerializationManagerConfiguration Instance { get; }
+  method static Nivalis.SerializationManagerConfiguration get_Instance()
+  method Void .ctor()
+  method static Void .cctor()
+  method static String get_RESOURCES_PATH()
+  method static Void set_RESOURCES_PATH(String )
+  method static Nivalis.SerializationManagerConfiguration get__instance()
+  method static Void set__instance(Nivalis.SerializationManagerConfiguration )
+  method Int32 get_MinimalSupportedSaveVersion()
+  method Void set_MinimalSupportedSaveVersion(Int32 )
+  method Int32 get_LatestSaveVersion()
+  method Void set_LatestSaveVersion(Int32 )
+  method Int32 get_MinimalSupportedGlobalSaveVersion()
+  method Void set_MinimalSupportedGlobalSaveVersion(Int32 )
+  method Int32 get_LatestGlobalSaveVersion()
+  method Void set_LatestGlobalSaveVersion(Int32 )

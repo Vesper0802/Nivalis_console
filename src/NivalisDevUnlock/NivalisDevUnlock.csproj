@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- BepInEx 6 IL2CPP ships a .NET 6 CoreCLR runtime, so plugins must target net6.0. -->
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>NivalisDevUnlock</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Interop assemblies are unsigned and have mismatched refs; that's expected. -->
+    <NoWarn>$(NoWarn);CS0436;CS8981</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Nivalis Nights</GameDir>
+    <BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
+    <BepInExInterop>$(GameDir)\BepInEx\interop</BepInExInterop>
+  </PropertyGroup>
+
+  <ItemGroup Label="BepInEx">
+    <Reference Include="BepInEx.Core"><HintPath>$(BepInExCore)\BepInEx.Core.dll</HintPath></Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP"><HintPath>$(BepInExCore)\BepInEx.Unity.IL2CPP.dll</HintPath></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(BepInExCore)\Il2CppInterop.Runtime.dll</HintPath></Reference>
+    <Reference Include="Il2CppInterop.Common"><HintPath>$(BepInExCore)\Il2CppInterop.Common.dll</HintPath></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExCore)\0Harmony.dll</HintPath></Reference>
+  </ItemGroup>
+
+  <ItemGroup Label="Game interop">
+    <Reference Include="Assembly-CSharp"><HintPath>$(BepInExInterop)\Assembly-CSharp.dll</HintPath></Reference>
+    <Reference Include="Il2Cppmscorlib"><HintPath>$(BepInExInterop)\Il2Cppmscorlib.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(BepInExInterop)\UnityEngine.CoreModule.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(BepInExInterop)\UnityEngine.InputLegacyModule.dll</HintPath></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(BepInExInterop)\UnityEngine.IMGUIModule.dll</HintPath></Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="@(Reference)">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="DeployToGame" AfterTargets="Build" Condition="'$(Deploy)' == 'true'">
+    <MakeDir Directories="$(GameDir)\BepInEx\plugins" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameDir)\BepInEx\plugins" />
+    <Message Importance="high" Text="Deployed $(TargetFileName) -> $(GameDir)\BepInEx\plugins" />
+  </Target>
+
+</Project>
