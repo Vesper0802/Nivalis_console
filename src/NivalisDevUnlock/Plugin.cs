@@ -18,6 +18,7 @@ public class Plugin : BasePlugin
     internal static Plugin Instance;
     internal static ConfigEntry<Key> ToggleKey;
     internal static ConfigEntry<bool> PauseWhileOpen;
+    internal static ConfigEntry<float> UiScale;
 
     public override void Load()
     {
@@ -28,6 +29,9 @@ public class Plugin : BasePlugin
         PauseWhileOpen = Config.Bind("Console", "PauseWhileOpen", true,
             "Sets Time.timeScale to 0 while the console is open. This also stops the " +
             "player from walking around as you type, since movement is time-scaled.");
+        UiScale = Config.Bind("Console", "UiScale", 2f,
+            "Magnification of the console overlay. Applied through GUI.matrix, so the " +
+            "whole panel scales rather than just the text.");
 
         // DevMode.IsDevMode is a lazy getter over a Nullable<bool> that is filled by
         // RSA-verifying the `token` field in settings.ini. Short-circuit the getter so

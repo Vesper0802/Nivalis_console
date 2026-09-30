@@ -62,10 +62,13 @@ internal static class KeyboardInput
 
     private static bool ShiftHeld => IsHeld(Key.LeftShift) || IsHeld(Key.RightShift);
 
+    public static bool CtrlHeld => IsHeld(Key.LeftCtrl) || IsHeld(Key.RightCtrl);
+
     /// <summary>Characters typed this frame, honouring shift.</summary>
     public static string TypedThisFrame()
     {
-        if (Keyboard.current == null)
+        // Ctrl combinations are shortcuts, not text, so Ctrl+V must not also type a "v".
+        if (Keyboard.current == null || CtrlHeld)
             return "";
 
         var shift = ShiftHeld;

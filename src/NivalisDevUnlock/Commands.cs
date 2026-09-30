@@ -1,5 +1,6 @@
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using Nivalis.DevOptions;
+using UnityEngine;
 
 namespace NivalisDevUnlock;
 
@@ -60,7 +61,7 @@ internal static class Commands
                 }
 
                 var label = string.IsNullOrEmpty(display) || display == asset ? asset : $"{asset}  ({display})";
-                print($"  {label}");
+                print($"  {GameRefs.ShortGuid(item)}  {label}");
             }
 
             if (shown == 0)
@@ -69,7 +70,52 @@ internal static class Commands
                 print($"{items.Length} item types loaded.");
         });
 
-        Add("give", "give <item> [amount]", "Adds an item to the player inventory.", (args, print) =>
+        Add("iteminfo", "iteminfo <item|code>", "Shows an item's codes and properties.", (args, print) =>
+        {
+            if (args.Length == 0)
+            {
+                print("Usage: iteminfo <item|code>");
+                return;
+            }
+
+            var query = string.Join(" ", args);
+            var matches = GameRefs.Resolve(query);
+
+            if (matches.Count == 0)
+            {
+                print($"Nothing matching '{query}'.");
+                return;
+            }
+
+            if (matches.Count > 1)
+            {
+                print($"'{query}' matches {matches.Count} items:");
+                foreach (var m in matches.Take(15))
+                    print($"  {GameRefs.ShortGuid(m)}  {GameRefs.AssetName(m)}");
+                return;
+            }
+
+            var item = matches[0];
+            print($"Asset name : {GameRefs.AssetName(item)}");
+            print($"Display    : {GameRefs.DisplayName(item)}");
+            print($"Guid       : {GameRefs.Guid(item)}");
+            print($"ArticyGuid : {GameRefs.ArticyGuid(item)}");
+
+            try
+            {
+                print($"BasePrice  : {item.BasePrice}   MarketPrice: {item.BaseMarketPrice}");
+                print($"Storable   : {item.IsPlayerStorable}   Furniture: {item.IsFurniture}   " +
+                      $"Ingredient: {item.IsIngredient}");
+                print($"Useable    : {item.IsUseable}   Equippable: {item.IsEquippable}   " +
+                      $"Fish: {item.IsFish}   Plant: {item.IsPlant}");
+            }
+            catch (Exception e)
+            {
+                print($"(some properties unavailable: {e.Message})");
+            }
+        });
+
+        Add("give", "give <item|code> [amount]", "Adds an item to the player inventory.", (args, print) =>
         {
             if (args.Length == 0)
             {
@@ -102,9 +148,9 @@ internal static class Commands
 
             if (matches.Count > 1)
             {
-                print($"'{query}' is ambiguous, {matches.Count} matches:");
+                print($"'{query}' is ambiguous, {matches.Count} matches — retry with a code:");
                 for (var i = 0; i < Math.Min(matches.Count, 15); i++)
-                    print($"  {GameRefs.AssetName(matches[i])}");
+                    print($"  {GameRefs.ShortGuid(matches[i])}  {GameRefs.AssetName(matches[i])}");
                 return;
             }
 
@@ -261,6 +307,31 @@ internal static class Commands
         {
             GameRefs.InvalidateItemCache();
             print($"{GameRefs.ItemTypes(true).Length} item types loaded.");
+        });
+
+        Add("copylog", "copylog", "Copies the whole console output to the clipboard.", (args, print) =>
+        {
+            var text = ConsoleWindow.OutputText;
+            GUIUtility.systemCopyBuffer = text;
+            print($"Copied {text.Length} characters to the clipboard.");
+        });
+
+        Add("uiscale", "uiscale [factor]", "Shows or sets the console magnification.", (args, print) =>
+        {
+            if (args.Length == 0)
+            {
+                print($"UiScale is {Plugin.UiScale.Value}.");
+                return;
+            }
+
+            if (!float.TryParse(args[0], out var scale))
+            {
+                print($"'{args[0]}' is not a number.");
+                return;
+            }
+
+            Plugin.UiScale.Value = Mathf.Clamp(scale, 0.5f, 6f);
+            print($"UiScale is now {Plugin.UiScale.Value}. Saved to the config file.");
         });
     }
 

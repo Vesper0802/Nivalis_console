@@ -62,13 +62,39 @@ internal static class GameRefs
         catch { return ""; }
     }
 
+    /// <summary>The item's own identifier, which is what the game uses internally.</summary>
+    public static string Guid(ItemType item)
+    {
+        try { return item.Guid ?? ""; }
+        catch { return ""; }
+    }
+
+    public static string ArticyGuid(ItemType item)
+    {
+        try { return item.ArticyGuid ?? ""; }
+        catch { return ""; }
+    }
+
+    /// <summary>Short form of the guid, enough to identify an item when typing.</summary>
+    public static string ShortGuid(ItemType item)
+    {
+        var guid = Guid(item);
+        return guid.Length <= 8 ? guid : guid[..8];
+    }
+
     /// <summary>
-    /// Resolves a user-typed query to item types: exact asset name first, then exact
-    /// display name, then substring matches across both.
+    /// Resolves a user-typed query to item types. Exact matches win, in order of how
+    /// unambiguous they are: guid, then asset name, then display name. Only if none hit
+    /// does it fall back to substring matching, which may return several candidates.
     /// </summary>
     public static List<ItemType> Resolve(string query)
     {
         var items = ItemTypes();
+
+        foreach (var item in items)
+            if (string.Equals(Guid(item), query, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(ArticyGuid(item), query, StringComparison.OrdinalIgnoreCase))
+                return new List<ItemType> { item };
 
         foreach (var item in items)
             if (string.Equals(AssetName(item), query, StringComparison.OrdinalIgnoreCase))
@@ -78,11 +104,18 @@ internal static class GameRefs
             if (string.Equals(DisplayName(item), query, StringComparison.OrdinalIgnoreCase))
                 return new List<ItemType> { item };
 
+        // A guid prefix is precise enough to accept on its own if it hits exactly one item.
+        var byGuidPrefix = items.Where(i =>
+            Guid(i).StartsWith(query, StringComparison.OrdinalIgnoreCase)).ToList();
+        if (byGuidPrefix.Count == 1)
+            return byGuidPrefix;
+
         var partial = new List<ItemType>();
         foreach (var item in items)
         {
             if (AssetName(item).Contains(query, StringComparison.OrdinalIgnoreCase) ||
-                DisplayName(item).Contains(query, StringComparison.OrdinalIgnoreCase))
+                DisplayName(item).Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                Guid(item).StartsWith(query, StringComparison.OrdinalIgnoreCase))
                 partial.Add(item);
         }
 

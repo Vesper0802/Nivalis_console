@@ -14,7 +14,7 @@ namespace NivalisDevUnlock;
 /// </summary>
 public class ConsoleWindow : MonoBehaviour
 {
-    private const float LineHeight = 18f;
+    private const int BaseFontSize = 12;
     private const float Padding = 8f;
 
     private static readonly List<string> Output = new();
@@ -29,6 +29,8 @@ public class ConsoleWindow : MonoBehaviour
     private float _caretTimer;
 
     public ConsoleWindow(IntPtr ptr) : base(ptr) { }
+
+    public static string OutputText => string.Join("\n", Output);
 
     public static void Print(string line)
     {
@@ -75,6 +77,22 @@ public class ConsoleWindow : MonoBehaviour
             _caretOn = !_caretOn;
         }
 
+        if (KeyboardInput.CtrlHeld)
+        {
+            if (KeyboardInput.WasPressed(Key.V))
+            {
+                Paste();
+                return;
+            }
+
+            if (KeyboardInput.WasPressed(Key.C))
+            {
+                GUIUtility.systemCopyBuffer = _input;
+                Print($"Copied input line to clipboard.");
+                return;
+            }
+        }
+
         if (KeyboardInput.WasPressed(Key.Enter) || KeyboardInput.WasPressed(Key.NumpadEnter))
         {
             Submit();
@@ -83,8 +101,20 @@ public class ConsoleWindow : MonoBehaviour
 
         if (KeyboardInput.PressedOrRepeating(Key.Backspace))
         {
-            if (_input.Length > 0)
+            if (_input.Length == 0)
+                return;
+
+            // Ctrl+Backspace deletes the trailing word, like most shells.
+            if (KeyboardInput.CtrlHeld)
+            {
+                var trimmed = _input.TrimEnd();
+                var cut = trimmed.LastIndexOf(' ');
+                _input = cut < 0 ? "" : trimmed[..(cut + 1)];
+            }
+            else
+            {
                 _input = _input[..^1];
+            }
             return;
         }
 
@@ -120,6 +150,19 @@ public class ConsoleWindow : MonoBehaviour
         }
     }
 
+    private void Paste()
+    {
+        var clip = GUIUtility.systemCopyBuffer;
+        if (string.IsNullOrEmpty(clip))
+        {
+            Print("Clipboard is empty.");
+            return;
+        }
+
+        // The prompt is a single line, so flatten any structure in the pasted text.
+        _input += clip.Replace("\r", " ").Replace("\n", " ").Replace("\t", " ").Trim();
+    }
+
     private void Toggle()
     {
         _open = !_open;
@@ -143,24 +186,41 @@ public class ConsoleWindow : MonoBehaviour
         if (!_open)
             return;
 
-        var width = Screen.width - 80f;
-        var height = Mathf.Min(Screen.height - 80f, 520f);
-        var panel = new Rect(40f, 40f, width, height);
+        // Set a real font size rather than scaling a small bitmap through GUI.matrix:
+        // scaling made the glyphs blurry and clipped descenders like p and y, because the
+        // style's padding ate into a line box sized for the unscaled font.
+        var scale = Mathf.Clamp(Plugin.UiScale.Value, 0.5f, 6f);
+        var fontSize = Mathf.RoundToInt(BaseFontSize * scale);
+        var style = GUI.skin.label;
+        style.fontSize = fontSize;
+        style.wordWrap = false;
+
+        // Descenders need headroom beyond the nominal font size.
+        var lineHeight = fontSize + 8f;
+
+        var margin = 20f;
+        var width = Screen.width - margin * 2f;
+        var height = Mathf.Min(Screen.height - margin * 2f, lineHeight * 16f);
+        var panel = new Rect(margin, margin, width, height);
 
         GUI.color = Color.white;
-        GUI.Box(panel, "");
+        // Stacked because the default box texture is translucent; repeating it darkens the
+        // panel enough to read white text over a bright scene.
+        for (var i = 0; i < 4; i++)
+            GUI.Box(panel, "");
 
         var x = panel.x + Padding;
         var innerWidth = panel.width - Padding * 2f;
         var y = panel.y + Padding;
 
-        GUI.Label(new Rect(x, y, innerWidth, LineHeight),
-            $"Nivalis Console  —  Enter runs, Up/Down history, PageUp/PageDown scroll, {Plugin.ToggleKey.Value}/Escape closes");
-        y += LineHeight + 4f;
+        GUI.Label(new Rect(x, y, innerWidth, lineHeight),
+            $"Nivalis Console  —  Enter runs, Up/Down history, PageUp/PageDown scroll, " +
+            $"Ctrl+V paste, Ctrl+C copy, {Plugin.ToggleKey.Value}/Escape closes");
+        y += lineHeight + 4f;
 
         // Two lines are reserved at the bottom for the prompt and its separator.
-        var outputHeight = panel.yMax - Padding - (LineHeight * 2f) - y;
-        var visibleLines = Mathf.Max(1, Mathf.FloorToInt(outputHeight / LineHeight));
+        var outputHeight = panel.yMax - Padding - (lineHeight * 2f) - y;
+        var visibleLines = Mathf.Max(1, Mathf.FloorToInt(outputHeight / lineHeight));
 
         _scrollBack = Mathf.Clamp(_scrollBack, 0, Mathf.Max(0, Output.Count - visibleLines));
         var end = Output.Count - _scrollBack;
@@ -168,13 +228,13 @@ public class ConsoleWindow : MonoBehaviour
 
         for (var i = start; i < end; i++)
         {
-            GUI.Label(new Rect(x, y, innerWidth, LineHeight), Output[i]);
-            y += LineHeight;
+            GUI.Label(new Rect(x, y, innerWidth, lineHeight), Output[i]);
+            y += lineHeight;
         }
 
-        var promptY = panel.yMax - Padding - LineHeight;
+        var promptY = panel.yMax - Padding - lineHeight;
         var scrollNote = _scrollBack > 0 ? $"   [scrolled back {_scrollBack}]" : "";
-        GUI.Label(new Rect(x, promptY, innerWidth, LineHeight),
+        GUI.Label(new Rect(x, promptY, innerWidth, lineHeight),
             $"> {_input}{(_caretOn ? "_" : " ")}{scrollNote}");
     }
 
