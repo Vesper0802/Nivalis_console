@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 namespace NivalisDevUnlock;
 
-[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.4.0")]
+[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.4.2")]
 public class Plugin : BasePlugin
 {
     public const string Guid = "nivalisnights.devunlock";
@@ -62,10 +62,18 @@ public class Plugin : BasePlugin
 
     private void Force(Harmony harmony, System.Type type, string getter)
     {
+        // Patching a method interop never bound detours onto address zero and crashes the
+        // process later, so an unbound getter is skipped rather than patched.
+        if (!Interop.HasNativeMethod(type, getter))
+        {
+            Log.LogWarning($"{type.Name}.{getter} has no native pointer; leaving it alone.");
+            return;
+        }
+
         var target = AccessTools.Method(type, getter);
         if (target == null)
         {
-            Log.LogError($"Could not find {type.FullName}.{getter} â€” the game probably updated.");
+            Log.LogError($"Could not find {type.FullName}.{getter} â€?the game probably updated.");
             return;
         }
 

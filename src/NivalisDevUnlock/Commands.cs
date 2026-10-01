@@ -1,6 +1,7 @@
 using System.IO;
 using System.Text;
 using BepInEx;
+using Nivalis;
 using Nivalis.DevOptions;
 using Nivalis.InventorySystem;
 using UnityEngine;
@@ -244,8 +245,27 @@ internal static class Commands
             print("Called AddAllFurniture().");
         });
 
-        Add("shoplist", "shoplist", "Shows the shopping list and what filling it would cost.", (args, print) =>
+        Add("shoplist", "shoplist [full]", "Shows the shopping list. 'full' adds codes and prices.", (args, print) =>
         {
+            // The plain form asks the game to format the list for us, which touches none of
+            // the generic collections that crashed the process before.
+            if (args.Length == 0)
+            {
+                var manager = GameRefs.ShoppingList;
+                if (manager == null)
+                {
+                    print("No ShoppingListManager in the scene — load a save first.");
+                    return;
+                }
+
+                manager.CreateMessage(out var message);
+                print(string.IsNullOrWhiteSpace(message)
+                    ? "The game reports nothing on the shopping list."
+                    : message);
+                print("Use 'shoplist full' for codes and prices, or 'buylist' to get them.");
+                return;
+            }
+
             var entries = ShoppingListEntries(print);
             if (entries == null)
                 return;
@@ -516,18 +536,26 @@ internal static class Commands
     }
 
     /// <summary>
-    /// Reads the shopping list. Rather than enumerating the Il2Cpp dictionary, this walks the
-    /// loaded item types and asks IsOnList, which avoids interop enumeration quirks entirely.
-    /// Returns null (after printing why) when the game is not in a state to answer.
+    /// Reads the shopping list.
+    ///
+    /// An earlier version of this took the process down with an access violation inside
+    /// coreclr, which no try/catch can intercept, so every call into the game is announced to
+    /// the log before it happens: if it crashes again the last line written names the culprit.
+    /// The scan is also limited to the kinds of item a shopping list can hold, which keeps us
+    /// from poking the game with hundreds of furniture and prop types it never expects here.
     /// </summary>
     private static List<(ItemType Item, int Missing, int Price)> ShoppingListEntries(Action<string> print)
     {
+        var log = Plugin.Instance.Log;
+
+        log.LogInfo("shoplist: resolving PlayerInventory");
         if (GameRefs.PlayerInventory == null)
         {
             print("No PlayerInventory in the scene — load a save first.");
             return null;
         }
 
+        log.LogInfo("shoplist: resolving ShoppingListManager");
         var manager = GameRefs.ShoppingList;
         if (manager == null)
         {
@@ -535,6 +563,7 @@ internal static class Commands
             return null;
         }
 
+        log.LogInfo("shoplist: reading the ShoppingList dictionary");
         var list = manager.ShoppingList;
         if (list == null)
         {
@@ -542,14 +571,45 @@ internal static class Commands
             return null;
         }
 
+        try { log.LogInfo($"shoplist: dictionary holds {list.Count} entries"); }
+        catch (Exception e) { log.LogWarning($"shoplist: Count failed ({e.Message}); continuing"); }
+
+        var fallback = Math.Max(1, ShoppingListManager.demandAmount);
         var entries = new List<(ItemType, int, int)>();
+        var scanned = 0;
+
+        log.LogInfo("shoplist: scanning item types");
         foreach (var item in GameRefs.ItemTypes())
         {
-            if (!manager.IsOnList(item))
+            if (!IsShoppable(item))
                 continue;
 
-            var data = list[item];
-            var missing = data?.MissingItems ?? 0;
+            if (++scanned % 100 == 0)
+                log.LogInfo($"shoplist: scanned {scanned} candidates");
+
+            bool onList;
+            try { onList = manager.IsOnList(item); }
+            catch (Exception e)
+            {
+                log.LogWarning($"shoplist: IsOnList threw on {GameRefs.AssetName(item)}: {e.Message}");
+                continue;
+            }
+
+            if (!onList)
+                continue;
+
+            var missing = fallback;
+            try
+            {
+                var data = list[item];
+                if (data != null)
+                    missing = data.MissingItems;
+            }
+            catch (Exception e)
+            {
+                log.LogWarning($"shoplist: no entry for {GameRefs.AssetName(item)} ({e.Message}); using {fallback}");
+            }
+
             if (missing <= 0)
                 continue;
 
@@ -558,7 +618,21 @@ internal static class Commands
             entries.Add((item, missing, price));
         }
 
+        log.LogInfo($"shoplist: done, {scanned} candidates scanned, {entries.Count} on the list");
         return entries;
+    }
+
+    /// <summary>Only consumables reach a shopping list, so nothing else is worth asking about.</summary>
+    private static bool IsShoppable(ItemType item)
+    {
+        try
+        {
+            return item.IsIngredient || item.IsMeal || item.IsDrink || item.IsSeed || item.IsPlant;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     private static void Add(string name, string usage, string help, CommandHandler run) =>

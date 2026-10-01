@@ -29,10 +29,21 @@ internal static class GameRefs
     /// <summary>
     /// Finds a live instance the same way as PlayerInventory. Used for the Singleton&lt;T&gt;
     /// managers, whose generic static Instance property does not survive interop cleanly.
+    ///
+    /// The type lookup is checked because Il2CppType.Of can return null for a class whose
+    /// base is a generic instantiation, and FindObjectOfType(null) takes the process down
+    /// with an access violation rather than throwing something catchable.
     /// </summary>
     public static T Find<T>() where T : UnityEngine.Object
     {
-        var found = UnityEngine.Object.FindObjectOfType(Il2CppType.Of<T>());
+        var type = Il2CppType.Of<T>();
+        if (type == null)
+        {
+            Plugin.Instance?.Log.LogError($"Il2CppType.Of<{typeof(T).Name}>() is null; refusing to search.");
+            return null;
+        }
+
+        var found = UnityEngine.Object.FindObjectOfType(type);
         return found == null ? null : found.TryCast<T>();
     }
 
