@@ -19,28 +19,61 @@ $ErrorActionPreference = 'Stop'
 $repo = Split-Path $PSScriptRoot -Parent
 
 # 1. Close the game.
-$procs = Get-Process -Name 'Nivalis Nights' -ErrorAction SilentlyContinue
+# A process that has already begun exiting still shows up by name but refuses Stop-Process,
+# so failures are tolerated here and only the liveness check below decides whether to abort.
+function Get-GameProcesses {
+    Get-Process -Name 'Nivalis Nights' -ErrorAction SilentlyContinue |
+        Where-Object { -not $_.HasExited }
+}
+
+$procs = Get-GameProcesses
 if ($procs) {
     Write-Host "Closing game (pid $($procs.Id -join ', '))..." -ForegroundColor Yellow
-    $procs | Stop-Process -Force
+    foreach ($proc in $procs) {
+        try { Stop-Process -Id $proc.Id -Force -ErrorAction Stop }
+        catch { Write-Host "  pid $($proc.Id) is already exiting." -ForegroundColor DarkGray }
+    }
+
     for ($i = 0; $i -lt 20; $i++) {
         Start-Sleep -Milliseconds 500
-        if (-not (Get-Process -Name 'Nivalis Nights' -ErrorAction SilentlyContinue)) { break }
+        if (-not (Get-GameProcesses)) { break }
     }
-    if (Get-Process -Name 'Nivalis Nights' -ErrorAction SilentlyContinue) {
-        throw 'Game process would not exit; deploy aborted.'
+
+    $stuck = Get-GameProcesses
+    if ($stuck) {
+        # Unity can leave a thread-less husk that Windows will not reap without a reboot.
+        # It is harmless apart from the file handle, which the rename below works around.
+        Write-Host "pid $($stuck.Id -join ', ') is wedged in termination; continuing." -ForegroundColor Yellow
+    } else {
+        Write-Host 'Game closed.' -ForegroundColor Green
     }
-    Write-Host 'Game closed.' -ForegroundColor Green
 } else {
     Write-Host 'Game not running.' -ForegroundColor DarkGray
 }
+
+# A wedged process keeps its handle on the old plugin, and a locked file cannot be
+# overwritten — but it can still be renamed out of the way, which frees the name.
+$plugin = Join-Path $GameDir 'BepInEx\plugins\NivalisDevUnlock.dll'
+if (Test-Path $plugin) {
+    try {
+        $handle = [IO.File]::Open($plugin, 'Open', 'ReadWrite', 'None')
+        $handle.Close()
+    } catch {
+        $aside = "NivalisDevUnlock.dll.locked-$(Get-Date -Format HHmmss)"
+        Rename-Item $plugin $aside
+        Write-Host "Old plugin was locked; moved it to $aside." -ForegroundColor Yellow
+    }
+}
+
+# Sweep away earlier husks' leftovers once Windows has released them.
+Get-ChildItem (Split-Path $plugin -Parent) -Filter '*.dll.locked-*' -ErrorAction SilentlyContinue |
+    ForEach-Object { Remove-Item $_.FullName -Force -ErrorAction SilentlyContinue }
 
 # 2. Build and deploy.
 Write-Host 'Building...' -ForegroundColor Cyan
 dotnet build "$repo\src\NivalisDevUnlock" -c Release -p:Deploy=true -p:GameDir=$GameDir
 if ($LASTEXITCODE -ne 0) { throw "Build failed with exit code $LASTEXITCODE." }
 
-$plugin = Join-Path $GameDir 'BepInEx\plugins\NivalisDevUnlock.dll'
 if (-not (Test-Path $plugin)) { throw "Plugin missing after deploy: $plugin" }
 Write-Host "Deployed $((Get-Item $plugin).Length) bytes at $((Get-Item $plugin).LastWriteTime)." -ForegroundColor Green
 
