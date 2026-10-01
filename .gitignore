@@ -5,3 +5,6 @@ obj/
 
 # Scratch output from ad-hoc MetaDump runs.
 reference/_tmp.txt
+
+# Local restore points taken before irreversible cheats; multi-megabyte binaries.
+save-backups/

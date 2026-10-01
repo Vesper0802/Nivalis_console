@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 namespace NivalisDevUnlock;
 
-[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.2.0")]
+[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.4.0")]
 public class Plugin : BasePlugin
 {
     public const string Guid = "nivalisnights.devunlock";
@@ -20,6 +20,7 @@ public class Plugin : BasePlugin
     internal static ConfigEntry<bool> PauseWhileOpen;
     internal static ConfigEntry<bool> BlockGameInput;
     internal static ConfigEntry<float> UiScale;
+    internal static ConfigEntry<bool> FreezeDecay;
 
     public override void Load()
     {
@@ -36,6 +37,9 @@ public class Plugin : BasePlugin
         UiScale = Config.Bind("Console", "UiScale", 2f,
             "Magnification of the console overlay. Applied through GUI.matrix, so the " +
             "whole panel scales rather than just the text.");
+        FreezeDecay = Config.Bind("Cheats", "FreezeDecay", false,
+            "Starts the game with food decay frozen. Toggle it at any time with the " +
+            "'nospoil' console command.");
 
         // DevMode.IsDevMode is a lazy getter over a Nullable<bool> that is filled by
         // RSA-verifying the `token` field in settings.ini. Short-circuit the getter so
@@ -44,6 +48,8 @@ public class Plugin : BasePlugin
         var harmony = new Harmony(Guid);
         Force(harmony, typeof(DevMode), "get_IsDevMode");
         Force(harmony, typeof(BuildVersionData), "get_AreDevOptionsEnabled");
+        DecayFreeze.Apply(harmony);
+        DecayFreeze.Enabled = FreezeDecay.Value;
 
         ClassInjector.RegisterTypeInIl2Cpp<ConsoleWindow>();
         var host = new GameObject(nameof(ConsoleWindow));

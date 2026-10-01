@@ -1,8 +1,8 @@
 using System.IO;
 using System.Text;
 using BepInEx;
-using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using Nivalis.DevOptions;
+using Nivalis.InventorySystem;
 using UnityEngine;
 
 namespace NivalisDevUnlock;
@@ -37,9 +37,22 @@ internal static class Commands
                 return;
             }
 
-            print("Commands (type 'help <name>' for detail):");
+            // Names only: the full list no longer fits on screen one per line.
+            print($"{All.Count} commands — type 'help <name>' for detail:");
+            var row = new StringBuilder("  ");
             foreach (var cmd in All)
-                print($"  {cmd.Name.PadRight(12)} {cmd.Help}");
+            {
+                if (row.Length + cmd.Name.Length > 70)
+                {
+                    print(row.ToString());
+                    row.Clear().Append("  ");
+                }
+
+                row.Append(cmd.Name).Append("  ");
+            }
+
+            if (row.Length > 2)
+                print(row.ToString());
         });
 
         Add("items", "items [filter]", "Lists loaded item types, optionally filtered.", (args, print) =>
@@ -231,6 +244,63 @@ internal static class Commands
             print("Called AddAllFurniture().");
         });
 
+        Add("shoplist", "shoplist", "Shows the shopping list and what filling it would cost.", (args, print) =>
+        {
+            var entries = ShoppingListEntries(print);
+            if (entries == null)
+                return;
+
+            if (entries.Count == 0)
+            {
+                print("The shopping list is empty.");
+                return;
+            }
+
+            var total = 0;
+            foreach (var (item, missing, price) in entries)
+            {
+                total += missing * price;
+                print($"  {missing.ToString().PadLeft(3)}x {GameRefs.DisplayName(item)}  ({GameRefs.AssetName(item)})  {missing * price} cents");
+            }
+
+            print($"{entries.Count} items short, {total} cents total. Use 'buylist' to get them.");
+        });
+
+        Add("buylist", "buylist [free]", "Puts everything the shopping list is short of into your inventory.",
+            (args, print) =>
+            {
+                var entries = ShoppingListEntries(print);
+                if (entries == null)
+                    return;
+
+                if (entries.Count == 0)
+                {
+                    print("The shopping list is empty — nothing to buy.");
+                    return;
+                }
+
+                var inventory = GameRefs.PlayerInventory;
+                var free = args.Length > 0 && args[0] == "free";
+                var total = 0;
+
+                foreach (var (item, missing, price) in entries)
+                {
+                    inventory.AddItem(item, missing);
+                    total += missing * price;
+                    print($"  +{missing}x {GameRefs.DisplayName(item)}");
+                }
+
+                if (free)
+                {
+                    print($"Bought {entries.Count} items for nothing. Normally {total} cents.");
+                    return;
+                }
+
+                // Paying keeps the economy honest; 'free' is there when you do not care.
+                inventory.TakeMoney(total);
+                print($"Bought {entries.Count} items for {total} cents. Money left: {inventory.Money}.");
+            });
+
         Add("clearitems", "clearitems", "Empties the player inventory.", (args, print) =>
         {
             var inventory = GameRefs.PlayerInventory;
@@ -257,54 +327,61 @@ internal static class Commands
             print("Opened the dev option menu.");
         });
 
-        Add("dev", "dev list | dev <index>", "Lists or invokes the game's own dev options.", (args, print) =>
+        Add("dev", "dev [list|filter] | dev <index> [args]", "Lists or runs the game's own dev options.", (args, print) =>
         {
-            var attributes = DevOptionMenuRevised._methodDisplayString;
-            if (attributes == null)
+            if (!DevOptions.Ready)
             {
-                print("Dev options have not been discovered yet.");
+                print("Dev options have not been discovered yet — load a save first.");
                 return;
             }
 
-            if (args.Length == 0 || args[0] == "list")
+            if (args.Length == 0 || args[0] == "list" || !int.TryParse(args[0], out var index))
             {
-                print($"{attributes.Length} dev options:");
-                for (var i = 0; i < attributes.Length; i++)
+                var filter = args.Length > 0 && args[0] != "list" ? string.Join(" ", args) : null;
+                var shown = 0;
+                for (var i = 0; i < DevOptions.Count; i++)
                 {
-                    var attr = attributes[i];
-                    if (attr == null)
+                    var name = DevOptions.Name(i);
+                    if (filter != null && !name.Contains(filter, StringComparison.OrdinalIgnoreCase))
                         continue;
-                    print($"  {i.ToString().PadLeft(3)}  {attr.Name}");
+
+                    print($"  {i.ToString().PadLeft(3)}  {name} {DevOptions.Signature(i)}");
+                    shown++;
                 }
+
+                print(filter == null
+                    ? $"{shown} dev options. Run one with: dev <index> [args]"
+                    : $"{shown} of {DevOptions.Count} dev options match '{filter}'.");
                 return;
             }
 
-            if (!int.TryParse(args[0], out var index) || index < 0 || index >= attributes.Length)
+            if (index < 0 || index >= DevOptions.Count)
             {
-                print($"Index must be 0..{attributes.Length - 1}. Use 'dev list'.");
+                print($"Index must be 0..{DevOptions.Count - 1}. Use 'dev list'.");
                 return;
             }
 
-            var menu = DevOptionMenuRevised.Instance;
-            if (menu == null)
-            {
-                print("DevOptionMenuRevised.Instance is null — the UI is not up yet.");
-                return;
-            }
-
-            // Only zero-argument options work this way; anything needing parameters has to
-            // go through the real menu UI, which is what the failure message points at.
-            try
-            {
-                menu.InvokeMethod(index, new Il2CppReferenceArray<Il2CppSystem.Object>(0));
-                print($"Invoked dev option {index} ({attributes[index].Name}).");
-            }
-            catch (Exception e)
-            {
-                print($"Invoke failed: {e.Message}");
-                print("It probably takes parameters — use 'devmenu' and run it from the UI.");
-            }
+            DevOptions.Invoke(index, args[1..], print);
         });
+
+        Add("nospoil", "nospoil [on|off]", "Freezes food decay. The game has no built-in option for this.",
+            (args, print) =>
+            {
+                if (args.Length > 0)
+                    DecayFreeze.Enabled = args[0] is "1" or "on" or "true";
+                else
+                    DecayFreeze.Enabled = !DecayFreeze.Enabled;
+
+                if (!DecayFreeze.Patched)
+                {
+                    print("Decay patch is not active — check the BepInEx log for the reason.");
+                    return;
+                }
+
+                print(DecayFreeze.Enabled
+                    ? "Food decay frozen. Already-spoiled items stay spoiled."
+                    : "Food decay back to normal.");
+            });
 
         Add("refresh", "refresh", "Rebuilds the item type cache.", (args, print) =>
         {
@@ -393,10 +470,124 @@ internal static class Commands
             Plugin.UiScale.Value = Mathf.Clamp(scale, 0.5f, 6f);
             print($"UiScale is now {Plugin.UiScale.Value}. Saved to the config file.");
         });
+
+        // Friendly names for the game's own dev options. Anything not covered here is still
+        // reachable through 'dev list' and 'dev <index>'.
+        AddDevAlias("recipes", "Discover All Recipes", "recipes",
+            "Unlocks every meal recipe. Permanent.");
+        AddDevAlias("recipe", "Discover Recipe", "recipe <name>",
+            "Unlocks one recipe; a wrong name lists what is loaded.");
+        AddDevAlias("fasttravel", "Unlock All Fast Travel", "fasttravel",
+            "Unlocks every fast travel destination. Permanent.");
+        AddDevAlias("unlockfish", "Unlock all fish", "unlockfish",
+            "Marks every fish as discovered. Permanent.");
+        AddDevAlias("unlockshops", "Unlock vendors and properties", "unlockshops",
+            "Unlocks vendors and buyable properties. Permanent.");
+        AddDevAlias("unlockboat", "Unlock boat", "unlockboat", "Gives you the boat.");
+        AddDevAlias("venuelevel", "Set Venue Level", "venuelevel <1-5>",
+            "Sets the current venue's level.");
+        AddDevAlias("allfurniture", "Add All Furniture Items", "allfurniture",
+            "Adds one of every furniture item to your inventory.");
+        AddDevAlias("farmfast", "Speed up farming", "farmfast", "Advances crop growth.");
+
+        AddDevAlias("timescale", "Set Game Time Multiplier", "timescale <multiplier> <timeScale>",
+            "Speeds up or slows down the clock. 1 1 is normal.");
+        AddDevAlias("settime", "Set Time Of Day", "settime <0..1> <pause>",
+            "Jumps to a fraction of the day; 0.5 is noon.");
+        AddDevAlias("pausetime", "Pause time of day", "pausetime", "Freezes the clock.");
+        AddDevAlias("unpausetime", "Unpause time of day", "unpausetime", "Resumes the clock.");
+        AddDevAlias("weather", "Set Weather Preset", "weather <preset>",
+            "Sets the weather; a wrong name lists the presets.");
+
+        AddDevAlias("speed", "Set player speed", "speed <value>", "Sets player movement speed.");
+        AddDevAlias("fov", "Change camera FOV", "fov <degrees>", "Changes the camera field of view.");
+        AddDevAlias("noclip", "Toggle No Clip", "noclip", "Toggles walking through walls.");
+        AddDevAlias("stat", "Set stat", "stat <name> <value>",
+            "Sets a player stat; a wrong name lists them.");
+        AddDevAlias("curfewon", "Turn ON Curfew", "curfewon", "Starts curfew.");
+        AddDevAlias("curfewoff", "Turn OFF Curfew", "curfewoff", "Ends curfew.");
+
+        AddDevAlias("getvar", "Get Global Variable", "getvar <name>",
+            "Reads a story variable. The value goes to the game's own log.");
+        AddDevAlias("setbool", "Set Bool Global Variable", "setbool <name> <true|false>",
+            "Sets a story variable. Can break quest state — use with care.");
+        AddDevAlias("setint", "Set Int Global Variable", "setint <name> <value>",
+            "Sets a story variable. Can break quest state — use with care.");
+    }
+
+    /// <summary>
+    /// Reads the shopping list. Rather than enumerating the Il2Cpp dictionary, this walks the
+    /// loaded item types and asks IsOnList, which avoids interop enumeration quirks entirely.
+    /// Returns null (after printing why) when the game is not in a state to answer.
+    /// </summary>
+    private static List<(ItemType Item, int Missing, int Price)> ShoppingListEntries(Action<string> print)
+    {
+        if (GameRefs.PlayerInventory == null)
+        {
+            print("No PlayerInventory in the scene — load a save first.");
+            return null;
+        }
+
+        var manager = GameRefs.ShoppingList;
+        if (manager == null)
+        {
+            print("No ShoppingListManager in the scene — load a save first.");
+            return null;
+        }
+
+        var list = manager.ShoppingList;
+        if (list == null)
+        {
+            print("The game has not built a shopping list yet.");
+            return null;
+        }
+
+        var entries = new List<(ItemType, int, int)>();
+        foreach (var item in GameRefs.ItemTypes())
+        {
+            if (!manager.IsOnList(item))
+                continue;
+
+            var data = list[item];
+            var missing = data?.MissingItems ?? 0;
+            if (missing <= 0)
+                continue;
+
+            var price = 0;
+            try { price = item.BaseMarketPrice; } catch { }
+            entries.Add((item, missing, price));
+        }
+
+        return entries;
     }
 
     private static void Add(string name, string usage, string help, CommandHandler run) =>
         All.Add(new Command { Name = name, Usage = usage, Help = help, Run = run });
+
+    /// <summary>
+    /// Wraps one of the game's own dev options in a memorable name so you do not have to
+    /// remember its index. Resolution happens by label at call time, not by index at startup.
+    /// </summary>
+    private static void AddDevAlias(string name, string label, string usage, string help)
+    {
+        Add(name, usage, help, (args, print) =>
+        {
+            if (!DevOptions.Ready)
+            {
+                print("The game's dev options are not available yet — load a save first.");
+                return;
+            }
+
+            var index = DevOptions.FindByName(label, args.Length);
+            if (index < 0)
+            {
+                print($"The game has no dev option called '{label}' any more. Check 'dev list'.");
+                return;
+            }
+
+            DevOptions.Invoke(index, args, print);
+        });
+    }
 
     public static Command Find(string name) =>
         All.FirstOrDefault(c => string.Equals(c.Name, name, StringComparison.OrdinalIgnoreCase));

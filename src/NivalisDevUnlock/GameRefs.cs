@@ -1,4 +1,5 @@
 using Il2CppInterop.Runtime;
+using Nivalis;
 using Nivalis.InventorySystem;
 using UnityEngine;
 
@@ -21,6 +22,18 @@ internal static class GameRefs
             var found = UnityEngine.Object.FindObjectOfType(Il2CppType.Of<PlayerInventory>());
             return found == null ? null : found.TryCast<PlayerInventory>();
         }
+    }
+
+    public static ShoppingListManager ShoppingList => Find<ShoppingListManager>();
+
+    /// <summary>
+    /// Finds a live instance the same way as PlayerInventory. Used for the Singleton&lt;T&gt;
+    /// managers, whose generic static Instance property does not survive interop cleanly.
+    /// </summary>
+    public static T Find<T>() where T : UnityEngine.Object
+    {
+        var found = UnityEngine.Object.FindObjectOfType(Il2CppType.Of<T>());
+        return found == null ? null : found.TryCast<T>();
     }
 
     /// <summary>
