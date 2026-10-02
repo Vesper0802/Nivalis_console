@@ -80,8 +80,14 @@ Write-Host "Deployed $((Get-Item $plugin).Length) bytes at $((Get-Item $plugin).
 # 3. Start from a clean log so the next read cannot show a stale run.
 $log = Join-Path $GameDir 'BepInEx\LogOutput.log'
 if (-not $KeepLog -and (Test-Path $log)) {
-    Remove-Item $log -Force
-    Write-Host 'Cleared LogOutput.log.' -ForegroundColor DarkGray
+    # Windows can hold the handle for a moment after the process exits, and a stale log is
+    # not worth aborting a successful deploy over.
+    try {
+        Remove-Item $log -Force -ErrorAction Stop
+        Write-Host 'Cleared LogOutput.log.' -ForegroundColor DarkGray
+    } catch {
+        Write-Host 'Log still locked; it will be overwritten at startup.' -ForegroundColor DarkGray
+    }
 }
 
 # 4. Launch.

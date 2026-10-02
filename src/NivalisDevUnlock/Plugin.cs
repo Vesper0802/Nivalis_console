@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 namespace NivalisDevUnlock;
 
-[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.4.2")]
+[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.5.0")]
 public class Plugin : BasePlugin
 {
     public const string Guid = "nivalisnights.devunlock";

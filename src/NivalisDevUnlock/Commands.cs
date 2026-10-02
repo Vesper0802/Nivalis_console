@@ -1,6 +1,9 @@
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using BepInEx;
+using Il2CppInterop.Runtime;
+using Nivalis.GhostSystem.CustomerLoop;
 using Nivalis;
 using Nivalis.DevOptions;
 using Nivalis.InventorySystem;
@@ -34,12 +37,12 @@ internal static class Commands
                     print($"No such command '{args[0]}'.");
                     return;
                 }
-                print($"{cmd.Usage}  —  {cmd.Help}");
+                print($"{cmd.Usage}  ?? {cmd.Help}");
                 return;
             }
 
             // Names only: the full list no longer fits on screen one per line.
-            print($"{All.Count} commands — type 'help <name>' for detail:");
+            print($"{All.Count} commands ??type 'help <name>' for detail:");
             var row = new StringBuilder("  ");
             foreach (var cmd in All)
             {
@@ -165,7 +168,7 @@ internal static class Commands
 
             if (matches.Count > 1)
             {
-                print($"'{query}' is ambiguous, {matches.Count} matches — retry with a code:");
+                print($"'{query}' is ambiguous, {matches.Count} matches ??retry with a code:");
                 for (var i = 0; i < Math.Min(matches.Count, 15); i++)
                     print($"  {GameRefs.ShortGuid(matches[i])}  {GameRefs.AssetName(matches[i])}");
                 return;
@@ -174,7 +177,7 @@ internal static class Commands
             var inventory = GameRefs.PlayerInventory;
             if (inventory == null)
             {
-                print("No PlayerInventory in the scene — load a save first.");
+                print("No PlayerInventory in the scene ??load a save first.");
                 return;
             }
 
@@ -188,7 +191,7 @@ internal static class Commands
             var inventory = GameRefs.PlayerInventory;
             if (inventory == null)
             {
-                print("No PlayerInventory in the scene — load a save first.");
+                print("No PlayerInventory in the scene ??load a save first.");
                 return;
             }
 
@@ -214,7 +217,7 @@ internal static class Commands
             var inventory = GameRefs.PlayerInventory;
             if (inventory == null)
             {
-                print("No PlayerInventory in the scene — load a save first.");
+                print("No PlayerInventory in the scene ??load a save first.");
                 return;
             }
 
@@ -237,7 +240,7 @@ internal static class Commands
             var inventory = GameRefs.PlayerInventory;
             if (inventory == null)
             {
-                print("No PlayerInventory in the scene — load a save first.");
+                print("No PlayerInventory in the scene ??load a save first.");
                 return;
             }
 
@@ -245,24 +248,22 @@ internal static class Commands
             print("Called AddAllFurniture().");
         });
 
-        Add("shoplist", "shoplist [full]", "Shows the shopping list. 'full' adds codes and prices.", (args, print) =>
+        Add("shoplist", "shoplist [raw]", "Shows the shopping list with prices. 'raw' uses the game's own wording.",
+            (args, print) =>
         {
-            // The plain form asks the game to format the list for us, which touches none of
-            // the generic collections that crashed the process before.
-            if (args.Length == 0)
+            if (args.Length > 0 && args[0] == "raw")
             {
                 var manager = GameRefs.ShoppingList;
                 if (manager == null)
                 {
-                    print("No ShoppingListManager in the scene — load a save first.");
+                    print("No ShoppingListManager in the scene ??load a save first.");
                     return;
                 }
 
                 manager.CreateMessage(out var message);
                 print(string.IsNullOrWhiteSpace(message)
                     ? "The game reports nothing on the shopping list."
-                    : message);
-                print("Use 'shoplist full' for codes and prices, or 'buylist' to get them.");
+                    : StripRichText(message));
                 return;
             }
 
@@ -295,7 +296,7 @@ internal static class Commands
 
                 if (entries.Count == 0)
                 {
-                    print("The shopping list is empty — nothing to buy.");
+                    print("The shopping list is empty ??nothing to buy.");
                     return;
                 }
 
@@ -326,7 +327,7 @@ internal static class Commands
             var inventory = GameRefs.PlayerInventory;
             if (inventory == null)
             {
-                print("No PlayerInventory in the scene — load a save first.");
+                print("No PlayerInventory in the scene ??load a save first.");
                 return;
             }
 
@@ -339,7 +340,7 @@ internal static class Commands
             var menu = DevOptionMenuRevised.Instance;
             if (menu == null)
             {
-                print("DevOptionMenuRevised.Instance is null — the UI is not up yet.");
+                print("DevOptionMenuRevised.Instance is null ??the UI is not up yet.");
                 return;
             }
 
@@ -351,7 +352,7 @@ internal static class Commands
         {
             if (!DevOptions.Ready)
             {
-                print("Dev options have not been discovered yet — load a save first.");
+                print("Dev options have not been discovered yet ??load a save first.");
                 return;
             }
 
@@ -394,7 +395,7 @@ internal static class Commands
 
                 if (!DecayFreeze.Patched)
                 {
-                    print("Decay patch is not active — check the BepInEx log for the reason.");
+                    print("Decay patch is not active ??check the BepInEx log for the reason.");
                     return;
                 }
 
@@ -416,7 +417,7 @@ internal static class Commands
             var items = GameRefs.ItemTypes();
 
             var sb = new StringBuilder();
-            sb.AppendLine($"Nivalis Nights item types — {items.Length} entries");
+            sb.AppendLine($"Nivalis Nights item types ??{items.Length} entries");
             sb.AppendLine("Paste a COMMAND cell into the console and press Enter; change the trailing number for a different amount.");
             sb.AppendLine("For details run iteminfo with the same code, e.g. iteminfo 04f867e4");
             sb.AppendLine("Rows flagged NOT-STORABLE cannot be placed in the player inventory.");
@@ -509,6 +510,64 @@ internal static class Commands
         AddDevAlias("allfurniture", "Add All Furniture Items", "allfurniture",
             "Adds one of every furniture item to your inventory.");
         AddDevAlias("farmfast", "Speed up farming", "farmfast", "Advances crop growth.");
+        AddDevAlias("addvenue", "Add venue to player", "addvenue <name>",
+            "Hands you one venue; a wrong name lists them all.");
+
+        Add("dumpmenus", "dumpmenus", "Writes every venue's candidate recipes, ingredients and scores to a file.",
+            (args, print) => MenuExport.Run(print));
+
+        Add("venues", "venues", "Lists every venue and who owns it.", (args, print) =>
+        {
+            var venues = Venues();
+            if (venues.Count == 0)
+            {
+                print("No venues loaded ??load a save first.");
+                return;
+            }
+
+            foreach (var venue in venues)
+                print($"  {Ownership(venue).PadRight(8)} tier {Tier(venue)}  {venue.name}");
+
+            print($"{venues.Count} venues. Use 'addvenue <name>' or 'allvenues'.");
+        });
+
+        Add("allvenues", "allvenues", "Hands you every venue you do not already own.", (args, print) =>
+        {
+            if (!DevOptions.Ready)
+            {
+                print("The game's dev options are not available yet ??load a save first.");
+                return;
+            }
+
+            var venues = Venues();
+            if (venues.Count == 0)
+            {
+                print("No venues loaded ??load a save first.");
+                return;
+            }
+
+            var added = 0;
+            foreach (var venue in venues)
+            {
+                if (Ownership(venue) != "none")
+                    continue;
+
+                // Going through the dev option by name reuses the parameter marshalling that
+                // resolves a Venue from text, rather than calling ForceAddToPlayer ourselves.
+                var index = DevOptions.FindByName("Add venue to player", 1);
+                if (index < 0)
+                {
+                    print("The game no longer has an 'Add venue to player' option. Check 'dev list'.");
+                    return;
+                }
+
+                print($"  {venue.name}");
+                DevOptions.Invoke(index, new[] { venue.name }, _ => { });
+                added++;
+            }
+
+            print(added == 0 ? "You already own every venue." : $"Added {added} venues.");
+        });
 
         AddDevAlias("timescale", "Set Game Time Multiplier", "timescale <multiplier> <timeScale>",
             "Speeds up or slows down the clock. 1 1 is normal.");
@@ -530,9 +589,9 @@ internal static class Commands
         AddDevAlias("getvar", "Get Global Variable", "getvar <name>",
             "Reads a story variable. The value goes to the game's own log.");
         AddDevAlias("setbool", "Set Bool Global Variable", "setbool <name> <true|false>",
-            "Sets a story variable. Can break quest state — use with care.");
+            "Sets a story variable. Can break quest state ??use with care.");
         AddDevAlias("setint", "Set Int Global Variable", "setint <name> <value>",
-            "Sets a story variable. Can break quest state — use with care.");
+            "Sets a story variable. Can break quest state ??use with care.");
     }
 
     /// <summary>
@@ -551,7 +610,7 @@ internal static class Commands
         log.LogInfo("shoplist: resolving PlayerInventory");
         if (GameRefs.PlayerInventory == null)
         {
-            print("No PlayerInventory in the scene — load a save first.");
+            print("No PlayerInventory in the scene ??load a save first.");
             return null;
         }
 
@@ -559,7 +618,7 @@ internal static class Commands
         var manager = GameRefs.ShoppingList;
         if (manager == null)
         {
-            print("No ShoppingListManager in the scene — load a save first.");
+            print("No ShoppingListManager in the scene ??load a save first.");
             return null;
         }
 
@@ -622,6 +681,52 @@ internal static class Commands
         return entries;
     }
 
+    /// <summary>Venues are ScriptableObjects, so every one in the build is reachable.</summary>
+    private static List<Venue> Venues()
+    {
+        var found = new List<Venue>();
+        foreach (var obj in Resources.FindObjectsOfTypeAll(Il2CppType.Of<Venue>()))
+        {
+            var venue = obj?.TryCast<Venue>();
+            if (venue != null)
+                found.Add(venue);
+        }
+
+        found.Sort((a, b) => string.Compare(a.name, b.name, StringComparison.OrdinalIgnoreCase));
+        return found;
+    }
+
+    /// <summary>
+    /// Venue.OwnershipType is the authored default and reads None even for venues you hold, so
+    /// ownership comes from the player instead.
+    /// </summary>
+    private static string Ownership(Venue venue)
+    {
+        try
+        {
+            var player = GameRefs.Find<PlayerManager>()?.LocalPlayer;
+            if (player == null)
+                return "?";
+            return player.IsOwningVenue(venue)
+                ? player.GetPropertyOwnershipState(venue).ToString().ToLowerInvariant()
+                : "none";
+        }
+        catch { return "?"; }
+    }
+
+    private static string Tier(Venue venue)
+    {
+        try { return venue.Tier.ToString(); }
+        catch { return "?"; }
+    }
+
+    /// <summary>
+    /// Drops TextMeshPro markup. Strings the game builds for its own UI carry things like
+    /// &lt;sprite="Keyboard_Mouse_Combined" name="R"&gt;, which is noise in a plain text console.
+    /// </summary>
+    private static string StripRichText(string text) =>
+        Regex.Replace(text ?? "", "<[^>]+>", "").Replace("  ", " ").Trim();
+
     /// <summary>Only consumables reach a shopping list, so nothing else is worth asking about.</summary>
     private static bool IsShoppable(ItemType item)
     {
@@ -648,7 +753,7 @@ internal static class Commands
         {
             if (!DevOptions.Ready)
             {
-                print("The game's dev options are not available yet — load a save first.");
+                print("The game's dev options are not available yet ??load a save first.");
                 return;
             }
 

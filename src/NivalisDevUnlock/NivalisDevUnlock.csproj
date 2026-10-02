@@ -29,6 +29,8 @@
   <ItemGroup Label="Game interop">
     <Reference Include="Assembly-CSharp"><HintPath>$(BepInExInterop)\Assembly-CSharp.dll</HintPath></Reference>
     <Reference Include="Il2Cppmscorlib"><HintPath>$(BepInExInterop)\Il2Cppmscorlib.dll</HintPath></Reference>
+    <!-- HashSet<T> lives here rather than in mscorlib. -->
+    <Reference Include="Il2CppSystem.Core"><HintPath>$(BepInExInterop)\Il2CppSystem.Core.dll</HintPath></Reference>
     <Reference Include="UnityEngine.CoreModule"><HintPath>$(BepInExInterop)\UnityEngine.CoreModule.dll</HintPath></Reference>
     <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(BepInExInterop)\UnityEngine.InputLegacyModule.dll</HintPath></Reference>
     <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(BepInExInterop)\UnityEngine.IMGUIModule.dll</HintPath></Reference>

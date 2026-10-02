@@ -1,0 +1,537 @@
+owned venues 57, with candidates 55
+menu limit -> venue count: 2:6, 3:4, 4:20, 5:14, 6:2, 7:4, 8:2, 10:2, 20:3
+
+venues over half-full on fridge volume: 2
+  Central_Canyon_Deep_Sea_Smoke              menu=20  fridge 159/160  cupboard 287/290
+  NoodleBar                                  menu=20  fridge 268/430  cupboard 318/445
+
+====================================================================================================
+Calypso Island   Hipsters:0.3(pref 0.34) Workers:0.1(pref 0.05) Elite:1.0(pref 0.85)
+  local tags: Fish,Seafood,Fruit,Flower
+
+  Luxury_Island_Deep_Sea_Smoke  (limit 10, allows Fish,Salad,Meat,Drink)  avg score 0.982, 26 ingredients
+    0.996 Fish      Trout with Garlic Lemon Butter Herb Sauce  1619  excl 1.00
+    0.992 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.990 Drink     Oyster Shooter                          1959  excl 1.00
+    0.988 Drink     Aurora                                  2087  excl 1.00
+    0.987 Drink     Aqua Freeze                             1571  excl 1.00
+    0.987 Fish      Zope with Cherry Salsa                  2239  excl 1.00
+    0.985 Drink     Frosted Murder                          1755  excl 1.00
+    0.977 Drink     Scarlet Shot                            2439  excl 1.00
+    0.976 Meat      Pemmican                                2714  excl 1.00
+    0.945 Salad     Spicy Lemon Chicken Feet Salad          1653  excl 1.00
+    needs: Basil, Beef, Butter, Butterfly Pea Flower, Cherries, Chicken, Chili, Cranberries, Duck, Garlic, Ginger, Lake Trout, Lemons, Liquid Nitrogen, Mint, Onions, Oysters, Peppers, Pork, Roses, Spirulina, Tequila, Tonic Water, Vodka, Walnuts, Zope
+
+  Luxury_Island_Food_Trailer  (limit 4, allows Pizza,Sandwich,Drink)  avg score 0.992, 13 ingredients
+    0.998 Sandwich  Golden Rings                            1456  excl 1.00
+    0.992 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.988 Pizza     Meridian Pizza                          1711  excl 1.00
+    0.988 Drink     Aurora                                  2087  excl 1.00
+    needs: Burger Bun, Butterfly Pea Flower, Chicken, Cranberries, Garlic, Hibiscus Flower, Lemons, Pizza Dough, Roses, Spirulina, Squid, Tonic Water, Vodka
+
+  Luxury_Island_Sunset  (limit 2, allows Fish,Salad,Meat,Drink)  avg score 0.970, 9 ingredients
+    0.996 Fish      Trout with Garlic Lemon Butter Herb Sauce  1619  excl 1.00
+    0.945 Salad     Spicy Lemon Chicken Feet Salad          1653  excl 1.00
+    needs: Basil, Butter, Chicken, Chili, Garlic, Ginger, Lake Trout, Lemons, Onions
+
+  Luxury_Island_Tropical_Restaurant  (limit 5, allows Fish,Salad,Meat,Drink)  avg score 0.979, 18 ingredients
+    0.996 Fish      Trout with Garlic Lemon Butter Herb Sauce  1619  excl 1.00
+    0.992 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.988 Drink     Aurora                                  2087  excl 1.00
+    0.976 Meat      Pemmican                                2714  excl 1.00
+    0.945 Salad     Spicy Lemon Chicken Feet Salad          1653  excl 1.00
+    needs: Basil, Beef, Butter, Butterfly Pea Flower, Chicken, Chili, Cranberries, Duck, Garlic, Ginger, Lake Trout, Lemons, Onions, Pork, Roses, Tonic Water, Vodka, Walnuts
+
+  Luxury_Island_Yuan_Zhi_Restaraunt  (limit 7, allows Meat,Soup,Drink,Fish,Salad)  avg score 0.976, 22 ingredients
+    0.996 Fish      Trout with Garlic Lemon Butter Herb Sauce  1619  excl 1.00
+    0.992 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.988 Drink     Aurora                                  2087  excl 1.00
+    0.977 Drink     Scarlet Shot                            2439  excl 1.00
+    0.976 Meat      Pemmican                                2714  excl 1.00
+    0.959 Soup      Snake Soup                              2416  excl 1.00
+    0.945 Salad     Spicy Lemon Chicken Feet Salad          1653  excl 1.00
+    needs: Basil, Beef, Butter, Butterfly Pea Flower, Cherries, Chicken, Chili, Cranberries, Duck, Garlic, Ginger, Lake Trout, Lemons, Onions, Pork, Roses, Snake, Straw Mushrooms, Tonic Water, Vodka, Walnuts, Wolfberries
+
+  Calypso Island combined shopping list (33 items): Basil, Beef, Burger Bun, Butter, Butterfly Pea Flower, Cherries, Chicken, Chili, Cranberries, Duck, Garlic, Ginger, Hibiscus Flower, Lake Trout, Lemons, Liquid Nitrogen, Mint, Onions, Oysters, Peppers, Pizza Dough, Pork, Roses, Snake, Spirulina, Squid, Straw Mushrooms, Tequila, Tonic Water, Vodka, Walnuts, Wolfberries, Zope
+
+====================================================================================================
+Central Canyon   Hipsters:1.0(pref 0.34) Workers:0.5(pref 0.05) Elite:1.0(pref 0.85)
+  local tags: Spicy,Sweet,Noodles
+
+  Central_Canyon_Ancient_Spirit  (limit 5, allows Fish,Seafood,Meat,Drink)  avg score 0.938, 17 ingredients
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.974 Fish      Parmesan Crumbled Whitefish             1447  excl 1.00
+    0.951 Seafood   Sea Urchin Guacamole Tacos              2288  excl 1.00
+    0.924 Meat      Kung Pao Chicken                        1703  excl 0.90
+    0.864 Drink     Green Essence                           2142  excl 0.85
+    needs: Apples, Avocados, Celery, Chicken, Chili, Corn Bread, Cucumbers, Ginger, Mustard, Parmesan, Peanuts, Rice, Sea Urchins, Spinach, Vodka, Wheat Bread, WhiteFish
+
+  Central_Canyon_Corner_Restaurant  (limit 5, allows Meat,Pizza,Drink)  avg score 0.940, 16 ingredients
+    0.977 Pizza     Boba Pizza                              1340  excl 1.00
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.960 Drink     Strawberry Stinger                      2277  excl 1.00
+    0.924 Meat      Kung Pao Chicken                        1703  excl 0.90
+    0.864 Drink     Green Essence                           2142  excl 0.85
+    needs: Apples, Boba, Celery, Chicken, Chili, Cucumbers, Gin, Ginger, Honey, Parmesan, Peanuts, Pizza Dough, Rice, Spinach, Strawberries, Vodka
+
+  Central_Canyon_Deep_Sea_Smoke  (limit 20, allows Fish,Salad,Meat,Drink)  avg score 0.923, 40 ingredients
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.974 Fish      Parmesan Crumbled Whitefish             1447  excl 1.00
+    0.960 Drink     Strawberry Stinger                      2277  excl 1.00
+    0.958 Drink     Frosted Murder                          1755  excl 1.00
+    0.955 Drink     Molotov Cocktail                        2412  excl 1.00
+    0.952 Drink     Black Widow                             1930  excl 1.00
+    0.951 Drink     Oyster Shooter                          1959  excl 1.00
+    0.947 Drink     Pi Pa                                   2072  excl 1.00
+    0.943 Drink     ClamZest                                2187  excl 1.00
+    0.939 Drink     Bacon Bloody Mary                       2314  excl 1.00
+    0.938 Drink     Pina Colada                             2338  excl 1.00
+    0.935 Drink     Scarlet Shot                            2439  excl 1.00
+    0.924 Meat      Kung Pao Chicken                        1703  excl 0.90
+    0.913 Drink     Ginger Lime Espresso Tonic              1500  excl 0.90
+    0.910 Salad     Spicy Lemon Chicken Feet Salad          1653  excl 1.00
+    0.901 Drink     PB&J                                    1842  excl 0.90
+    0.864 Drink     Green Essence                           2142  excl 0.85
+    0.858 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.846 Drink     Aurora                                  2087  excl 1.00
+    0.824 Drink     Nivalis                                 2628  excl 1.00
+    needs: Apples, Bacon, Blackberries, Butterfly Pea Flower, Celery, Cherries, Chicken, Chili, Clam, Coconut, Coffee Beans, Cranberries, Cucumbers, Gin, Ginger, Kumquat, Lemons, Lime, Liquid Nitrogen, Mustard, Onions, Oysters, Parmesan, Peanuts, Pi Pa Gao, Pineapple, Raspberries, Rice, Roses, Rum, Spinach, Strawberries, Tequila, Tomatoes, Tonic Water, Vanilla, Vodka, Wheat Bread, Whiskey, WhiteFish
+
+  Central_Canyon_Japanese_Restaraunt  (limit 5, allows Meat,Seafood,Soup,Drink)  avg score 0.927, 16 ingredients
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.951 Seafood   Sea Urchin Guacamole Tacos              2288  excl 1.00
+    0.924 Meat      Kung Pao Chicken                        1703  excl 0.90
+    0.918 Soup      Snake Soup                              2416  excl 1.00
+    0.864 Drink     Green Essence                           2142  excl 0.85
+    needs: Apples, Avocados, Celery, Chicken, Chili, Corn Bread, Cucumbers, Ginger, Peanuts, Rice, Sea Urchins, Snake, Spinach, Straw Mushrooms, Vodka, Wolfberries
+
+  Central_Canyon_Poccocup  (limit 5, allows Drink)  avg score 0.858, 15 ingredients
+    0.963 Drink     Immortalitea                            1588  excl 1.00
+    0.962 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.826 Drink     Mint Mojito Iced Coffee                  911  excl 0.70
+    0.824 Drink     Boba Tea                                 966  excl 0.70
+    0.713 Drink     VegCoffee                               1086  excl 0.50
+    needs: Boba, Broccoli, Cinnamon, Coffee Beans, Ginger, Ginseng, Honey, Jasmine, Milk, Mint, Oolong, Osmanthus, Straw Mushrooms, Sugar, Tea Leafs
+
+  Central_Canyon_Sake_Bar  (limit 20, allows Snack,Drink,Meat)  avg score 0.934, 43 ingredients
+    0.978 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.965 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.960 Drink     Strawberry Stinger                      2277  excl 1.00
+    0.958 Drink     Frosted Murder                          1755  excl 1.00
+    0.955 Drink     Molotov Cocktail                        2412  excl 1.00
+    0.952 Drink     Black Widow                             1930  excl 1.00
+    0.951 Drink     Oyster Shooter                          1959  excl 1.00
+    0.950 Drink     Tereré                                  1984  excl 1.00
+    0.943 Drink     ClamZest                                2187  excl 1.00
+    0.943 Drink     Jalapeno Juice                          2188  excl 1.00
+    0.939 Drink     Bacon Bloody Mary                       2314  excl 1.00
+    0.935 Drink     Scarlet Shot                            2439  excl 1.00
+    0.933 Drink     Cyber Shot                              2487  excl 1.00
+    0.933 Drink     Synectar                                2498  excl 1.00
+    0.924 Meat      Kung Pao Chicken                        1703  excl 0.90
+    0.913 Drink     Ginger Lime Espresso Tonic              1500  excl 0.90
+    0.901 Drink     PB&J                                    1842  excl 0.90
+    0.864 Drink     Green Essence                           2142  excl 0.85
+    0.809 Drink     VapoBooze                               3129  excl 1.00
+    needs: Apples, Bacon, Beetroots, Blackberries, Celery, Cherries, Chicken, Chili, Chlorophyll, Clam, Coffee Beans, Cranberries, Cucumbers, Eggs, Gin, Ginger, Lemons, Lime, Liquid Nitrogen, Mango, Mayonnaise, Mint, Muskmelon, Mustard, Oranges, Oysters, Peanuts, Peppers, Pineapple, Raspberries, Rice, Rosemary, Spinach, Strawberries, Synthetic Alcohol, Tequila, Tomatoes, Tonic Water, Vanilla, Vinegar, Vodka, Whiskey, Yerba Mate
+
+  Central_Canyon_Side_Bar  (limit 4, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.950, 19 ingredients
+    0.978 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.929 Sandwich  Ramen Burger                            2337  excl 0.95
+    0.918 Soup      Snake Soup                              2416  excl 1.00
+    needs: Apples, Beef, Beetroots, Celery, Chicken, Cream Cheese, Cucumbers, Eggs, Ginger, Lettuce, Mayonnaise, Mustard, Ramen Noodles, Snake, Spinach, Straw Mushrooms, Tomatoes, Vinegar, Wolfberries
+
+  Central_Canyon_Side_Bar_2  (limit 3, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.961, 15 ingredients
+    0.978 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.929 Sandwich  Ramen Burger                            2337  excl 0.95
+    needs: Apples, Beef, Beetroots, Celery, Cream Cheese, Cucumbers, Eggs, Ginger, Lettuce, Mayonnaise, Mustard, Ramen Noodles, Spinach, Tomatoes, Vinegar
+
+  Central_Canyon_YakiTori  (limit 5, allows Seafood,Fish,Soup,Drink)  avg score 0.937, 18 ingredients
+    0.976 Drink     Ruby Red                                1807  excl 1.00
+    0.974 Fish      Parmesan Crumbled Whitefish             1447  excl 1.00
+    0.951 Seafood   Sea Urchin Guacamole Tacos              2288  excl 1.00
+    0.918 Soup      Snake Soup                              2416  excl 1.00
+    0.864 Drink     Green Essence                           2142  excl 0.85
+    needs: Apples, Avocados, Celery, Chicken, Chili, Corn Bread, Cucumbers, Ginger, Mustard, Parmesan, Sea Urchins, Snake, Spinach, Straw Mushrooms, Vodka, Wheat Bread, WhiteFish, Wolfberries
+
+  Central Canyon combined shopping list (75 items): Apples, Avocados, Bacon, Beef, Beetroots, Blackberries, Boba, Broccoli, Butterfly Pea Flower, Celery, Cherries, Chicken, Chili, Chlorophyll, Cinnamon, Clam, Coconut, Coffee Beans, Corn Bread, Cranberries, Cream Cheese, Cucumbers, Eggs, Gin, Ginger, Ginseng, Honey, Jasmine, Kumquat, Lemons, Lettuce, Lime, Liquid Nitrogen, Mango, Mayonnaise, Milk, Mint, Muskmelon, Mustard, Onions, Oolong, Oranges, Osmanthus, Oysters, Parmesan, Peanuts, Peppers, Pi Pa Gao, Pineapple, Pizza Dough, Ramen Noodles, Raspberries, Rice, Rosemary, Roses, Rum, Sea Urchins, Snake, Spinach, Straw Mushrooms, Strawberries, Sugar, Synthetic Alcohol, Tea Leafs, Tequila, Tomatoes, Tonic Water, Vanilla, Vinegar, Vodka, Wheat Bread, Whiskey, WhiteFish, Wolfberries, Yerba Mate
+
+====================================================================================================
+Eastern Residential   Hipsters:1.0(pref 0.34) Workers:0.5(pref 0.05) Elite:0.6(pref 0.85)
+  local tags: Vegetable,Legume,Herb
+
+  Eastern_Residental_Fusion_Point_Bar  (limit 6, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.975, 26 ingredients
+    0.995 Soup      Fennel Soup with Bacon                  1406  excl 1.00
+    0.991 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.986 Sandwich  Vege Burger                             1480  excl 0.85
+    0.973 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.959 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.948 Seafood   Mini Hotpot                             2104  excl 1.00
+    needs: Bacon, Basil, Beetroots, Black Mushroom, Burger Bun, Butter, Cabbage, Cashew, Chervil, Chicken, Coffee Beans, Cream, Eggs, Fennel, Lettuce, Liquid Nitrogen, Mayonnaise, Mustard, Oranges, Potatoes, Rosemary, Shrimp, Squid, Tofu, Tonic Water, Vinegar
+
+  Eastern_Residental_Fusion_Point_Restaurant  (limit 2, allows Meat,Salad,Soup,Drink)  avg score 0.980, 9 ingredients
+    0.991 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.968 Salad     Eastern Salad                           2222  excl 1.00
+    needs: Buckwheat, Butter, Cashew, Chervil, Chicken, Fennel, Peppers, Potatoes, Straw Mushrooms
+
+  Eastern_Residental_Kubo_Bakery  (limit 5, allows Dessert,Pizza,Drink)  avg score 0.928, 16 ingredients
+    0.959 Pizza     Cheese Dream                            1785  excl 1.00
+    0.959 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.955 Pizza     Pizza Napoli                            1381  excl 0.70
+    0.915 Dessert   Rain Drop Cake                          1391  excl 0.85
+    0.850 Drink     Frosted Murder                          1755  excl 1.00
+    needs: Agar, Basil, Blue Cheese, Cheddar, Cherries, Coffee Beans, Liquid Nitrogen, Mozarella, Oranges, Pizza Dough, Rosemary, Soy Beans, Sugar, Tomatoes, Tonic Water, Vodka
+
+  Eastern_Residental_Kubo_Bakery_2  (limit 5, allows Dessert,Pizza,Drink)  avg score 0.928, 16 ingredients
+    0.959 Pizza     Cheese Dream                            1785  excl 1.00
+    0.959 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.955 Pizza     Pizza Napoli                            1381  excl 0.70
+    0.915 Dessert   Rain Drop Cake                          1391  excl 0.85
+    0.850 Drink     Frosted Murder                          1755  excl 1.00
+    needs: Agar, Basil, Blue Cheese, Cheddar, Cherries, Coffee Beans, Liquid Nitrogen, Mozarella, Oranges, Pizza Dough, Rosemary, Soy Beans, Sugar, Tomatoes, Tonic Water, Vodka
+
+  Eastern Residential combined shopping list (39 items): Agar, Bacon, Basil, Beetroots, Black Mushroom, Blue Cheese, Buckwheat, Burger Bun, Butter, Cabbage, Cashew, Cheddar, Cherries, Chervil, Chicken, Coffee Beans, Cream, Eggs, Fennel, Lettuce, Liquid Nitrogen, Mayonnaise, Mozarella, Mustard, Oranges, Peppers, Pizza Dough, Potatoes, Rosemary, Shrimp, Soy Beans, Squid, Straw Mushrooms, Sugar, Tofu, Tomatoes, Tonic Water, Vinegar, Vodka
+
+====================================================================================================
+Helix Monumental   Hipsters:0.6(pref 0.34) Workers:0.6(pref 0.05) Elite:0.6(pref 0.85)
+  local tags: Noodles,Vegetable,Oil
+
+  Helix_Monumental_Poccocup  (limit 5, allows Drink)  avg score 0.779, 15 ingredients
+    0.839 Drink     Immortalitea                            1588  excl 1.00
+    0.836 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.741 Drink     Mint Mojito Iced Coffee                  911  excl 0.70
+    0.740 Drink     VegCoffee                               1086  excl 0.50
+    0.737 Drink     Boba Tea                                 966  excl 0.70
+    needs: Boba, Broccoli, Cinnamon, Coffee Beans, Ginger, Ginseng, Honey, Jasmine, Milk, Mint, Oolong, Osmanthus, Straw Mushrooms, Sugar, Tea Leafs
+
+  Helix_Monumental_Ramen  (limit 4, allows Soup,Drink,Meat)  avg score 0.931, 16 ingredients
+    0.973 Soup      Beondegi Soup                           1839  excl 1.00
+    0.965 Meat      Roasted Tofu Lollipops with Pesto       1279  excl 1.00
+    0.936 Drink     SoyBoost                                1235  excl 0.95
+    0.849 Soup      Goulash                                 1787  excl 0.75
+    needs: Basil, Beef, Cooking Wine, Garlic, Micronutrient Premix, Olive Oil, Paprika, Peppers, Potatoes, Protein Powder, Sesame Oil, Silkworm Pupae, Soy Beans, Sunflower Oil, Tofu, Vanilla
+
+  Helix_Monumental_Sake_Bar_1  (limit 7, allows Snack,Drink,Meat)  avg score 0.931, 24 ingredients
+    0.996 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.965 Meat      Roasted Tofu Lollipops with Pesto       1279  excl 1.00
+    0.954 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.936 Drink     SoyBoost                                1235  excl 0.95
+    0.917 Meat      Bombies                                 2354  excl 1.00
+    0.900 Meat      Steak                                   2411  excl 1.00
+    0.852 Snack     Accordion Potatoes                      1005  excl 0.40
+    needs: Asparagus, Basil, Beef, Beetroots, Black Mushroom, Butter, Cashew, Chervil, Eggs, Garlic, Mayonnaise, Micronutrient Premix, Mustard, Neutral Oil, Olive Oil, Paprika, Pork, Potatoes, Protein Powder, Soy Beans, Sunflower Oil, Tofu, Vanilla, Vinegar
+
+  Helix_Monumental_Sake_Bar_2  (limit 4, allows Snack,Drink,Meat)  avg score 0.963, 18 ingredients
+    0.996 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.965 Meat      Roasted Tofu Lollipops with Pesto       1279  excl 1.00
+    0.954 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.936 Drink     SoyBoost                                1235  excl 0.95
+    needs: Basil, Beetroots, Butter, Cashew, Chervil, Eggs, Mayonnaise, Micronutrient Premix, Mustard, Olive Oil, Paprika, Potatoes, Protein Powder, Soy Beans, Sunflower Oil, Tofu, Vanilla, Vinegar
+
+  Helix_Monumental_Sunrice  (limit 4, allows Seafood,Drink,Soup)  avg score 0.934, 14 ingredients
+    0.979 Seafood   Galician-Style-Octopus                  1698  excl 0.95
+    0.973 Soup      Beondegi Soup                           1839  excl 1.00
+    0.936 Drink     SoyBoost                                1235  excl 0.95
+    0.849 Soup      Goulash                                 1787  excl 0.75
+    needs: Beef, Cooking Wine, Garlic, Micronutrient Premix, Olive Oil, Peppers, Potatoes, Protein Powder, Sesame Oil, Silkworm Pupae, Soy Beans, Squid, Sunflower Oil, Vanilla
+
+  Helix_Monumental_YakiTori  (limit 3, allows Seafood,Fish,Soup,Drink)  avg score 0.971, 10 ingredients
+    0.979 Seafood   Galician-Style-Octopus                  1698  excl 0.95
+    0.973 Soup      Beondegi Soup                           1839  excl 1.00
+    0.962 Fish      Brook Trout with Asparagus              2077  excl 1.00
+    needs: Asparagus, Brook Trout, Cooking Wine, Garlic, Olive Oil, Peppers, Potatoes, Sesame Oil, Silkworm Pupae, Squid
+
+  Helix Monumental combined shopping list (45 items): Asparagus, Basil, Beef, Beetroots, Black Mushroom, Boba, Broccoli, Brook Trout, Butter, Cashew, Chervil, Cinnamon, Coffee Beans, Cooking Wine, Eggs, Garlic, Ginger, Ginseng, Honey, Jasmine, Mayonnaise, Micronutrient Premix, Milk, Mint, Mustard, Neutral Oil, Olive Oil, Oolong, Osmanthus, Paprika, Peppers, Pork, Potatoes, Protein Powder, Sesame Oil, Silkworm Pupae, Soy Beans, Squid, Straw Mushrooms, Sugar, Sunflower Oil, Tea Leafs, Tofu, Vanilla, Vinegar
+
+====================================================================================================
+Hive Mall   Hipsters:1.0(pref 0.34) Workers:0.7(pref 0.05) Elite:0.8(pref 0.85)
+  local tags: Bread,Liquid,Cheese
+
+  Hive_Mall_Food_Trailer  (limit 4, allows Pizza,Sandwich,Drink)  avg score 0.966, 14 ingredients
+    0.996 Pizza     Boba Pizza                              1340  excl 1.00
+    0.977 Sandwich  Fruity Burger                           1829  excl 0.90
+    0.951 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.941 Drink     Frosted Murder                          1755  excl 1.00
+    needs: Boba, Burger Bun, Cherries, Coffee Beans, Honey, Liquid Nitrogen, Oranges, Parmesan, Pineapple, Pizza Dough, Rosemary, Tonic Water, Vodka, Watermelon
+
+  Hive_Mall_Food_Trailer_2  (limit 4, allows Pizza,Sandwich,Drink)  avg score 0.966, 14 ingredients
+    0.996 Pizza     Boba Pizza                              1340  excl 1.00
+    0.977 Sandwich  Fruity Burger                           1829  excl 0.90
+    0.951 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.941 Drink     Frosted Murder                          1755  excl 1.00
+    needs: Boba, Burger Bun, Cherries, Coffee Beans, Honey, Liquid Nitrogen, Oranges, Parmesan, Pineapple, Pizza Dough, Rosemary, Tonic Water, Vodka, Watermelon
+
+  Hive_Mall_Japanese_Restaraunt  (limit 5, allows Meat,Seafood,Soup,Drink)  avg score 0.955, 19 ingredients
+    1.000 Soup      Beer Soup                               1365  excl 0.85
+    0.951 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.946 Meat      Veal Orloff                             1922  excl 1.00
+    0.939 Soup      Onion Soup                              1231  excl 0.65
+    0.937 Seafood   Steamed Sticky Rice with Crab           2158  excl 1.00
+    needs: Bacon, Beer, Black Mushroom, Blue Cheese, Coffee Beans, Cooking Wine, Crab, Cream Cheese, Liquid Nitrogen, Lotus Leaves, Onions, Oranges, Parmesan, Pork, Rice, Rosemary, Tonic Water, Veal, Wheat Bread
+
+  Hive_Mall_Neon_Mist  (limit 2, allows Drink,Snack)  avg score 0.960, 10 ingredients
+    0.969 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.951 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    needs: Beetroots, Coffee Beans, Eggs, Liquid Nitrogen, Mayonnaise, Mustard, Oranges, Rosemary, Tonic Water, Vinegar
+
+  Hive_Mall_Sunrice  (limit 4, allows Seafood,Drink,Soup)  avg score 0.957, 16 ingredients
+    1.000 Soup      Beer Soup                               1365  excl 0.85
+    0.951 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.939 Soup      Onion Soup                              1231  excl 0.65
+    0.937 Seafood   Steamed Sticky Rice with Crab           2158  excl 1.00
+    needs: Bacon, Beer, Blue Cheese, Coffee Beans, Cooking Wine, Crab, Cream Cheese, Liquid Nitrogen, Lotus Leaves, Onions, Oranges, Pork, Rice, Rosemary, Tonic Water, Wheat Bread
+
+  Hive_Mall_Sunrice_2  (limit 4, allows Seafood,Drink,Soup)  avg score 0.957, 16 ingredients
+    1.000 Soup      Beer Soup                               1365  excl 0.85
+    0.951 Drink     Nitro Espresso Tonic                    1532  excl 1.00
+    0.939 Soup      Onion Soup                              1231  excl 0.65
+    0.937 Seafood   Steamed Sticky Rice with Crab           2158  excl 1.00
+    needs: Bacon, Beer, Blue Cheese, Coffee Beans, Cooking Wine, Crab, Cream Cheese, Liquid Nitrogen, Lotus Leaves, Onions, Oranges, Pork, Rice, Rosemary, Tonic Water, Wheat Bread
+
+  Hive_Mall_Taco_Real  (limit 7, allows Snack,Meat,Sandwich)  avg score 0.936, 20 ingredients
+    0.977 Sandwich  Fruity Burger                           1829  excl 0.90
+    0.969 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.965 Sandwich  Mutant Burger                           2179  excl 1.00
+    0.955 Sandwich  Tarantula Burger                        2433  excl 1.00
+    0.946 Meat      Veal Orloff                             1922  excl 1.00
+    0.913 Sandwich  Cheese Burger                           1428  excl 0.60
+    0.829 Meat      Cloudplugs                              1880  excl 0.95
+    needs: Beef, Beetroots, Black Mushroom, Blue Cheese, Burger Bun, Cheese, Eggs, Flour, Lettuce, Mayonnaise, Mustard, Onions, Oranges, Parmesan, Pineapple, Tarantula, Tomatoes, Veal, Vinegar, Watermelon
+
+  Hive Mall combined shopping list (38 items): Bacon, Beef, Beer, Beetroots, Black Mushroom, Blue Cheese, Boba, Burger Bun, Cheese, Cherries, Coffee Beans, Cooking Wine, Crab, Cream Cheese, Eggs, Flour, Honey, Lettuce, Liquid Nitrogen, Lotus Leaves, Mayonnaise, Mustard, Onions, Oranges, Parmesan, Pineapple, Pizza Dough, Pork, Rice, Rosemary, Tarantula, Tomatoes, Tonic Water, Veal, Vinegar, Vodka, Watermelon, Wheat Bread
+
+====================================================================================================
+Industrial District   Hipsters:0.7(pref 0.34) Workers:1.0(pref 0.05) Elite:0.3(pref 0.85)
+  local tags: Chemistry,Spicy,Legume
+
+  Industrial_District_Food_Trailer  (limit 4, allows Pizza,Sandwich,Drink)  avg score 0.912, 16 ingredients
+    0.987 Drink     SoyBoost                                1235  excl 0.95
+    0.918 Pizza     Meridian Pizza                          1711  excl 1.00
+    0.910 Drink     Aqua Freeze                             1571  excl 1.00
+    0.835 Sandwich  Golden Rings                            1456  excl 1.00
+    needs: Burger Bun, Chicken, Garlic, Hibiscus Flower, Lemons, Liquid Nitrogen, Micronutrient Premix, Mint, Pizza Dough, Protein Powder, Soy Beans, Spirulina, Squid, Sunflower Oil, Tonic Water, Vanilla
+
+  Industrial_District_Night_Vision_Bar  (limit 7, allows Drink)  avg score 0.838, 16 ingredients
+    0.987 Drink     SoyBoost                                1235  excl 0.95
+    0.910 Drink     Aqua Freeze                             1571  excl 1.00
+    0.894 Drink     Frosted Murder                          1755  excl 1.00
+    0.796 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.779 Drink     Black Widow                             1930  excl 1.00
+    0.766 Drink     Aurora                                  2087  excl 1.00
+    0.736 Drink     Scarlet Shot                            2439  excl 1.00
+    needs: Blackberries, Butterfly Pea Flower, Cherries, Cranberries, Lemons, Liquid Nitrogen, Micronutrient Premix, Mint, Protein Powder, Roses, Soy Beans, Spirulina, Sunflower Oil, Tonic Water, Vanilla, Vodka
+
+  Industrial_District_Odin's_Pub  (limit 8, allows Drink,Snack)  avg score 0.852, 21 ingredients
+    0.987 Drink     SoyBoost                                1235  excl 0.95
+    0.944 Snack     Beet Pickled Deviled Eggs               1333  excl 1.00
+    0.910 Drink     Aqua Freeze                             1571  excl 1.00
+    0.894 Drink     Frosted Murder                          1755  excl 1.00
+    0.796 Drink     Galaxy Lemonade                         1732  excl 1.00
+    0.779 Drink     Black Widow                             1930  excl 1.00
+    0.766 Drink     Aurora                                  2087  excl 1.00
+    0.736 Drink     Scarlet Shot                            2439  excl 1.00
+    needs: Beetroots, Blackberries, Butterfly Pea Flower, Cherries, Cranberries, Eggs, Lemons, Liquid Nitrogen, Mayonnaise, Micronutrient Premix, Mint, Mustard, Protein Powder, Roses, Soy Beans, Spirulina, Sunflower Oil, Tonic Water, Vanilla, Vinegar, Vodka
+
+  Industrial_District_Sunrice  (limit 4, allows Seafood,Drink,Soup)  avg score 0.871, 15 ingredients
+    0.987 Drink     SoyBoost                                1235  excl 0.95
+    0.891 Soup      Okroshka                                1790  excl 0.50
+    0.879 Seafood   Sea Urchin Guacamole Tacos              2288  excl 1.00
+    0.726 Soup      Rassolnik Soup                          1092  excl 0.45
+    needs: Avocados, Chili, Corn Bread, Cucumbers, Kvass, Micronutrient Premix, Pearl Barley, Pork, Potatoes, Protein Powder, Radishes, Sea Urchins, Soy Beans, Sunflower Oil, Vanilla
+
+  Industrial_District_Yummy_Canteen  (limit 2, allows Meat,Salad,Pizza,Soup)  avg score 0.876, 7 ingredients
+    0.894 Meat      Kung Pao Chicken                        1703  excl 0.90
+    0.858 Salad     Spicy Lemon Chicken Feet Salad          1653  excl 1.00
+    needs: Chicken, Chili, Ginger, Lemons, Onions, Peanuts, Rice
+
+  Industrial District combined shopping list (41 items): Avocados, Beetroots, Blackberries, Burger Bun, Butterfly Pea Flower, Cherries, Chicken, Chili, Corn Bread, Cranberries, Cucumbers, Eggs, Garlic, Ginger, Hibiscus Flower, Kvass, Lemons, Liquid Nitrogen, Mayonnaise, Micronutrient Premix, Mint, Mustard, Onions, Peanuts, Pearl Barley, Pizza Dough, Pork, Potatoes, Protein Powder, Radishes, Rice, Roses, Sea Urchins, Soy Beans, Spirulina, Squid, Sunflower Oil, Tonic Water, Vanilla, Vinegar, Vodka
+
+====================================================================================================
+Lowtown   Hipsters:0.75(pref 0.34) Workers:0.5(pref 0.05) Elite:0.25(pref 0.85)
+  local tags: Cereal,Mushroom,Herb
+
+  Lowtown_Food_Trailer  (limit 4, allows Pizza,Sandwich,Drink)  avg score 0.930, 14 ingredients
+    0.985 Sandwich  Vege Burger                             1480  excl 0.85
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.923 Pizza     Pizza Speciale                          2202  excl 1.00
+    0.872 Pizza     Pizza Napoli                            1381  excl 0.70
+    needs: Basil, Black Mushroom, Burger Bun, Cinnamon, Cocoa Powder, King Mushroom, Lettuce, Milk, Mozarella, Pizza Dough, Prosciutto, Tofu, Tomatoes, Vanilla
+
+  Lowtown_Neon_Mist  (limit 6, allows Drink,Snack)  avg score 0.887, 18 ingredients
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.936 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.910 Snack     Canapés                                 2000  excl 1.00
+    0.860 Drink     Mint Mojito Iced Coffee                  911  excl 0.70
+    0.845 Drink     Insect Milkshake                        1482  excl 1.00
+    0.830 Drink     Ocean Latte                             1743  excl 1.00
+    needs: Basil, Black Mushroom, Blue Cheese, Blueberries, Butterfly Pea Flower, Cinnamon, Cocoa Powder, Coffee Beans, Cricket, Ginger, Melon, Milk, Mint, Prosciutto, Straw Mushrooms, Sugar, Vanilla, Whipped Cream
+
+  Lowtown_Side_Bar  (limit 4, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.959, 17 ingredients
+    1.000 Soup      Shroom Soup                             1612  excl 1.00
+    0.985 Sandwich  Vege Burger                             1480  excl 0.85
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.910 Snack     Canapés                                 2000  excl 1.00
+    needs: Basil, Black Mushroom, Blue Cheese, Burger Bun, Cinnamon, Cocoa Powder, Flour, Garlic, Lettuce, Magic Mushrooms, Melon, Milk, Onions, Prosciutto, Thyme, Tofu, Vanilla
+
+  Lowtown combined shopping list (30 items): Basil, Black Mushroom, Blue Cheese, Blueberries, Burger Bun, Butterfly Pea Flower, Cinnamon, Cocoa Powder, Coffee Beans, Cricket, Flour, Garlic, Ginger, King Mushroom, Lettuce, Magic Mushrooms, Melon, Milk, Mint, Mozarella, Onions, Pizza Dough, Prosciutto, Straw Mushrooms, Sugar, Thyme, Tofu, Tomatoes, Vanilla, Whipped Cream
+
+====================================================================================================
+Meridian Market   Elite:1.0(pref 0.85) Hipsters:1.0(pref 0.34)
+  local tags: Noodles,Meat,Mushroom
+
+  Meridian_Market_Ancient_Spirit  (limit 4, allows Fish,Seafood,Meat,Drink)  avg score 1.000, 15 ingredients
+    1.000 Fish      Sautéed Grayling with Pasta Carbonara   2206  excl 1.00
+    1.000 Seafood   Mini Hotpot                             2104  excl 1.00
+    1.000 Meat      Veal Orloff                             1922  excl 1.00
+    1.000 Drink     Chicken Shake                           2286  excl 1.00
+    needs: Bacon, Banana, Black Mushroom, Butter, Cabbage, Chicken, Eggs, Grayling, Honey, Milk, Onions, Parmesan, Shrimp, Squid, Veal
+
+  Meridian_Market_Corner_Restaurant  (limit 3, allows Meat,Pizza,Drink,Soup,Seafood)  avg score 1.000, 10 ingredients
+    1.000 Meat      Cola Chicken                            1586  excl 0.85
+    1.000 Pizza     Meridian Pizza                          1711  excl 1.00
+    1.000 Drink     Chicken Shake                           2286  excl 1.00
+    needs: Banana, Black Mushroom, Black Soda, Chicken, Hibiscus Flower, Honey, Milk, Onions, Pizza Dough, Spirulina
+
+  Meridian_Market_Side_Bar  (limit 4, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.922, 17 ingredients
+    0.944 Soup      Solyanka Soup                           2064  excl 1.00
+    0.925 Sandwich  Ramen Burger                            2337  excl 0.95
+    0.913 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.905 Snack     Kushiyaki                               2653  excl 1.00
+    needs: Beef, Black Mushroom, Cabbage, Chicken, Cinnamon, Cocoa Powder, Cream Cheese, Cucumbers, King Mushroom, Lettuce, Milk, Okra, Ramen Noodles, Salmon, Sour Cream, Tomatoes, Vanilla
+
+  Meridian_Market_Side_Bar_ 2  (limit 5, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.932, 19 ingredients
+    0.973 Meat      Cola Chicken                            1586  excl 0.85
+    0.944 Soup      Solyanka Soup                           2064  excl 1.00
+    0.925 Sandwich  Ramen Burger                            2337  excl 0.95
+    0.913 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.905 Snack     Kushiyaki                               2653  excl 1.00
+    needs: Beef, Black Mushroom, Black Soda, Cabbage, Chicken, Cinnamon, Cocoa Powder, Cream Cheese, Cucumbers, King Mushroom, Lettuce, Milk, Okra, Onions, Ramen Noodles, Salmon, Sour Cream, Tomatoes, Vanilla
+
+  NoodleBar  (limit 20, allows Fish,Soup,Seafood,Drink,Meat,Salad,Pizza,Dessert,Snack)  avg score 0.914, 41 ingredients
+    0.985 Pizza     Pizza Creativo                          1290  excl 0.80
+    0.979 Meat      Cola Chicken                            1586  excl 0.85
+    0.970 Meat      Cloudplugs                              1880  excl 0.95
+    0.969 Meat      Veal Orloff                             1922  excl 1.00
+    0.963 Soup      Solyanka Soup                           2064  excl 1.00
+    0.959 Soup      Fennel Soup with Bacon                  1406  excl 1.00
+    0.956 Salad     Eastern Salad                           2222  excl 1.00
+    0.946 Pizza     Meridian Pizza                          1711  excl 1.00
+    0.943 Meat      Steak                                   2411  excl 1.00
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.936 Snack     Kushiyaki                               2653  excl 1.00
+    0.928 Seafood   Mini Hotpot                             2104  excl 1.00
+    0.923 Fish      Sautéed Grayling with Pasta Carbonara   2206  excl 1.00
+    0.865 Soup      Goulash                                 1787  excl 0.75
+    0.863 Dessert   Ice Cream Burger                        1327  excl 1.00
+    0.858 Dessert   Apple Pie                               1441  excl 1.00
+    0.845 Drink     Insect Milkshake                        1482  excl 1.00
+    0.844 Fish      Sashimi Plate                           1743  excl 1.00
+    0.840 Dessert   Brownie                                 1162  excl 0.90
+    0.776 Salad     Potato Mushroom Salad                   1395  excl 0.40
+    needs: Apples, Asparagus, Bacon, Beef, Black Mushroom, Black Soda, Buckwheat, Burger Bun, Butter, Cabbage, Chicken, Cinnamon, Cocoa Powder, Cream, Cricket, Cucumbers, Eggs, Fennel, Flour, Grayling, Hibiscus Flower, King Mushroom, Mayonnaise, Milk, Okra, Onions, Parmesan, Peppers, Pizza Dough, Potatoes, Salmon, Scallops, Shrimp, Sour Cream, Spirulina, Squid, Straw Mushrooms, Strawberries, Vanilla, Veal, Whipped Cream
+
+  Meridian Market combined shopping list (47 items): Apples, Asparagus, Bacon, Banana, Beef, Black Mushroom, Black Soda, Buckwheat, Burger Bun, Butter, Cabbage, Chicken, Cinnamon, Cocoa Powder, Cream, Cream Cheese, Cricket, Cucumbers, Eggs, Fennel, Flour, Grayling, Hibiscus Flower, Honey, King Mushroom, Lettuce, Mayonnaise, Milk, Okra, Onions, Parmesan, Peppers, Pizza Dough, Potatoes, Ramen Noodles, Salmon, Scallops, Shrimp, Sour Cream, Spirulina, Squid, Straw Mushrooms, Strawberries, Tomatoes, Vanilla, Veal, Whipped Cream
+
+====================================================================================================
+Metro Hub   Hipsters:1.0(pref 0.34) Workers:1.0(pref 0.05) Elite:1.0(pref 0.85)
+  local tags: Bread,Cereal,Dairy
+
+  Metro_Hub_Japanese_Restaraunt  (limit 5, allows Meat,Seafood,Soup,Drink)  avg score 0.935, 18 ingredients
+    0.987 Soup      Beer Soup                               1365  excl 0.85
+    0.954 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    0.941 Seafood   Katsu Ika Odori Don                     1817  excl 1.00
+    0.847 Seafood   Squid Stuffed with Rice                 1419  excl 0.70
+    needs: Bacon, Beer, Blue Cheese, Butter, Cashew, Chervil, Cricket, Fish Roe, Milk, Onions, Potatoes, Rice, Seaweed, Soy Sauce, Squid, Vanilla, Wheat Bread, Whipped Cream
+
+  Metro_Hub_Odin's_Pub  (limit 8, allows Drink,Snack)  avg score 0.879, 20 ingredients
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.936 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.930 Drink     Ocean Latte                             1743  excl 1.00
+    0.914 Snack     Canapés                                 2000  excl 1.00
+    0.841 Drink     Mint Mojito Iced Coffee                  911  excl 0.70
+    0.786 Drink     Egg Coffee                              1068  excl 0.60
+    0.740 Drink     VegCoffee                               1086  excl 0.50
+    needs: Basil, Black Mushroom, Blue Cheese, Blueberries, Broccoli, Butterfly Pea Flower, Cinnamon, Cocoa Powder, Coffee Beans, Cricket, Eggs, Ginger, Melon, Milk, Mint, Prosciutto, Straw Mushrooms, Sugar, Vanilla, Whipped Cream
+
+  Metro_Hub_Poccocup  (limit 5, allows Drink)  avg score 0.828, 12 ingredients
+    0.936 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.841 Drink     Mint Mojito Iced Coffee                  911  excl 0.70
+    0.837 Drink     Boba Tea                                 966  excl 0.70
+    0.786 Drink     Egg Coffee                              1068  excl 0.60
+    0.740 Drink     VegCoffee                               1086  excl 0.50
+    needs: Boba, Broccoli, Cinnamon, Coffee Beans, Eggs, Ginger, Milk, Mint, Straw Mushrooms, Sugar, Tea Leafs, Vanilla
+
+  Metro_Hub_Ramen  (limit 4, allows Soup,Drink,Meat)  avg score 0.961, 15 ingredients
+    0.987 Soup      Beer Soup                               1365  excl 0.85
+    0.959 Soup      Fennel Soup with Bacon                  1406  excl 1.00
+    0.954 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    needs: Bacon, Beer, Blue Cheese, Butter, Cashew, Chervil, Cream, Cricket, Fennel, Milk, Onions, Potatoes, Vanilla, Wheat Bread, Whipped Cream
+
+  Metro_Hub_Sake_Bar_1  (limit 10, allows Snack,Drink,Meat)  avg score 0.882, 26 ingredients
+    0.954 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.936 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.930 Drink     Ocean Latte                             1743  excl 1.00
+    0.914 Snack     Canapés                                 2000  excl 1.00
+    0.841 Drink     Mint Mojito Iced Coffee                  911  excl 0.70
+    0.837 Drink     Boba Tea                                 966  excl 0.70
+    0.786 Drink     Egg Coffee                              1068  excl 0.60
+    0.740 Drink     VegCoffee                               1086  excl 0.50
+    needs: Basil, Black Mushroom, Blue Cheese, Blueberries, Boba, Broccoli, Butter, Butterfly Pea Flower, Cashew, Chervil, Cinnamon, Cocoa Powder, Coffee Beans, Cricket, Eggs, Ginger, Melon, Milk, Mint, Potatoes, Prosciutto, Straw Mushrooms, Sugar, Tea Leafs, Vanilla, Whipped Cream
+
+  Metro_Hub_Sake_Bar_2  (limit 5, allows Snack,Drink,Meat)  avg score 0.938, 18 ingredients
+    0.954 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    0.942 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    0.936 Drink     Spiced Shroom Coffee                    1634  excl 1.00
+    0.914 Snack     Canapés                                 2000  excl 1.00
+    needs: Basil, Black Mushroom, Blue Cheese, Butter, Cashew, Chervil, Cinnamon, Cocoa Powder, Coffee Beans, Cricket, Ginger, Melon, Milk, Potatoes, Prosciutto, Straw Mushrooms, Vanilla, Whipped Cream
+
+  Metro_Hub_Side_Bar  (limit 4, allows Drink,Sandwich,Snack,Soup,Meat,Seafood)  avg score 0.955, 17 ingredients
+    0.987 Soup      Beer Soup                               1365  excl 0.85
+    0.972 Sandwich  Fruity Burger                           1829  excl 0.90
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    0.914 Snack     Canapés                                 2000  excl 1.00
+    needs: Bacon, Basil, Beer, Blue Cheese, Burger Bun, Cricket, Melon, Milk, Onions, Oranges, Parmesan, Pineapple, Prosciutto, Vanilla, Watermelon, Wheat Bread, Whipped Cream
+
+  Metro_Hub_Sunrice  (limit 4, allows Seafood,Drink,Soup)  avg score 0.930, 14 ingredients
+    0.987 Soup      Beer Soup                               1365  excl 0.85
+    0.945 Drink     Insect Milkshake                        1482  excl 1.00
+    0.941 Seafood   Katsu Ika Odori Don                     1817  excl 1.00
+    0.847 Seafood   Squid Stuffed with Rice                 1419  excl 0.70
+    needs: Bacon, Beer, Blue Cheese, Cricket, Fish Roe, Milk, Onions, Rice, Seaweed, Soy Sauce, Squid, Vanilla, Wheat Bread, Whipped Cream
+
+  Metro Hub combined shopping list (42 items): Bacon, Basil, Beer, Black Mushroom, Blue Cheese, Blueberries, Boba, Broccoli, Burger Bun, Butter, Butterfly Pea Flower, Cashew, Chervil, Cinnamon, Cocoa Powder, Coffee Beans, Cream, Cricket, Eggs, Fennel, Fish Roe, Ginger, Melon, Milk, Mint, Onions, Oranges, Parmesan, Pineapple, Potatoes, Prosciutto, Rice, Seaweed, Soy Sauce, Squid, Straw Mushrooms, Sugar, Tea Leafs, Vanilla, Watermelon, Wheat Bread, Whipped Cream
+
+====================================================================================================
+Mountain Town   Hipsters:0.7(pref 0.34) Workers:1.0(pref 0.05) Elite:0.2(pref 0.85)
+  local tags: Mushroom,Herb,Vegetable
+
+  Mountain_Town_Food_Trailer  (limit 4, allows Pizza,Sandwich,Drink)  avg score 0.952, 14 ingredients
+    1.000 Sandwich  Vege Burger                             1480  excl 0.85
+    0.969 Pizza     Pizza Napoli                            1381  excl 0.70
+    0.932 Pizza     Pizza Speciale                          2202  excl 1.00
+    0.908 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    needs: Basil, Black Mushroom, Burger Bun, Cinnamon, Cocoa Powder, King Mushroom, Lettuce, Milk, Mozarella, Pizza Dough, Prosciutto, Tofu, Tomatoes, Vanilla
+
+  Mountain_Town_Ramen  (limit 4, allows Soup,Drink,Meat)  avg score 0.964, 16 ingredients
+    0.999 Soup      Shroom Soup                             1612  excl 1.00
+    0.980 Meat      Purple Potato Bombs                     1525  excl 1.00
+    0.970 Meat      Cola Chicken                            1586  excl 0.85
+    0.908 Drink     Mushroom Hot Cocoa                      1534  excl 1.00
+    needs: Black Mushroom, Black Soda, Butter, Cashew, Chervil, Chicken, Cinnamon, Cocoa Powder, Flour, Garlic, Magic Mushrooms, Milk, Onions, Potatoes, Thyme, Vanilla
+
+  Mountain_Town_Sunset_Hour  (limit 3, allows Fish,Seafood,Soup,Drink)  avg score 0.966, 10 ingredients
+    0.999 Soup      Shroom Soup                             1612  excl 1.00
+    0.995 Fish      Barbudian Fish Wata                     1208  excl 1.00
+    0.904 Seafood   Galician-Style-Octopus                  1698  excl 0.95
+    needs: Bream, Flour, Garlic, Magic Mushrooms, Okra, Olive Oil, Onions, Potatoes, Squid, Thyme
+
+  Mountain Town combined shopping list (29 items): Basil, Black Mushroom, Black Soda, Bream, Burger Bun, Butter, Cashew, Chervil, Chicken, Cinnamon, Cocoa Powder, Flour, Garlic, King Mushroom, Lettuce, Magic Mushrooms, Milk, Mozarella, Okra, Olive Oil, Onions, Pizza Dough, Potatoes, Prosciutto, Squid, Thyme, Tofu, Tomatoes, Vanilla
