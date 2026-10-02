@@ -1,4 +1,4 @@
-﻿Nivalis Nights story global variables - 1817 variables in 168 groups
+﻿Nivalis Nights story global variables - 1822 variables in 168 groups
 Use the full NAME with: getvar <name> | setbool <name> <true|false> | setint <name> <value>
 The class prefix is required: GameState.UI_Tutorial_UnlockRecipe, not UI_Tutorial_UnlockRecipe.
 Changing these can break quest state. Read with getvar before writing.
@@ -378,6 +378,7 @@ CeresCoilson.Friend	Int32
 CeresCoilson.Romance	Int32
 Chess.GamesPlayed	Int32
 Chess.Lost	Boolean
+Chess.NextTryDay	Int32
 Chess.NotInterested	Boolean
 Chess.Qualified	Boolean
 Chess.Round	Int32
@@ -724,6 +725,7 @@ GlobalInventory.BusinessPermit4	Boolean
 GlobalInventory.Cabbage	Int32
 GlobalInventory.CabbageSeeds	Int32
 GlobalInventory.Cherries	Int32
+GlobalInventory.Chicken	Int32
 GlobalInventory.ClemPackage	Boolean
 GlobalInventory.DeadRat	Boolean
 GlobalInventory.DeeDeesReply	Boolean
@@ -750,6 +752,7 @@ GlobalInventory.Onion	Int32
 GlobalInventory.OnionSeeds	Int32
 GlobalInventory.Orange	Int32
 GlobalInventory.Potatoes	Int32
+GlobalInventory.RamenNoodles	Int32
 GlobalInventory.RareTrainTimetable	Boolean
 GlobalInventory.RatMeat	Boolean
 GlobalInventory.RustRemover	Boolean
@@ -764,7 +767,10 @@ GlobalInventory.VendingMachine	Int32
 GlobalInventory.Vodka	Int32
 GlobalInventory.WheatBread	Int32
 GlobalInventory_NoodleBar.Bread	Int32
+GlobalInventory_NoodleBar.Chicken	Int32
 GlobalInventory_NoodleBar.Mustard	Int32
+GlobalInventory_NoodleBar.Onion	Int32
+GlobalInventory_NoodleBar.RamenNoodles	Int32
 GlobalInventory_NoodleBar.Toast	Int32
 GlobalInventory_NoodleBar.WheatBread	Int32
 GlobalMorality.Corp	Int32
@@ -1716,7 +1722,6 @@ Venue_NoodleBar.ColdStorage	Int32
 Venue_NoodleBar.ColdStorageAlmostFull	Boolean
 Venue_NoodleBar.ColdStorageCheckValue	Int32
 Venue_NoodleBar.CustomersServed	Int32
-Venue_NoodleBar.HasAllIngredients	Boolean
 Venue_NoodleBar.IngredientsRunningLow	Boolean
 Venue_NoodleBar.Level	Int32
 Venue_NoodleBar.LevelPrevious	Int32
