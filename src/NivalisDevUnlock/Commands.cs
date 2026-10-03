@@ -331,9 +331,11 @@ internal static class Commands
                                  string.Equals(args[0], "all", StringComparison.OrdinalIgnoreCase),
                                  print));
 
-        Add("storyitems", "storyitems",
+        Add("storyitems", "storyitems [all]",
             "Lists the items the story is watching, and which you are carrying.",
-            (args, print) => StoryItems.Run(print));
+            (args, print) => StoryItems.Run(
+                args.Length > 0 && string.Equals(args[0], "all", StringComparison.OrdinalIgnoreCase),
+                print));
 
         Add("devmenu", "devmenu", "Opens the game's built-in developer option menu.", (args, print) =>
         {
@@ -526,6 +528,16 @@ internal static class Commands
 
         Add("skill", "skill [name] [level]", "Shows your skill levels, or raises one to a level.",
             (args, print) => Skills.Run(args, print));
+
+        // The game shows one property at a time at its own console, so there is nowhere to
+        // compare prices or see which permit each one wants.
+        Add("properties", "properties [filter]",
+            "Lists every property with its price, rent and required permit.",
+            (args, print) => Properties.List(args.Length > 0 ? string.Join(" ", args) : null, print));
+
+        Add("acquire", "acquire <name> [rent]",
+            "Takes or rents any property for free, including apartments and greenhouses.",
+            (args, print) => Properties.Acquire(args, print));
 
         // Spoiled stock is worth nothing but still takes up storage, and the game leaves it in
         // place as RottenFood, which no screen clears in bulk.

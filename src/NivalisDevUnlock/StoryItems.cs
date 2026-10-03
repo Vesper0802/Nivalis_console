@@ -68,7 +68,7 @@ internal static class StoryItems
         return map;
     }
 
-    public static void Run(Action<string> print)
+    public static void Run(bool all, Action<string> print)
     {
         var links = Links(print);
         if (links == null)
@@ -110,9 +110,21 @@ internal static class StoryItems
                 print(line);
         }
 
+        // An item absent from this table is not protected, so being able to read the whole table
+        // is the only way to tell that something you are carrying is unprotected.
+        if (all)
+        {
+            print($"All {links.Count} watched item types:");
+            foreach (var (type, variables) in links.Values.OrderBy(v => GameRefs.AssetName(v.Type),
+                        StringComparer.OrdinalIgnoreCase))
+                print($"  {GameRefs.AssetName(type)} <- {variables}");
+            return;
+        }
+
         if (rest > 0)
             print($"The other {rest} are not in your inventory. 'clearitems' keeps all of them; " +
-                  "'clearitems all' does not.");
+                  "'clearitems all' does not. Anything absent from this list is not protected — " +
+                  "run 'storyitems all' for the whole table.");
     }
 
     /// <summary>
