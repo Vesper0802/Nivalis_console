@@ -26,27 +26,84 @@ internal static class Properties
             return;
         }
 
-        var shown = string.IsNullOrWhiteSpace(filter)
+        // Most of the city's properties are NPC-run and flagged unacquireable, so the useful
+        // list is the short one; everything is still reachable by asking for it.
+        var everything = string.Equals(filter, "all", StringComparison.OrdinalIgnoreCase);
+        var shown = everything
             ? all
-            : all.Where(p => p.name.Contains(filter, StringComparison.OrdinalIgnoreCase)).ToList();
+            : string.IsNullOrWhiteSpace(filter)
+                ? all.Where(p => Acquireable(p) || Owned(p) == "yours").ToList()
+                : all.Where(p => Matches(p, filter)).ToList();
 
         if (shown.Count == 0)
         {
-            print($"No property matches '{filter}'. Run 'properties' for the whole list.");
+            print($"No property matches '{filter}'. Run 'properties all' for the whole list.");
             return;
         }
 
-        print("  OWNED  BUY        RENT      PERMIT            KIND        NAME");
+        print("  OWNED  BUY      RENT  PERMIT            LOCATION             NAME");
         foreach (var property in shown.OrderBy(Kind).ThenBy(p => Buy(p)))
         {
             var permit = Permit(property, out var have);
-            print($"  {Owned(property),-6} {Money(Buy(property)),-10} {Money(Rent(property)),-9} " +
-                  $"{permit + (have ? " *" : ""),-17} {Kind(property),-11} {property.name}" +
-                  $"{(Acquireable(property) ? "" : "  (not acquireable)")}");
+            print($"  {Owned(property),-6} {Money(Buy(property)),-8} {Money(Rent(property)),-5} " +
+                  $"{permit + (have ? " *" : ""),-17} {Where(property),-20} " +
+                  $"{Localised(property)}  ({Kind(property)} {property.name})" +
+                  $"{(Acquireable(property) ? "" : "  NOT ACQUIREABLE")}");
         }
 
-        print($"{shown.Count} of {all.Count} properties. A '*' means you hold that permit. " +
-              "Use 'acquire <name>' to take one, or 'acquire <name> rent' to rent it.");
+        print($"{shown.Count} of {all.Count} properties" +
+              (everything || !string.IsNullOrWhiteSpace(filter)
+                  ? ". "
+                  : " — the acquireable ones plus yours; 'properties all' for the rest. ") +
+              "A '*' means you hold that permit. Use 'acquire <name>' to take one, " +
+              "or 'acquire <name> rent' to rent it.");
+    }
+
+    private static bool Matches(BaseProperty property, string filter) =>
+        property.name.Contains(filter, StringComparison.OrdinalIgnoreCase) ||
+        (Localised(property)?.Contains(filter, StringComparison.OrdinalIgnoreCase) ?? false) ||
+        (Where(property)?.Contains(filter, StringComparison.OrdinalIgnoreCase) ?? false);
+
+    /// <summary>
+    /// The name on screen, which is localised. The asset name is still printed alongside it,
+    /// because that is what the commands take.
+    /// </summary>
+    private static string Localised(BaseProperty property)
+    {
+        try
+        {
+            var name = property.locObjRef?.Obj?.displayName;
+            if (!string.IsNullOrWhiteSpace(name))
+                return name;
+        }
+        catch { }
+
+        try
+        {
+            var entry = property.TryCast<Venue>()?.EntryName;
+            if (!string.IsNullOrWhiteSpace(entry))
+                return entry;
+        }
+        catch { }
+
+        return "?";
+    }
+
+    /// <summary>Only venues carry a world location; the others are reached through a portal.</summary>
+    private static string Where(BaseProperty property)
+    {
+        try
+        {
+            var location = property.TryCast<Venue>()?.Location;
+            if (location != null)
+            {
+                var name = location.DisplayName;
+                return string.IsNullOrWhiteSpace(name) ? location.name : name;
+            }
+        }
+        catch { }
+
+        return "-";
     }
 
     /// <summary>
