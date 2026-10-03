@@ -1,4 +1,4 @@
-﻿Nivalis Nights 控制台命令表（插件 v0.6.0，共 51 条命令）
+﻿Nivalis Nights 控制台命令表（插件 v0.6.0，共 53 条命令）
 ================================================================================
 
 基本用法
@@ -29,6 +29,7 @@ furniture                   发放全部家具（走游戏的 AddAllFurniture）
 allfurniture                每种家具各发一件（走开发选项，和上一条实现不同，
                             两条都留着是因为不同版本里有时只有一条管用）
 storyitems                  列出剧情在盯的物品，标出你身上带着哪些，不改变任何状态
+storyitems all              连整张表（55 项）一起列出
 clearitems                  清空背包，但保留剧情物品            ← 不可撤销
 clearitems all              连剧情物品一起清掉                  ← 不可撤销，慎用
 spoiled                     报告背包和各店里腐坏的食材，不改变任何状态
@@ -42,6 +43,9 @@ ArticyGlobalInventoryLinker 里的 linkPairs（Articy 剧情变量 ↔ 物品类
 改写，任务检查的标记就一起没了。这张表在实测存档里有 55 项，包括
 BusinessPermit1..4（经营许可）、ClemPackage、AvaBlackBox、BodyList、
 EldridgePhotos、SeafaringTreasure1..3、AnchorPin、EnchiridionFragment 等。
+
+没出现在这张表里的物品不受保护，所以 storyitems all 是唯一能确认「我带着的某件
+东西会不会被清掉」的办法。实测这 55 项里包含 BusinessPermit1..4 全部四张许可。
 
 所以 clearitems 默认保留这 55 项，并在清完后向游戏逐个核对它们是否真的还在——
 对不上会打 WARNING 并列出要补回的物品，而不是凭自己的记账说一句保护成功。
@@ -88,6 +92,26 @@ restock 的食材是凭空生成的，不动背包也不扣钱，所以有了它
 
 店铺
 --------------------------------------------------------------------------------
+properties                  列出全部房产：归属、售价、租金、所需许可、类型
+properties <关键词>         筛选
+acquire <名字>              直接买下任意房产（不花钱、不消耗许可）← 永久写入存档
+acquire <名字> rent         改成租下
+
+Venue（店铺）、Apartment（公寓）、Greenhouse（温室）三者都派生自 BaseProperty，
+所以 properties 一次列全三类，共 140 项。但其中**只有 13 间店铺是可收购的**
+（isAcquireable），其余都是 NPC 固定经营的店面，公寓和温室在实测存档里也全部
+不可收购。addvenue 走的开发选项只认店铺，碰不到另外两类；acquire 走
+PropertyManager.AddOwnedProperty，三类都能拿，租房也只有这一条路
+（PropertyManager.StartRenting）。
+
+许可是具体物品而不是等级门槛：BaseProperty.requiredPermit 指向某一个
+BusinessPermit，拿着 4 级许可也买不了要求 2 级的店铺。界面里有 spendingPermitText，
+说明走正规途径时许可会被消耗。properties 的许可列会在你手上有那张许可时打个 *。
+
+售价读的是 PropertyManager.GetBuyPrice()，不是资源上的 BuyCost 字段——后者给所有
+可收购店铺写的都是同一个数，像占位值。GetBuyPrice 的结果看起来是「当前估值」：
+已拥有的店铺报价明显高于条件相近的未拥有店铺，家具最多的那间报价最高。
+
 venues                      列出全部店铺、等级和归属（none / purchase / rent）
 addvenue <名字>             把某一间店铺划给你，名字写错会列出全部可选项
 allvenues                   把所有还不属于你的店铺一次全划给你  ← 永久写入存档
