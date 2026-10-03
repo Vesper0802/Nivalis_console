@@ -1,4 +1,4 @@
-﻿Nivalis Nights 控制台命令表（插件 v0.6.0，共 48 条命令）
+﻿Nivalis Nights 控制台命令表（插件 v0.6.0，共 51 条命令）
 ================================================================================
 
 基本用法
@@ -28,10 +28,39 @@ addmoney <数值>             增减金钱，负数为扣除
 furniture                   发放全部家具（走游戏的 AddAllFurniture）
 allfurniture                每种家具各发一件（走开发选项，和上一条实现不同，
                             两条都留着是因为不同版本里有时只有一条管用）
-clearitems                  清空背包                              ← 不可撤销
+storyitems                  列出剧情在盯的物品，标出你身上带着哪些，不改变任何状态
+clearitems                  清空背包，但保留剧情物品            ← 不可撤销
+clearitems all              连剧情物品一起清掉                  ← 不可撤销，慎用
+spoiled                     报告背包和各店里腐坏的食材，不改变任何状态
+spoiled clear               把腐坏的全部清掉
+spoiled sell                清掉并按残值把钱打给你
+spoiled clear <店名片段>    只清指定的店（背包始终包含在内）
+
+ItemType 上没有「剧情物品」这种标记，所以光看物品属性分不出来。真正的判据是
+ArticyGlobalInventoryLinker 里的 linkPairs（Articy 剧情变量 ↔ 物品类型映射表），
+而且它注册了 OnPlayerInventoryChanged：背包里少了某个物品，剧情变量会被同步
+改写，任务检查的标记就一起没了。这张表在实测存档里有 55 项，包括
+BusinessPermit1..4（经营许可）、ClemPackage、AvaBlackBox、BodyList、
+EldridgePhotos、SeafaringTreasure1..3、AnchorPin、EnchiridionFragment 等。
+
+所以 clearitems 默认保留这 55 项，并在清完后向游戏逐个核对它们是否真的还在——
+对不上会打 WARNING 并列出要补回的物品，而不是凭自己的记账说一句保护成功。
+身份读不出来的物品也一律保留：分不清剧情要不要它，不构成销毁它的理由。
+万一那张表读不出来（比如存档还没加载完），它会直接拒绝执行而不是当成「没有
+剧情物品」放心清空——那是两回事。要强制清空得明确写 clearitems all。
+
+好消息是这个联动是双向的：物品加回背包，剧情变量也会跟着置回。所以误删之后
+只要在存档前用 give 补回去就能救，storyitems 的输出里有对应的变量名。
+
+腐坏的那边大多会变成 RottenFood（腐烂的食物），残值 0，游戏里没有批量清理的
+界面。它的 Freshness 已经没有意义，所以 spoiled 是按物品类型抓它，而不是按
+新鲜度。sell 不是真实交易——没有渠道收购腐坏食物，那是插件按残值直接打钱，
+残值通常是 0，这时它会直说一文不值而不是假装卖掉了。
 
 完整物品表见 reference/items.txt，1313 项，每行第一列就是可直接粘贴的
-give 命令。带 NOT-STORABLE 标记的 213 项无法进入玩家背包。
+give 命令。带 NOT-STORABLE 标记的 213 项无法进入玩家背包；标 chilled 的需要
+冷藏（决定 restock 时进冰箱还是储物柜），标 storage+N / cold+N 的是能给店铺
+加储物容量的家具。
 
 
 购物清单与备货
