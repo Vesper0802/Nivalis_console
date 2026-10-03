@@ -322,18 +322,18 @@ internal static class Commands
                 print($"Bought {entries.Count} items for {total} cents. Money left: {inventory.Money}.");
             });
 
-        Add("clearitems", "clearitems", "Empties the player inventory.", (args, print) =>
-        {
-            var inventory = GameRefs.PlayerInventory;
-            if (inventory == null)
-            {
-                print("No PlayerInventory in the scene ??load a save first.");
-                return;
-            }
+        // Taking an item away also clears the Articy variable a quest reads, so the plain form
+        // keeps the items the story is watching and you have to ask for the rest.
+        Add("clearitems", "clearitems [all]",
+            "Empties the player inventory, keeping story items unless you say 'all'.",
+            (args, print) =>
+                StoryItems.Clear(args.Length > 0 &&
+                                 string.Equals(args[0], "all", StringComparison.OrdinalIgnoreCase),
+                                 print));
 
-            inventory.ClearItems();
-            print("Inventory cleared.");
-        });
+        Add("storyitems", "storyitems",
+            "Lists the items the story is watching, and which you are carrying.",
+            (args, print) => StoryItems.Run(print));
 
         Add("devmenu", "devmenu", "Opens the game's built-in developer option menu.", (args, print) =>
         {
@@ -526,6 +526,12 @@ internal static class Commands
 
         Add("skill", "skill [name] [level]", "Shows your skill levels, or raises one to a level.",
             (args, print) => Skills.Run(args, print));
+
+        // Spoiled stock is worth nothing but still takes up storage, and the game leaves it in
+        // place as RottenFood, which no screen clears in bulk.
+        Add("spoiled", "spoiled [clear|sell] [venue]",
+            "Reports food that has gone off in your bag and your venues, or bins it.",
+            (args, print) => Spoiled.Run(args, print));
 
         // A venue's fridge and cupboard capacities are the sum of its placed furniture, and the
         // per-item contribution is authored where no screen shows it.

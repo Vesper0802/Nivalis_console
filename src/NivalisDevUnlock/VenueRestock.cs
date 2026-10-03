@@ -290,7 +290,7 @@ internal static class VenueRestock
         catch { return "?"; }
     }
 
-    private static List<Venue> Owned(PlayerManager.Player player, string filter, Action<string> print)
+    internal static List<Venue> Owned(PlayerManager.Player player, string filter, Action<string> print)
     {
         var owned = new List<Venue>();
         try

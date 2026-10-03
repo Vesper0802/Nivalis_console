@@ -41,9 +41,17 @@ if ($procs) {
 
     $stuck = Get-GameProcesses
     if ($stuck) {
-        # Unity can leave a thread-less husk that Windows will not reap without a reboot.
-        # It is harmless apart from the file handle, which the rename below works around.
+        # A husk reports no threads, no handles and no working set, yet still keeps the DLLs it
+        # had loaded locked: a mapped image is a section reference rather than a handle, and
+        # something in the kernel is holding the dying process together. Stop-Process has
+        # nothing left to kill, so only a reboot clears them. The rename below steps around the
+        # one that matters here.
         Write-Host "pid $($stuck.Id -join ', ') is wedged in termination; continuing." -ForegroundColor Yellow
+        if ($stuck.Count -ge 5) {
+            # These also hold interop\Assembly-CSharp.dll, which has to be rewritten from
+            # scratch after a game update. That is the one job they will block outright.
+            Write-Host "  $($stuck.Count) husks have built up. Reboot before regenerating interop." -ForegroundColor DarkYellow
+        }
     } else {
         Write-Host 'Game closed.' -ForegroundColor Green
     }
