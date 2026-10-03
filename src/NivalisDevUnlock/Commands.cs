@@ -519,6 +519,9 @@ internal static class Commands
         Add("restock", "restock [name fragment]", "Stocks each owned venue's fridge and cupboard with what its menu needs.",
             (args, print) => VenueRestock.Run(args.Length > 0 ? string.Join(" ", args) : null, print));
 
+        Add("skill", "skill [name] [level]", "Shows your skill levels, or raises one to a level.",
+            (args, print) => Skills.Run(args, print));
+
         Add("venues", "venues", "Lists every venue and who owns it.", (args, print) =>
         {
             var venues = Venues();
