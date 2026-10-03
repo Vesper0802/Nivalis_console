@@ -1,0 +1,90 @@
+Doors To Yama 推荐菜单（Meridian Market，5 级）
+================================================================================
+数据来源：dumpmenus 导出的 BepInEx\nivalis-menus.txt（2026-10-03 13:44）
+评分由游戏自己的 CalculateRecipeJudgementBreakdown 算出，按当地人群占比加权。
+
+店铺条件
+--------------------------------------------------------------------------------
+地点          Meridian Market，tier 3，人口 60
+人群构成      Hipsters 占比 1.0（专营度偏好 0.34，价格敏感 0.33）
+              Workers  占比 0.7（专营度偏好 0.05，价格敏感 0.75）
+              Elite    占比 0.4（专营度偏好 0.85，价格敏感 0.05）
+当地偏好      Noodles、Meat、Mushroom
+菜单上限      20 道（5 级）
+储物容量      冰箱 160 + 储物柜 210 = 370
+候选菜        193 道（这家店的允许大类列表为空，即不限大类）
+
+关键约束不是菜单上限而是储物：游戏给每种食材的目标库存是 10 个，370 ÷ 10 =
+最多 37 种不同食材。按这个预算做穷举，13 道菜刚好吃满 37 种，再往上加菜只能靠
+重复食材硬塞，平均分从 0.958 一路掉到 20 道时的 0.922。所以推荐 13 道。
+
+菜品数与平均分的权衡（每一档都是该菜品数下的最优组合）
+--------------------------------------------------------------------------------
+ 道数   平均分   食材种数
+   4    0.977      12
+   6    0.971      18
+   8    0.968      25
+  10    0.964      30
+  12    0.960      34
+  13    0.958      37   ← 预算吃满，推荐
+  16    0.945      37
+  20    0.922      37
+
+推荐菜单（13 道，平均分 0.958，食材 37 种，与 NoodleBar 现有菜单零重复）
+--------------------------------------------------------------------------------
+评分   大类      英文名                    中文名          参考价
+0.986  Pizza     Pizza Creativo            创意米兰披萨     1266
+0.981  Meat      ColaChicken               可乐鸡           1554
+0.972  Meat      Veal Orloff               奥尔洛夫牛肉     1866
+0.970  Meat      Cloudplugs                云朵棉           1901
+0.960  Soup      Solyanka Soup             酸辣浓汤         2119
+0.958  Pizza     Pizza Speciale            精选披萨         2182
+0.958  Soup      Fennel Soup with Bacon    茴香培根汤       1430
+0.957  Salad     Eastern Salad             东方沙拉         2196
+0.949  Sandwich  Ramen Burger              拉面汉堡         2367
+0.948  Pizza     Meridian Pizza            子午披萨         1663
+0.941  Soup      Snake Soup                蛇肉汤           2371
+0.938  Drink     Spiced Shroom Coffee      五香蘑菇咖啡     1600
+0.937  Meat      Steak                     肉排             2495
+
+大类分布：Meat 4、Pizza 3、Soup 3、Salad 1、Sandwich 1、Drink 1。
+东方沙拉和五香蘑菇咖啡本来就在这家店的菜单上，不用动；其余 11 道是新加的。
+Sandwich 是 NoodleBar 不允许的大类，只有这家店能上，所以拉面汉堡放在这里。
+
+这份菜单的 37 种食材
+--------------------------------------------------------------------------------
+Asparagus         芦笋            Mayonnaise        蛋黄酱
+Bacon             培根            Milk              鲜奶
+Beef              牛肉            Mozarella         马苏里拉奶酪
+Black Mushroom    黑蘑菇          Onions            洋葱
+Black Soda        黑苏打          Parmesan          帕尔马干酪
+Buckwheat         荞麦            Peppers           胡椒粉
+Cabbage           卷心菜          Pizza Dough       披萨面团
+Chicken           鸡肉            Potatoes          土豆
+Cinnamon          肉桂            Prosciutto        意式火腿
+Coffee Beans      咖啡豆          Ramen Noodles     拉面面条
+Cream             奶油            Snake             蛇肉
+Cream Cheese      奶油芝士        Sour Cream        酸奶油
+Cucumbers         黄瓜            Spirulina         螺旋藻
+Eggs              蛋              Straw Mushrooms   草菇
+Fennel            茴香            Tomatoes          番茄
+Flour             面粉            Veal              小牛肉
+Ginger            生姜            Wolfberries       枸杞
+Hibiscus Flower   芙蓉花
+King Mushroom     杏鲍菇
+Lettuce           生菜
+
+食材不用自己买：菜单设好后在控制台跑 restock，它会直接把两个储物容器补满。
+
+为什么是这些菜
+--------------------------------------------------------------------------------
+三个人群的诉求是矛盾的：Workers 占比 0.7 且价格敏感度 0.75，Elite 占比虽只有 0.4
+但专营度偏好 0.85、几乎不看价。所以高分菜集中在「专营度高但定价不贵」这一带——
+创意米兰披萨专营度 1.0 而参考价只要 1266，是全场最高分的原因。
+
+食材预算也在推着选择走：黑蘑菇一种撑起 5 道菜，披萨面团撑起 3 道，鸡肉和牛肉各
+4 道。这种高复用正好和当地偏好 Meat、Mushroom 重合，所以省食材和拿高分在这家店
+是同向的，不冲突。
+
+菜单在游戏里只能手动设，没有对应的控制台命令——VenueAreaGhost 上没有可写的菜单
+接口，菜单项带定价是成对的结构。所以上面这份是照着抄的清单。
