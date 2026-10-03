@@ -68,6 +68,18 @@ setlevel all <等级>         把名下所有店一次设成某个等级
 dumpmenus                   把每家店的候选菜谱、食材和评分导出到
                             BepInEx\nivalis-menus.txt
 
+storage                     列出所有能给店铺加储物容量的家具，按单件容量排序
+
+店铺的冰箱和储物柜是两个互不相通的容器（FridgeInventory 收冷藏、CupboardInventory
+收常温），容量来自店里摆放家具的累加：每件家具的 ItemType 上有 basicStorage 和
+refridgeratedStorage 两个字段。所以不能把两边容量加起来算食材种数，要分开算。
+食材归哪边看 RequiresRefridgeration，dumpitems 导出里标 chilled。
+
+共 119 件物品带容量，按名字找会漏掉绝大多数（厨房橱柜、水槽、桌子都带）。
+冷藏首选 Deep_Freezer（高级冰柜）：200 容量 30000，单件容量和性价比都是全场第一。
+常温单件最大是 Island_W270cm_Set_03（200 容量 100000），但 Base_Cabinet_W90cm 系列
+40 容量只要 10000，性价比是它的两倍。详见 reference/menu-doorstoyama.txt。
+
 setlevel 走 VenueAreaGhost.SetLevel()，游戏会自己套用该等级的各项限制并触发等级
 变更事件，所以不是只改一个数字。执行后会打印新的菜单上限、员工上限和桌位上限。
 名字片段匹配到多家时它会列出来让你再具体一点，不会随便挑一家动手。

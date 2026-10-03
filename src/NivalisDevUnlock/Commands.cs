@@ -438,6 +438,11 @@ internal static class Commands
                     if (item.IsSeed) flags.Add("seed");
                     if (item.IsUseable) flags.Add("useable");
                     if (item.IsEquippable) flags.Add("equippable");
+                    // Which of a venue's two containers an ingredient lands in, and so which kind
+                    // of storage furniture a menu actually calls for.
+                    if (item.RequiresRefridgeration) flags.Add("chilled");
+                    if (item.basicStorage > 0) flags.Add($"storage+{item.basicStorage}");
+                    if (item.refridgeratedStorage > 0) flags.Add($"cold+{item.refridgeratedStorage}");
                     if (!item.IsPlayerStorable) flags.Add("NOT-STORABLE");
                 }
                 catch
@@ -521,6 +526,11 @@ internal static class Commands
 
         Add("skill", "skill [name] [level]", "Shows your skill levels, or raises one to a level.",
             (args, print) => Skills.Run(args, print));
+
+        // A venue's fridge and cupboard capacities are the sum of its placed furniture, and the
+        // per-item contribution is authored where no screen shows it.
+        Add("storage", "storage [filter]", "Lists furniture by how much venue storage it adds.",
+            (args, print) => Storage.Run(args, print));
 
         Add("refuel", "refuel", "Fills the boat's tank, wherever the boat is.",
             (args, print) => BoatFuel.Run(print));

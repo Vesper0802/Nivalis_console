@@ -1,7 +1,8 @@
-Doors To Yama 推荐菜单（Meridian Market，5 级）
+Doors To Yama 推荐菜单与储物规划（Meridian Market，5 级）
 ================================================================================
-数据来源：dumpmenus 导出的 BepInEx\nivalis-menus.txt（2026-10-03 13:44）
-评分由游戏自己的 CalculateRecipeJudgementBreakdown 算出，按当地人群占比加权。
+数据来源：dumpmenus 的 BepInEx\nivalis-menus.txt、dumpitems 的 nivalis-items.txt、
+storage 命令的输出（均为 2026-10-03）。评分由游戏自己的
+CalculateRecipeJudgementBreakdown 算出，按当地人群占比加权。
 
 店铺条件
 --------------------------------------------------------------------------------
@@ -11,80 +12,110 @@ Doors To Yama 推荐菜单（Meridian Market，5 级）
               Elite    占比 0.4（专营度偏好 0.85，价格敏感 0.05）
 当地偏好      Noodles、Meat、Mushroom
 菜单上限      20 道（5 级）
-储物容量      冰箱 160 + 储物柜 210 = 370
 候选菜        193 道（这家店的允许大类列表为空，即不限大类）
+储物          冰箱 160 / 储物柜 210
 
-关键约束不是菜单上限而是储物：游戏给每种食材的目标库存是 10 个，370 ÷ 10 =
-最多 37 种不同食材。按这个预算做穷举，13 道菜刚好吃满 37 种，再往上加菜只能靠
-重复食材硬塞，平均分从 0.958 一路掉到 20 道时的 0.922。所以推荐 13 道。
-
-菜品数与平均分的权衡（每一档都是该菜品数下的最优组合）
+容量怎么算（这一段是前面算错过的地方）
 --------------------------------------------------------------------------------
- 道数   平均分   食材种数
-   4    0.977      12
-   6    0.971      18
-   8    0.968      25
-  10    0.964      30
-  12    0.960      34
-  13    0.958      37   ← 预算吃满，推荐
-  16    0.945      37
-  20    0.922      37
+VenueAreaGhost 下挂一个 VenueInventory，里面是两个互不相通的 ItemContainer：
+FridgeInventory 收冷藏食材，CupboardInventory 收常温食材。导出里两个都显示
+coldCap=0 正是因为它们各自只用自己的 NormalCapacity 计数，冷藏/常温的区分体现在
+「东西进哪个容器」，而不是一个容器内部分区。
 
-推荐菜单（13 道，平均分 0.958，食材 37 种，与 NoodleBar 现有菜单零重复）
+所以不能把两边加起来算：370 的总容量不等于 37 种食材随便放，而是
+冷藏 16 种 + 常温 21 种，配比是固定的。食材归哪边看 ItemType.RequiresRefridgeration
+（dumpitems 导出里标 chilled），游戏对每种食材的目标库存是 10 个。
+
+容量来自摆放的家具，不是等级直接给的：每件家具的 ItemType 上有 basicStorage 和
+refridgeratedStorage 两个字段，摆进店里就累加到对应容器。升级之所以也能涨容量，
+是因为解锁了更多摆放位置。
+
+储物家具怎么选（storage 命令可随时重列，共 119 件物品带容量）
+--------------------------------------------------------------------------------
+冷藏首选，没有第二选择：
+  Deep_Freezer [高级冰柜]          200 冷藏   30000   give 1ccd7f71 1
+  单件容量并列全场第一，性价比全场第一（每万 67）。同样 200 容量的
+  Large_Fridge_with_Groceries 要 60000，整整贵一倍。
+
+常温，看你是想少摆几件还是想省钱：
+  Island_W270cm_Set_03 [三件套厨房岛台]   200 常温  100000  give fd6cbbd3 1
+  Base_Cabinet_W90cm_* [嵌入式底部橱柜]    40 常温   10000  （12 个外观版本容量相同）
+  橱柜每万 40 容量，是岛台的两倍效率；五件顶一个岛台，省 50000。
+
+要避开的：Furniture_wardrobe [衣柜] 30 容量要 90000（每万 3），
+Trailer_Sink [拖车水槽] 15 容量要 40000。这类是装饰家具顺带有点容量。
+
+按名字找储物家具会漏掉绝大多数：厨房橱柜、水槽、桌子、洗涤盆都带容量，
+名字里看不出来。用 storage 命令扫字段才全。
+
+要不要买（结论：想上大菜单才值）
+--------------------------------------------------------------------------------
+缺口全在冷藏这边。常温 210 够用到 21 种，基本不是瓶颈。
+
+ 方案                                     花费     13 道菜   20 道菜
+ 不花钱（冷藏 16 / 常温 21）                  0     0.9543    0.9229
+ +1 Deep_Freezer（冷藏 36 / 常温 21）     30000     0.9586    冷藏够了但常温差 3 种
+ +1 Deep_Freezer +1 Base_Cabinet_W90cm   40000     0.9586    0.9484
+
+菜品数越多平均分越低——高分菜是有限的，第 14 道往后只能往下挑。所以加容量不提分，
+只是让菜单能更宽。花 30000 在 13 道菜上只换来 0.9543 → 0.9586；真正的差别在
+20 道菜：0.9229 → 0.9484。要上满 20 道就连带再买一个 10000 的橱柜。
+
+推荐菜单 A：13 道，不花钱（平均分 0.9543，冷藏 16 / 常温 20）
 --------------------------------------------------------------------------------
 评分   大类      英文名                    中文名          参考价
 0.986  Pizza     Pizza Creativo            创意米兰披萨     1266
 0.981  Meat      ColaChicken               可乐鸡           1554
 0.972  Meat      Veal Orloff               奥尔洛夫牛肉     1866
 0.970  Meat      Cloudplugs                云朵棉           1901
-0.960  Soup      Solyanka Soup             酸辣浓汤         2119
 0.958  Pizza     Pizza Speciale            精选披萨         2182
 0.958  Soup      Fennel Soup with Bacon    茴香培根汤       1430
 0.957  Salad     Eastern Salad             东方沙拉         2196
-0.949  Sandwich  Ramen Burger              拉面汉堡         2367
 0.948  Pizza     Meridian Pizza            子午披萨         1663
 0.941  Soup      Snake Soup                蛇肉汤           2371
+0.941  Drink     Mushroom Hot Cocoa        蘑菇热可可       1540
 0.938  Drink     Spiced Shroom Coffee      五香蘑菇咖啡     1600
 0.937  Meat      Steak                     肉排             2495
+0.919  Sandwich  Subland                   美味园           2309
 
-大类分布：Meat 4、Pizza 3、Soup 3、Salad 1、Sandwich 1、Drink 1。
-东方沙拉和五香蘑菇咖啡本来就在这家店的菜单上，不用动；其余 11 道是新加的。
-Sandwich 是 NoodleBar 不允许的大类，只有这家店能上，所以拉面汉堡放在这里。
+大类：Meat 4、Pizza 3、Drink 2、Soup 2、Salad 1、Sandwich 1。
+东方沙拉和五香蘑菇咖啡本来就在菜单上，不用动。
 
-这份菜单的 37 种食材
+推荐菜单 B：13 道，买 1 个高级冰柜（平均分 0.9586，冷藏 23 / 常温 18）
 --------------------------------------------------------------------------------
-Asparagus         芦笋            Mayonnaise        蛋黄酱
-Bacon             培根            Milk              鲜奶
-Beef              牛肉            Mozarella         马苏里拉奶酪
-Black Mushroom    黑蘑菇          Onions            洋葱
-Black Soda        黑苏打          Parmesan          帕尔马干酪
-Buckwheat         荞麦            Peppers           胡椒粉
-Cabbage           卷心菜          Pizza Dough       披萨面团
-Chicken           鸡肉            Potatoes          土豆
-Cinnamon          肉桂            Prosciutto        意式火腿
-Coffee Beans      咖啡豆          Ramen Noodles     拉面面条
-Cream             奶油            Snake             蛇肉
-Cream Cheese      奶油芝士        Sour Cream        酸奶油
-Cucumbers         黄瓜            Spirulina         螺旋藻
-Eggs              蛋              Straw Mushrooms   草菇
-Fennel            茴香            Tomatoes          番茄
-Flour             面粉            Veal              小牛肉
-Ginger            生姜            Wolfberries       枸杞
-Hibiscus Flower   芙蓉花
-King Mushroom     杏鲍菇
-Lettuce           生菜
+在 A 的基础上换三道：Subland、Steak、五香蘑菇咖啡 换成
+0.960  Soup      Solyanka Soup             酸辣浓汤         2119
+0.949  Sandwich  Ramen Burger              拉面汉堡         2367
+0.941  Sandwich  Stacks                    三层堡           1819
 
-食材不用自己买：菜单设好后在控制台跑 restock，它会直接把两个储物容器补满。
+完整的 13 道：创意米兰披萨、可乐鸡、奥尔洛夫牛肉、云朵棉、酸辣浓汤、精选披萨、
+茴香培根汤、东方沙拉、拉面汉堡、三层堡、子午披萨、蛇肉汤、蘑菇热可可。
+大类：Meat 3、Pizza 3、Soup 3、Sandwich 2、Salad 1、Drink 1。
+
+推荐菜单 C：20 道，买冰柜加橱柜（平均分 0.9484，冷藏 31 / 常温 24）
+--------------------------------------------------------------------------------
+在 B 的 13 道里去掉蘑菇热可可之外全部保留，再加：
+0.938  Drink     Spiced Shroom Coffee      五香蘑菇咖啡     1600
+0.937  Meat      Steak                     肉排             2495
+0.930  Snack     Kushiyaki                 日式烤串         2798
+0.929  Seafood   Mini Hotpot               小火锅           2071
+0.925  Seafood   Steamed Sticky Rice with Crab  糯米蟹      2172
+0.924  Sandwich  Mutant Burger             变种汉堡         2195
+0.923  Soup      Beef Ramen                牛肉拉面         2475
+
+大类扩到 8 类：Soup 4、Meat 4、Pizza 3、Sandwich 3、Drink 2、Seafood 2、
+Salad 1、Snack 1。注意糯米蟹和 NoodleBar 现有菜单重复，想完全错开就换掉它。
 
 为什么是这些菜
 --------------------------------------------------------------------------------
-三个人群的诉求是矛盾的：Workers 占比 0.7 且价格敏感度 0.75，Elite 占比虽只有 0.4
+三个人群的诉求是矛盾的：Workers 占比 0.7 且价格敏感度 0.75，Elite 占比只有 0.4
 但专营度偏好 0.85、几乎不看价。所以高分菜集中在「专营度高但定价不贵」这一带——
-创意米兰披萨专营度 1.0 而参考价只要 1266，是全场最高分的原因。
+创意米兰披萨专营度满值 1.0 而参考价只要 1266，是全场最高分的原因。
 
-食材预算也在推着选择走：黑蘑菇一种撑起 5 道菜，披萨面团撑起 3 道，鸡肉和牛肉各
-4 道。这种高复用正好和当地偏好 Meat、Mushroom 重合，所以省食材和拿高分在这家店
+食材复用也在推着选择走：黑蘑菇一种撑起多道菜，披萨面团撑起 3 道，鸡肉和牛肉各
+3-4 道。这种高复用正好和当地偏好 Meat、Mushroom 重合，所以省食材和拿高分在这家店
 是同向的，不冲突。
 
-菜单在游戏里只能手动设，没有对应的控制台命令——VenueAreaGhost 上没有可写的菜单
-接口，菜单项带定价是成对的结构。所以上面这份是照着抄的清单。
+菜单只能在游戏里手动设，没有对应的控制台命令——VenueAreaGhost 上没有可写的菜单
+接口，菜单项带定价是成对的结构。所以上面几份是照着抄的清单。食材不用买，菜单设好
+后跑 restock 会直接补满两个容器。
