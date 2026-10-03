@@ -43,6 +43,10 @@ internal static class VenueRestock
             }
         }
 
+        // These two are static settings on the manager, not per-venue state.
+        print($"Restocking {venues.Count} venues. The game stocks " +
+              $"{N(() => ShoppingListManager.demandAmount)} of each ingredient and flags a venue " +
+              $"below {N(() => ShoppingListManager.itemThreshold)}.");
         log.LogInfo($"restock: {venues.Count} venues against {ingredients.Count} ingredient types");
 
         var totalItems = 0;
@@ -84,6 +88,9 @@ internal static class VenueRestock
 
             var cold = new List<ItemTypeAmount>();
             var dry = new List<ItemTypeAmount>();
+            var target = 0;
+            var kinds = 0;
+
             foreach (var item in ingredients)
             {
                 int need;
@@ -91,8 +98,14 @@ internal static class VenueRestock
                 {
                     if (!demand.ContainsKey(item))
                         continue;
+
                     var data = demand[item];
                     need = data?.MissingItems ?? 0;
+
+                    // The menu's full appetite, not just today's shortfall, which is what
+                    // decides whether a venue's storage can ever hold its menu.
+                    target += data?.demand ?? 0;
+                    kinds++;
                 }
                 catch (Exception e)
                 {
@@ -110,6 +123,13 @@ internal static class VenueRestock
                 (refrigerated ? cold : dry).Add(new ItemTypeAmount(item, need));
             }
 
+            // The demand list only carries ingredients that have fallen below the threshold, so
+            // this is today's shopping list rather than the menu's full appetite.
+            var storage = Capacity(ghost.FridgeInventory) + Capacity(ghost.CupboardInventory);
+            if (kinds > 0)
+                print($"  {venue.name}: short {target} units across {kinds} kinds, " +
+                      $"storage holds {(storage < 0 ? "unlimited" : storage.ToString())}.");
+
             if (cold.Count == 0 && dry.Count == 0)
             {
                 print($"  {venue.name}: already stocked.");
@@ -121,7 +141,7 @@ internal static class VenueRestock
 
             totalItems += added;
             totalKinds += cold.Count + dry.Count;
-            print($"  {venue.name}: +{added} items across {cold.Count + dry.Count} kinds " +
+            print($"  {venue.name}: +{added} items for the {cold.Count + dry.Count} kinds it was short " +
                   $"({cold.Count} chilled, {dry.Count} dry)");
         }
 
@@ -130,8 +150,10 @@ internal static class VenueRestock
     }
 
     /// <summary>
-    /// TryAdd reports nothing about what fitted, so the container is measured either side of the
-    /// call; a shortfall means the venue is out of storage rather than that the command failed.
+    /// This TryAdd overload is all or nothing: hand it more than fits and it stores none of it.
+    /// So each kind goes in on its own call, trimmed to the room left, which keeps one oversized
+    /// ingredient from costing the venue everything else it asked for. TryAdd reports nothing
+    /// about what it took either, so the container is measured on both sides of the call.
     /// </summary>
     private static int Fill(ItemContainer container, List<ItemTypeAmount> items, string label,
         string venueName, Action<string> print)
@@ -144,28 +166,128 @@ internal static class VenueRestock
         }
 
         var wanted = items.Sum(i => i.amount);
-        var before = Count(container);
+        var added = 0;
+        var short_of = new List<ItemTypeAmount>();
 
+        foreach (var item in items)
+        {
+            var room = Room(container);
+            if (room == 0)
+            {
+                short_of.Add(item);
+                continue;
+            }
+
+            var amount = room < 0 ? item.amount : Math.Min(item.amount, room);
+            var before = Count(container);
+
+            try
+            {
+                container.TryAdd(new Il2CppReferenceArray<ItemTypeAmount>(
+                    new[] { new ItemTypeAmount(item.type, amount) }));
+            }
+            catch (Exception e)
+            {
+                Plugin.Instance.Log.LogWarning(
+                    $"restock: {label} TryAdd failed for {Name(item.type)} at {venueName}: {e.Message}");
+                short_of.Add(item);
+                continue;
+            }
+
+            var took = Count(container) - before;
+            added += took;
+            if (took < item.amount)
+                short_of.Add(new ItemTypeAmount(item.type, item.amount - took));
+        }
+
+        if (added < wanted)
+            print($"  {venueName}: {label} took {added} of {wanted}, still short {Kinds(short_of)} — " +
+                  $"{State(container)}.");
+
+        return added;
+    }
+
+    /// <summary>
+    /// How many more items the container will hold, or -1 when it reports no limit. Only the
+    /// normal capacity is consulted: every venue container reads back a refrigerated capacity of
+    /// zero while happily storing chilled goods, so that figure is not the limit in play.
+    /// </summary>
+    private static int Room(ItemContainer container)
+    {
         try
         {
-            container.TryAdd(new Il2CppReferenceArray<ItemTypeAmount>(items.ToArray()));
+            var capacity = container.NormalCapacity;
+            if (!capacity.HasValue)
+                return -1;
+
+            return Math.Max(capacity.Value - container.ItemCount, 0);
         }
         catch (Exception e)
         {
-            Plugin.Instance.Log.LogWarning($"restock: {label} TryAdd failed for {venueName}: {e.Message}");
-            return 0;
+            Plugin.Instance.Log.LogWarning($"restock: could not read capacity: {e.Message}");
+            return -1;
         }
-
-        var added = Count(container) - before;
-        if (added < wanted)
-            print($"  {venueName}: {label} took {added} of {wanted} — out of space.");
-        return added;
     }
 
     private static int Count(ItemContainer container)
     {
         try { return container.ItemCount; }
         catch { return 0; }
+    }
+
+    /// <summary>How much the container holds in total, or -1 when it reports no limit.</summary>
+    private static int Capacity(ItemContainer container)
+    {
+        try
+        {
+            var capacity = container.NormalCapacity;
+            return capacity.HasValue ? capacity.Value : -1;
+        }
+        catch { return -1; }
+    }
+
+    private static string N(Func<int?> read)
+    {
+        try { return read()?.ToString() ?? "?"; }
+        catch { return "?"; }
+    }
+
+    /// <summary>
+    /// What the container says about itself, so a shortfall can be told apart from a command that
+    /// simply failed. A capacity of null is the game's way of saying unlimited.
+    /// </summary>
+    private static string State(ItemContainer container)
+    {
+        try
+        {
+            return $"holding {container.ItemCount} of {Cap(container.NormalCapacity)} " +
+                   $"in {container.StackCount} stacks";
+        }
+        catch (Exception e)
+        {
+            return $"could not read its capacity ({e.Message})";
+        }
+    }
+
+    private static string Cap(Il2CppSystem.Nullable<int> capacity)
+    {
+        try { return capacity.HasValue ? capacity.Value.ToString() : "unlimited"; }
+        catch { return "?"; }
+    }
+
+    /// <summary>Names the items, because knowing which one will not fit is the point.</summary>
+    private static string Kinds(List<ItemTypeAmount> items)
+    {
+        var names = items.Select(i => Name(i.type)).ToList();
+        return names.Count <= 4
+            ? string.Join(", ", names)
+            : $"{string.Join(", ", names.Take(4))} and {names.Count - 4} more";
+    }
+
+    private static string Name(ItemType type)
+    {
+        try { return type.name; }
+        catch { return "?"; }
     }
 
     private static List<Venue> Owned(PlayerManager.Player player, string filter, Action<string> print)

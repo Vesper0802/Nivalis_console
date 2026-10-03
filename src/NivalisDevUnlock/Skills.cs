@@ -96,11 +96,11 @@ internal static class Skills
     private static void Raise(SkillLevelController controller, PlayerManager.Player player,
         SkillDefinition skill, int target, Action<string> print)
     {
+        // Cooking, Serving and Cleaning are authored against the staff level data, but the player
+        // earns them as well, so sharing that data is worth a note rather than a refusal. The
+        // level is read back afterwards either way, which is what settles whether it took.
         if (IsStaffSkill(skill))
-        {
-            print($"{Id(skill)} is a staff skill, not one of yours — it belongs to an employee.");
-            return;
-        }
+            print($"{Id(skill)} shares the staff level data, so it may belong to an employee.");
 
         var thresholds = Thresholds(skill);
         if (!thresholds.TryGetValue(target, out var required))
@@ -168,7 +168,7 @@ internal static class Skills
         var level = Level(controller, skill);
         var have = Experience(controller, skill);
         var localised = Localised(skill);
-        var owner = IsStaffSkill(skill) ? "  (staff)" : "";
+        var owner = IsStaffSkill(skill) ? "  (staff levels)" : "";
 
         // The top level is the highest number the game authored, which is one less than the count
         // because the levels start at zero.
@@ -243,7 +243,10 @@ internal static class Skills
         catch { return 0f; }
     }
 
-    /// <summary>Staff skills share the system but are read off an employee, not off the player.</summary>
+    /// <summary>
+    /// Whether the skill's levels come from the staff set. The player shares some of these, so
+    /// this marks where a level might not be the player's rather than ruling it out.
+    /// </summary>
     private static bool IsStaffSkill(SkillDefinition skill)
     {
         var levels = LevelData(skill);

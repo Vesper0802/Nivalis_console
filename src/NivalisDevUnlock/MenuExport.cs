@@ -54,7 +54,8 @@ internal static class MenuExport
         sb.AppendLine($"# {venues.Count} venues ({owned.Count} owned), {recipes.Count} recipes, " +
                       $"{demographics.Count} location demographics");
         sb.AppendLine("# A venue may serve any unlocked recipe whose type is in its allowed types;");
-        sb.AppendLine("# the per-venue 'recipes' array is only authored for fixed-menu chains.");
+        sb.AppendLine("# an empty type list restricts nothing, and the per-venue 'recipes' array");
+        sb.AppendLine("# is only authored for fixed-menu chains.");
         sb.AppendLine("# score = representation-weighted FinalScore over the location's demographics.");
         sb.AppendLine();
 
@@ -292,6 +293,11 @@ internal static class MenuExport
                     list.Add(r);
             return list;
         }
+
+        // No authored types is the venue saying it restricts nothing, not that it allows nothing;
+        // Doors To Yama has an empty array and serves a salad and a drink side by side.
+        if (allowed.Count == 0)
+            return all.ToList();
 
         return all.Where(r =>
         {

@@ -506,7 +506,7 @@ internal static class Commands
             "Unlocks vendors and buyable properties. Permanent.");
         AddDevAlias("unlockboat", "Unlock boat", "unlockboat", "Gives you the boat.");
         AddDevAlias("venuelevel", "Set Venue Level", "venuelevel <1-5>",
-            "Sets the current venue's level.");
+            "Sets the level of the venue you are standing in.");
         AddDevAlias("allfurniture", "Add All Furniture Items", "allfurniture",
             "Adds one of every furniture item to your inventory.");
         AddDevAlias("farmfast", "Speed up farming", "farmfast", "Advances crop growth.");
@@ -521,6 +521,40 @@ internal static class Commands
 
         Add("skill", "skill [name] [level]", "Shows your skill levels, or raises one to a level.",
             (args, print) => Skills.Run(args, print));
+
+        Add("refuel", "refuel", "Fills the boat's tank, wherever the boat is.",
+            (args, print) => BoatFuel.Run(print));
+
+        // The dev option only reaches the venue you are standing in, and walking to each one to
+        // level it is the slow part.
+        Add("setlevel", "setlevel <name fragment|all> <level>",
+            "Sets any venue's level from anywhere. 'all' does every venue you own.",
+            (args, print) =>
+        {
+            if (args.Length < 2 || !int.TryParse(args[^1], out var level))
+            {
+                print("Usage: setlevel <name fragment|all> <level>. Use 'venues' for the names.");
+                return;
+            }
+
+            var manager = GameRefs.Find<VenueManager>();
+            if (manager == null)
+            {
+                print("No VenueManager in the scene — load a save first.");
+                return;
+            }
+
+            var fragment = string.Join(" ", args[..^1]);
+            var targets = Targets(manager, fragment, print);
+            if (targets == null)
+                return;
+
+            foreach (var venue in targets)
+                SetVenueLevel(manager, venue, level, print);
+
+            if (targets.Count > 1)
+                print($"Set {targets.Count} venues to level {level}.");
+        });
 
         Add("venues", "venues", "Lists every venue and who owns it.", (args, print) =>
         {
@@ -688,6 +722,85 @@ internal static class Commands
     }
 
     /// <summary>Venues are ScriptableObjects, so every one in the build is reachable.</summary>
+    /// <summary>
+    /// The venues a level change should apply to. 'all' means the ones you own, because a level
+    /// only means anything on a venue that is yours.
+    /// </summary>
+    private static List<Venue> Targets(VenueManager manager, string fragment, Action<string> print)
+    {
+        if (string.Equals(fragment, "all", StringComparison.OrdinalIgnoreCase))
+        {
+            var owned = new List<Venue>();
+            try
+            {
+                var player = GameRefs.Find<PlayerManager>()?.LocalPlayer;
+                var results = new Il2CppSystem.Collections.Generic.List<Venue>();
+                player?.GetOwnedVenues(results);
+                for (var i = 0; i < results.Count; i++)
+                    if (results[i] != null)
+                        owned.Add(results[i]);
+            }
+            catch (Exception e)
+            {
+                print($"Could not list your venues: {e.Message}");
+                return null;
+            }
+
+            if (owned.Count == 0)
+            {
+                print("You do not own any venues. Use 'venues' to check.");
+                return null;
+            }
+
+            return owned.OrderBy(v => v.name, StringComparer.OrdinalIgnoreCase).ToList();
+        }
+
+        var matches = Venues()
+            .Where(v => v.name.Contains(fragment, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        if (matches.Count == 1)
+            return matches;
+
+        print(matches.Count == 0
+            ? $"No venue matches '{fragment}'. Use 'venues' for the list."
+            : $"'{fragment}' matches {matches.Count} venues — be more specific, or use 'all':");
+        foreach (var venue in matches.Take(20))
+            print($"  {venue.name}");
+        return null;
+    }
+
+    private static void SetVenueLevel(VenueManager manager, Venue venue, int level, Action<string> print)
+    {
+        VenueAreaGhost ghost;
+        try { ghost = manager.GetRuntimeData(venue); }
+        catch (Exception e)
+        {
+            print($"  {venue.name}: could not reach it ({e.Message}).");
+            return;
+        }
+
+        if (ghost == null)
+        {
+            print($"  {venue.name}: no runtime data, so its level cannot be set.");
+            return;
+        }
+
+        try
+        {
+            var before = ghost.CurrentLevel;
+            // SetLevel rather than the CurrentLevel setter, so the game applies the level's own
+            // limits and raises its level-changed event.
+            ghost.SetLevel(level);
+            print($"  {venue.name}: level {before} -> {ghost.CurrentLevel}, menu limit " +
+                  $"{ghost.MenuLimit}, staff {ghost.StaffLimit}, tables {ghost.TableLimit}.");
+        }
+        catch (Exception e)
+        {
+            print($"  {venue.name}: could not set the level ({e.Message}).");
+        }
+    }
+
     private static List<Venue> Venues()
     {
         var found = new List<Venue>();
