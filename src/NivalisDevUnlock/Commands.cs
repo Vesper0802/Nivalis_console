@@ -516,6 +516,9 @@ internal static class Commands
         Add("dumpmenus", "dumpmenus", "Writes every venue's candidate recipes, ingredients and scores to a file.",
             (args, print) => MenuExport.Run(print));
 
+        Add("restock", "restock [name fragment]", "Stocks each owned venue's fridge and cupboard with what its menu needs.",
+            (args, print) => VenueRestock.Run(args.Length > 0 ? string.Join(" ", args) : null, print));
+
         Add("venues", "venues", "Lists every venue and who owns it.", (args, print) =>
         {
             var venues = Venues();

@@ -1,4 +1,4 @@
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 namespace NivalisDevUnlock;
 
-[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.5.0")]
+[BepInPlugin(Guid, "Nivalis Nights Dev Unlock", "0.6.0")]
 public class Plugin : BasePlugin
 {
     public const string Guid = "nivalisnights.devunlock";
@@ -52,12 +52,13 @@ public class Plugin : BasePlugin
         DecayFreeze.Enabled = FreezeDecay.Value;
 
         ClassInjector.RegisterTypeInIl2Cpp<ConsoleWindow>();
-        var host = new GameObject(nameof(ConsoleWindow));
-        UnityEngine.Object.DontDestroyOnLoad(host);
-        host.hideFlags = HideFlags.HideAndDontSave;
-        host.AddComponent<ConsoleWindow>();
 
-        Log.LogInfo($"Dev mode forced on. Press {ToggleKey.Value} in game to open the console.");
+        // Creating the host here gives a console on the title screen, but it fails if Unity is
+        // not ready yet, so the scene hooks stay armed to retry once the game is running.
+        ConsoleHost.Arm(harmony);
+        ConsoleHost.Ensure();
+
+        Log.LogInfo("Dev mode forced on.");
     }
 
     private void Force(Harmony harmony, System.Type type, string getter)
@@ -73,7 +74,7 @@ public class Plugin : BasePlugin
         var target = AccessTools.Method(type, getter);
         if (target == null)
         {
-            Log.LogError($"Could not find {type.FullName}.{getter} �?the game probably updated.");
+            Log.LogError($"Could not find {type.FullName}.{getter} 鈥?the game probably updated.");
             return;
         }
 
@@ -81,9 +82,14 @@ public class Plugin : BasePlugin
         Log.LogInfo($"Patched {type.Name}.{getter}");
     }
 
+    /// <summary>
+    /// Doubles as a fallback trigger for the console. These getters are read from the game's own
+    /// managed code, which is the only kind of call a Harmony detour on an il2cpp method sees.
+    /// </summary>
     private static bool ReturnTrue(ref bool __result)
     {
         __result = true;
+        ConsoleHost.Ensure();
         return false;
     }
 }
