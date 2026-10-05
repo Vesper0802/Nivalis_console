@@ -123,11 +123,12 @@ internal static class VenueRestock
                 (refrigerated ? cold : dry).Add(new ItemTypeAmount(item, need));
             }
 
-            // The demand list only carries ingredients that have fallen below the threshold, so
-            // this is today's shopping list rather than the menu's full appetite.
+            // This is the menu's full appetite, not the shortfall: target sums every kind's
+            // demand whether or not any is missing. The two numbers differ by a lot, so saying
+            // "short" here would contradict the count of items actually added below.
             var storage = Capacity(ghost.FridgeInventory) + Capacity(ghost.CupboardInventory);
             if (kinds > 0)
-                print($"  {venue.name}: short {target} units across {kinds} kinds, " +
+                print($"  {venue.name}: menu wants {target} units across {kinds} kinds, " +
                       $"storage holds {(storage < 0 ? "unlimited" : storage.ToString())}.");
 
             if (cold.Count == 0 && dry.Count == 0)
@@ -141,8 +142,8 @@ internal static class VenueRestock
 
             totalItems += added;
             totalKinds += cold.Count + dry.Count;
-            print($"  {venue.name}: +{added} items for the {cold.Count + dry.Count} kinds it was short " +
-                  $"({cold.Count} chilled, {dry.Count} dry)");
+            print($"  {venue.name}: +{added} items topping up {cold.Count + dry.Count} kinds that " +
+                  $"had run low ({cold.Count} chilled, {dry.Count} dry)");
         }
 
         print($"Restocked {venues.Count - skipped} venues: {totalItems} items, {totalKinds} entries." +
