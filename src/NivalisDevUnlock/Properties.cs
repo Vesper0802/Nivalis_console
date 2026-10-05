@@ -183,6 +183,50 @@ internal static class Properties
         catch (Exception e) { print($"Could not take {target.name}: {e.Message}"); }
     }
 
+    /// <summary>
+    /// The property rows for the item dump, in the same five columns the items use, so one search
+    /// of one file turns up both a dish and the venue that could serve it. Venues are given
+    /// 'addvenue', which goes through the game's own dev option; apartments and greenhouses only
+    /// 'acquire' can reach.
+    /// </summary>
+    public static List<string> DumpRows()
+    {
+        var rows = new List<string>();
+
+        foreach (var property in All().OrderBy(Kind).ThenBy(p => Buy(p)))
+        {
+            var kind = Kind(property);
+            var flags = new List<string> { kind };
+
+            var where = Where(property);
+            if (where != "-")
+                flags.Add($"at={where}");
+
+            var permit = Permit(property, out var have);
+            if (permit != "none")
+            {
+                flags.Add($"permit={permit}");
+                if (have)
+                    flags.Add("have-permit");
+            }
+
+            var rent = Rent(property);
+            if (rent > 0)
+                flags.Add($"rent={rent}");
+
+            if (Owned(property) == "yours")
+                flags.Add("yours");
+            if (!Acquireable(property))
+                flags.Add("NOT-ACQUIREABLE");
+
+            var command = kind == "venue" ? $"addvenue {property.name}" : $"acquire {property.name}";
+            rows.Add(string.Join("\t", command, property.name, Localised(property), Buy(property),
+                                 string.Join(",", flags)));
+        }
+
+        return rows;
+    }
+
     private static List<BaseProperty> All()
     {
         var found = new List<BaseProperty>();

@@ -419,10 +419,11 @@ internal static class Commands
             var items = GameRefs.ItemTypes();
 
             var sb = new StringBuilder();
-            sb.AppendLine($"Nivalis Nights item types ??{items.Length} entries");
+            sb.AppendLine($"Nivalis Nights item types - {items.Length} entries, then every property");
             sb.AppendLine("Paste a COMMAND cell into the console and press Enter; change the trailing number for a different amount.");
             sb.AppendLine("For details run iteminfo with the same code, e.g. iteminfo 04f867e4");
             sb.AppendLine("Rows flagged NOT-STORABLE cannot be placed in the player inventory.");
+            sb.AppendLine("PRICE is in cents throughout, so 10000 is 100.");
             sb.AppendLine();
             sb.AppendLine("COMMAND\tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
 
@@ -463,10 +464,23 @@ internal static class Commands
                   .AppendLine();
             }
 
+            // Venues go in the same file and the same columns as the items, because looking up a
+            // venue and looking up an ingredient are the same job and splitting them across two
+            // files means searching twice.
+            var properties = Properties.DumpRows();
+            sb.AppendLine();
+            sb.AppendLine($"Properties - {properties.Count} entries. Paste a COMMAND cell the same way.");
+            sb.AppendLine("'at=' is the district. 'permit=' is a specific item, not a level, and");
+            sb.AppendLine("'have-permit' means you are carrying it. NOT-ACQUIREABLE ones are NPC-run.");
+            sb.AppendLine();
+            sb.AppendLine("COMMAND\tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
+            foreach (var row in properties)
+                sb.AppendLine(row);
+
             try
             {
                 File.WriteAllText(path, sb.ToString(), new UTF8Encoding(true));
-                print($"Wrote {items.Length} items to {path}");
+                print($"Wrote {items.Length} items and {properties.Count} properties to {path}");
             }
             catch (Exception e)
             {
