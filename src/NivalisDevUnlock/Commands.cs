@@ -934,7 +934,9 @@ internal static class Commands
 
     public static void Execute(string line, Action<string> print)
     {
-        var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        // The commands are written inside code fences in the documentation, so copying one out
+        // tends to bring a backtick along with it. Nothing here takes a backtick as an argument.
+        var parts = line.Trim().Trim('`').Split(' ', StringSplitOptions.RemoveEmptyEntries);
         if (parts.Length == 0)
             return;
 

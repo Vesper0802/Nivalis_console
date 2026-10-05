@@ -29,7 +29,7 @@ furniture                   发放全部家具（走游戏的 AddAllFurniture）
 allfurniture                每种家具各发一件（走开发选项，和上一条实现不同，
                             两条都留着是因为不同版本里有时只有一条管用）
 storyitems                  列出剧情在盯的物品，标出你身上带着哪些，不改变任何状态
-storyitems all              连整张表（55 项）一起列出
+storyitems all              连整张表一起列出
 clearitems                  清空背包，但保留剧情物品            ← 不可撤销
 clearitems all              连剧情物品一起清掉                  ← 不可撤销，慎用
 spoiled                     报告背包和各店里腐坏的食材，不改变任何状态
@@ -40,14 +40,15 @@ spoiled clear <店名片段>    只清指定的店（背包始终包含在内）
 ItemType 上没有「剧情物品」这种标记，所以光看物品属性分不出来。真正的判据是
 ArticyGlobalInventoryLinker 里的 linkPairs（Articy 剧情变量 ↔ 物品类型映射表），
 而且它注册了 OnPlayerInventoryChanged：背包里少了某个物品，剧情变量会被同步
-改写，任务检查的标记就一起没了。这张表在实测存档里有 55 项，包括
-BusinessPermit1..4（经营许可）、ClemPackage、AvaBlackBox、BodyList、
-EldridgePhotos、SeafaringTreasure1..3、AnchorPin、EnchiridionFragment 等。
+改写，任务检查的标记就一起没了。这张表撰写时有 55 项（随游戏版本变化，storyitems all
+会打印当前的实际数量），包括 BusinessPermit1..4（经营许可）、ClemPackage、
+AvaBlackBox、BodyList、EldridgePhotos、SeafaringTreasure1..3、AnchorPin、
+EnchiridionFragment 等。四张经营许可都在表内，不会被误删。
 
 没出现在这张表里的物品不受保护，所以 storyitems all 是唯一能确认「我带着的某件
-东西会不会被清掉」的办法。实测这 55 项里包含 BusinessPermit1..4 全部四张许可。
+东西会不会被清掉」的办法。
 
-所以 clearitems 默认保留这 55 项，并在清完后向游戏逐个核对它们是否真的还在——
+所以 clearitems 默认保留表内全部物品，并在清完后向游戏逐个核对它们是否真的还在——
 对不上会打 WARNING 并列出要补回的物品，而不是凭自己的记账说一句保护成功。
 身份读不出来的物品也一律保留：分不清剧情要不要它，不构成销毁它的理由。
 万一那张表读不出来（比如存档还没加载完），它会直接拒绝执行而不是当成「没有
@@ -61,10 +62,10 @@ EldridgePhotos、SeafaringTreasure1..3、AnchorPin、EnchiridionFragment 等。
 新鲜度。sell 不是真实交易——没有渠道收购腐坏食物，那是插件按残值直接打钱，
 残值通常是 0，这时它会直说一文不值而不是假装卖掉了。
 
-完整物品表见 reference/items.txt，1313 项，每行第一列就是可直接粘贴的
-give 命令。带 NOT-STORABLE 标记的 213 项无法进入玩家背包；标 chilled 的需要
-冷藏（决定 restock 时进冰箱还是储物柜），标 storage+N / cold+N 的是能给店铺
-加储物容量的家具。
+完整物品表见 reference/items.txt，每行第一列就是可直接粘贴的 give 命令。
+带 NOT-STORABLE 标记的无法进入玩家背包；标 chilled 的需要冷藏（决定 restock 时
+进冰箱还是储物柜），标 storage+N / cold+N 的是能给店铺加储物容量的家具。
+那份是随手提交的快照，物品随版本增减，要最新的自己跑一次 dumpitems。
 
 
 购物清单与备货
@@ -104,8 +105,8 @@ acquire <名字> rent         改成租下
 Venue（店铺）、Apartment（公寓）、Greenhouse（温室）三者都派生自 BaseProperty，
 所以 properties all 一次列全三类：店铺 89 个、公寓 43 个、温室 8 个。店铺数量看着多，
 是因为 Kubo_Bakery、Poccocup、Sunrice、Food_Trailer 这类连锁在十几个区各有一家。
-其中**只有 14 间店铺可收购**（isAcquireable），扣掉已属于你的两间，实际能拿的是 12 间；
-公寓和温室在实测存档里全部不可收购。addvenue 走的开发选项只认店铺，碰不到另外两类；
+其中**只有 14 间店铺可收购**（isAcquireable），其余 75 间是 NPC 固定经营、永远拿不到的；
+公寓和温室全部不可收购。addvenue 走的开发选项只认店铺，碰不到另外两类；
 acquire 走 PropertyManager.AddOwnedProperty，三类都能拿，租房也只有这一条路
 （PropertyManager.StartRenting）。
 
@@ -118,29 +119,29 @@ BusinessPermit，拿着 4 级许可也买不了要求 2 级的店铺。界面里
 说明走正规途径时许可会被消耗。properties 的许可列会在你手上有那张许可时打个 *。
 
 售价读的是 PropertyManager.GetBuyPrice()，不是资源上的 BuyCost 字段——后者给所有
-可收购店铺写的都是同一个数，像占位值。GetBuyPrice 的结果是「当前估值」而不是固定标价：
-已拥有的店铺报价明显高于条件相近的未拥有店铺，家具最多的那间报价最高，而且**两次运行
-之间数字会变**（烧鸟 1,975 → 1,976，蔚蓝微风 5,536 → 5,531），所以「哪家最便宜」这个
-排名本身不固定。
+可收购店铺写的都是同一个数，像占位值。GetBuyPrice 返回的是「当前估值」而不是固定标价：
+它随店里的家具和库存变动，同一家店两次运行之间数字就会不一样，已经营多年的店能比
+条件相近的空店贵一个数量级。所以售价只能现场跑 properties 看，没法写成表。
+租金（RentCost）相反，是资源上写死的，所以下表里的租金是固定的。
 
-四张许可的 give 代号（本身价格为 0）：
+四张许可的 give 代号（许可本身价格为 0）：
   1 级 32b6addb    2 级 5f1de8c3    3 级 f01afe17    4 级 fb69ef1c
 
-12 间可收购店铺（售价会浮动，这里是某一次的读数）：
-  1 级  烧鸟          螺旋纪念碑     1,976   租 90
-  1 级  清酒吧        中央谷地       2,423   租 90
-  1 级  船舶机库      叠楼区         2,796   租 75
-  1 级  好味餐厅      工业城区       2,973   租 90
-  2 级  熔点          东住宅区       2,908   租 100
-  2 级  年神酒吧      海滨步道       2,939   租 150
-  2 级  蜂窝俱乐部    商巢           3,613   租 120
-  3 级  日落时光      远山镇         2,824   租 150
-  3 级  缘至味馆      天空花园       3,847   租 150
-  3 级  蔚蓝微风      卡吕普索岛     5,531   租 300
-  4 级  暗曜          轨道枢纽       1,987   租 300
-  4 级  飞逸轩        云巅           3,016   租 500
+12 间可收购店铺（店名、地点、许可、租金都是固定数据）：
+  1 级  烧鸟          螺旋纪念碑     租 90
+  1 级  清酒吧        中央谷地       租 90
+  1 级  船舶机库      叠楼区         租 75
+  1 级  好味餐厅      工业城区       租 90
+  2 级  熔点          东住宅区       租 100
+  2 级  年神酒吧      海滨步道       租 150
+  2 级  蜂窝俱乐部    商巢           租 120
+  3 级  日落时光      远山镇         租 150
+  3 级  缘至味馆      天空花园       租 150
+  3 级  蔚蓝微风      卡吕普索岛     租 300
+  4 级  暗曜          轨道枢纽       租 300
+  4 级  飞逸轩        云巅           租 500
 
-暗曜只要 1,987 却要求最高级的 4 级许可，和其他店的定价规律不符，可能是数值没调好。
+另外两间（子午市场的阎王之门和暗调拉面馆）是剧情开局就给你的，不用收购。
 
 租金的结算周期（每天还是每周）没有查实，所以买与租的回本估算不可靠。
 
@@ -163,7 +164,7 @@ refridgeratedStorage 两个字段。所以不能把两边容量加起来算食�
 共 119 件物品带容量，按名字找会漏掉绝大多数（厨房橱柜、水槽、桌子都带）。
 冷藏首选 Deep_Freezer（高级冰柜）：200 容量 30000，单件容量和性价比都是全场第一。
 常温单件最大是 Island_W270cm_Set_03（200 容量 100000），但 Base_Cabinet_W90cm 系列
-40 容量只要 10000，性价比是它的两倍。详见 reference/menu-doorstoyama.txt。
+40 容量只要 10000，性价比是它的两倍。详见 reference/menu-design.txt。
 
 setlevel 走 VenueAreaGhost.SetLevel()，游戏会自己套用该等级的各项限制并触发等级
 变更事件，所以不是只改一个数字。执行后会打印新的菜单上限、员工上限和桌位上限。
@@ -174,14 +175,20 @@ setlevel 走 VenueAreaGhost.SetLevel()，游戏会自己套用该等级的各项
 addvenue / allvenues 之后菜单、等级、员工和库存都照原样继承，所以多数店一上手
 就是 2-5 级、菜单已填满上限的状态。
 
-dumpmenus 导出的内容包括每家店允许的菜谱大类、所在地的人群构成与偏好、菜单上限、
-冰箱与储物柜容量，以及每道候选菜按当地人群加权算出的评分（直接调游戏自己的
-评分函数）。大类列表为空表示这家店不限大类（不是不允许任何大类）。据此生成的
-推荐菜单见 reference/menu-plan.txt（详版）和 reference/menu-plan-compact.txt
-（精简版），注意那两份是按另一个存档的 57 家店算的；
-reference/menu-doorstoyama.txt 是按当前存档重算的单店版本（含中文菜名和食材名）。
+dumpmenus 导出分五段：
+  ## ALL VENUES    全部 89 家店的所在地、等级和允许的菜谱大类
+  ## RECIPES       全部菜谱的大类、定价、食材成本、专营度倍率、食材表
+  ## RECIPE SLOTS  每道菜的食材槽位，标出哪些槽位可替换（cust=True）及其标签
+  ## LOCATIONS     18 个地点的人群构成与偏好，以及每道菜在该地点的评分
+  ## OWNED ...     你名下店铺的菜单上限、储物容量、等级门槛和候选菜
 
-菜单本身只能在游戏里手动设，没有对应命令，所以那几份文件是照着抄的清单。
+大类列表为空表示这家店不限大类（不是不允许任何大类）。
+
+前四段都是游戏的固定数据，和存档无关；只有最后一段取决于你拥有什么。整理好的
+按地点评分表见 reference/recipe-scores.txt，菜单设计方法见 reference/menu-design.txt。
+
+菜单本身只能在游戏里手动设，没有对应命令——VenueAreaGhost 上没有可写的菜单接口，
+菜单项带定价是成对的结构。所以那两份文件是照着抄的清单。
 
 
 技能

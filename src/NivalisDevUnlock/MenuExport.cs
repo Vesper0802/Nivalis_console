@@ -102,6 +102,44 @@ internal static class MenuExport
         }
         sb.AppendLine();
 
+        // Every location scored, whether or not you have a venue there. The owned-venue section
+        // below can only speak for the venues you hold, which is no use when the question is
+        // which venue to buy, and no use to anyone else reading the file.
+        sb.AppendLine("## LOCATIONS");
+        sb.AppendLine("# Scores here come from the location's own demographic mix. A venue with an");
+        sb.AppendLine("# authored DemographicPriority weights every group equally instead, so check");
+        sb.AppendLine("# DEMOSOURCE in the owned section before trusting these for such a venue.");
+        var locationRows = 0;
+        foreach (var demo in demographics.OrderBy(d => S(() => d.Location?.name) ?? "?"))
+        {
+            var groups = LocationGroups(demo);
+            var prefs = LocalPreferences(demo, out var prefNames);
+
+            sb.AppendLine();
+            sb.AppendLine($"LOCATION\t{S(() => demo.Location?.name) ?? "?"}" +
+                          $"\tdisplay={S(() => demo.Location?.DisplayName) ?? "?"}" +
+                          $"\tpopulation={S(() => demo.PopulationCount.ToString())}" +
+                          $"\tgroups={groups.Count}");
+            foreach (var (group, weight) in groups)
+                sb.AppendLine($"  DEMO\t{group.name}\trep={F(weight)}\texclPref={F(N(() => group.ExclusivityPreference))}" +
+                              $"\texclImp={F(N(() => group.ExclusivityImportance))}" +
+                              $"\tvalImp={F(N(() => group.ValueImportance))}" +
+                              $"\tpriceImp={F(N(() => group.PriceImportance))}");
+            sb.AppendLine($"  LOCALPREF\t{prefNames}");
+            sb.AppendLine($"  LOCAVGEXCL\t{F(N(() => demo.GetAverageExclusivityPreference()))}");
+
+            sb.AppendLine("  SCORE\tRECIPE\tTYPE\tPRICE\tCALORIES\tEXCLUSIVITY\tLOCVALUE\tSCORE\tINGREDIENTS");
+            foreach (var recipe in recipes)
+            {
+                var judged = Judge(recipe, prefs, groups, canPrecalc, canJudge);
+                sb.AppendLine($"  SCORE\t{recipe.name}\t{S(() => recipe.RecipeType.ToString())}\t{F(judged.Price)}" +
+                              $"\t{F(judged.Calories)}\t{F(judged.Exclusivity)}\t{F(judged.LocationValue)}" +
+                              $"\t{judged.Score}\t{IngredientSummary(recipe)}");
+                locationRows++;
+            }
+        }
+        sb.AppendLine();
+
         sb.AppendLine("## OWNED VENUES AND THEIR CANDIDATES");
         var rows = 0;
         foreach (var venue in owned)
@@ -134,57 +172,18 @@ internal static class MenuExport
             sb.AppendLine("  CAND\tRECIPE\tTYPE\tPRICE\tCALORIES\tEXCLUSIVITY\tLOCVALUE\tSCORE\tINGREDIENTS");
             foreach (var recipe in Candidates(venue, recipes, allowed))
             {
-                float calories = 0f, exclusivity = 0f, locationValue = 0f;
-                var precalculated = false;
-                if (canPrecalc)
-                {
-                    try
-                    {
-                        DemographicGroup.PrecalculateRecipeJudgementInfo(
-                            recipe.Recipe, prefs, out calories, out exclusivity, out locationValue);
-                        precalculated = true;
-                    }
-                    catch (Exception e)
-                    {
-                        log.LogWarning($"dumpmenus: precalc failed for {recipe.name}: {e.Message}");
-                    }
-                }
-
-                var price = N(() => recipe.CurrentBasePrice) ?? 0f;
-                var score = "n/a";
-                if (precalculated && canJudge && groups.Count > 0)
-                {
-                    var total = 0f;
-                    var weight = 0f;
-                    foreach (var (group, w) in groups)
-                    {
-                        try
-                        {
-                            var breakdown = group.CalculateRecipeJudgementBreakdown(
-                                recipe.Recipe, price, calories, exclusivity, locationValue);
-                            total += breakdown.FinalScore * w;
-                            weight += w;
-                        }
-                        catch (Exception e)
-                        {
-                            log.LogWarning($"dumpmenus: judge failed for {recipe.name}: {e.Message}");
-                        }
-                    }
-
-                    if (weight > 0f)
-                        score = F(total / weight);
-                }
-
-                sb.AppendLine($"  CAND\t{recipe.name}\t{S(() => recipe.RecipeType.ToString())}\t{F(price)}" +
-                              $"\t{F(calories)}\t{F(exclusivity)}\t{F(locationValue)}\t{score}" +
-                              $"\t{IngredientSummary(recipe)}");
+                var judged = Judge(recipe, prefs, groups, canPrecalc, canJudge);
+                sb.AppendLine($"  CAND\t{recipe.name}\t{S(() => recipe.RecipeType.ToString())}\t{F(judged.Price)}" +
+                              $"\t{F(judged.Calories)}\t{F(judged.Exclusivity)}\t{F(judged.LocationValue)}" +
+                              $"\t{judged.Score}\t{IngredientSummary(recipe)}");
                 rows++;
             }
         }
 
         var path = Path.Combine(Paths.BepInExRootPath, "nivalis-menus.txt");
         File.WriteAllText(path, sb.ToString(), Encoding.UTF8);
-        print($"Wrote {venues.Count} venues ({owned.Count} owned), {recipes.Count} recipes " +
+        print($"Wrote {venues.Count} venues ({owned.Count} owned), {recipes.Count} recipes, " +
+              $"{locationRows} scored rows across {demographics.Count} locations " +
               $"and {rows} candidate rows to {path}");
     }
 
@@ -342,6 +341,10 @@ internal static class MenuExport
     /// <summary>
     /// The venue's own priority list is usually empty, so the location's demographic mix is the
     /// real audience. Each entry carries how much of the local population it represents.
+    ///
+    /// Which of the two it is matters when reading the numbers: a priority list gives every group
+    /// a weight of 1, so a venue with one can score quite differently from its neighbour on the
+    /// same street. That is why the source is written into the export.
     /// </summary>
     private static List<(DemographicGroup Group, float Weight)> WeightedGroups(
         Venue venue, LocationDemographics demo, out string source)
@@ -358,33 +361,111 @@ internal static class MenuExport
             return result;
         }
 
-        if (demo != null)
+        result = LocationGroups(demo);
+        source = result.Count > 0 ? "location.groups" : "none";
+        return result;
+    }
+
+    private static List<(DemographicGroup Group, float Weight)> LocationGroups(LocationDemographics demo)
+    {
+        var result = new List<(DemographicGroup, float)>();
+        if (demo == null)
+            return result;
+
+        try
+        {
+            var groups = demo.groups;
+            for (var i = 0; i < groups.Count; i++)
+            {
+                var entry = groups[i];
+                var group = entry.group;
+                if (group != null)
+                    result.Add((group, Math.Max(entry.representation, 0.0001f)));
+            }
+        }
+        catch (Exception e)
+        {
+            Plugin.Instance.Log.LogWarning($"dumpmenus: could not read location groups: {e.Message}");
+        }
+
+        return result;
+    }
+
+    /// <summary>What the game's own judgement maths makes of one recipe for one audience.</summary>
+    private readonly struct Judged
+    {
+        public readonly float Price;
+        public readonly float Calories;
+        public readonly float Exclusivity;
+        public readonly float LocationValue;
+        public readonly string Score;
+
+        public Judged(float price, float calories, float exclusivity, float locationValue, string score)
+        {
+            Price = price;
+            Calories = calories;
+            Exclusivity = exclusivity;
+            LocationValue = locationValue;
+            Score = score;
+        }
+    }
+
+    /// <summary>
+    /// Scores one recipe for one audience by calling the game's own maths, once per demographic
+    /// group and weighted by how much of the population that group represents. A group that throws
+    /// is dropped from both the total and the divisor, so a partial failure lowers confidence in
+    /// the figure rather than silently dragging it towards zero.
+    /// </summary>
+    private static Judged Judge(MealRecipeDefinition recipe,
+                                Il2CppSystem.Collections.Generic.HashSet<int> prefs,
+                                List<(DemographicGroup Group, float Weight)> groups,
+                                bool canPrecalc, bool canJudge)
+    {
+        var log = Plugin.Instance.Log;
+        float calories = 0f, exclusivity = 0f, locationValue = 0f;
+        var precalculated = false;
+
+        if (canPrecalc)
         {
             try
             {
-                var groups = demo.groups;
-                for (var i = 0; i < groups.Count; i++)
-                {
-                    var entry = groups[i];
-                    var group = entry.group;
-                    if (group != null)
-                        result.Add((group, Math.Max(entry.representation, 0.0001f)));
-                }
-
-                if (result.Count > 0)
-                {
-                    source = "location.groups";
-                    return result;
-                }
+                DemographicGroup.PrecalculateRecipeJudgementInfo(
+                    recipe.Recipe, prefs, out calories, out exclusivity, out locationValue);
+                precalculated = true;
             }
             catch (Exception e)
             {
-                Plugin.Instance.Log.LogWarning($"dumpmenus: could not read location groups: {e.Message}");
+                log.LogWarning($"dumpmenus: precalc failed for {recipe.name}: {e.Message}");
             }
         }
 
-        source = "none";
-        return result;
+        var price = N(() => recipe.CurrentBasePrice) ?? 0f;
+        var score = "n/a";
+
+        if (precalculated && canJudge && groups.Count > 0)
+        {
+            var total = 0f;
+            var weight = 0f;
+            foreach (var (group, w) in groups)
+            {
+                try
+                {
+                    var breakdown = group.CalculateRecipeJudgementBreakdown(
+                        recipe.Recipe, price, calories, exclusivity, locationValue);
+                    total += breakdown.FinalScore * w;
+                    weight += w;
+                }
+                catch (Exception e)
+                {
+                    log.LogWarning($"dumpmenus: judge failed for {recipe.name}: {e.Message}");
+                }
+            }
+
+            if (weight > 0f)
+                score = F(total / weight);
+        }
+
+        return new Judged(price, calories, exclusivity, locationValue, score);
     }
 
     private static Il2CppSystem.Collections.Generic.HashSet<int> LocalPreferences(
