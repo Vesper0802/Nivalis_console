@@ -470,8 +470,10 @@ internal static class Commands
             var properties = Properties.DumpRows();
             sb.AppendLine();
             sb.AppendLine($"Properties - {properties.Count} entries. Paste a COMMAND cell the same way.");
-            sb.AppendLine("'at=' is the district. 'permit=' is a specific item, not a level, and");
-            sb.AppendLine("'have-permit' means you are carrying it. NOT-ACQUIREABLE ones are NPC-run.");
+            sb.AppendLine("'at=' is the district. 'permit=' is a specific item, not a level, so permit 4");
+            sb.AppendLine("does not satisfy a property asking for permit 2. NOT-ACQUIREABLE ones are");
+            sb.AppendLine("NPC-run and can never be yours. PRICE reads '-' because a property's price is");
+            sb.AppendLine("a live valuation; run 'properties' to see it, along with what you already own.");
             sb.AppendLine();
             sb.AppendLine("COMMAND\tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
             foreach (var row in properties)

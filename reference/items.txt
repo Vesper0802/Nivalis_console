@@ -1,7 +1,8 @@
-﻿Nivalis Nights item types — 1313 entries
+﻿Nivalis Nights item types - 1313 entries, then every property
 Paste a COMMAND cell into the console and press Enter; change the trailing number for a different amount.
 For details run iteminfo with the same code, e.g. iteminfo 04f867e4
 Rows flagged NOT-STORABLE cannot be placed in the player inventory.
+PRICE is in cents throughout, so 10000 is 100.
 
 COMMAND	ASSET NAME	DISPLAY NAME	PRICE	FLAGS
 give 20455fb6 1	Absinthe	苦艾烈酒 	800	ingredient
@@ -19,7 +20,7 @@ give 998ea7f7 1	Algae Infusion	海藻精泡 	500
 give 8094d4f8 1	Alia's Confession	阿莉雅的供状 	0	
 give 8f7e24b8 1	Almond Crusted Zander	杏仁鲈鱼	0	meal,useable,NOT-STORABLE
 give eef42888 1	Almonds	杏仁	300	ingredient
-give ab38b127 1	Aloe Vera	芦荟	300	ingredient
+give ab38b127 1	Aloe Vera	芦荟	300	ingredient,chilled
 give 1e4dcc59 1	Amaro	阿马罗酒	800	ingredient
 give d653dba0 1	Ana-Blog No. 1	模拟生活博客第 1 期	0	
 give a8ce1dbd 1	Ana-Blog No. 2	模拟生活博客第 2 期	0	
@@ -43,7 +44,7 @@ give 05dd135d 1	Apartment_picture	狗狗挂画	5000	furniture
 give 42623e74 1	Apartment_tv	壁挂式电视	100000	furniture
 give 05272a09 1	Apple Pie	苹果派	0	meal,useable,NOT-STORABLE
 give 04f867e4 1	Apples	苹果	300	ingredient,plant,seed
-give 6fb0aac9 1	Aqua Freeze	水凝冰爽	0	meal,drink,NOT-STORABLE
+give 6fb0aac9 1	Aqua Freeze	水凝冰爽	0	meal,drink,chilled,NOT-STORABLE
 give 4c74e1b5 1	Archlight	弧光灯	21500	furniture
 give 89047705 1	Armchair_1	设计师扶手椅	10000	furniture
 give 82b5c495 1	Armchair_2	扶手椅	25000	furniture
@@ -54,16 +55,16 @@ give 37aec8a2 1	Aseptic_Wanted_poster_1		100000
 give 1da303a4 1	Aseptic_Wanted_poster_1_half		100000	
 give 3f38f148 1	Aseptic_Wanted_poster_2		100000	
 give 67ac8d91 1	Aseptic_Wanted_poster_2_half		100000	
-give fa41a57d 1	Asparagus	芦笋	500	ingredient,plant
+give fa41a57d 1	Asparagus	芦笋	500	ingredient,plant,chilled
 give df243db3 1	Asparagus Seeds	芦笋种子	1000	seed
 give de2c623d 1	Aura Cocktail	波光鸡尾酒	1200	
-give 7a43c9be 1	Aurora	极光	0	meal,drink,NOT-STORABLE
+give 7a43c9be 1	Aurora	极光	0	meal,drink,chilled,NOT-STORABLE
 give a1f1ea49 1	Avocados	牛油果	400	ingredient,plant,seed
 give 87bcbe35 1	Azores Chicharros	亚速尔炸鱼	0	meal,useable,NOT-STORABLE
 give c69dff4e 1	Azure Powder	天青粉	500	
-give d324bbb6 1	Bacon	培根	300	ingredient
+give d324bbb6 1	Bacon	培根	300	ingredient,chilled
 give 5b5f9453 1	Bacon Avocado Salad	培根牛油果沙拉	0	meal,NOT-STORABLE
-give 2dd067c9 1	Bacon Bloody Mary	培根味血腥玛丽	0	meal,drink,NOT-STORABLE
+give 2dd067c9 1	Bacon Bloody Mary	培根味血腥玛丽	0	meal,drink,chilled,NOT-STORABLE
 give cda1a757 1	Bad Seaweed	坏海苔	200	
 give d7979740 1	Bait3000FishingRod	诱饵 3000 型	120000	equippable
 give 349097ce 1	Baked Ide	烤雅罗鱼	0	meal,useable,NOT-STORABLE
@@ -79,46 +80,46 @@ give ff882a07 1	Barstool_4	吧台椅	3000	furniture
 give 93237b00 1	Barstool_5	吧台椅	3000	furniture
 give 517dcac1 1	Bar_Counter_1	酒吧柜台	120000	furniture
 give 6ea3e0eb 1	Bar_Counter_2	酒吧柜台	90000	furniture
-give 8616fab0 1	Base_Cabinet_Corner_90cm_Set_01	厨房橱柜内角柜	10000	furniture
-give f4a46249 1	Base_Cabinet_Corner_90cm_Set_02	厨房橱柜内角柜	10000	furniture
-give 0c7ee3cd 1	Base_Cabinet_Corner_90cm_wGlass_Set_01	厨房橱柜内角柜	10000	furniture
-give 80ada825 1	Base_Cabinet_Corner_90cm_wGlass_Set_03	厨房橱柜内角柜	10000	furniture
-give 43bc57e7 1	Base_Cabinet_W40cm_1DoorwGlass_Set_01	开门式厨房橱柜	10000	furniture
-give 22435f00 1	Base_Cabinet_W40cm_1Door_Set_01	开门式厨房橱柜	10000	furniture
-give 57e90b4d 1	Base_Cabinet_W40cm_1Door_Set_02	开门式厨房橱柜	10000	furniture
-give 6a17b31b 1	Base_Cabinet_W40cm_1Door_Set_03	开门式厨房橱柜	10000	furniture
-give 09987c4c 1	Base_Cabinet_W40cm_2Drawer_Set_01	抽屉式厨房橱柜	10000	furniture
-give b6283b91 1	Base_Cabinet_W40cm_2Drawer_Set_02	抽屉式厨房橱柜	10000	furniture
-give a7d5826a 1	Base_Cabinet_W40cm_2Drawer_Set_03	抽屉式厨房橱柜	10000	furniture
-give a8b91557 1	Base_Cabinet_W40cm_3Drawer_Set_01	抽屉式厨房橱柜	10000	furniture
-give 474902d2 1	Base_Cabinet_W40cm_3Drawer_Set_02	抽屉式厨房橱柜	10000	furniture
-give 720c1eb9 1	Base_Cabinet_W40cm_3Drawer_Set_03	抽屉式厨房橱柜	10000	furniture
-give 692ece52 1	Base_Cabinet_W60cm_1DoorwGlass_Set_01	开门式厨房橱柜	10000	furniture
-give bae1bb77 1	Base_Cabinet_W60cm_1Door_Set_01	开门式厨房橱柜	10000	furniture
-give 772bdecd 1	Base_Cabinet_W60cm_1Door_Set_02	开门式厨房橱柜	10000	furniture
-give 36c8e8cb 1	Base_Cabinet_W60cm_1Door_Set_03	开门式厨房橱柜	10000	furniture
-give da7a2cf9 1	Base_Cabinet_W60cm_1Drawer_1Door_Set_01	抽屉式厨房橱柜	10000	furniture
-give bc9061bd 1	Base_Cabinet_W60cm_1Drawer_1Door_Set_02	抽屉式厨房橱柜	10000	furniture
-give d1ad6ab3 1	Base_Cabinet_W60cm_1Drawer_1Door_Set_03	抽屉式厨房橱柜	10000	furniture
-give f20264fe 1	Base_Cabinet_W60cm_3Drawer_Set_01	抽屉式厨房橱柜	10000	furniture
-give 2f2bfe09 1	Base_Cabinet_W60cm_3Drawer_Set_02	抽屉式厨房橱柜	10000	furniture
-give 340cae45 1	Base_Cabinet_W60cm_3Drawer_Set_03	抽屉式厨房橱柜	10000	furniture
-give 4948e04f 1	Base_Cabinet_W90cm_1Drawer_2Door_Set_01	抽屉式厨房橱柜	10000	furniture
-give 60d1e321 1	Base_Cabinet_W90cm_1Drawer_2Door_Set_02	抽屉式厨房橱柜	10000	furniture
-give d09c91e0 1	Base_Cabinet_W90cm_1Drawer_2Door_Set_03	抽屉式厨房橱柜	10000	furniture
-give 1a5553c4 1	Base_Cabinet_W90cm_2Door_Set_01	开门式厨房橱柜	10000	furniture
-give 14f1755b 1	Base_Cabinet_W90cm_2Door_Set_02	开门式厨房橱柜	10000	furniture
-give ead937e2 1	Base_Cabinet_W90cm_2Door_Set_03	开门式厨房橱柜	10000	furniture
-give 5305e845 1	Base_Cabinet_W90cm_2Drawer_2Door_Set_01	抽屉式厨房橱柜	10000	furniture
-give 41f91a8d 1	Base_Cabinet_W90cm_2Drawer_2Door_Set_02	抽屉式厨房橱柜	10000	furniture
-give 7cfea878 1	Base_Cabinet_W90cm_2Drawer_2Door_Set_03	抽屉式厨房橱柜	10000	furniture
-give 4020cc6f 1	Base_Cabinet_W90cm_3Drawer_1DoorwGlass_Set_01	抽屉式厨房橱柜	10000	furniture
-give 4f272a1e 1	Base_Cabinet_W90cm_3Drawer_1Door_Set_01	抽屉式厨房橱柜	10000	furniture
-give 1d89c4a6 1	Base_Cabinet_W90cm_3Drawer_1Door_Set_02	抽屉式厨房橱柜	10000	furniture
-give a2d9a19b 1	Base_Cabinet_W90cm_3Drawer_1Door_Set_03	抽屉式厨房橱柜	10000	furniture
-give 3c9ab9a1 1	Base_Cabinet_W90cm_Sink_Set_01	水槽	20000	furniture
-give b222b225 1	Base_Cabinet_W90cm_Sink_Set_02	水槽	20000	furniture
-give 263c136a 1	Base_Cabinet_W90cm_Sink_Set_03	水槽	20000	furniture
+give 8616fab0 1	Base_Cabinet_Corner_90cm_Set_01	厨房橱柜内角柜	10000	furniture,storage+30
+give f4a46249 1	Base_Cabinet_Corner_90cm_Set_02	厨房橱柜内角柜	10000	furniture,storage+30
+give 0c7ee3cd 1	Base_Cabinet_Corner_90cm_wGlass_Set_01	厨房橱柜内角柜	10000	furniture,storage+30
+give 80ada825 1	Base_Cabinet_Corner_90cm_wGlass_Set_03	厨房橱柜内角柜	10000	furniture,storage+30
+give 43bc57e7 1	Base_Cabinet_W40cm_1DoorwGlass_Set_01	开门式厨房橱柜	10000	furniture,storage+20
+give 22435f00 1	Base_Cabinet_W40cm_1Door_Set_01	开门式厨房橱柜	10000	furniture,storage+20
+give 57e90b4d 1	Base_Cabinet_W40cm_1Door_Set_02	开门式厨房橱柜	10000	furniture,storage+20
+give 6a17b31b 1	Base_Cabinet_W40cm_1Door_Set_03	开门式厨房橱柜	10000	furniture,storage+20
+give 09987c4c 1	Base_Cabinet_W40cm_2Drawer_Set_01	抽屉式厨房橱柜	10000	furniture,storage+20
+give b6283b91 1	Base_Cabinet_W40cm_2Drawer_Set_02	抽屉式厨房橱柜	10000	furniture,storage+20
+give a7d5826a 1	Base_Cabinet_W40cm_2Drawer_Set_03	抽屉式厨房橱柜	10000	furniture,storage+20
+give a8b91557 1	Base_Cabinet_W40cm_3Drawer_Set_01	抽屉式厨房橱柜	10000	furniture,storage+20
+give 474902d2 1	Base_Cabinet_W40cm_3Drawer_Set_02	抽屉式厨房橱柜	10000	furniture,storage+20
+give 720c1eb9 1	Base_Cabinet_W40cm_3Drawer_Set_03	抽屉式厨房橱柜	10000	furniture,storage+20
+give 692ece52 1	Base_Cabinet_W60cm_1DoorwGlass_Set_01	开门式厨房橱柜	10000	furniture,storage+30
+give bae1bb77 1	Base_Cabinet_W60cm_1Door_Set_01	开门式厨房橱柜	10000	furniture,storage+30
+give 772bdecd 1	Base_Cabinet_W60cm_1Door_Set_02	开门式厨房橱柜	10000	furniture,storage+30
+give 36c8e8cb 1	Base_Cabinet_W60cm_1Door_Set_03	开门式厨房橱柜	10000	furniture,storage+30
+give da7a2cf9 1	Base_Cabinet_W60cm_1Drawer_1Door_Set_01	抽屉式厨房橱柜	10000	furniture,storage+30
+give bc9061bd 1	Base_Cabinet_W60cm_1Drawer_1Door_Set_02	抽屉式厨房橱柜	10000	furniture,storage+30
+give d1ad6ab3 1	Base_Cabinet_W60cm_1Drawer_1Door_Set_03	抽屉式厨房橱柜	10000	furniture,storage+30
+give f20264fe 1	Base_Cabinet_W60cm_3Drawer_Set_01	抽屉式厨房橱柜	10000	furniture,storage+30
+give 2f2bfe09 1	Base_Cabinet_W60cm_3Drawer_Set_02	抽屉式厨房橱柜	10000	furniture,storage+30
+give 340cae45 1	Base_Cabinet_W60cm_3Drawer_Set_03	抽屉式厨房橱柜	10000	furniture,storage+30
+give 4948e04f 1	Base_Cabinet_W90cm_1Drawer_2Door_Set_01	抽屉式厨房橱柜	10000	furniture,storage+40
+give 60d1e321 1	Base_Cabinet_W90cm_1Drawer_2Door_Set_02	抽屉式厨房橱柜	10000	furniture,storage+40
+give d09c91e0 1	Base_Cabinet_W90cm_1Drawer_2Door_Set_03	抽屉式厨房橱柜	10000	furniture,storage+40
+give 1a5553c4 1	Base_Cabinet_W90cm_2Door_Set_01	开门式厨房橱柜	10000	furniture,storage+40
+give 14f1755b 1	Base_Cabinet_W90cm_2Door_Set_02	开门式厨房橱柜	10000	furniture,storage+40
+give ead937e2 1	Base_Cabinet_W90cm_2Door_Set_03	开门式厨房橱柜	10000	furniture,storage+40
+give 5305e845 1	Base_Cabinet_W90cm_2Drawer_2Door_Set_01	抽屉式厨房橱柜	10000	furniture,storage+40
+give 41f91a8d 1	Base_Cabinet_W90cm_2Drawer_2Door_Set_02	抽屉式厨房橱柜	10000	furniture,storage+40
+give 7cfea878 1	Base_Cabinet_W90cm_2Drawer_2Door_Set_03	抽屉式厨房橱柜	10000	furniture,storage+40
+give 4020cc6f 1	Base_Cabinet_W90cm_3Drawer_1DoorwGlass_Set_01	抽屉式厨房橱柜	10000	furniture,storage+40
+give 4f272a1e 1	Base_Cabinet_W90cm_3Drawer_1Door_Set_01	抽屉式厨房橱柜	10000	furniture,storage+40
+give 1d89c4a6 1	Base_Cabinet_W90cm_3Drawer_1Door_Set_02	抽屉式厨房橱柜	10000	furniture,storage+40
+give a2d9a19b 1	Base_Cabinet_W90cm_3Drawer_1Door_Set_03	抽屉式厨房橱柜	10000	furniture,storage+40
+give 3c9ab9a1 1	Base_Cabinet_W90cm_Sink_Set_01	水槽	20000	furniture,storage+30
+give b222b225 1	Base_Cabinet_W90cm_Sink_Set_02	水槽	20000	furniture,storage+30
+give 263c136a 1	Base_Cabinet_W90cm_Sink_Set_03	水槽	20000	furniture,storage+30
 give 4f32eef3 1	Basil	罗勒	180	ingredient,plant
 give 44e6d6e3 1	Basil Seeds	罗勒种子	1000	seed
 give 695b744b 1	Bath	浴缸	160000	furniture
@@ -137,7 +138,7 @@ give 810baced 1	Bathroom_Vanity_V2-Large	浴室梳妆台	35000	furniture
 give 8d98bd5b 1	Bathroom_Vanity_V2-Small	浴室梳妆台	30000	furniture
 give 0e71db90 1	Bathroom_Vanity_V3-Large	浴室梳妆台	35000	furniture
 give 3aaa9a17 1	Bathroom_Vanity_V3-Small	浴室梳妆台	30000	furniture
-give b2adefe6 1	Bean Sprouts	豆芽	300	ingredient,plant
+give b2adefe6 1	Bean Sprouts	豆芽	300	ingredient,plant,chilled
 give 111fc168 1	Bean Sprouts Seeds	豆芽种子	1000	seed
 give 07fb6f3c 1	Beauty_Products-1	美妆产品	1500	furniture
 give 151e1bbb 1	Beauty_Products-10	美妆产品	1500	furniture
@@ -149,10 +150,10 @@ give 24f97209 1	Beauty_Products-6	美妆产品	1500	furniture
 give 38e5a8e9 1	Beauty_Products-7	美妆产品	1500	furniture
 give 9985ed0b 1	Beauty_Products-8	美妆产品	1500	furniture
 give 11ed684d 1	Beauty_Products-9	美妆产品	1500	furniture
-give 0ecd905e 1	Beef	牛肉	700	ingredient,plant
+give 0ecd905e 1	Beef	牛肉	700	ingredient,plant,chilled
 give 26cffe5b 1	Beef Ramen	牛肉拉面	0	meal,useable,NOT-STORABLE
 give 90c2a630 1	Beef Resin Pellets	牛肉胶颗粒	3000	seed
-give b2cfe44b 1	Beer	啤酒	0	meal,drink,NOT-STORABLE
+give b2cfe44b 1	Beer	啤酒	0	meal,drink,chilled,NOT-STORABLE
 give 7b36dfcc 1	Beer Soup	啤酒汤	0	meal,useable,NOT-STORABLE
 give 03481c5a 1	Beet Pickled Deviled Eggs	腌甜菜魔鬼蛋	0	meal,useable,NOT-STORABLE
 give c44c63c7 1	Beetroots	甜菜	250	ingredient,plant
@@ -171,24 +172,24 @@ give bd6cd663 1	Black Moss Seeds	发菜种子	1000	seed
 give c8e8f02d 1	Black Mushroom	黑蘑菇	250	ingredient,plant
 give 0191f545 1	Black Mushroom Spores	黑蘑菇孢子	1000	seed
 give 41385a10 1	Black Pepper	黑胡椒	150	ingredient
-give 98435f5a 1	Black Soda	黑苏打	200	ingredient
+give 98435f5a 1	Black Soda	黑苏打	200	ingredient,chilled
 give 3a0cc329 1	Black Ultra Grande	超大杯黑咖	800	
-give aa5e70a4 1	Black Widow	黑寡妇	0	meal,drink,NOT-STORABLE
+give aa5e70a4 1	Black Widow	黑寡妇	0	meal,drink,chilled,NOT-STORABLE
 give 0c4e4b16 1	Blackberries	黑莓	600	ingredient
 give c275aacd 1	BlackBox	黑匣子	10000	
 give 3aa2462b 1	Blender	搅拌机	30000	furniture
-give 2c28ec96 1	Blue Cheese	蓝纹奶酪	350	ingredient,plant
+give 2c28ec96 1	Blue Cheese	蓝纹奶酪	350	ingredient,plant,chilled
 give d6a34147 1	Blue Cheese Coffee	蓝纹手冲	900	
 give 05204ef4 1	Blue Smoothie Bowl	蓝调冰沙	0	meal,useable,NOT-STORABLE
 give e59314ad 1	Blue Taco	蓝色塔可	0	meal,useable,NOT-STORABLE
 give 05b2b7be 1	Blueberries	蓝莓	400	ingredient
-give 450d662f 1	Blueberry Avocado Smoothie	蓝莓鳄梨奶昔	0	meal,drink,NOT-STORABLE
+give 450d662f 1	Blueberry Avocado Smoothie	蓝莓鳄梨奶昔	0	meal,drink,chilled,NOT-STORABLE
 give 5dc36c63 1	Boat Name Plate	船骸铭牌	10000	
 give e0463926 1	Boba	珍珠粉圆	150	ingredient
 give 872bf524 1	Boba Pizza	珍珠披萨	0	meal,useable,NOT-STORABLE
-give 622a7691 1	Boba Tea	珍珠奶茶	0	meal,drink,NOT-STORABLE
+give 622a7691 1	Boba Tea	珍珠奶茶	0	meal,drink,chilled,NOT-STORABLE
 give fc00b8dd 1	BodyList	生药公司存储舱货单	0	
-give 8b34c613 1	Bok Choy	小白菜	270	ingredient,plant
+give 8b34c613 1	Bok Choy	小白菜	270	ingredient,plant,chilled
 give b4cf5fca 1	Bok Choy Seeds	小白菜种子	1000	seed
 give 0a181804 1	Bombies	炸蛋	0	meal,useable,NOT-STORABLE
 give d76790dd 1	Bone	骨头	200	
@@ -215,31 +216,31 @@ give 7265a662 1	Borsch	罗宋汤	0	meal,useable,NOT-STORABLE
 give 5755c0a2 1	Brandy	白兰地	800	ingredient
 give a733842f 1	Bread	面包	100	ingredient
 give a3c3ff8f 1	Breakfast Salad	早餐沙拉	0	meal,NOT-STORABLE
-give cd38eada 1	Bream	鳊鱼	500	ingredient,fish
-give c48bf972 1	Broccoli	西兰花	350	ingredient,plant
+give cd38eada 1	Bream	鳊鱼	500	ingredient,fish,chilled
+give c48bf972 1	Broccoli	西兰花	350	ingredient,plant,chilled
 give fc82667a 1	Broccoli Seeds	西兰花种子	1000	seed
 give 23feb86b 1	Broken Fishing Rod	坏掉的鱼竿	200	
 give 56834573 1	Broken Wireless Relay	损坏的无线中继	10000	
-give 5ce7d040 1	Brook Trout	溪鳟鱼	500	ingredient,fish
+give 5ce7d040 1	Brook Trout	溪鳟鱼	500	ingredient,fish,chilled
 give 75d1583b 1	Brook Trout with Asparagus	芦笋溪鳟	0	meal,useable,NOT-STORABLE
 give e430a1f7 1	Brownie	布朗尼蛋糕	0	meal,useable,NOT-STORABLE
 give 8e4ee97f 1	Brownie Milkshake	布朗尼奶昔	0	meal,useable,NOT-STORABLE
 give c6a3e177 1	Buckwheat	荞麦	150	ingredient,plant
 give 4b874a54 1	Buckwheat Seeds	荞麦种子	1000	seed
-give a507dcfc 1	Burbot	淡水鳕	400	ingredient,fish
+give a507dcfc 1	Burbot	淡水鳕	400	ingredient,fish,chilled
 give 71530707 1	Burger Bun	汉堡面包	100	ingredient
 give 32b6addb 1	BusinessPermit1	经营许可（1 级）	0	
 give 5f1de8c3 1	BusinessPermit2	经营许可（2级）	0	
 give f01afe17 1	BusinessPermit3	经营许可（3级）	0	
 give fb69ef1c 1	BusinessPermit4	经营许可（4级）	0	
-give ad584a0b 1	Butter	黄油	300	ingredient,plant
+give ad584a0b 1	Butter	黄油	300	ingredient,plant,chilled
 give 911e4cb2 1	Butterfly Pea Flower	蝶豆花	300	ingredient
 give 3b488302 1	Butterscotch Mocha	奶油糖摩卡	500	
-give b0484440 1	Cabbage	卷心菜	150	ingredient,plant
+give b0484440 1	Cabbage	卷心菜	150	ingredient,plant,chilled
 give a52fa496 1	Cabbage Seeds	卷心菜种子	1000	seed
-give 7222bd65 1	Calypso Island Iced Tea	卡吕普索岛冰茶	0	meal,drink,NOT-STORABLE
+give 7222bd65 1	Calypso Island Iced Tea	卡吕普索岛冰茶	0	meal,drink,chilled,NOT-STORABLE
 give 574bdbe5 1	Canapés	开胃饼	0	meal,useable,NOT-STORABLE
-give e7cb218a 1	Carp	鲤鱼	450	ingredient,fish
+give e7cb218a 1	Carp	鲤鱼	450	ingredient,fish,chilled
 give 6a9392e3 1	Carpet_1	地毯	70000	furniture
 give 112a11d4 1	Carpet_2	地毯	65000	furniture
 give e86e9e85 1	Carpet_3	地毯	130000	furniture
@@ -248,7 +249,7 @@ give 24617d45 1	Carpet_5	地毯	170000	furniture
 give 32a898ea 1	Carpet_6	地毯	130000	furniture
 give 8e4016d3 1	Carpet_7	地毯	125000	furniture
 give b619f7d9 1	Carpet_8	地毯	160000	furniture
-give 2653365c 1	Carrots	胡萝卜	200	ingredient,plant
+give 2653365c 1	Carrots	胡萝卜	200	ingredient,plant,chilled
 give b9b2ed10 1	Carrots Seeds	胡萝卜种子	1000	seed
 give 67b14a43 1	Cashew	腰果	300	ingredient
 give 95dc0f4a 1	Cash_Register	收银机	10000	furniture
@@ -258,7 +259,7 @@ give 5cdb2932 1	Ceiling-Lamp_03	吸顶灯	79000	furniture
 give 2969b51f 1	Ceiling-Lamp_04	吸顶灯	63000	furniture
 give 5e95b9a4 1	Ceiling-Lamp_05	吸顶灯	92000	furniture
 give abd70b82 1	Ceiling_Light	吸顶灯	10000	furniture
-give ab2f2697 1	Celery	芹菜	200	ingredient,plant
+give ab2f2697 1	Celery	芹菜	200	ingredient,plant,chilled
 give 5748b91c 1	Celery Seeds	芹菜种子	1000	seed
 give 7b881f92 1	Cendol	煎蕊	0	meal,useable,NOT-STORABLE
 give 107cf814 1	CerealsFarmingModuleA	A级谷物种植模块	41000	furniture
@@ -269,23 +270,23 @@ give fb26743f 1	Chair_2	高脚凳	3000	furniture
 give 1799c0d1 1	Chair_3	高脚凳	3000	furniture
 give 2cbacfef 1	Chair_4	高脚凳	3000	furniture
 give a01e0f72 1	Chair_5	高脚凳	3000	furniture
-give d793de81 1	Chapulines	蚂蚱	300	ingredient
+give d793de81 1	Chapulines	蚂蚱	300	ingredient,chilled
 give 5a737ee5 1	Chapulines Pizza	蚂蚱披萨	0	meal,useable,NOT-STORABLE
 give f22c8f89 1	Chartreuse	查特酒	800	ingredient
-give c035beed 1	Cheddar	切达奶酪	250	ingredient,plant
-give bea8d994 1	Cheese	奶酪	150	ingredient,plant
-give 992f67d6 1	Cheese Burger	奶酪汉堡	0	meal,NOT-STORABLE
+give c035beed 1	Cheddar	切达奶酪	250	ingredient,plant,chilled
+give bea8d994 1	Cheese	奶酪	150	ingredient,plant,chilled
+give 992f67d6 1	Cheese Burger	奶酪汉堡	0	meal,chilled,NOT-STORABLE
 give 24d788d6 1	Cheese Dream	芝士梦想	0	meal,useable,NOT-STORABLE
 give 3c07a826 1	Chef Hugo Ortega’s Mescal Worm Tacos	雨果·奥特加大厨的龙舌兰虫塔可	0	meal,useable,NOT-STORABLE
 give f4a425d1 1	Cherries	车厘子	500	ingredient,plant,seed
 give 30e0b7cc 1	Chervil	细叶芹	180	ingredient,plant
 give 2ec10996 1	Chervil Seeds	细叶芹种子	1000	seed
 give dc05cc17 1	Chic Salmon and Cucumber Sandwiches	鲜鲑黄瓜三明治	0	meal,useable,NOT-STORABLE
-give b29fbd8d 1	Chicken	鸡肉	500	ingredient,plant
+give b29fbd8d 1	Chicken	鸡肉	500	ingredient,plant,chilled
 give 59bafa9d 1	Chicken Noodle Soup	鸡肉拉面	0	meal,NOT-STORABLE
 give 0af04417 1	Chicken Resin Pellets	鸡肉胶颗粒	300	seed
 give 6094055d 1	Chicken Sandwich	鸡肉三明治	0	meal,NOT-STORABLE
-give b9317846 1	Chicken Shake	鸡肉奶昔	0	meal,drink,NOT-STORABLE
+give b9317846 1	Chicken Shake	鸡肉奶昔	0	meal,drink,chilled,NOT-STORABLE
 give 07de58b1 1	Chickpeas	鹰嘴豆	300	ingredient
 give 0eca1f8a 1	Chili	辣椒	150	ingredient,plant
 give a5c0d773 1	Chili Peppers Seeds	辣椒种子	1000	seed
@@ -293,14 +294,14 @@ give f166cd3c 1	Chlorophyll	叶绿素	300	ingredient
 give 2345f772 1	Chocolate	巧克力	300	ingredient
 give 9c51e4cc 1	Chow Mein	炒面	0	meal,useable,NOT-STORABLE
 give f15b244d 1	Cinnamon	肉桂	150	ingredient
-give b92907e6 1	Citrus Juice	仙人掌果滋	0	meal,drink,NOT-STORABLE
-give 0636d964 1	Clam	蛤蜊	500	ingredient,plant,seed
-give ab3ed933 1	ClamZest	鲜蛤风味	0	meal,drink,NOT-STORABLE
+give b92907e6 1	Citrus Juice	仙人掌果滋	0	meal,drink,chilled,NOT-STORABLE
+give 0636d964 1	Clam	蛤蜊	500	ingredient,plant,seed,chilled
+give ab3ed933 1	ClamZest	鲜蛤风味	0	meal,drink,chilled,NOT-STORABLE
 give 9dec5dac 1	Clem's Package	克莱姆的包裹	5000	
 give 51f6635c 1	Clock_Rectangular	钟表	10000	furniture
 give 64212725 1	Clock_Round	钟表	10000	furniture
 give 00391b06 1	Cloudplugs	云朵棉	0	meal,useable,NOT-STORABLE
-give ee0fbf94 1	Cockroaches	蟑螂	100	ingredient
+give ee0fbf94 1	Cockroaches	蟑螂	100	ingredient,chilled
 give c745cd61 1	Cocoa Powder	可可粉	150	ingredient
 give 13c7c08a 1	Coconut	椰子	400	ingredient
 give 06b32629 1	Coffee Beans	咖啡豆	200	ingredient
@@ -311,7 +312,7 @@ give 73442a79 1	Computer_with_Monitor_Set_2	电脑	150000	furniture
 give 031e94ce 1	Computer_with_Monitor_Set_3	电脑	150000	furniture
 give 7803b995 1	Cooker	炉灶	30000	furniture
 give 3401fb9b 1	Cooker_Hood	吸风罩 V15	10000	furniture
-give 842f7d9c 1	Cooking Wine	料酒	300	ingredient
+give 842f7d9c 1	Cooking Wine	料酒	300	ingredient,chilled
 give 08d98da8 1	Copper Wire	铜线	400	
 give 85914f1b 1	Coriander	香菜	180	ingredient,plant
 give bbf712a0 1	Coriander Seeds	香菜种子	1000	seed
@@ -321,21 +322,21 @@ give 93dabcd5 1	Corn Seeds	玉米种子	1000	seed
 give 036231f1 1	CorpSec Witness Protection ID	安保集团证人保护 ID	500000	
 give f69ad695 1	Counter_Computer	电脑	90000	furniture
 give b0372c7e 1	CPU	CPU	15000	
-give 1cc3d846 1	Crab	螃蟹	700	ingredient
+give 1cc3d846 1	Crab	螃蟹	700	ingredient,chilled
 give 132626d6 1	Cranberries	蔓越莓	400	ingredient
-give da9d9c02 1	Cream	奶油	200	ingredient,plant
-give 5469c2b8 1	Cream Cheese	奶油芝士	200	ingredient,plant
-give 734aa71b 1	Cricket	蟋蟀	300	ingredient
+give da9d9c02 1	Cream	奶油	200	ingredient,plant,chilled
+give 5469c2b8 1	Cream Cheese	奶油芝士	200	ingredient,plant,chilled
+give 734aa71b 1	Cricket	蟋蟀	300	ingredient,chilled
 give 3d1448d6 1	Crispy Bugs Platter	脆虫拼盘	0	meal,useable,NOT-STORABLE
 give 470baec7 1	Crispy Chicken Burger	脆皮鸡汉堡	0	meal,NOT-STORABLE
 give b272683c 1	Croquettes	可乐饼	0	meal,useable,NOT-STORABLE
-give ec574431 1	Crucian	鲫鱼	450	ingredient,fish
-give 392046d0 1	Cucumbers	黄瓜	150	ingredient,plant
+give ec574431 1	Crucian	鲫鱼	450	ingredient,fish,chilled
+give 392046d0 1	Cucumbers	黄瓜	150	ingredient,plant,chilled
 give 4948f113 1	Cucumbers Seeds	黄瓜种子	1000	seed
 give 741cf5c0 1	Cup of Coffee	一杯咖啡	400	
 give ebb71f31 1	Curry	咖喱	150	ingredient
-give 7f4e8b96 1	Cyber Shot	赛博冲击	0	meal,drink,NOT-STORABLE
-give 0fdebc3b 1	Dace	鲮鱼	550	ingredient,fish
+give 7f4e8b96 1	Cyber Shot	赛博冲击	0	meal,drink,chilled,NOT-STORABLE
+give 0fdebc3b 1	Dace	鲮鱼	550	ingredient,fish,chilled
 give ccd8a6a5 1	Dace Kalatusha	鲮鱼汤	0	meal,useable,NOT-STORABLE
 give a58872c3 1	DairyFarmingModuleA	A级乳品生产模块	41000	furniture
 give 27ebf872 1	DairyFarmingModuleB	B级乳品生产模块	21000	furniture
@@ -347,7 +348,7 @@ give 81215a50 1	Dark_Headphone	耳机	25000	furniture
 give d1473cd4 1	Dates	枣椰	400	ingredient,plant,seed
 give e3269a36 1	Dead Rat	死老鼠	0	
 give fa2c7719 1	Dee Dees Reply	迪迪的回复	0	
-give 1ccd7f71 1	Deep_Freezer	高级冷柜	30000	furniture
+give 1ccd7f71 1	Deep_Freezer	高级冷柜	30000	furniture,cold+200
 give 3cfb8da3 1	Deep_Fryer	炸锅	30000	furniture
 give 9b227853 1	Desk_chair_1	办公椅	10000	furniture
 give feb810a4 1	Desk_chair_2_black	办公椅	10000	furniture
@@ -370,22 +371,22 @@ give 14dd9946 1	Dishwasher_W60cm_Bottom_Set_03	洗碗机	30000	furniture
 give c45753fd 1	Donut	甜甜圈	400	
 give 48b11a55 1	DoomBowl	厄运之碗	0	
 give d5d5992e 1	Drinks_Machine	酒水机	30000	furniture
-give 2e6cdb5c 1	Drunken Master	醉拳宗师	0	meal,drink,NOT-STORABLE
-give 3e3aa5cd 1	Duck	鸭肉	600	ingredient,plant
+give 2e6cdb5c 1	Drunken Master	醉拳宗师	0	meal,drink,chilled,NOT-STORABLE
+give 3e3aa5cd 1	Duck	鸭肉	600	ingredient,plant,chilled
 give 8ac7e29f 1	Duck Resin Pellets	鸭肉胶颗粒	300	seed
 give ab800cb7 1	Dumpling Wrappers	饺子皮	200	ingredient
 give 32c65161 1	Eastern Salad	东方沙拉	0	meal,useable,NOT-STORABLE
 give 68ccf1a2 1	Edison Audio Transcript	爱迪生音频记录	0	
-give 9aaeeb37 1	Egg Coffee	蛋香咖啡	0	meal,drink,NOT-STORABLE
-give 79cacd61 1	Eggplants	茄子	350	ingredient,plant
+give 9aaeeb37 1	Egg Coffee	蛋香咖啡	0	meal,drink,chilled,NOT-STORABLE
+give 79cacd61 1	Eggplants	茄子	350	ingredient,plant,chilled
 give 643596e8 1	Eggplants Seeds	茄子种子	1000	seed
-give 6a05cecf 1	Eggs	蛋	220	ingredient
+give 6a05cecf 1	Eggs	蛋	220	ingredient,chilled
 give a7e70070 1	Empty_Sink		0	furniture,NOT-STORABLE
 give dd0f2306 1	Enchiridion Fragment	万域集碎片	0	
 give 42f4231c 1	Encrypted_Chip		6000	
 give f242a429 1	Enoki Mushrooms	金针菇	300	ingredient,plant
 give 3fb102d2 1	Enoki Spores	金针菇孢子	1000	seed
-give 2b6234d1 1	Espresso Martini	浓咖马天尼	0	meal,drink,NOT-STORABLE
+give 2b6234d1 1	Espresso Martini	浓咖马天尼	0	meal,drink,chilled,NOT-STORABLE
 give 05e8b614 1	Eugene's Remains	尤金遗骸	0	
 give c15ed9b7 1	Extra Tall Latte	加高加高拿铁	1000	
 give 030a42f4 1	Eyeball Pasta	眼球意面	0	meal,useable,NOT-STORABLE
@@ -396,11 +397,11 @@ give f2db14a7 1	Fashion Holo	时尚全息	2800
 give 9c3fd8d6 1	Fennel	茴香	180	ingredient,plant
 give 9cd76927 1	Fennel Seeds	茴香种子	1000	seed
 give 08c6cfc9 1	Fennel Soup with Bacon	茴香培根汤	0	meal,useable,NOT-STORABLE
-give 343f579f 1	Feta	菲达羊乳酪	250	ingredient,plant
+give 343f579f 1	Feta	菲达羊乳酪	250	ingredient,plant,chilled
 give a6ca9b57 1	Fish Burger	鱼肉汉堡	0	meal,NOT-STORABLE
-give 81a1c2ed 1	Fish Roe	鱼籽	500	ingredient
+give 81a1c2ed 1	Fish Roe	鱼籽	500	ingredient,chilled
 give 7bd895be 1	Fish Salad	鱼肉沙拉	0	meal,NOT-STORABLE
-give 37f18adc 1	Flask Fizz	充气宝瓶	0	meal,drink,NOT-STORABLE
+give 37f18adc 1	Flask Fizz	充气宝瓶	0	meal,drink,chilled,NOT-STORABLE
 give 91cabef5 1	Floating_Toilet	浮式马桶	20000	furniture
 give 69d245a8 1	Floating_Toilet_01	马桶	25000	furniture
 give 1224f5d4 1	Floating_Toilet_01_with_Cistern	马桶	35000	furniture
@@ -448,15 +449,15 @@ give d33ff16d 1	frame-14inchesx11inches_300vox	相框（14x11）	2000	furniture
 give 5165986d 1	frame-5inchesx7inches_300vox	相框（5x7）	2000	furniture
 give 708bea00 1	frame-7inchesx5inches_300vox	相框（7x5）	2000	furniture
 give 367961c1 1	frame-8inchesx10inches_300vox	相框（8x10）	2000	furniture
-give dbaa847d 1	Freezer	冷柜	50000	furniture
+give dbaa847d 1	Freezer	冷柜	50000	furniture,cold+100
 give 6aa4cc7a 1	Fried Carp	炸鲤鱼	0	meal,useable,NOT-STORABLE
-give 6aede13f 1	Frosted Murder	霜冻杀机	0	meal,drink,NOT-STORABLE
+give 6aede13f 1	Frosted Murder	霜冻杀机	0	meal,drink,chilled,NOT-STORABLE
 give 2faf9db7 1	FruitFarmingModuleA	A级水果种植模块	41000	furniture
 give f04bccf5 1	FruitFarmingModuleB	B级水果种植模块	21000	furniture
 give 42bb9a34 1	FruitFarmingModuleC	C级水果种植模块	11000	furniture
 give 169d0006 1	Fruity Burger	果味汉堡	0	meal,useable,NOT-STORABLE
 give 1f6f88cc 1	Frushi	水果寿司	0	meal,useable,NOT-STORABLE
-give 44b04a85 1	Fuh	芙华	0	meal,drink,NOT-STORABLE
+give 44b04a85 1	Fuh	芙华	0	meal,drink,chilled,NOT-STORABLE
 give 9bd1a3e1 1	Furniture_BathTowel01	毛巾架	5000	furniture
 give 454dfcf2 1	Furniture_BathTowel02	毛巾架	6000	furniture
 give 0446767f 1	Furniture_BathTowel03	毛巾架	5000	furniture
@@ -493,11 +494,11 @@ give 7b396b99 1	Furniture_couch02_Grey3	灰色沙发（三人座）	130000	furni
 give dec76ff6 1	Furniture_couch02_Teal1	天青绿扶手椅	50000	furniture
 give 2e0c081e 1	Furniture_couch02_Teal2	天青绿沙发（两人座）	100000	furniture
 give e701c349 1	Furniture_couch02_Teal3	天青绿沙发（三人座）	130000	furniture
-give 0d0511ad 1	Furniture_cupboard01	餐边柜	40000	furniture
-give bf62f49c 1	Furniture_cupboard02	壁橱	35000	furniture
-give 32cd957b 1	Furniture_cupboard03	床头柜	25000	furniture
-give 48d8ee4e 1	Furniture_cupboard04	餐边柜	50000	furniture
-give 995bb5f9 1	Furniture_cupboard05	餐边柜	80000	furniture
+give 0d0511ad 1	Furniture_cupboard01	餐边柜	40000	furniture,storage+60
+give bf62f49c 1	Furniture_cupboard02	壁橱	35000	furniture,storage+30
+give 32cd957b 1	Furniture_cupboard03	床头柜	25000	furniture,storage+30
+give 48d8ee4e 1	Furniture_cupboard04	餐边柜	50000	furniture,storage+50
+give 995bb5f9 1	Furniture_cupboard05	餐边柜	80000	furniture,storage+60
 give c9ef6ffe 1	Furniture_Desk_1	书桌	40000	furniture
 give ed1034c4 1	Furniture_Desk_2	书桌	60000	furniture
 give 2af7bc17 1	Furniture_guitar	吉他	85000	furniture
@@ -509,7 +510,7 @@ give e306ca6d 1	Furniture_Low_Table_2	茶几	40000	furniture
 give 27a2b836 1	Furniture_Low_Table_3	茶几	80000	furniture
 give 0c8bd29e 1	Furniture_mirror01	镜子	15000	furniture
 give 2e743ffb 1	Furniture_mirror02	镜子	25000	furniture
-give dd0220ea 1	Furniture_Nightstand_Shelf	床头柜	20000	furniture
+give dd0220ea 1	Furniture_Nightstand_Shelf	床头柜	20000	furniture,storage+10
 give 0d522fa5 1	Furniture_Painting01	艺术画	16000	furniture
 give 6147547b 1	Furniture_Painting02	艺术画	30000	furniture
 give 49491994 1	Furniture_Painting03	艺术画	20000	furniture
@@ -553,10 +554,10 @@ give 9591aeb4 1	Furniture_wallLamp01	壁灯	12000	furniture
 give 3dff98cc 1	Furniture_wallLamp02	壁灯	9000	furniture
 give 7f4e6e9d 1	Furniture_wallLamp03	壁灯	12500	furniture
 give 83749a09 1	Furniture_wallShelve	挂壁书架	5000	furniture
-give 1fd5df8a 1	Furniture_wardrobe	衣柜	90000	furniture
+give 1fd5df8a 1	Furniture_wardrobe	衣柜	90000	furniture,storage+30
 give 00fb8a9a 1	Furniture_washmachine	洗衣机	20000	furniture
 give 6d6ecda4 1	Futu-Rice	浮屠饭	0	meal,useable,NOT-STORABLE
-give e56e767c 1	Galaxy Lemonade	银河柠檬水	0	meal,drink,NOT-STORABLE
+give e56e767c 1	Galaxy Lemonade	银河柠檬水	0	meal,drink,chilled,NOT-STORABLE
 give c1284b8a 1	Galician-Style-Octopus	加利西亚风味章鱼	0	meal,useable,NOT-STORABLE
 give bb845892 1	GalvanizedSteel_Plastic	洗衣篮	4000	furniture
 give 11453194 1	Garlic	大蒜	150	ingredient,plant
@@ -569,22 +570,22 @@ give ab8d362c 1	GenericFarmingModuleC	C级通用种植模块	11000	furniture
 give 5089fec8 1	Gift Bag	礼品盒	45000	
 give c98b5f79 1	Gin	杜松子酒	800	ingredient
 give 0cb11043 1	Ginger	生姜	150	ingredient,plant
-give cddafd30 1	Ginger Lime Espresso Tonic	生姜青柠浓缩汤力	0	meal,drink,NOT-STORABLE
+give cddafd30 1	Ginger Lime Espresso Tonic	生姜青柠浓缩汤力	0	meal,drink,chilled,NOT-STORABLE
 give a33969b4 1	Ginger Seeds	生姜种子	1000	seed
-give 5ad05c86 1	Ginseng	人参	200	ingredient
+give 5ad05c86 1	Ginseng	人参	200	ingredient,chilled
 give 9dd1ccee 1	Golden Rings	黄金圈	0	meal,useable,NOT-STORABLE
 give a8f45690 1	Goulash	匈牙利浓汤	0	meal,useable,NOT-STORABLE
 give 9a4e3ccd 1	Grandma's Cake	奶奶的蛋糕	0	meal,useable,NOT-STORABLE
 give 796d38d9 1	Grapefruit	西柚	400	ingredient
 give 89d9a615 1	Grapes	葡萄	400	ingredient,plant,seed
-give 424a71bd 1	Grasshopers	蝗虫	400	ingredient
-give 469f282b 1	Grayling	茴鱼	550	ingredient,fish
+give 424a71bd 1	Grasshopers	蝗虫	400	ingredient,chilled
+give 469f282b 1	Grayling	茴鱼	550	ingredient,fish,chilled
 give ad96d849 1	Great Green Salad	蔬菜荟萃	0	meal,NOT-STORABLE
-give cc985f95 1	Green Beans	绿豆角	300	ingredient,plant
+give cc985f95 1	Green Beans	绿豆角	300	ingredient,plant,chilled
 give 0a895255 1	Green Beans Seeds	绿豆角种子	1000	seed
-give a35919e8 1	Green Essence	绿色本源	0	meal,drink,NOT-STORABLE
+give a35919e8 1	Green Essence	绿色本源	0	meal,drink,chilled,NOT-STORABLE
 give 8c95c3b9 1	Green Reeker Cheese	绿色臭鼬	3500	
-give 8dfb04dd 1	Green Snake	青蛇	0	meal,drink,NOT-STORABLE
+give 8dfb04dd 1	Green Snake	青蛇	0	meal,drink,chilled,NOT-STORABLE
 give 2b4bef6b 1	Grill	烤架	30000	furniture
 give 195d35a0 1	Grinder	MG-15 研磨机	20000	furniture
 give 88432365 1	Grocery_Shelves_V1_L_1-sided	食杂货架	10000	furniture
@@ -599,7 +600,7 @@ give 614a997e 1	Grocery_Shelves_V3_L_1-sided	食杂货架	10000	furniture
 give 1335ca9d 1	Grocery_Shelves_V3_L_2-sided	食杂货架	30000	furniture
 give b186e897 1	Grocery_Shelves_V3_S_1-sided	食杂货架	10000	furniture
 give d9be0b55 1	Grocery_Shelves_V3_S_2-sided	食杂货架	25000	furniture
-give eb2b197d 1	Grub	食物	200	ingredient
+give eb2b197d 1	Grub	食物	200	ingredient,chilled
 give f6ec6730 1	Gyudon	牛丼饭	0	meal,useable,NOT-STORABLE
 give b82ae2dc 1	Hanging_Lights_Cool-1	吊灯	46500	furniture
 give d097e01a 1	Hanging_Lights_Cool-2	吊灯	23000	furniture
@@ -636,35 +637,35 @@ give ad353390 1	HydroFarmingModuleB	B级水培种植模块	21000	furniture
 give b7c9dd13 1	HydroFarmingModuleC	C级水培种植模块	11000	furniture
 give 0deb7ea1 1	I.M.P.U.N.E	I.M.P.U.N.E 调查令	135000	
 give 51e0fc2e 1	Ice Cream Burger	冰淇淋堡	0	meal,useable,NOT-STORABLE
-give c8c85c01 1	Ide	雅罗鱼	450	ingredient,fish
+give c8c85c01 1	Ide	雅罗鱼	450	ingredient,fish,chilled
 give 28b58fa6 1	Ika Nigiri	鱿鱼手握寿司	0	meal,NOT-STORABLE
-give c4f753ff 1	Ikasumi	墨汁嚢	0	meal,drink,NOT-STORABLE
-give 9864a8a1 1	Immortalitea	永生之茶	0	meal,drink,NOT-STORABLE
-give 51746add 1	Insect Milkshake	昆虫奶昔	0	meal,drink,NOT-STORABLE
+give c4f753ff 1	Ikasumi	墨汁嚢	0	meal,drink,chilled,NOT-STORABLE
+give 9864a8a1 1	Immortalitea	永生之茶	0	meal,drink,chilled,NOT-STORABLE
+give 51746add 1	Insect Milkshake	昆虫奶昔	0	meal,drink,chilled,NOT-STORABLE
 give c04bb804 1	Insect Sushi	昆虫寿司	0	meal,useable,NOT-STORABLE
 give 8448c464 1	IronCastSFishingRod	生锈的鱼竿	50000	equippable
-give 01c81d12 1	Island_W270CM_Set_01	厨房中央岛台	110000	furniture
-give 62787fe9 1	Island_W270CM_Set_02	厨房中央岛台	125000	furniture
-give fd6cbbd3 1	Island_W270cm_Set_03	厨房中央岛台	100000	furniture
-give 2f491bd2 1	Item_Highboard_1	立柜	85000	furniture
-give c9d2778f 1	Item_Highboard_2	立柜	75000	furniture
-give 643c9684 1	Item_Highboard_3	立柜	68000	furniture
-give c1dd04dc 1	Item_Lowboards_1	矮柜	60000	furniture
-give 06f1fc29 1	Item_Lowboards_2	矮柜	80000	furniture
-give a6ac19e4 1	Item_Lowboards_3	矮柜	70000	furniture
-give 7722e338 1	Item_Vending_Chips	薯片	500	ingredient
-give 3a67b9e2 1	Item_Vending_Doshirakus	多食乐便当（小）	800	ingredient
-give 709e2134 1	Item_Vending_Doshirakus_2	多食乐便当（大）	1500	ingredient
-give f1f6a8e9 1	Item_Vending_Nyaco_Cola	尼亚科可乐	400	ingredient
-give 8af12678 1	Item_Vending_Shlepa_Dumplings	什列帕饺子	1000	ingredient
-give f32ecad0 1	Item_Vending_Space_Cola	太空可乐	400	ingredient
-give dd5b224a 1	Jalapeno Juice	墨西哥辣椒汁	0	meal,drink,NOT-STORABLE
+give 01c81d12 1	Island_W270CM_Set_01	厨房中央岛台	110000	furniture,storage+200
+give 62787fe9 1	Island_W270CM_Set_02	厨房中央岛台	125000	furniture,storage+200
+give fd6cbbd3 1	Island_W270cm_Set_03	厨房中央岛台	100000	furniture,storage+200
+give 2f491bd2 1	Item_Highboard_1	立柜	85000	furniture,storage+80
+give c9d2778f 1	Item_Highboard_2	立柜	75000	furniture,storage+80
+give 643c9684 1	Item_Highboard_3	立柜	68000	furniture,storage+80
+give c1dd04dc 1	Item_Lowboards_1	矮柜	60000	furniture,storage+40
+give 06f1fc29 1	Item_Lowboards_2	矮柜	80000	furniture,storage+40
+give a6ac19e4 1	Item_Lowboards_3	矮柜	70000	furniture,storage+40
+give 7722e338 1	Item_Vending_Chips	薯片	500	ingredient,chilled
+give 3a67b9e2 1	Item_Vending_Doshirakus	多食乐便当（小）	800	ingredient,chilled
+give 709e2134 1	Item_Vending_Doshirakus_2	多食乐便当（大）	1500	ingredient,chilled
+give f1f6a8e9 1	Item_Vending_Nyaco_Cola	尼亚科可乐	400	ingredient,chilled
+give 8af12678 1	Item_Vending_Shlepa_Dumplings	什列帕饺子	1000	ingredient,chilled
+give f32ecad0 1	Item_Vending_Space_Cola	太空可乐	400	ingredient,chilled
+give dd5b224a 1	Jalapeno Juice	墨西哥辣椒汁	0	meal,drink,chilled,NOT-STORABLE
 give 84f63cb6 1	Jasmine	茉莉	300	ingredient
 give 9de9e236 1	Jellied Volga Zander	伏尔加梭鲈鱼冻	0	meal,useable,NOT-STORABLE
 give 17ec7c4f 1	Jujube	枣子	400	ingredient
 give 931d8e53 1	Jukebox	点唱机	170000	furniture
 give cb353738 1	k20 Tumbler	k20 保温杯	500	
-give b68cd2c3 1	Kahlua	咖啡酒	800	ingredient
+give b68cd2c3 1	Kahlua	咖啡酒	800	ingredient,chilled
 give d57e62c2 1	Kaisen Don	海鲜丼	0	meal,useable,NOT-STORABLE
 give fdf2601a 1	Katsu Ika Odori Don	活乌贼丼	0	meal,useable,NOT-STORABLE
 give 4c1b9047 1	King Mushroom	杏鲍菇	400	ingredient,plant
@@ -672,10 +673,10 @@ give 7d9f9502 1	King Mushroom Spores	杏鲍菇孢子	1000	seed
 give 4c7fe2e3 1	King Mushroom Steak	杏鲍菇排	0	meal,useable,NOT-STORABLE
 give fe1f1d7f 1	King_bed_1	超豪华双人床	150000	furniture
 give 9bb60668 1	King_bed_2	超豪华双人床	120000	furniture
-give 25a17204 1	Kitchen_Base_Cabinet_OuterCorner_Set_01	厨房橱柜外角	10000	furniture
-give 926ecf77 1	Kitchen_Base_Cabinet_OuterCorner_Set_02	厨房橱柜外角	10000	furniture
-give 65bd1f81 1	Kitchen_Buffet	自助餐台	100000	furniture
-give 44069b00 1	Kitchen_Cabinet_OuterCorner_Set_03	厨房橱柜外角	10000	furniture
+give 25a17204 1	Kitchen_Base_Cabinet_OuterCorner_Set_01	厨房橱柜外角	10000	furniture,storage+20
+give 926ecf77 1	Kitchen_Base_Cabinet_OuterCorner_Set_02	厨房橱柜外角	10000	furniture,storage+30
+give 65bd1f81 1	Kitchen_Buffet	自助餐台	100000	furniture,storage+100,cold+50
+give 44069b00 1	Kitchen_Cabinet_OuterCorner_Set_03	厨房橱柜外角	10000	furniture,storage+30
 give b892fe42 1	Kitchen_CoffeeMachine	咖啡机	30000	furniture
 give d710c0ed 1	Kitchen_CoffeeMug	咖啡杯	1000	furniture
 give 5a6a601b 1	Kitchen_Counter_Cabinet_01	桃木厨房	137000	furniture
@@ -684,63 +685,63 @@ give 5b5ce1b2 1	Kitchen_Dish_Rack_02	大号碗架	12000	furniture
 give 74d503a7 1	Kitchen_Dish_Rack_03	大号金属碗架	21000	furniture
 give 7f872126 1	Kitchen_ElectricStove_Range	电炉	60000	furniture
 give 60a0542b 1	Kitchen_Elevator		0	furniture,NOT-STORABLE
-give 92e94b64 1	Kitchen_Fridge01	冰箱	60000	furniture
-give 125a7290 1	Kitchen_Fridge02	冰箱	60000	furniture
+give 92e94b64 1	Kitchen_Fridge01	冰箱	60000	furniture,cold+100
+give 125a7290 1	Kitchen_Fridge02	冰箱	60000	furniture,cold+110
 give 0522891c 1	Kitchen_InductionStove	电磁炉	50000	furniture
 give 09f60ca1 1	Kitchen_Knives_Set_1	刀具套装（陶瓷）	15000	furniture
 give 12c3d1ae 1	Kitchen_Knives_Set_2	刀具套装（不锈钢）	10000	furniture
 give 6e9d2996 1	Kitchen_Knives_Set_3	刀具套装（木质）	20000	furniture
 give 7e4ab521 1	Kitchen_Oil_Bottle_Set_01	油瓶多件套	4500	furniture
-give 26c80ae7 1	Kitchen_SingleSink_Set_01	水槽	17000	furniture
-give add09c9d 1	Kitchen_SingleSink_Set_02	水槽	17000	furniture
-give c2e9882f 1	Kitchen_SingleSink_Set_03	水槽	17000	furniture
+give 26c80ae7 1	Kitchen_SingleSink_Set_01	水槽	17000	furniture,storage+20
+give add09c9d 1	Kitchen_SingleSink_Set_02	水槽	17000	furniture,storage+20
+give c2e9882f 1	Kitchen_SingleSink_Set_03	水槽	17000	furniture,storage+20
 give 2a10d850 1	Kitchen_Toaster	烤面包机	10000	furniture
 give 557fbd18 1	Kitchen_Trash-Bin_Large_01	厨房垃圾桶	5000	furniture
 give 1d7eb231 1	Kitchen_Trash-Bin_Large_02	厨房垃圾桶	7000	furniture
-give af7e9b0c 1	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_01	壁挂式外角橱柜（40×40）	10000	furniture
-give 21faec9a 1	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_02	壁挂式外角橱柜（40×40）	10000	furniture
-give d82584f3 1	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_03	壁挂式外角橱柜（40×40）	10000	furniture
-give 0af56707 1	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_01	壁挂式外角橱柜（40×60）	10000	furniture
-give 57424650 1	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_02	壁挂式外角橱柜（40×60）	10000	furniture
-give c48a1f51 1	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_03	壁挂式外角橱柜（40×60）	10000	furniture
+give af7e9b0c 1	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_01	壁挂式外角橱柜（40×40）	10000	furniture,storage+10
+give 21faec9a 1	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_02	壁挂式外角橱柜（40×40）	10000	furniture,storage+10
+give d82584f3 1	Kitchen_Wall_Cabinet_Outer-Corner_H40cm_Set_03	壁挂式外角橱柜（40×40）	10000	furniture,storage+10
+give 0af56707 1	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_01	壁挂式外角橱柜（40×60）	10000	furniture,storage+15
+give 57424650 1	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_02	壁挂式外角橱柜（40×60）	10000	furniture,storage+15
+give c48a1f51 1	Kitchen_Wall_Cabinet_Outer-Corner_H60cm_Set_03	壁挂式外角橱柜（40×60）	10000	furniture,storage+15
 give 821f83f6 1	Kiwi	猕猴桃	400	ingredient
-give a3824b67 1	Kombucha	康普茶	300	ingredient
-give 515d5da3 1	Kompot	原汁果片	0	meal,drink,NOT-STORABLE
+give a3824b67 1	Kombucha	康普茶	300	ingredient,chilled
+give 515d5da3 1	Kompot	原汁果片	0	meal,drink,chilled,NOT-STORABLE
 give 21d3ce91 1	KoreChant Codex	柯颂参典	9500	
 give 1745598c 1	Kumquat	金橘	400	ingredient
 give 568cabf1 1	Kung Pao Chicken	宫保鸡丁	0	meal,useable,NOT-STORABLE
 give 2498979c 1	Kushiyaki	日式串烧	0	meal,useable,NOT-STORABLE
-give 6e4e7ee9 1	Kvass	格瓦斯	0	meal,drink,NOT-STORABLE
+give 6e4e7ee9 1	Kvass	格瓦斯	0	meal,drink,chilled,NOT-STORABLE
 give 30f08f31 1	Kvass	格瓦斯	300	ingredient
-give 9c75d9c3 1	Lake Trout	湖鲑鱼	450	ingredient,fish
-give de7bb5b4 1	Lamb	羊羔肉	700	ingredient
+give 9c75d9c3 1	Lake Trout	湖鲑鱼	450	ingredient,fish,chilled
+give de7bb5b4 1	Lamb	羊羔肉	700	ingredient,chilled
 give daede5f7 1	Lamp_Apt_Central_Market_1	吊灯	18000	furniture
 give 3ef19342 1	Lamp_Apt_Central_Market_2	吸顶灯	10000	furniture
 give cfecf4c7 1	Lamp_Apt_Central_Market_3	吊灯	19000	furniture
-give 78a4de21 1	Large_Fridge_with_Groceries	大号冰箱	60000	furniture
-give 97ec31a8 1	Leeks	韭葱	170	ingredient,plant
+give 78a4de21 1	Large_Fridge_with_Groceries	大号冰箱	60000	furniture,cold+200
+give 97ec31a8 1	Leeks	韭葱	170	ingredient,plant,chilled
 give 7e15ebf8 1	Leeks Seeds	韭葱种子	1000	seed
-give 76120e4d 1	Lemon Soda	柠檬苏打	200	ingredient
+give 76120e4d 1	Lemon Soda	柠檬苏打	200	ingredient,chilled
 give 1cdedd63 1	Lemongrass	柠檬草	180	ingredient,plant
 give d8316bb7 1	Lemongrass Seeds	柠檬草种子	1000	seed
 give c1632b80 1	Lemons	柠檬	200	ingredient,plant,seed
-give 27d1499e 1	Lettuce	生菜	200	ingredient,plant
+give 27d1499e 1	Lettuce	生菜	200	ingredient,plant,chilled
 give 242dc33d 1	Lettuce Seeds	生菜种子	1000	seed
 give 8d6ee0d4 1	Level Up! Patch	“升级！”贴片	680000	
 give 9d72d7a2 1	Light Bar	条状灯带	15000	furniture
 give 5b31640a 1	Light_Goggles	VR眼镜	120000	furniture
 give fb6b6505 1	Light_Headphone	耳机	30000	furniture
 give 9d12265b 1	Lime	青柠	200	ingredient
-give 828c21c1 1	Liquid Nitrogen	液氮	300	ingredient
-give 6caf6e59 1	Lizard	蜥蜴	600	ingredient
-give 8571c83f 1	Lizard Tonic	蜥蜴汤力	0	meal,drink,NOT-STORABLE
+give 828c21c1 1	Liquid Nitrogen	液氮	300	ingredient,chilled
+give 6caf6e59 1	Lizard	蜥蜴	600	ingredient,chilled
+give 8571c83f 1	Lizard Tonic	蜥蜴汤力	0	meal,drink,chilled,NOT-STORABLE
 give 59c5060e 1	Logic Relay	逻辑中继	75000	
 give 03fb06e8 1	Lost Bracelet	丢失的手镯	3500	
 give da45fd1e 1	Lost Earring	丢失的耳环	1500	
 give b1ca1557 1	Lost Necklace	丢失的项链	5000	
 give bd545c30 1	Lost Ring	丢失的戒指	2000	
 give cd2dfdd7 1	Lotus Leaves	荷叶	300	ingredient
-give 3d6074a9 1	Lotus Roots	藕	400	ingredient,plant
+give 3d6074a9 1	Lotus Roots	藕	400	ingredient,plant,chilled
 give 3b0fc0bd 1	Lotus Roots Seeds	莲藕种子	1000	seed
 give 77e35270 1	Low_Shelf_01	浴室架	15000	furniture
 give 740c07ae 1	Low_Shelf_02	浴室架	20000	furniture
@@ -754,34 +755,34 @@ give a36b55ce 1	Magic Potion	魔法药水	0	meal,useable,NOT-STORABLE
 give 60a237ca 1	Mango	芒果	400	ingredient
 give b5f27dca 1	Marjorie's Chip	生药公司旧记录	0	
 give 9e4ac97b 1	Matcha Powder	抹茶粉	300	ingredient
-give 1f55703a 1	Mayonnaise	蛋黄酱	150	ingredient
-give 5a358dd3 1	Mealworms	面包虫	100	ingredient
+give 1f55703a 1	Mayonnaise	蛋黄酱	150	ingredient,chilled
+give 5a358dd3 1	Mealworms	面包虫	100	ingredient,chilled
 give d5a0d23a 1	MeatFarmingModuleA	A级肉类打印模块	41000	furniture
 give 11456bc4 1	MeatFarmingModuleB	B级肉类打印模块	21000	furniture
 give 6ef3c905 1	MeatFarmingModuleC	C级肉类打印模块	11000	furniture
-give cfdae31e 1	Mei Ling	美铃	0	meal,drink,NOT-STORABLE
+give cfdae31e 1	Mei Ling	美铃	0	meal,drink,chilled,NOT-STORABLE
 give f0611750 1	Melon	香瓜	400	ingredient
 give 20ee14a3 1	Meridian Pizza	子午披萨	0	meal,useable,NOT-STORABLE
 give a1f34129 1	Micronutrient Premix	微量元素混合剂	300	ingredient
-give cb0da62a 1	Milk	鲜奶	150	ingredient
+give cb0da62a 1	Milk	鲜奶	150	ingredient,chilled
 give 6775cbbf 1	Mini Hotpot	小火锅	0	meal,useable,NOT-STORABLE
 give 8539d27f 1	Mint	薄荷	180	ingredient,plant
-give a7a5a396 1	Mint Mojito Iced Coffee	薄荷莫吉托冰咖啡	0	meal,drink,NOT-STORABLE
+give a7a5a396 1	Mint Mojito Iced Coffee	薄荷莫吉托冰咖啡	0	meal,drink,chilled,NOT-STORABLE
 give 433a4577 1	Mint Seeds	薄荷种子	1000	seed
-give 8a65e26c 1	Molotov Cocktail	莫洛托夫鸡尾酒	0	meal,drink,NOT-STORABLE
+give 8a65e26c 1	Molotov Cocktail	莫洛托夫鸡尾酒	0	meal,drink,chilled,NOT-STORABLE
 give 3fc8edd3 1	Morels Spores	羊肚菌孢子	0	seed
 give 2a7e3d10 1	Motherboard	主板	55000	
 give df44e164 1	Mountain Flower	山花	300	ingredient,plant
 give 7e0ff501 1	Mountain Flower Seeds	山花种子	1000	seed
-give 142955ac 1	Mozarella	马苏里拉奶酪	250	ingredient,plant
-give 9d55c222 1	Mushroom Hot Cocoa	蘑菇热可可	0	meal,drink,NOT-STORABLE
+give 142955ac 1	Mozarella	马苏里拉奶酪	250	ingredient,plant,chilled
+give 9d55c222 1	Mushroom Hot Cocoa	蘑菇热可可	0	meal,drink,chilled,NOT-STORABLE
 give f385f71c 1	Mushroom Mocha	菌菇抹茶	1100	
 give 9c2b9469 1	MushroomsFarmingModuleA	A级菌菇种植模块	41000	furniture
 give 9dd8c8bb 1	MushroomsFarmingModuleB	B级菌菇种植模块	21000	furniture
 give 89297756 1	MushroomsFarmingModuleC	C级菌菇种植模块	11000	furniture
 give 75e4b7bb 1	Muskmelon	甜瓜	400	ingredient
-give 2af340f7 1	Mussels	贻贝	500	ingredient,plant,seed
-give 7337364f 1	Mustard	芥末酱	100	ingredient
+give 2af340f7 1	Mussels	贻贝	500	ingredient,plant,seed,chilled
+give 7337364f 1	Mustard	芥末酱	100	ingredient,chilled
 give 16d21c7d 1	Mutant Burger	变种汉堡	0	meal,useable,NOT-STORABLE
 give 1d6f0471 1	Mystery Spores	神秘孢子	500	seed
 give d91d7083 1	Nata-Log	运输局日志	7900	
@@ -790,9 +791,9 @@ give c03a7425 1	NeonSign	霓虹灯招牌	100000
 give 261b9698 1	Nettle	荨麻	180	ingredient,plant
 give 7fbf4259 1	Nettle Seeds	荨麻种子	1000	seed
 give 3f035c70 1	Neutral Oil	中性油	100	ingredient
-give d2a63935 1	Nitro Espresso Tonic	氮气浓缩汤力	0	meal,drink,NOT-STORABLE
-give 4dd5233b 1	Nivalis	尼瓦利斯	0	meal,drink,NOT-STORABLE
-give aaa2d300 1	Nivalis Sunset	尼瓦利斯日落	0	meal,drink,NOT-STORABLE
+give d2a63935 1	Nitro Espresso Tonic	氮气浓缩汤力	0	meal,drink,chilled,NOT-STORABLE
+give 4dd5233b 1	Nivalis	尼瓦利斯	0	meal,drink,chilled,NOT-STORABLE
+give aaa2d300 1	Nivalis Sunset	尼瓦利斯日落	0	meal,drink,chilled,NOT-STORABLE
 give 3e82d754 1	Nivalis Times	尼亚利斯时报	0	equippable
 give 0e5b25a6 1	Nivalis-Brochette	尼瓦利斯串烧	0	meal,useable,NOT-STORABLE
 give de26cb88 1	Nutmeg	肉豆蔻	150	ingredient
@@ -800,7 +801,7 @@ give b78a9953 1	Oatstraw	燕麦草	180	ingredient,plant
 give c7c7facd 1	Oatstraw Seeds	燕麦草种子	1000	seed
 give 2be3662c 1	Object_tableLamp01	桌灯	4000	furniture
 give e78a1770 1	Object_tableLamp02	桌灯	4000	furniture
-give 02287269 1	Ocean Latte	海洋拿铁	0	meal,drink,NOT-STORABLE
+give 02287269 1	Ocean Latte	海洋拿铁	0	meal,drink,chilled,NOT-STORABLE
 give 634f802a 1	Octo-Shot Espresso	八倍浓缩咖啡	1500	
 give 1c5d348d 1	Okra	秋葵	200	ingredient,plant
 give 34ecf656 1	Okra Seeds	秋葵种子	1000	seed
@@ -827,17 +828,17 @@ give f382953f 1	Oranges	橙子	250	ingredient,plant,seed
 give 838c9ff7 1	Osmanthus	桂花	180	ingredient,plant
 give 2dec3c38 1	Osmanthus Seeds	桂花种子	1000	seed
 give cb71333f 1	Oven	烤炉	60000	furniture
-give ebf9a0d0 1	Oyster Shooter	牡蛎子弹酒	0	meal,drink,NOT-STORABLE
-give 2afd5b50 1	Oysters	牡蛎	500	ingredient,plant,seed
+give ebf9a0d0 1	Oyster Shooter	牡蛎子弹酒	0	meal,drink,chilled,NOT-STORABLE
+give 2afd5b50 1	Oysters	牡蛎	500	ingredient,plant,seed,chilled
 give fc8bf0d3 1	Package for Sage	赛吉的包裹	10000	
 give 3b35357f 1	Pan	平底锅	10000	furniture
 give d9afd113 1	Pancake Coffee	煎饼咖啡	1800	
-give a63e717d 1	Paprika	红辣椒	170	ingredient
-give 17527816 1	Parmesan	帕尔马干酪	300	ingredient,plant
+give a63e717d 1	Paprika	红辣椒	170	ingredient,chilled
+give 17527816 1	Parmesan	帕尔马干酪	300	ingredient,plant,chilled
 give 3d6d9fb8 1	Parmesan Crumbled Whitefish	帕尔马酪白鲑鱼	0	meal,useable,NOT-STORABLE
 give 8307f23a 1	Parsley	香芹	180	ingredient,plant
 give 7368e768 1	Parsley Seeds	香芹种子	1000	seed
-give 217549e5 1	PB&J	花生酱果冻三明治	0	meal,drink,NOT-STORABLE
+give 217549e5 1	PB&J	花生酱果冻三明治	0	meal,drink,chilled,NOT-STORABLE
 give b7ae9346 1	Peach	桃子	350	ingredient
 give 065db0aa 1	Peanuts	花生	300	ingredient
 give bdbb303a 1	Pearl Barley	大麦米	150	ingredient,plant
@@ -845,28 +846,28 @@ give 7250d4b2 1	Pearl Barley Seeds	大麦米种子	1000	seed
 give e1b66af0 1	Peas	豌豆	150	ingredient,plant
 give f08002b0 1	Peas Seeds	豌豆种子	1000	seed
 give 9e264e40 1	Pemmican	干肉饼	0	meal,useable,NOT-STORABLE
-give c79f7ee5 1	Pepperoni	意式辣肠	200	ingredient
-give 0eab5d19 1	Peppers	胡椒粉	350	ingredient,plant
+give c79f7ee5 1	Pepperoni	意式辣肠	200	ingredient,chilled
+give 0eab5d19 1	Peppers	胡椒粉	350	ingredient,plant,chilled
 give 0cdb8e67 1	Peppers Seeds	胡椒种子	1000	seed
-give 0379a22a 1	Perch	河鲈	550	ingredient,fish
+give 0379a22a 1	Perch	河鲈	550	ingredient,fish,chilled
 give 869a09af 1	Photos of Eldridge	埃尔德里奇的照片	10000	
-give d6a08f85 1	Pi Pa	枇杷	0	meal,drink,NOT-STORABLE
-give 8171b1c1 1	Pi Pa Gao	枇杷膏	300	ingredient
+give d6a08f85 1	Pi Pa	枇杷	0	meal,drink,chilled,NOT-STORABLE
+give 8171b1c1 1	Pi Pa Gao	枇杷膏	300	ingredient,chilled
 give 66287ba5 1	Pickle Corn Dog	腌菜玉米肠	0	meal,useable,NOT-STORABLE
 give 09768d14 1	Picture_Apt_Central_Market_1	抽象绘画	60000	furniture
 give 4a7810ee 1	Picture_Apt_Central_Market_2	抽象绘画	105000	furniture
 give c587cfa6 1	Picture_Apt_Central_Market_3	抽象绘画	90000	furniture
 give 9717b9c5 1	Picture_Apt_Central_Market_4	抽象绘画	90000	furniture
 give 46bba7fa 1	Picture_Apt_Central_Market_5	抽象绘画	200000	furniture
-give 1adfbeab 1	Pike	梭子鱼	400	ingredient,fish
+give 1adfbeab 1	Pike	梭子鱼	400	ingredient,fish,chilled
 give 84682823 1	Pike Poke	梭子鱼波奇饭	0	meal,useable,NOT-STORABLE
-give 746d5f94 1	Pina Colada	凤梨椰香朗姆	0	meal,drink,NOT-STORABLE
+give 746d5f94 1	Pina Colada	凤梨椰香朗姆	0	meal,drink,chilled,NOT-STORABLE
 give 83238263 1	Pineapple	菠萝	400	ingredient
 give a03c9820 1	Pineapple Fried Rice	菠萝炒饭	0	meal,useable,NOT-STORABLE
 give da3adfee 1	Pissoir_Urinal	小便池	40000	furniture
-give ebbda66d 1	Pizza Cocktail	披萨鸡尾酒	0	meal,drink,NOT-STORABLE
+give ebbda66d 1	Pizza Cocktail	披萨鸡尾酒	0	meal,drink,chilled,NOT-STORABLE
 give 58525ffd 1	Pizza Creativo	创意米兰披萨	0	meal,useable,NOT-STORABLE
-give 94a08c93 1	Pizza Dough	披萨面团	100	ingredient
+give 94a08c93 1	Pizza Dough	披萨面团	100	ingredient,chilled
 give f1e61a7d 1	Pizza Frutti di Mare	海鲜披萨	0	meal,useable,NOT-STORABLE
 give 4b4934e7 1	Pizza Napoli	那不勒斯比萨	0	meal,useable,NOT-STORABLE
 give f7655dc4 1	Pizza Speciale	精选披萨	0	meal,useable,NOT-STORABLE
@@ -887,8 +888,8 @@ give 7393e14a 1	Plunger	皮搋子	2000	furniture
 give 4acd034c 1	Poached Roaches	白灼蟑螂	0	meal,useable,NOT-STORABLE
 give 32f6aae8 1	Poison Pill Bottle	毒药瓶	8500	
 give 001088d5 1	Poison-Pill-Bottle		100000	
-give 24814b80 1	Pork	猪肉	300	ingredient,plant
-give 135fcb0c 1	Pork Belly	五花肉	300	ingredient,plant
+give 24814b80 1	Pork	猪肉	300	ingredient,plant,chilled
+give 135fcb0c 1	Pork Belly	五花肉	300	ingredient,plant,chilled
 give d52ec7c3 1	Pork Belly Resin Pellets	五花肉胶颗粒	300	seed
 give 14ab611a 1	Pork Resin Pellets	猪肉胶颗粒	300	seed
 give 545b2c85 1	Portable_Toilet	便携式马桶	120000	furniture
@@ -915,21 +916,21 @@ give d71cb2ec 1	Pot_6	盆栽	21000	furniture
 give 5b82a1fd 1	Pot_7	盆栽	22000	furniture
 give ace50429 1	Pot_8	盆栽	25000	furniture
 give 0d1e7767 1	Pot_9	盆栽	10000	furniture
-give 04265fec 1	Prawns	大虾	700	ingredient
-give b2c56a2e 1	Prosciutto	意式火腿	600	ingredient
+give 04265fec 1	Prawns	大虾	700	ingredient,chilled
+give b2c56a2e 1	Prosciutto	意式火腿	600	ingredient,chilled
 give 502c6ff5 1	Protein Powder	蛋白粉	200	ingredient
 give 9671f2b7 1	Pumpkin	南瓜	300	ingredient
-give 098129fa 1	Pumpkin Juice	南瓜汁	0	meal,drink,NOT-STORABLE
-give b74e2a12 1	Purple Magic	紫色魔法	0	meal,drink,NOT-STORABLE
+give 098129fa 1	Pumpkin Juice	南瓜汁	0	meal,drink,chilled,NOT-STORABLE
+give b74e2a12 1	Purple Magic	紫色魔法	0	meal,drink,chilled,NOT-STORABLE
 give 154684e3 1	Purple Potato Bombs	紫薯球	0	meal,useable,NOT-STORABLE
 give 46e563b8 1	Purple Processing Card	紫色处理卡	6500	
 give d7447d87 1	Queen_bed_1	带绿植豪华双人床	80000	furniture
 give e9747337 1	Queen_bed_1_2	带绿植豪华双人床	80000	furniture
 give 1f0ebd64 1	Queen_bed_2	豪华双人床	80000	furniture
 give a5a32611 1	Radish Seeds	红萝卜种子	1000	seed
-give 0ed5ae0a 1	Radishes	红萝卜	300	ingredient,plant
+give 0ed5ae0a 1	Radishes	红萝卜	300	ingredient,plant,chilled
 give d0435686 1	Rain Drop Cake	水信玄饼	0	meal,useable,NOT-STORABLE
-give 855162ed 1	Rainbow Trout	彩虹鳟	700	ingredient,fish
+give 855162ed 1	Rainbow Trout	彩虹鳟	700	ingredient,fish,chilled
 give 7c937602 1	Ramen Burger	拉面汉堡	0	meal,useable,NOT-STORABLE
 give 14bd1be0 1	Ramen Noodles	拉面面条	150	ingredient
 give c5b8be81 1	Rangehood_W90cm	厨房一体式抽油烟机	20000	furniture
@@ -940,7 +941,7 @@ give 2ca4420d 1	Range_W90cm_Set_02	厨房灶台	60000	furniture
 give 2c2a2868 1	Range_W90cm_Set_03	厨房灶台	60000	furniture
 give 5e89beef 1	Raspberries	覆盆子	400	ingredient
 give 8e77ed67 1	Rassolnik Soup	酸黄瓜汤	0	meal,useable,NOT-STORABLE
-give 21dafa13 1	Rat Meat	鼠肉	600	ingredient
+give 21dafa13 1	Rat Meat	鼠肉	600	ingredient,chilled
 give 71e37b8b 1	Rattan_Steel	藤编洗衣篮	4000	furniture
 give a3f8b93c 1	Raw Milk	生牛乳	1000	seed
 give 56b00669 1	Red Beans	红豆	400	ingredient,plant
@@ -983,8 +984,8 @@ give e458b8df 1	Rheno's Confession	雷诺的供状	0
 give ab47d0d7 1	Rice	大米	100	ingredient,plant
 give b545e629 1	Rice Noodles	米线	150	ingredient
 give bff925b0 1	Rice Seeds	水稻种子	1000	seed
-give 88c97dd7 1	Rice Wine	米酒	200	ingredient
-give 0eb4bdd1 1	Roach	拟鲤	600	ingredient,fish
+give 88c97dd7 1	Rice Wine	米酒	200	ingredient,chilled
+give 0eb4bdd1 1	Roach	拟鲤	600	ingredient,fish,chilled
 give 9acc53f3 1	Roasted Crucian in Sour Cream Sauce	酸奶油酱烤鲫鱼	0	meal,useable,NOT-STORABLE
 give 34be8bd2 1	Roasted Tofu Lollipops with Pesto	香蒜沙司烤豆腐棒棒糖	0	meal,useable,NOT-STORABLE
 give e0d6af2f 1	Roasted Yam Seaweed Salad	烤山药海苔沙拉	0	meal,NOT-STORABLE
@@ -996,29 +997,29 @@ give d1461cd0 1	Rosemary Seeds	迷迭香种子	1000	seed
 give 9291a6c9 1	Roses	玫瑰	300	ingredient
 give c2b12218 1	RottenFood	腐坏的食物	0	
 give 72e119e9 1	Roxi Fynx Jersey	罗克西·芬克斯的战衣	25000	
-give a8e0ac37 1	Ruby Red	红色刚玉	0	meal,drink,NOT-STORABLE
-give cdb69461 1	Rudd	赤睛鱼	450	ingredient,fish
+give a8e0ac37 1	Ruby Red	红色刚玉	0	meal,drink,chilled,NOT-STORABLE
+give cdb69461 1	Rudd	赤睛鱼	450	ingredient,fish,chilled
 give 4d09d0db 1	Rudd Kebab	赤睛鱼烤串	0	meal,useable,NOT-STORABLE
-give a42de709 1	Ruffe	梅花鲈	600	ingredient,fish
+give a42de709 1	Ruffe	梅花鲈	600	ingredient,fish,chilled
 give 3734bb6d 1	Rum	朗姆酒	400	ingredient
 give 20202e8e 1	Rust Remover	除锈剂	200	
 give b5c05c62 1	Rusty Wire	锈蚀电线	200	
 give 382b86fc 1	RustyFishingRod	生锈的鱼竿	20000	equippable
 give e22b436d 1	Rye	黑麦	150	ingredient,plant
 give ef76d0c2 1	Rye Seeds	黑麦种子	1000	seed
-give adb032c0 1	SabreFish	黑鳕鱼	600	ingredient,fish
+give adb032c0 1	SabreFish	黑鳕鱼	600	ingredient,fish,chilled
 give 468140f2 1	Sailor Soup	水手汤	0	meal,useable,NOT-STORABLE
 give 3733a90a 1	Sake Maki	三文鱼寿司卷	0	meal,NOT-STORABLE
 give 7020205c 1	Sake Nigiri	三文鱼手握寿司	0	meal,NOT-STORABLE
 give c400d114 1	Sal's Recipe Book	萨尔的食谱秘籍	19000	
-give 96fc3365 1	Salmon	三文鱼	500	ingredient,fish
+give 96fc3365 1	Salmon	三文鱼	500	ingredient,fish,chilled
 give 07c2c4e8 1	Salted Taimen	盐渍哲罗鲑	0	meal,useable,NOT-STORABLE
 give ae37779b 1	Sample Mushroom Spores	样本孢子	2000	
 give b96a661e 1	Sashimi Plate	刺身拼盘	0	meal,NOT-STORABLE
-give 75056d4b 1	Sausage	香肠	300	ingredient
+give 75056d4b 1	Sausage	香肠	300	ingredient,chilled
 give d1ea099a 1	Sautéed Grayling with Pasta Carbonara	煎茴鱼肉酱面	0	meal,useable,NOT-STORABLE
-give cacf8ef9 1	Scallops	瑶柱	600	ingredient,plant,seed
-give 8445d92f 1	Scarlet Shot	猩红子弹	0	meal,drink,NOT-STORABLE
+give cacf8ef9 1	Scallops	瑶柱	600	ingredient,plant,seed,chilled
+give 8445d92f 1	Scarlet Shot	猩红子弹	0	meal,drink,chilled,NOT-STORABLE
 give 598253c1 1	Scorpion Shimmer Chip	闪光蝎子芯片	40000	
 give 05b75cc2 1	Sculpture_Bionic_Bone	仿生骨骼雕塑	200000	furniture
 give a3660993 1	Sculpture_Bluescraper	蓝厦雕塑	180000	furniture
@@ -1028,11 +1029,11 @@ give e4f44250 1	Sculpture_Liquid_Server	液态服务器雕塑	500000	furniture
 give dacdb78d 1	Sculpture_Singularity	奇点雕塑	100000	furniture
 give 2925d432 1	Sculpture_Thermic_High	热力雕塑	100000	furniture
 give 1f657bca 1	Sea Urchin Guacamole Tacos	鳄梨海胆塔可	0	meal,useable,NOT-STORABLE
-give 63c8b504 1	Sea Urchins	海胆	800	ingredient,plant,seed
+give 63c8b504 1	Sea Urchins	海胆	800	ingredient,plant,seed,chilled
 give 8b50e1a1 1	Seashell	海贝	200	
 give 621d65c1 1	Seaweed	海苔	150	ingredient,plant
 give ef44735b 1	Seaweed Seeds	海苔种子	1000	seed
-give 3ec155b7 1	Serenity	清逸安宁	0	meal,drink,NOT-STORABLE
+give 3ec155b7 1	Serenity	清逸安宁	0	meal,drink,chilled,NOT-STORABLE
 give 5880223f 1	Sesame Oil	芝麻油	150	ingredient
 give 64fcf8f0 1	Sewers Chip	下水道芯片	8000	
 give 10f52706 1	Shcherba	月桂鲈鱼汤	0	meal,useable,NOT-STORABLE
@@ -1055,18 +1056,18 @@ give ea12dc88 1	Shelf_Decoration_02_Hourglass	沙漏	80000	furniture
 give 0e35e686 1	Shelf_Decoration_03_Neon_Box_Sign	霓虹灯箱标志	20000	furniture
 give 65a246da 1	Shelf_Decoration_05_Maneki_Neko_V1	招财猫	10000	furniture
 give 2c7dd2bd 1	Shelf_Decoration_05_Maneki_Neko_V2	招财猫	10000	furniture
-give 0b4b682d 1	Shellfish	贝类	400	ingredient,plant,seed
+give 0b4b682d 1	Shellfish	贝类	400	ingredient,plant,seed,chilled
 give 8ba397c8 1	Shiitake	香菇	450	ingredient,plant
 give 17bdf2e5 1	Shiitake Spores	香菇孢子	1000	seed
 give 90fb0f48 1	Shimmer Sage Look-a-Like	乍看像闪光鼠尾草	500	
 give aff4a9bb 1	Shower_Cabin_01_Small	狭小淋浴舱	100000	furniture
 give 1957fd70 1	Shower_Cabin_02_Normal	大型淋浴舱	200000	furniture
 give a83db8c3 1	Shower_Cabin_03_Luxury	奢华淋浴舱	300000	furniture
-give 093651db 1	Shrimp	虾	450	ingredient
+give 093651db 1	Shrimp	虾	450	ingredient,chilled
 give 3e68eb79 1	Shroom Soup	蘑菇汤	0	meal,useable,NOT-STORABLE
-give 702255f2 1	Silkworm Pupae	蚕蛹	400	ingredient
-give f7639a42 1	Single-Door-Fridge_1	小号冰箱	40000	furniture
-give cfd327a9 1	Single-Door-Fridge_2	小号冰箱	40000	furniture
+give 702255f2 1	Silkworm Pupae	蚕蛹	400	ingredient,chilled
+give f7639a42 1	Single-Door-Fridge_1	小号冰箱	40000	furniture,cold+70
+give cfd327a9 1	Single-Door-Fridge_2	小号冰箱	40000	furniture,cold+60
 give 8e8f5332 1	Single_Bed_01	单人床	50000	furniture
 give cb406178 1	Single_Bed_02	单人床	50000	furniture
 give 67f4bf46 1	Single_bed_1	悬浮单人床	50000	furniture
@@ -1080,27 +1081,27 @@ give dbc89c2d 1	Small_Button_Square-1	方形按钮	2000	furniture
 give ad429c50 1	Small_Button_Square-2	方形按钮	2000	furniture
 give 8743ba60 1	Small_Button_Square-Large	方形按钮	2000	furniture
 give 7352e43f 1	Smoked Salmon Cupcake	熏鲑鱼杯子蛋糕	0	meal,useable,NOT-STORABLE
-give 94d38a0d 1	Snake	蛇肉	600	ingredient
+give 94d38a0d 1	Snake	蛇肉	600	ingredient,chilled
 give 6cf755a0 1	Snake Soup	蛇肉汤	0	meal,useable,NOT-STORABLE
-give 77d8604d 1	Snake Wine	蛇酒	800	ingredient
+give 77d8604d 1	Snake Wine	蛇酒	800	ingredient,chilled
 give 31029c39 1	Solyanka Soup	酸辣浓汤	0	meal,useable,NOT-STORABLE
-give 84f98526 1	Sour Cream	酸奶油	200	ingredient,plant
+give 84f98526 1	Sour Cream	酸奶油	200	ingredient,plant,chilled
 give bebc958f 1	Soy Beans	大豆	150	ingredient,plant
 give 8a103854 1	Soy Beans Seeds	大豆种子	1000	seed
 give b049a90e 1	Soy Pellets	大豆饲料	1000	seed
 give 7a682a14 1	Soy Sauce	酱油	70	ingredient
-give 85b1e947 1	SoyBoost	豆志昂扬	0	meal,drink,NOT-STORABLE
+give 85b1e947 1	SoyBoost	豆志昂扬	0	meal,drink,chilled,NOT-STORABLE
 give 34423e6b 1	Spaghetti Noodles	意大利面	150	ingredient
 give f316e854 1	Special Bait	特殊诱饵	900	
-give 669abd4d 1	Spiced Shroom Coffee	五香蘑菇咖啡	0	meal,drink,NOT-STORABLE
+give 669abd4d 1	Spiced Shroom Coffee	五香蘑菇咖啡	0	meal,drink,chilled,NOT-STORABLE
 give cc41ad04 1	Spicy Lemon Chicken Feet Salad	酸辣柠檬凤爪沙拉	0	meal,useable,NOT-STORABLE
 give 585360cd 1	Spider Roll	蜘蛛卷	0	meal,NOT-STORABLE
-give c349a0ba 1	Spinach	菠菜	320	ingredient,plant
+give c349a0ba 1	Spinach	菠菜	320	ingredient,plant,chilled
 give b202a026 1	Spinach Apple Salad	菠菜苹果沙拉	0	meal,NOT-STORABLE
 give d3613416 1	Spinach Seeds	菠菜种子	1000	seed
 give fe7f242f 1	Spirulina	螺旋藻	300	ingredient
 give f1125497 1	Spring Roll Wrappers	春卷皮	150	ingredient
-give 941fb886 1	Squid	鱿鱼	500	ingredient
+give 941fb886 1	Squid	鱿鱼	500	ingredient,chilled
 give 40f76c19 1	Squid Ink	墨鱼汁	500	
 give a12cb773 1	Squid Ink Pasta with Shrimp and Scallop	扇贝虾墨鱼汁意面	0	meal,useable,NOT-STORABLE
 give 6560e98e 1	Squid Stuffed with Rice	鱿鱼酿饭	0	meal,useable,NOT-STORABLE
@@ -1116,45 +1117,45 @@ give ccf98014 1	Static_Low_Table_Corner		0	furniture,NOT-STORABLE
 give 3ec6c929 1	Steak	肉排	0	meal,useable,NOT-STORABLE
 give 4b989cf1 1	Steamed Sticky Rice with Crab	糯米蟹	0	meal,useable,NOT-STORABLE
 give dd76aa0d 1	Steamed Tench	清蒸丁鲷	0	meal,useable,NOT-STORABLE
-give c29626b7 1	Stickleback	棘鱼	400	ingredient,fish
+give c29626b7 1	Stickleback	棘鱼	400	ingredient,fish,chilled
 give 7bc78206 1	Stinky Tofu	臭豆腐	0	meal,useable,NOT-STORABLE
 give 0432e9bf 1	Straw Mushrooms	草菇	300	ingredient,plant
 give 78dda06e 1	Straw Mushrooms Spores	草菇孢子	1000	seed
 give f38d6eba 1	Strawberries	草莓	500	ingredient
 give 1b6a727a 1	Strawberry Bomb Coffee	草莓蛋糕咖啡	1300	
-give 4dd53112 1	Strawberry Stinger	草莓毒刺	0	meal,drink,NOT-STORABLE
+give 4dd53112 1	Strawberry Stinger	草莓毒刺	0	meal,drink,chilled,NOT-STORABLE
 give 362225bf 1	Subland	次味园	0	meal,useable,NOT-STORABLE
 give 1d2e1184 1	Sugar	食糖	50	ingredient
 give b31eb46f 1	Summer Salad	夏季沙拉	0	meal,NOT-STORABLE
 give 026ce9eb 1	Sunflower Oil	葵花籽油	100	ingredient
 give b79ca7c6 1	Sunrise	日出	0	meal,useable,NOT-STORABLE
 give bb8c2667 1	Sushi_Counter	寿司柜台	49000	furniture
-give 99575783 1	Sweet Peppers	尖椒	350	ingredient,plant
+give 99575783 1	Sweet Peppers	尖椒	350	ingredient,plant,chilled
 give 4e7def60 1	Sweet Peppers Seeds	甜椒种子	1000	seed
 give 41f9dbd6 1	Sweet Potatoes	红薯	300	ingredient,plant
 give a51f1055 1	Sweet Potatoes Seeds	红薯种子	1000	seed
 give fbe4a162 1	Sweet Waffle	甜华夫饼	0	meal,useable,NOT-STORABLE
-give dc4f3b7a 1	Synectar	仿生琼浆	0	meal,drink,NOT-STORABLE
+give dc4f3b7a 1	Synectar	仿生琼浆	0	meal,drink,chilled,NOT-STORABLE
 give 686a6f50 1	Synthetic Alcohol	合成酒精	300	ingredient
 give 1802e0f1 1	Table_Menu	平板菜单	15000	furniture
 give 38fe4db4 1	Table_Umbrella_Round	餐桌遮伞（圆）	10000	furniture
 give cb942674 1	Table_Umbrella_Square	餐桌遮伞（方）	10000	furniture
-give 723457c3 1	Taimen	哲罗鲑	650	ingredient,fish
+give 723457c3 1	Taimen	哲罗鲑	650	ingredient,fish,chilled
 give 26845206 1	Taiyaki	鲷鱼烧	0	meal,useable,NOT-STORABLE
 give 95df626b 1	Tapioca Milk and Strawberries	草莓珍珠奶茶	0	meal,useable,NOT-STORABLE
-give 989ce5b9 1	Tarantula	狼蛛	400	ingredient
+give 989ce5b9 1	Tarantula	狼蛛	400	ingredient,chilled
 give cafb298e 1	Tarantula Burger	狼蛛汉堡	0	meal,useable,NOT-STORABLE
-give 8e364fd2 1	Taro Roots	芋头	450	ingredient,plant
+give 8e364fd2 1	Taro Roots	芋头	450	ingredient,plant,chilled
 give 49d7b613 1	Taro Roots Seeds	芋头种子	1000	seed
 give db7321eb 1	Taste of Lobster	龙虾之味	0	meal,useable,NOT-STORABLE
 give cc207e9d 1	Tea Leafs	茶叶	300	ingredient
 give 725db9fd 1	Tech_Gadgets_Cam_V1	摄像系统	60000	furniture
 give 43afb593 1	Tech_Gadgets_Cam_V2	摄像系统	60000	furniture
-give 590da50e 1	Tench	丁鲷	500	ingredient,fish
+give 590da50e 1	Tench	丁鲷	500	ingredient,fish,chilled
 give 81300832 1	Tendon	天丼	0	meal,useable,NOT-STORABLE
-give 90db8ff5 1	Tequila	龙舌兰酒	800	ingredient
+give 90db8ff5 1	Tequila	龙舌兰酒	800	ingredient,chilled
 give 983305e2 1	Tequila Corretto	龙舌兰烈酒咖	1700	
-give 413b7bf4 1	Tereré	巴拉圭凉茶	0	meal,drink,NOT-STORABLE
+give 413b7bf4 1	Tereré	巴拉圭凉茶	0	meal,drink,chilled,NOT-STORABLE
 give 493bb460 1	Teriyaki Rainbow Trout	照烧彩虹鳟	0	meal,useable,NOT-STORABLE
 give 96e0229e 1	TherapayBotSafia6819_clean		100000	
 give 51824753 1	TherapayBotSafia6819_decayed		100000	
@@ -1167,14 +1168,14 @@ give a5331e23 1	Toilet_Paper	厕纸	1000	furniture
 give d8c83415 1	Tomatoes	番茄	350	ingredient,plant
 give 9a5980d8 1	Tomatoes Seeds	番茄种子	1000	seed
 give 082a5489 1	Tongue Twister	绕舌酱 	4000	
-give 0fa07d9f 1	Tonic Water	汤力水	250	ingredient
+give 0fa07d9f 1	Tonic Water	汤力水	250	ingredient,chilled
 give f8762dfe 1	Tonkotsu Ramen	豚骨拉面	0	meal,NOT-STORABLE
 give c5d430b3 1	Towel_Bar_Bath_Towel	毛巾架	6000	furniture
 give 2a909ac5 1	Towel_Rack	毛巾架	10000	furniture
-give 1e1677fb 1	Trailer_Grill	铁板烧	60000	furniture
-give cfd54ec5 1	Trailer_Shelve_1	工业冷藏柜	45000	furniture
-give 5fa11f70 1	Trailer_Shelve_2	壁挂储物柜	25000	furniture
-give 3050c2c8 1	Trailer_Sink	大号水槽	40000	furniture
+give 1e1677fb 1	Trailer_Grill	铁板烧	60000	furniture,storage+100
+give cfd54ec5 1	Trailer_Shelve_1	工业冷藏柜	45000	furniture,cold+100
+give 5fa11f70 1	Trailer_Shelve_2	壁挂储物柜	25000	furniture,storage+50
+give 3050c2c8 1	Trailer_Sink	大号水槽	40000	furniture,storage+15
 give efba13b0 1	Tray_Basic		0	NOT-STORABLE
 give a0972930 1	Triangle Light	三角形灯	13000	furniture
 give 7e671d11 1	Trout with Garlic Lemon Butter Herb Sauce	蒜香柠檬黄油鲑鱼	0	meal,useable,NOT-STORABLE
@@ -1184,7 +1185,7 @@ give 6e982dfa 1	TV_Stand_Set_2	电视	60000	furniture
 give bdb33671 1	TV_Stand_Set_3	电视	70000	furniture
 give 3fa3e486 1	TV_Stand_Set_4	电视	80000	furniture
 give cfb4ea32 1	Udon Noodles	乌冬面	150	ingredient
-give 0669c3d3 1	Ultra 64	奥特 64	0	meal,drink,NOT-STORABLE
+give 0669c3d3 1	Ultra 64	奥特 64	0	meal,drink,chilled,NOT-STORABLE
 give b2cd6086 1	V1_Keyboard	键盘	10000	furniture
 give 7def2c72 1	V1_Mouse	鼠标	6000	furniture
 give 3ce1829c 1	V2_Keyboard	键盘	15000	furniture
@@ -1192,10 +1193,10 @@ give d9bf2e11 1	V2_Mouse	鼠标	7000	furniture
 give f1770fe0 1	V3_Keyboard	键盘	12000	furniture
 give c392e63f 1	V3_Mouse	鼠标	5000	furniture
 give 6ef367fc 1	Vanilla	香草	150	ingredient
-give e3cd2511 1	VapoBooze	蒸酿酒醇	0	meal,drink,NOT-STORABLE
-give 8da8dcfc 1	Veal	小牛肉	700	ingredient
+give e3cd2511 1	VapoBooze	蒸酿酒醇	0	meal,drink,chilled,NOT-STORABLE
+give 8da8dcfc 1	Veal	小牛肉	700	ingredient,chilled
 give 930125c3 1	Veal Orloff	奥尔洛夫牛肉	0	meal,useable,NOT-STORABLE
-give e2210121 1	VegCoffee	蔬萃咖啡	0	meal,drink,NOT-STORABLE
+give e2210121 1	VegCoffee	蔬萃咖啡	0	meal,drink,chilled,NOT-STORABLE
 give 67f115d1 1	Vege Burger	蔬菜汉堡	0	meal,useable,NOT-STORABLE
 give 9a3b2240 1	Veggie Roll	蔬菜寿司卷	0	meal,NOT-STORABLE
 give bfacec7c 1	Vending_Machine_Beverage	自动售货机	100000	furniture
@@ -1208,19 +1209,19 @@ give f0d13a6b 1	Vending_Machine_Sunrice	自动售货机	100000	furniture
 give 9270f7fb 1	Vermouth	味美思酒	800	ingredient
 give 4529bad8 1	Vinegar	食醋	100	ingredient
 give 2acda945 1	Vinegret Salad	甜菜沙拉	0	meal,useable,NOT-STORABLE
-give 6fc2b3a7 1	VM_Bottle_1	瓶装汽水	300	NOT-STORABLE
-give 097c383c 1	VM_Bottle_2	瓶装汽水	300	NOT-STORABLE
-give 2774eb76 1	VM_Bottle_3	瓶装汽水	300	NOT-STORABLE
-give 80312117 1	VM_Bottle_4	瓶装汽水	300	NOT-STORABLE
-give adbbf405 1	VM_Bottle_5	咖啡因水	300	NOT-STORABLE
-give f5a704c9 1	VM_Bottle_6	柠檬气泡水	300	NOT-STORABLE
-give 3e551d7d 1	VM_Bottle_7	橙子气泡水	300	NOT-STORABLE
-give a58d60f8 1	VM_Candy_Bar	块状糖	200	NOT-STORABLE
-give 239a6af1 1	VM_Chips_1	薯片	500	NOT-STORABLE
-give 6bc2f24a 1	VM_Chips_2	薯片	500	NOT-STORABLE
-give ec2cb558 1	VM_Noodles	方便面	800	NOT-STORABLE
+give 6fc2b3a7 1	VM_Bottle_1	瓶装汽水	300	chilled,NOT-STORABLE
+give 097c383c 1	VM_Bottle_2	瓶装汽水	300	chilled,NOT-STORABLE
+give 2774eb76 1	VM_Bottle_3	瓶装汽水	300	chilled,NOT-STORABLE
+give 80312117 1	VM_Bottle_4	瓶装汽水	300	chilled,NOT-STORABLE
+give adbbf405 1	VM_Bottle_5	咖啡因水	300	chilled,NOT-STORABLE
+give f5a704c9 1	VM_Bottle_6	柠檬气泡水	300	chilled,NOT-STORABLE
+give 3e551d7d 1	VM_Bottle_7	橙子气泡水	300	chilled,NOT-STORABLE
+give a58d60f8 1	VM_Candy_Bar	块状糖	200	chilled,NOT-STORABLE
+give 239a6af1 1	VM_Chips_1	薯片	500	chilled,NOT-STORABLE
+give 6bc2f24a 1	VM_Chips_2	薯片	500	chilled,NOT-STORABLE
+give ec2cb558 1	VM_Noodles	方便面	800	chilled,NOT-STORABLE
 give 145312bd 1	Vodka	伏特加	600	ingredient
-give b766462a 1	Volga Zander	伏尔加梭鲈	450	ingredient,fish
+give b766462a 1	Volga Zander	伏尔加梭鲈	450	ingredient,fish,chilled
 give 8d483ced 1	Waffle	华夫饼	200	ingredient
 give a528f38b 1	Wall-Lamp_01	壁灯	15000	furniture
 give 9f82f891 1	Wall-Lamp_02	壁灯	16900	furniture
@@ -1229,45 +1230,45 @@ give 7b34fe0f 1	Wall-Lamp_04	壁灯	26000	furniture
 give 6095112f 1	Wall-Lamp_05	壁灯	11000	furniture
 give bc96013f 1	Wall-Mounted_Air-Conditioner_01	空调	100000	furniture
 give dd75da68 1	Wall-Mounted_Air-Conditioner_02	空调	87000	furniture
-give 163a4aed 1	Wall_Cabinet_Corner_W60cm_H40cm_Set_02	转角壁柜	10000	furniture
-give cc065069 1	Wall_Cabinet_Corner_W60cm_H60cm_Set_02	转角壁柜	10000	furniture
-give 612dd38a 1	Wall_Cabinet_W40cm_H40cm_1DoorwGlass_Set_01	壁挂式橱柜（40×40）	10000	furniture
-give e76b8c70 1	Wall_Cabinet_W40cm_H40cm_1Door_Set_01	壁挂式橱柜（40×40）	10000	furniture
-give 1c23902a 1	Wall_Cabinet_W40cm_H40cm_1Door_Set_02	单开门壁柜（40x40）	10000	furniture
-give 04f739c3 1	Wall_Cabinet_W40cm_H40cm_1Door_Set_03	壁挂式橱柜（40×40）	10000	furniture
-give 811c69fe 1	Wall_Cabinet_W40cm_H60cm_1DoorwGlass_Set_01	壁挂式橱柜（40×60）	10000	furniture
-give 07cc0dbb 1	Wall_Cabinet_W40cm_H60cm_1Door_Set_01	壁挂式橱柜（40×60）	10000	furniture
-give f768ce37 1	Wall_Cabinet_W40cm_H60cm_1Door_Set_02	单开门壁柜（40x60）	10000	furniture
-give 25cae3b4 1	Wall_Cabinet_W40cm_H60cm_1Door_Set_03	壁挂式橱柜（40×60）	10000	furniture
-give a6bb2c3b 1	Wall_Cabinet_W60cm_H40cm_1DoorwGlass_Set_01	壁挂式橱柜（60×40）	10000	furniture
-give b1dbbcf5 1	Wall_Cabinet_W60cm_H40cm_1Door_Set_01	壁挂式橱柜（60×40）	10000	furniture
-give 7b798612 1	Wall_Cabinet_W60cm_H40cm_1Door_Set_02	壁挂式橱柜（60×40）	10000	furniture
-give a848e85f 1	Wall_Cabinet_W60cm_H40cm_1Door_Set_03	壁挂式橱柜（60×40）	10000	furniture
-give 12cad6e0 1	Wall_Cabinet_W60cm_H40cm_Corner_1_Set_01	壁挂式转角橱柜（60×40）	10000	furniture
-give 1d43c3e3 1	Wall_Cabinet_W60cm_H40cm_Corner_Set_01	壁挂式转角（60×40）	10000	furniture
-give ef231f87 1	Wall_Cabinet_W60cm_H40cm_Corner_Set_03	壁挂式转角（60×40）	10000	furniture
-give c0e6fbcd 1	Wall_Cabinet_W60cm_H60cm_1DoorwGlass_Set_01	壁挂式橱柜（60×60）	10000	furniture
-give ab96ba52 1	Wall_Cabinet_W60cm_H60cm_1Door_Set_01	壁挂式橱柜（60×60）	10000	furniture
-give e587213c 1	Wall_Cabinet_W60cm_H60cm_1Door_Set_02	壁挂式橱柜（60×60）	10000	furniture
-give 5de97694 1	Wall_Cabinet_W60cm_H60cm_1Door_Set_03	壁挂式橱柜（60×60）	10000	furniture
-give 71d0179d 1	Wall_Cabinet_W60cm_H60cm_2Door_Set_01	壁挂式橱柜（60×60）	10000	furniture
-give ba5ea5b8 1	Wall_Cabinet_W60cm_H60cm_2Door_Set_02	壁挂式橱柜（60×60）	10000	furniture
-give 0326afd5 1	Wall_Cabinet_W60cm_H60cm_2Door_Set_03	壁挂式橱柜（60×60）	10000	furniture
-give 03f35144 1	Wall_Cabinet_W60cm_H60cm_Corner_1_Set_01	壁挂式转角橱柜（60×60）	10000	furniture
-give 8064ce2b 1	Wall_Cabinet_W60cm_H60cm_Corner_Set_01	转角壁柜（60x60）	10000	furniture
-give 4560adac 1	Wall_Cabinet_W60cm_H60cm_Corner_Set_03	转角壁柜（60x60）	10000	furniture
-give f5c9f717 1	Wall_Cabinet_W90cm_H40cm_2Door_Set_01	壁挂式橱柜（90×40）	10000	furniture
-give bb58856e 1	Wall_Cabinet_W90cm_H40cm_2Door_Set_02	壁挂式橱柜（90×40）	10000	furniture
-give c5579928 1	Wall_Cabinet_W90cm_H40cm_2Door_Set_03	壁挂式橱柜（90×40）	10000	furniture
-give f7825780 1	Wall_Cabinet_W90cm_H40cm_3Door_Set_01	壁挂式橱柜（90×40）	10000	furniture
-give 8738c314 1	Wall_Cabinet_W90cm_H40cm_3Door_Set_02	壁挂式橱柜（90×40）	10000	furniture
-give ad3b9b38 1	Wall_Cabinet_W90cm_H40cm_3Door_Set_03	壁挂式橱柜（90×40）	10000	furniture
-give 21bb5171 1	Wall_Cabinet_W90cm_H60cm_2Door_Set_01	壁挂式橱柜（90×60）	10000	furniture
-give c564866e 1	Wall_Cabinet_W90cm_H60cm_2Door_Set_02	壁挂式橱柜（90×60）	10000	furniture
-give 89acc0c7 1	Wall_Cabinet_W90cm_H60cm_2Door_Set_03	壁挂式橱柜（90×60）	10000	furniture
-give a6548fb7 1	Wall_Cabinet_W90cm_H60cm_3Door_Set_01	壁挂式橱柜（90×60）	10000	furniture
-give 3029cbfd 1	Wall_Cabinet_W90cm_H60cm_3Door_Set_02	壁挂式橱柜（90×60）	10000	furniture
-give 5f1e39da 1	Wall_Cabinet_W90cm_H60cm_3Door_Set_03	壁挂式橱柜（90×60）	10000	furniture
+give 163a4aed 1	Wall_Cabinet_Corner_W60cm_H40cm_Set_02	转角壁柜	10000	furniture,storage+20
+give cc065069 1	Wall_Cabinet_Corner_W60cm_H60cm_Set_02	转角壁柜	10000	furniture,storage+20
+give 612dd38a 1	Wall_Cabinet_W40cm_H40cm_1DoorwGlass_Set_01	壁挂式橱柜（40×40）	10000	furniture,storage+10
+give e76b8c70 1	Wall_Cabinet_W40cm_H40cm_1Door_Set_01	壁挂式橱柜（40×40）	10000	furniture,storage+10
+give 1c23902a 1	Wall_Cabinet_W40cm_H40cm_1Door_Set_02	单开门壁柜（40x40）	10000	furniture,storage+10
+give 04f739c3 1	Wall_Cabinet_W40cm_H40cm_1Door_Set_03	壁挂式橱柜（40×40）	10000	furniture,storage+10
+give 811c69fe 1	Wall_Cabinet_W40cm_H60cm_1DoorwGlass_Set_01	壁挂式橱柜（40×60）	10000	furniture,storage+15
+give 07cc0dbb 1	Wall_Cabinet_W40cm_H60cm_1Door_Set_01	壁挂式橱柜（40×60）	10000	furniture,storage+15
+give f768ce37 1	Wall_Cabinet_W40cm_H60cm_1Door_Set_02	单开门壁柜（40x60）	10000	furniture,storage+15
+give 25cae3b4 1	Wall_Cabinet_W40cm_H60cm_1Door_Set_03	壁挂式橱柜（40×60）	10000	furniture,storage+15
+give a6bb2c3b 1	Wall_Cabinet_W60cm_H40cm_1DoorwGlass_Set_01	壁挂式橱柜（60×40）	10000	furniture,storage+15
+give b1dbbcf5 1	Wall_Cabinet_W60cm_H40cm_1Door_Set_01	壁挂式橱柜（60×40）	10000	furniture,storage+15
+give 7b798612 1	Wall_Cabinet_W60cm_H40cm_1Door_Set_02	壁挂式橱柜（60×40）	10000	furniture,storage+15
+give a848e85f 1	Wall_Cabinet_W60cm_H40cm_1Door_Set_03	壁挂式橱柜（60×40）	10000	furniture,storage+15
+give 12cad6e0 1	Wall_Cabinet_W60cm_H40cm_Corner_1_Set_01	壁挂式转角橱柜（60×40）	10000	furniture,storage+20
+give 1d43c3e3 1	Wall_Cabinet_W60cm_H40cm_Corner_Set_01	壁挂式转角（60×40）	10000	furniture,storage+20
+give ef231f87 1	Wall_Cabinet_W60cm_H40cm_Corner_Set_03	壁挂式转角（60×40）	10000	furniture,storage+20
+give c0e6fbcd 1	Wall_Cabinet_W60cm_H60cm_1DoorwGlass_Set_01	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give ab96ba52 1	Wall_Cabinet_W60cm_H60cm_1Door_Set_01	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give e587213c 1	Wall_Cabinet_W60cm_H60cm_1Door_Set_02	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give 5de97694 1	Wall_Cabinet_W60cm_H60cm_1Door_Set_03	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give 71d0179d 1	Wall_Cabinet_W60cm_H60cm_2Door_Set_01	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give ba5ea5b8 1	Wall_Cabinet_W60cm_H60cm_2Door_Set_02	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give 0326afd5 1	Wall_Cabinet_W60cm_H60cm_2Door_Set_03	壁挂式橱柜（60×60）	10000	furniture,storage+20
+give 03f35144 1	Wall_Cabinet_W60cm_H60cm_Corner_1_Set_01	壁挂式转角橱柜（60×60）	10000	furniture,storage+20
+give 8064ce2b 1	Wall_Cabinet_W60cm_H60cm_Corner_Set_01	转角壁柜（60x60）	10000	furniture,storage+20
+give 4560adac 1	Wall_Cabinet_W60cm_H60cm_Corner_Set_03	转角壁柜（60x60）	10000	furniture,storage+20
+give f5c9f717 1	Wall_Cabinet_W90cm_H40cm_2Door_Set_01	壁挂式橱柜（90×40）	10000	furniture,storage+25
+give bb58856e 1	Wall_Cabinet_W90cm_H40cm_2Door_Set_02	壁挂式橱柜（90×40）	10000	furniture,storage+25
+give c5579928 1	Wall_Cabinet_W90cm_H40cm_2Door_Set_03	壁挂式橱柜（90×40）	10000	furniture,storage+25
+give f7825780 1	Wall_Cabinet_W90cm_H40cm_3Door_Set_01	壁挂式橱柜（90×40）	10000	furniture,storage+25
+give 8738c314 1	Wall_Cabinet_W90cm_H40cm_3Door_Set_02	壁挂式橱柜（90×40）	10000	furniture,storage+25
+give ad3b9b38 1	Wall_Cabinet_W90cm_H40cm_3Door_Set_03	壁挂式橱柜（90×40）	10000	furniture,storage+25
+give 21bb5171 1	Wall_Cabinet_W90cm_H60cm_2Door_Set_01	壁挂式橱柜（90×60）	10000	furniture,storage+30
+give c564866e 1	Wall_Cabinet_W90cm_H60cm_2Door_Set_02	壁挂式橱柜（90×60）	10000	furniture,storage+30
+give 89acc0c7 1	Wall_Cabinet_W90cm_H60cm_2Door_Set_03	壁挂式橱柜（90×60）	10000	furniture,storage+30
+give a6548fb7 1	Wall_Cabinet_W90cm_H60cm_3Door_Set_01	壁挂式橱柜（90×60）	10000	furniture,storage+30
+give 3029cbfd 1	Wall_Cabinet_W90cm_H60cm_3Door_Set_02	壁挂式橱柜（90×60）	10000	furniture,storage+30
+give 5f1e39da 1	Wall_Cabinet_W90cm_H60cm_3Door_Set_03	壁挂式橱柜（90×60）	10000	furniture,storage+30
 give f8a47c8e 1	Wall_Flat_TV_Set_1	壁挂式电视	140000	furniture
 give 42408cef 1	Wall_Flat_TV_Set_2	壁挂式电视	140000	furniture
 give 2c713351 1	Wall_Flat_TV_Set_3	壁挂式电视	150000	furniture
@@ -1281,7 +1282,7 @@ give 2fc42f80 1	Watch_02	手表	70000	furniture
 give fc4ef647 1	Watch_03	手表	75000	furniture
 give abc3f2d4 1	Water Chestnut	荸荠	300	ingredient,plant
 give f5f0666a 1	Water Chestnuts Seeds	荸荠种子	1000	seed
-give dc165658 1	Watermelon	西瓜	300	ingredient
+give dc165658 1	Watermelon	西瓜	300	ingredient,chilled
 give 924d7756 1	Watermelon Pizza	西瓜披萨	0	meal,useable,NOT-STORABLE
 give 058e15a7 1	Webcam_01	直播摄像头	10000	furniture
 give 36ffe55d 1	Webcam_02	直播摄像头	10000	furniture
@@ -1290,10 +1291,10 @@ give e8f95954 1	Wheat	小麦	100	ingredient,plant
 give 80a10ce6 1	Wheat Bread	小麦面包	100	ingredient
 give 42b44a5d 1	Wheat Flour	小麦面粉	80	ingredient
 give 4c262202 1	Wheat Seeds	小麦种子	1000	seed
-give 325d50cd 1	Whipped Cream	发泡奶油	200	ingredient,plant
+give 325d50cd 1	Whipped Cream	发泡奶油	200	ingredient,plant,chilled
 give 5c022546 1	Whiskey	威士忌	800	ingredient
 give 7dab0a19 1	White Lithium Coffee	白锂咖啡	1500	
-give 470d6342 1	WhiteFish	白鲑鱼	700	ingredient,fish
+give 470d6342 1	WhiteFish	白鲑鱼	700	ingredient,fish,chilled
 give 29fe8697 1	Windowpane Lager	玻璃窗牌拉格啤酒	1200	
 give 066d1d0a 1	Wireless Relay	无线中继	62000	
 give eee0ff97 1	Wolfberries	枸杞	400	ingredient
@@ -1308,12 +1309,160 @@ give 4c2c25fd 1	Wooden_Low_Shelf_03	木制浴室储物架	20000	furniture
 give 0652a4ee 1	Wooden_Low_Shelf_04	木制浴室储物架	20000	furniture
 give b1c504d9 1	Wooden_Low_Shelf_Corner	木制浴室储物架	20000	furniture
 give a3485a75 1	Wooden_Towel_Bar_Bath_Towel	木制毛巾架	10000	furniture
-give ea75732b 1	Yam	山药	400	ingredient,plant
+give ea75732b 1	Yam	山药	400	ingredient,plant,chilled
 give 619ac1ec 1	Yam Seeds	山药种子	1000	seed
 give f85b9257 1	Yeast	酵母	150	ingredient
 give e6e6ab44 1	Yerba Mate	马黛茶	450	ingredient
-give 8dd2c34d 1	Yoghurt	酸奶	180	ingredient,plant
+give 8dd2c34d 1	Yoghurt	酸奶	180	ingredient,plant,chilled
 give 166cdb19 1	Your Photographs	你的照片	1000	
-give d1e9dc3c 1	Zander	梭鲈	650	ingredient,fish
-give a7f609eb 1	Zope	上口欧鳊	650	ingredient,fish
+give d1e9dc3c 1	Zander	梭鲈	650	ingredient,fish,chilled
+give a7f609eb 1	Zope	上口欧鳊	650	ingredient,fish,chilled
 give f96f2cc5 1	Zope with Cherry Salsa	樱桃莎莎酱欧鳊鱼	0	meal,useable,NOT-STORABLE
+
+Properties - 140 entries. Paste a COMMAND cell the same way.
+'at=' is the district. 'permit=' is a specific item, not a level, so permit 4
+does not satisfy a property asking for permit 2. NOT-ACQUIREABLE ones are
+NPC-run and can never be yours. PRICE reads '-' because a property's price is
+a live valuation; run 'properties' to see it, along with what you already own.
+
+COMMAND	ASSET NAME	DISPLAY NAME	PRICE	FLAGS
+acquire Apartment_Dev	Apartment_Dev	地下 12 层 404-B 室	-	apartment,rent=1000,NOT-ACQUIREABLE
+acquire CentralCanyonApartment	CentralCanyonApartment	天顶塔 902-A 套房	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire Custom Apartment 1 Metro Hub	Custom Apartment 1 Metro Hub	探索之巢	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 10 Helix	Custom Apartment 10 Helix	失窃公寓	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire Custom Apartment 11 Central Canyon	Custom Apartment 11 Central Canyon	对手的公寓	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 12 Lowtown	Custom Apartment 12 Lowtown	皮尔克·戴恩的公寓	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 2 Space Port	Custom Apartment 2 Space Port	犯罪现场	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 3 Hive Mall	Custom Apartment 3 Hive Mall	零与一的圣坛	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 4 SkyHigh Gardens	Custom Apartment 4 SkyHigh Gardens	纳布拉的家	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 5 Industrial	Custom Apartment 5 Industrial	爱巢	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 6 Oil Rig	Custom Apartment 6 Oil Rig	西洛的游乐房	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 7 Sewers	Custom Apartment 7 Sewers	派对小窝	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 8 Mountain Town	Custom Apartment 8 Mountain Town	智慧古迹	-	apartment,NOT-ACQUIREABLE
+acquire Custom Apartment 9 Spire	Custom Apartment 9 Spire	柯佐纳顶层公寓	-	apartment,NOT-ACQUIREABLE
+acquire DocksApartment	DocksApartment	汐岸公馆 7b 单元	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire EasternResidentialApartment	EasternResidentialApartment	枢纽层，2351单元	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire IndustrialDistrictApartment	IndustrialDistrictApartment	海港瞭望台 808 号	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire LowtownApartment	LowtownApartment	地下 12 层 404-B 室	-	apartment,rent=1000,NOT-ACQUIREABLE
+acquire LuxuryIslandApartment	LuxuryIslandApartment	卡吕普索岛水上别墅	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire LuxuryIslandApartment 2	LuxuryIslandApartment 2	卡吕普索岛海滩别墅	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire MeridianMarketApartment	MeridianMarketApartment	子午环线 42 层 3 单元	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire SeasideBoardwalkApartment	SeasideBoardwalkApartment	海滨公馆 15 号公寓	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire Shelter Central Canyon	Shelter Central Canyon	庇护所·中央谷地	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Docks	Shelter Docks	庇护所·港区	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Eastern Residential	Shelter Eastern Residential	庇护所·东住宅区	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Helix Monumental	Shelter Helix Monumental	庇护所·螺旋纪念碑	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Hive Mall	Shelter Hive Mall	庇护所·商巢	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Industrial District	Shelter Industrial District	庇护所·工业城区	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Lowtown	Shelter Lowtown	庇护所·下城区	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Luxury Island	Shelter Luxury Island	庇护所·奢岛	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Meridian Market	Shelter Meridian Market	庇护所·子午市场	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Metro Hub	Shelter Metro Hub	庇护所·轨道枢纽	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Mountain Town	Shelter Mountain Town	庇护所·远山镇	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Oil Rig	Shelter Oil Rig	庇护所·钻井平台	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Seaside Boardwalk	Shelter Seaside Boardwalk	海滨步道庇护所	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Sewers	Shelter Sewers	庇护所·下水道	-	apartment,NOT-ACQUIREABLE
+acquire Shelter SkyHigh Gardens	Shelter SkyHigh Gardens	庇护所·天空花园	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Space Port	Shelter Space Port	庇护所 太空港	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Spire	Shelter Spire	庇护所·云巅	-	apartment,NOT-ACQUIREABLE
+acquire Shelter Stacks	Shelter Stacks	庇护所·叠楼区	-	apartment,NOT-ACQUIREABLE
+acquire SkyHighGardensApartment	SkyHighGardensApartment	红木尖塔 89c 单元	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire SpireApartment	SpireApartment	天空泊位 49 号最高层	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire StacksApartment	StacksApartment	叠楼区 1804-C 单元	-	apartment,rent=10000,NOT-ACQUIREABLE
+acquire Greenhouse_Dev	Greenhouse_Dev	温室 2B	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire Greenhouse2B	Greenhouse2B	温室 2B	-	greenhouse,NOT-ACQUIREABLE
+acquire GreenhouseDocks1B	GreenhouseDocks1B	温室 1B	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire GreenhouseDocks3B	GreenhouseDocks3B	温室 3B	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire GreenhouseSkyhighGardens1G	GreenhouseSkyhighGardens1G	温室 1G	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire GreenhouseSkyhighGardens2G	GreenhouseSkyhighGardens2G	温室 2G	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire GreenhouseSkyhighGardens3G	GreenhouseSkyhighGardens3G	温室 3G	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire GreenhouseSpire1S	GreenhouseSpire1S	温室 1S	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Ancient_Spirit	Venue_Central_Canyon_Ancient_Spirit	大熔炉	-	venue,at=中央谷地,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Corner_Restaurant	Venue_Central_Canyon_Corner_Restaurant	观景角	-	venue,at=中央谷地,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Deep_Sea_Smoke	Venue_Central_Canyon_Deep_Sea_Smoke	深海烟	-	venue,at=中央谷地,rent=15000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Japanese_Restaraunt	Venue_Central_Canyon_Japanese_Restaraunt	志摩食堂	-	venue,at=中央谷地,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Kubo_Bakery	Venue_Central_Canyon_Kubo_Bakery	谷街烘焙	-	venue,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Poccocup	Venue_Central_Canyon_Poccocup	喜乐杯	-	venue,at=中央谷地,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Sake_Bar	Venue_Central_Canyon_Sake_Bar	清酒吧	-	venue,at=中央谷地,permit=BusinessPermit1,rent=9000
+addvenue Venue_Central_Canyon_Side_Bar	Venue_Central_Canyon_Side_Bar	乐饮杯	-	venue,at=中央谷地,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_Side_Bar_2	Venue_Central_Canyon_Side_Bar_2	飞鱼	-	venue,at=中央谷地,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Central_Canyon_YakiTori	Venue_Central_Canyon_YakiTori	撸串儿	-	venue,at=中央谷地,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Dev	Venue_Dev	海风	-	venue,rent=7500,NOT-ACQUIREABLE
+addvenue Venue_Eastern_Residental_Fusion_Point_Bar	Venue_Eastern_Residental_Fusion_Point_Bar	熔点酒吧	-	venue,at=东住宅区,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Eastern_Residental_Fusion_Point_Restaurant	Venue_Eastern_Residental_Fusion_Point_Restaurant	熔点	-	venue,at=东住宅区,permit=BusinessPermit2,rent=10000
+addvenue Venue_Eastern_Residental_Kubo_Bakery	Venue_Eastern_Residental_Kubo_Bakery	邂逅食光	-	venue,at=东住宅区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Eastern_Residental_Kubo_Bakery_2	Venue_Eastern_Residental_Kubo_Bakery_2	起酥坊	-	venue,at=东住宅区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Helix_Monumental_Poccocup	Venue_Helix_Monumental_Poccocup	螺旋咖啡馆	-	venue,at=螺旋纪念碑,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Helix_Monumental_Ramen	Venue_Helix_Monumental_Ramen	霓虹海苔	-	venue,at=螺旋纪念碑,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Helix_Monumental_Sake_Bar_1	Venue_Helix_Monumental_Sake_Bar_1	螺旋酒行	-	venue,at=螺旋纪念碑,permit=BusinessPermit1,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Helix_Monumental_Sake_Bar_2	Venue_Helix_Monumental_Sake_Bar_2	迷雾酒吧	-	venue,at=螺旋纪念碑,permit=BusinessPermit1,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Helix_Monumental_Sunrice	Venue_Helix_Monumental_Sunrice	稻日轩	-	venue,at=螺旋纪念碑,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Helix_Monumental_YakiTori	Venue_Helix_Monumental_YakiTori	烧鸟	-	venue,at=螺旋纪念碑,permit=BusinessPermit1,rent=9000
+addvenue Venue_Hive_Mall_Food_Trailer	Venue_Hive_Mall_Food_Trailer	巴克餐车	-	venue,at=商巢,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Hive_Mall_Food_Trailer_2	Venue_Hive_Mall_Food_Trailer_2	好味小吃	-	venue,at=商巢,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Hive_Mall_Japanese_Restaraunt	Venue_Hive_Mall_Japanese_Restaraunt	巢区	-	venue,at=商巢,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Hive_Mall_Neon_Mist	Venue_Hive_Mall_Neon_Mist	蜂窝俱乐部	-	venue,at=商巢,permit=BusinessPermit2,rent=12000
+addvenue Venue_Hive_Mall_Sunrice	Venue_Hive_Mall_Sunrice	稻日轩	-	venue,at=商巢,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Hive_Mall_Sunrice_2	Venue_Hive_Mall_Sunrice_2	稻日轩	-	venue,at=商巢,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Hive_Mall_Taco_Real	Venue_Hive_Mall_Taco_Real	街头乐队	-	venue,at=商巢,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Industrial_District_Food_Trailer	Venue_Industrial_District_Food_Trailer	斯莫基烤肉	-	venue,at=工业城区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Industrial_District_Night_Vision_Bar	Venue_Industrial_District_Night_Vision_Bar	铁龙头	-	venue,at=工业城区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Industrial_District_Odin's_Pub	Venue_Industrial_District_Odin's_Pub	奥丁酒吧	-	venue,at=工业城区,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Industrial_District_Sunrice	Venue_Industrial_District_Sunrice	稻日轩	-	venue,at=工业城区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Industrial_District_Yummy_Canteen	Venue_Industrial_District_Yummy_Canteen	好味餐厅	-	venue,at=工业城区,permit=BusinessPermit1,rent=9000
+addvenue Venue_Lowtown_Food_Trailer	Venue_Lowtown_Food_Trailer	深巷丽景	-	venue,at=下城区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Lowtown_Neon_Mist	Venue_Lowtown_Neon_Mist	雾影霓虹	-	venue,at=下城区,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Lowtown_Side_Bar	Venue_Lowtown_Side_Bar	幽暗灯笼	-	venue,at=下城区,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Luxury_Island_Deep_Sea_Smoke	Venue_Luxury_Island_Deep_Sea_Smoke	灯塔	-	venue,at=卡吕普索岛,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Luxury_Island_Food_Trailer	Venue_Luxury_Island_Food_Trailer	泻湖烧烤	-	venue,at=卡吕普索岛,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Luxury_Island_Sunset	Venue_Luxury_Island_Sunset	蔚蓝微风	-	venue,at=卡吕普索岛,permit=BusinessPermit3,rent=30000
+addvenue Venue_Luxury_Island_Tropical_Restaurant	Venue_Luxury_Island_Tropical_Restaurant	靛蓝海礁	-	venue,at=卡吕普索岛,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Luxury_Island_Yuan_Zhi_Restaraunt	Venue_Luxury_Island_Yuan_Zhi_Restaraunt	阿特里亚	-	venue,at=卡吕普索岛,rent=50000,NOT-ACQUIREABLE
+addvenue Venue_Meridian_Market_Ancient_Spirit	Venue_Meridian_Market_Ancient_Spirit	古灵	-	venue,at=子午市场,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Meridian_Market_Corner_Restaurant	Venue_Meridian_Market_Corner_Restaurant	居酒屋驿站	-	venue,at=子午市场,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Meridian_Market_DoorsToYama	Venue_Meridian_Market_DoorsToYama	阎王之门	-	venue,at=子午市场,permit=BusinessPermit3,rent=25000
+addvenue Venue_Meridian_Market_Side_Bar	Venue_Meridian_Market_Side_Bar	下城区酒馆	-	venue,at=子午市场,permit=BusinessPermit1,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Meridian_Market_Side_Bar_ 2	Venue_Meridian_Market_Side_Bar_ 2	保食神	-	venue,at=子午市场,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Japanese_Restaraunt	Venue_Metro_Hub_Japanese_Restaraunt	道祖神	-	venue,at=轨道枢纽,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Odin's_Pub	Venue_Metro_Hub_Odin's_Pub	界神	-	venue,at=轨道枢纽,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Poccocup	Venue_Metro_Hub_Poccocup	波可咖啡	-	venue,at=轨道枢纽,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Ramen	Venue_Metro_Hub_Ramen	多食乐便当	-	venue,at=轨道枢纽,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Sake_Bar_1	Venue_Metro_Hub_Sake_Bar_1	铁道	-	venue,at=轨道枢纽,permit=BusinessPermit1,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Sake_Bar_2	Venue_Metro_Hub_Sake_Bar_2	火车站	-	venue,at=轨道枢纽,permit=BusinessPermit1,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Side_Bar	Venue_Metro_Hub_Side_Bar	午夜之愿	-	venue,at=轨道枢纽,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Station_Bakery	Venue_Metro_Hub_Station_Bakery	车站面包房	-	venue,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Sunrice	Venue_Metro_Hub_Sunrice	稻日轩	-	venue,at=轨道枢纽,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Metro_Hub_Underground	Venue_Metro_Hub_Underground	暗曜	-	venue,at=轨道枢纽,permit=BusinessPermit4,rent=30000
+addvenue Venue_Mountain_Town_Food_Trailer	Venue_Mountain_Town_Food_Trailer	寻味小径	-	venue,at=远山镇,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Mountain_Town_Ramen	Venue_Mountain_Town_Ramen	阎王拉面馆	-	venue,at=远山镇,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Mountain_Town_Sunset_Hour	Venue_Mountain_Town_Sunset_Hour	日落时光	-	venue,at=远山镇,permit=BusinessPermit3,rent=15000
+addvenue Venue_NoodleBar	Venue_NoodleBar	暗调拉面馆	-	venue,at=子午市场,rent=7500
+addvenue Venue_Oil_Rig_Nigh_Food_Trailer	Venue_Oil_Rig_Nigh_Food_Trailer	水手港湾	-	venue,at=钻井平台,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Oil_Rig_Night_Vision_Bar	Venue_Oil_Rig_Night_Vision_Bar	干渴油工	-	venue,at=钻井平台,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_SeasideBoardwalk_Food_Trailer	Venue_SeasideBoardwalk_Food_Trailer	海风	-	venue,at=海滨步道,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_SeasideBoardwalk_Japanese_Restaurant	Venue_SeasideBoardwalk_Japanese_Restaurant	年神酒吧	-	venue,at=海滨步道,permit=BusinessPermit2,rent=15000
+addvenue Venue_SeasideBoardwalk_Kubo_Bakery	Venue_SeasideBoardwalk_Kubo_Bakery	酥脆坊	-	venue,at=海滨步道,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_SeasideBoardwalk_Ramen	Venue_SeasideBoardwalk_Ramen	海滨面馆	-	venue,at=海滨步道,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_SeasideBoardwalk_Side_Bar	Venue_SeasideBoardwalk_Side_Bar	避难所	-	venue,at=海滨步道,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_SeasideBoardwalk_Sunrice	Venue_SeasideBoardwalk_Sunrice	稻日轩	-	venue,at=海滨步道,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Sewers_Night_Vision_Bar	Venue_Sewers_Night_Vision_Bar	夜视酒吧	-	venue,at=下水道,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Sewers_Sunrice	Venue_Sewers_Sunrice	稻日轩	-	venue,at=下水道,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Skyhigh_Gardens_Japanese_Restaraunt	Venue_Skyhigh_Gardens_Japanese_Restaraunt	落樱	-	venue,at=天空花园,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Skyhigh_Gardens_Odin's_Pub	Venue_Skyhigh_Gardens_Odin's_Pub	落樱轩	-	venue,at=天空花园,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Skyhigh_Gardens_Side_Bar	Venue_Skyhigh_Gardens_Side_Bar	积云酒吧	-	venue,at=天空花园,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Skyhigh_Gardens_Sunrice	Venue_Skyhigh_Gardens_Sunrice	稻日轩	-	venue,at=天空花园,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Skyhigh_Gardens_Yuan_Zhi	Venue_Skyhigh_Gardens_Yuan_Zhi	缘至味馆	-	venue,at=天空花园,permit=BusinessPermit3,rent=15000
+addvenue Venue_Space_Port_Kubo_Bakery	Venue_Space_Port_Kubo_Bakery	久保烘焙	-	venue,at=太空港,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Space_Port_Kubo_Bakery_2	Venue_Space_Port_Kubo_Bakery_2	久保烘焙	-	venue,at=太空港,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Space_Port_Ramen	Venue_Space_Port_Ramen	火箭拉面馆	-	venue,at=太空港,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Space_Port_Sunrice	Venue_Space_Port_Sunrice	稻日轩	-	venue,at=太空港,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Space_Port_Yummy_Canteen	Venue_Space_Port_Yummy_Canteen	好味餐厅	-	venue,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_Spire_Fly_In	Venue_Spire_Fly_In	飞逸轩	-	venue,at=云巅,permit=BusinessPermit4,rent=50000
+addvenue Venue_Spire_Gas_Station	Venue_Spire_Gas_Station	燃榄	-	venue,rent=30000,NOT-ACQUIREABLE
+addvenue Venue_Spire_Sake_Bar	Venue_Spire_Sake_Bar	层云酒廊	-	venue,at=云巅,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Spire_Serpentarium_Club	Venue_Spire_Serpentarium_Club	蛇苑会所	-	venue,at=云巅,rent=50000,NOT-ACQUIREABLE
+addvenue Venue_Stacks_Boat_Hangar	Venue_Stacks_Boat_Hangar	船舶机库	-	venue,at=叠楼区,permit=BusinessPermit1,rent=7500
+addvenue Venue_Stacks_Food_Trailer	Venue_Stacks_Food_Trailer	暮色餐厅	-	venue,at=叠楼区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Stacks_Ramen	Venue_Stacks_Ramen	欢乐碗	-	venue,at=叠楼区,rent=10000,NOT-ACQUIREABLE
+addvenue Venue_Stacks_Taco_Real	Venue_Stacks_Taco_Real	十字路口	-	venue,at=叠楼区,rent=20000,NOT-ACQUIREABLE
+addvenue Venue_TestScene	Venue_TestScene	检测栏	-	venue,rent=10000,NOT-ACQUIREABLE

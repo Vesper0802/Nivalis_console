@@ -188,12 +188,17 @@ internal static class Properties
     /// of one file turns up both a dish and the venue that could serve it. Venues are given
     /// 'addvenue', which goes through the game's own dev option; apartments and greenhouses only
     /// 'acquire' can reach.
+    ///
+    /// Only authored data goes in. What you own and which permits you carry are save state, and
+    /// writing them into a file people share means the file describes one playthrough; 'properties'
+    /// answers those live and in the game anyway. The price is left out for the same reason — it
+    /// is a valuation that moves with the furniture in the shop, not a figure worth recording.
     /// </summary>
     public static List<string> DumpRows()
     {
         var rows = new List<string>();
 
-        foreach (var property in All().OrderBy(Kind).ThenBy(p => Buy(p)))
+        foreach (var property in All().OrderBy(Kind).ThenBy(p => p.name))
         {
             var kind = Kind(property);
             var flags = new List<string> { kind };
@@ -202,25 +207,19 @@ internal static class Properties
             if (where != "-")
                 flags.Add($"at={where}");
 
-            var permit = Permit(property, out var have);
+            var permit = Permit(property, out _);
             if (permit != "none")
-            {
                 flags.Add($"permit={permit}");
-                if (have)
-                    flags.Add("have-permit");
-            }
 
             var rent = Rent(property);
             if (rent > 0)
                 flags.Add($"rent={rent}");
 
-            if (Owned(property) == "yours")
-                flags.Add("yours");
             if (!Acquireable(property))
                 flags.Add("NOT-ACQUIREABLE");
 
             var command = kind == "venue" ? $"addvenue {property.name}" : $"acquire {property.name}";
-            rows.Add(string.Join("\t", command, property.name, Localised(property), Buy(property),
+            rows.Add(string.Join("\t", command, property.name, Localised(property), "-",
                                  string.Join(",", flags)));
         }
 
