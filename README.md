@@ -13,16 +13,43 @@
 
 ## 安装
 
-不需要装开发工具，也不需要编译。
+打开 PowerShell，粘贴这一行：
 
-1. 装 **BepInEx 6 IL2CPP (x64)**，解压到游戏根目录
-   （`...\steamapps\common\Nivalis Nights`）。注意必须是 6.x 的 **IL2CPP** 版本，
+```powershell
+irm https://raw.githubusercontent.com/Vesper0802/Nivalis_console/main/scripts/install.ps1 | iex
+```
+
+不需要克隆仓库，不需要装 .NET，不需要手动下载任何东西。脚本会：
+
+1. 从 Steam 注册表找到游戏（装在哪个盘都行，会遍历所有 Steam 库）
+2. 下载并安装 BepInEx 6 IL2CPP x64（约 33 MB，自带 .NET 运行时）
+3. 从 [Releases](../../releases) 下载插件装进 `BepInEx\plugins\`
+4. 启动游戏，然后**读日志确认插件真的加载成功了**才报完成
+
+第一次启动要生成 interop 程序集，会卡几分钟，脚本会等并显示进度。
+
+装好后**读档之后**按 `F1`。主菜单里按没用——大部分命令要有存档才有东西可操作。
+
+<details>
+<summary>游戏不在 Steam 默认位置，或想换参数</summary>
+
+```powershell
+irm https://raw.githubusercontent.com/Vesper0802/Nivalis_console/main/scripts/install.ps1 -OutFile install.ps1
+.\install.ps1 -GameDir 'D:\Games\Nivalis Nights'
+```
+
+其他参数：`-SkipLaunch` 只装不启动，`-Force` 连 BepInEx 一起重装（会清掉 interop，
+下次启动要重新生成），`-TimeoutMinutes` 改等待时长。
+</details>
+
+<details>
+<summary>手动安装</summary>
+
+1. 装 **BepInEx 6 IL2CPP (x64)**，解压到游戏根目录。必须是 6.x 的 **IL2CPP** 版本，
    5.x 和 Mono 版本都不行。
-2. 启动一次游戏让 BepInEx 生成 interop 程序集，然后退出。第一次会卡几分钟，
-   `BepInEx\LogOutput.log` 里能看到进度。
-3. 从 [Releases](../../releases) 下载 `NivalisDevUnlock.dll`，放进
-   `BepInEx\plugins\`。
-4. 启动游戏，**读档之后**按 `F1`。主菜单里按没用——大部分命令要有存档才有东西可操作。
+2. 从 [Releases](../../releases) 下载 `NivalisDevUnlock.dll` 放进 `BepInEx\plugins\`。
+3. 启动游戏，读档后按 `F1`。第一次启动会卡几分钟生成 interop。
+</details>
 
 配置文件在 `BepInEx\config\nivalisnights.devunlock.cfg`，可改快捷键、字号倍率、
 打开时是否暂停、是否屏蔽游戏输入、以及开局是否冻结腐败。
