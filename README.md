@@ -19,7 +19,7 @@
 irm https://raw.githubusercontent.com/Vesper0802/Nivalis_console/main/scripts/install.ps1 | iex
 ```
 
-不需要克隆仓库，不需要装 .NET，不需要手动下载任何东西。脚本会：
+脚本会：
 
 1. 从 Steam 注册表找到游戏（装在哪个盘都行，会遍历所有 Steam 库）
 2. 下载并安装 BepInEx 6 IL2CPP x64（约 33 MB，自带 .NET 运行时）
@@ -62,7 +62,7 @@ irm https://raw.githubusercontent.com/Vesper0802/Nivalis_console/main/scripts/in
 
 ```
 give 04f867e4 10       发放物品，代号查 reference/items.txt
-money                  查看金钱（单位是分，1 元 = 100 分）
+addmoney 1000000       添加金钱（单位是分，1 元 = 100 分）
 properties             列出可收购的房产，带中文店名、地点和所需许可
 restock                给名下每家店的冰箱和储物柜补满菜单需要的食材
 spoiled clear          清掉背包和各店里腐坏的食材
