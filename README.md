@@ -13,16 +13,21 @@
 
 ## 安装
 
+不需要装开发工具，也不需要编译。
+
 1. 装 **BepInEx 6 IL2CPP (x64)**，解压到游戏根目录
-   （`...\steamapps\common\Nivalis Nights`）。注意是 6.x 的 IL2CPP 版本，
+   （`...\steamapps\common\Nivalis Nights`）。注意必须是 6.x 的 **IL2CPP** 版本，
    5.x 和 Mono 版本都不行。
-2. 启动一次游戏让 BepInEx 生成 interop 程序集，然后退出。第一次会慢，
-   日志里能看到进度。
-3. 把 `NivalisDevUnlock.dll` 放进 `BepInEx\plugins\`。
-4. 启动游戏，读档后按 `F1`。
+2. 启动一次游戏让 BepInEx 生成 interop 程序集，然后退出。第一次会卡几分钟，
+   `BepInEx\LogOutput.log` 里能看到进度。
+3. 从 [Releases](../../releases) 下载 `NivalisDevUnlock.dll`，放进
+   `BepInEx\plugins\`。
+4. 启动游戏，**读档之后**按 `F1`。主菜单里按没用——大部分命令要有存档才有东西可操作。
 
 配置文件在 `BepInEx\config\nivalisnights.devunlock.cfg`，可改快捷键、字号倍率、
 打开时是否暂停、是否屏蔽游戏输入、以及开局是否冻结腐败。
+
+> dll 是针对某个游戏版本编译的。游戏更新后如果控制台失效，见下面的「排查」。
 
 ## 用法
 
@@ -61,22 +66,32 @@ dumpmenus              导出菜单规划数据（含 18 个地点的菜谱评�
 这些表都是某个游戏版本的快照，物品和变量会随版本增减。要最新的自己跑一次
 `dumpitems` / `dumpmenus`。
 
-## 从源码构建
+## 从源码构建（只有改代码才需要）
 
-需要 .NET 6 SDK，以及一份已经装好 BepInEx 并生成过 interop 的游戏。
+想用插件的话上面下载 Releases 就够了，这一节是给要改代码的人看的。
+
+构建需要：
+
+- .NET 6 SDK
+- 一份**已经装好 BepInEx 并且已经启动过一次**的游戏
+
+第二条是硬性的：`csproj` 直接引用 `BepInEx\interop\Assembly-CSharp.dll` 等由
+BepInEx 在本机生成的程序集。那些文件不在仓库里（它们是游戏代码，而且每个游戏版本
+都不一样），所以没有游戏就编译不了——这也是为什么没法用 GitHub Actions 自动出包。
 
 ```powershell
 dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 ```
 
-游戏不在默认路径时传 `GameDir`：
+游戏不在默认路径（`C:\Program Files (x86)\Steam\steamapps\common\Nivalis Nights`）
+时传 `GameDir`：
 
 ```powershell
-dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release `
-  -p:GameDir="D:\Games\Nivalis Nights"
+dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release -p:GameDir="D:\Games\Nivalis Nights"
 ```
 
-加 `-p:Deploy=true` 会在构建后自动拷进 `BepInEx\plugins`。
+产物在 `src\NivalisDevUnlock\bin\Release\net6.0\NivalisDevUnlock.dll`。加
+`-p:Deploy=true` 会在构建后自动拷进 `BepInEx\plugins`。
 `scripts\deploy-and-run.ps1` 是一键关游戏、构建、部署、重启的脚本（Windows + Steam）。
 
 ## 排查
