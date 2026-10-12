@@ -141,7 +141,8 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 
 **未验证，不要当成事实**
 
-- 0.7.0 的 `restock` 在游戏里跑过一次（5 家店，读出档位和基数都正常）；**`shoplist` / `buylist` 还没跑过**
+- 0.7.0 的 `restock` 和 `shoplist` 都在游戏里跑过，无告警；**`buylist` 还没跑过**（和 `shoplist` 共用 `ShoppingListEntries`，所以读的部分已覆盖，没覆盖的是扣钱和入包）
+- **`shoplist` 报出来的条目数比 `ShoppingList` 字典少，原因没查清。** 实测两次都差 1（字典 1 条报 0 条、字典 2 条报 1 条）。门控顺序是 `IsShoppable` → `IsOnList` → `ContainsKey` → `MissingItems > 0`，日志没区分是哪道门筛掉的；`IsOnList` 这道门在 0.6.0 就有，不是新问题。要查的话在各道门之间加日志
 - `demand` 相对基数的乘数是什么没验证（见上）。`RecentSales` 和 `Lean` / `Extra` 档的基数分别是多少也没实测，只确认了 `Normal` = 5
 - `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
 - `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 只打印 `DailyRestockBudget`，没打印它
