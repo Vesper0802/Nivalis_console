@@ -43,11 +43,19 @@ internal static class VenueRestock
             }
         }
 
-        // These two are static settings on the manager, not per-venue state.
-        print($"Restocking {venues.Count} venues. The game stocks " +
-              $"{N(() => ShoppingListManager.demandAmount)} of each ingredient and flags a venue " +
-              $"below {N(() => ShoppingListManager.itemThreshold)}.");
+        // How much of each ingredient a venue keeps is its own management setting, so the only
+        // figure that is still global is the threshold for calling a venue low.
+        print($"Restocking {venues.Count} venues. Each one stocks to its own supply target, " +
+              $"shown below; the game flags an ingredient as low under " +
+              $"{N(() => ShoppingListManager.itemThreshold)}.");
         log.LogInfo($"restock: {venues.Count} venues against {ingredients.Count} ingredient types");
+
+        // Only used to report the tier's basis; the amounts restocked come from the menu's own
+        // demand either way, so failing to bind costs a figure in the output and nothing else.
+        var canReadTarget = Interop.HasNativeMethod(typeof(VenueAreaGhost), "GetSupplyTarget");
+        if (!canReadTarget)
+            log.LogWarning("restock: VenueAreaGhost.GetSupplyTarget did not bind; " +
+                           "the per-ingredient basis will be left out of the output.");
 
         var totalItems = 0;
         var totalKinds = 0;
@@ -90,6 +98,8 @@ internal static class VenueRestock
             var dry = new List<ItemTypeAmount>();
             var target = 0;
             var kinds = 0;
+            var lowBasis = int.MaxValue;
+            var highBasis = 0;
 
             foreach (var item in ingredients)
             {
@@ -99,13 +109,27 @@ internal static class VenueRestock
                     if (!demand.ContainsKey(item))
                         continue;
 
+                    // ShoppingListData is a struct, so a missing entry throws rather than
+                    // reading back null; ContainsKey above is what keeps this safe.
                     var data = demand[item];
-                    need = data?.MissingItems ?? 0;
+                    need = data.MissingItems;
 
                     // The menu's full appetite, not just today's shortfall, which is what
                     // decides whether a venue's storage can ever hold its menu.
-                    target += data?.demand ?? 0;
+                    target += data.demand;
                     kinds++;
+
+                    // GetSupplyTarget is the venue's per-ingredient base for its tier, not the
+                    // target for this ingredient: at Normal it reads 5 for everything, while the
+                    // demand above is that base multiplied by how much the menu leans on the
+                    // ingredient. Collected only to report the base, because under RecentSales it
+                    // varies per ingredient and a single figure would misrepresent the venue.
+                    if (canReadTarget)
+                    {
+                        var basis = ghost.GetSupplyTarget(item);
+                        lowBasis = Math.Min(lowBasis, basis);
+                        highBasis = Math.Max(highBasis, basis);
+                    }
                 }
                 catch (Exception e)
                 {
@@ -126,10 +150,14 @@ internal static class VenueRestock
             // This is the menu's full appetite, not the shortfall: target sums every kind's
             // demand whether or not any is missing. The two numbers differ by a lot, so saying
             // "short" here would contradict the count of items actually added below.
-            var storage = Capacity(ghost.FridgeInventory) + Capacity(ghost.CupboardInventory);
+            //
+            // The two containers are reported separately because they do not pool: a chilled
+            // ingredient can only go in the fridge, so a single total would suggest a flexibility
+            // the venue does not have.
             if (kinds > 0)
-                print($"  {venue.name}: menu wants {target} units across {kinds} kinds, " +
-                      $"storage holds {(storage < 0 ? "unlimited" : storage.ToString())}.");
+                print($"  {venue.name}: {Setting(ghost, lowBasis, highBasis)} wants {target} units " +
+                      $"across {kinds} kinds, storage holds {Shown(ghost.FridgeInventory)} chilled " +
+                      $"and {Shown(ghost.CupboardInventory)} dry.");
 
             if (cold.Count == 0 && dry.Count == 0)
             {
@@ -217,11 +245,11 @@ internal static class VenueRestock
     {
         try
         {
-            var capacity = container.NormalCapacity;
-            if (!capacity.HasValue)
+            var capacity = Limit(container.NormalCapacity);
+            if (capacity < 0)
                 return -1;
 
-            return Math.Max(capacity.Value - container.ItemCount, 0);
+            return Math.Max(capacity - container.ItemCount, 0);
         }
         catch (Exception e)
         {
@@ -239,12 +267,54 @@ internal static class VenueRestock
     /// <summary>How much the container holds in total, or -1 when it reports no limit.</summary>
     private static int Capacity(ItemContainer container)
     {
-        try
-        {
-            var capacity = container.NormalCapacity;
-            return capacity.HasValue ? capacity.Value : -1;
-        }
+        try { return Limit(container.NormalCapacity); }
         catch { return -1; }
+    }
+
+    private static string Shown(ItemContainer container)
+    {
+        var capacity = Capacity(container);
+        return capacity < 0 ? "unlimited" : capacity.ToString();
+    }
+
+    /// <summary>
+    /// Capacity used to be nullable, where null meant unlimited. It is now a plain count with no
+    /// way left to say so, and a container that reports nothing is treated as unbounded rather
+    /// than full: Fill measures the container on both sides of every add, so an optimistic limit
+    /// costs a refused add that gets reported accurately, while a pessimistic one would stop
+    /// restocking entirely.
+    /// </summary>
+    private static int Limit(int capacity) => capacity > 0 ? capacity : -1;
+
+    /// <summary>
+    /// Which management setting the venue is restocking to. Every figure comes straight off the
+    /// venue rather than from any global, because Update #4 moved the target per venue. The basis
+    /// is given as a range: the tiers other than RecentSales read the same for every ingredient,
+    /// and collapsing a range that genuinely varies would hide that.
+    /// </summary>
+    private static string Setting(VenueAreaGhost ghost, int lowBasis, int highBasis)
+    {
+        var tier = "?";
+        try { tier = ghost.SupplyTarget.ToString(); }
+        catch (Exception e)
+        {
+            Plugin.Instance.Log.LogWarning($"restock: could not read the supply target: {e.Message}");
+        }
+
+        var budget = "?";
+        try { budget = ghost.DailyRestockBudget.ToString(); }
+        catch (Exception e)
+        {
+            Plugin.Instance.Log.LogWarning($"restock: could not read the restock budget: {e.Message}");
+        }
+
+        var basis = highBasis <= 0
+            ? ""
+            : lowBasis == highBasis
+                ? $", {lowBasis} per ingredient use"
+                : $", {lowBasis}-{highBasis} per ingredient use";
+
+        return $"supply target {tier}{basis} (daily restock budget {budget})";
     }
 
     private static string N(Func<int?> read)
@@ -261,19 +331,15 @@ internal static class VenueRestock
     {
         try
         {
-            return $"holding {container.ItemCount} of {Cap(container.NormalCapacity)} " +
+            var capacity = Limit(container.NormalCapacity);
+            return $"holding {container.ItemCount} of " +
+                   $"{(capacity < 0 ? "unlimited" : capacity.ToString())} " +
                    $"in {container.StackCount} stacks";
         }
         catch (Exception e)
         {
             return $"could not read its capacity ({e.Message})";
         }
-    }
-
-    private static string Cap(Il2CppSystem.Nullable<int> capacity)
-    {
-        try { return capacity.HasValue ? capacity.Value.ToString() : "unlimited"; }
-        catch { return "?"; }
     }
 
     /// <summary>Names the items, because knowing which one will not fit is the point.</summary>

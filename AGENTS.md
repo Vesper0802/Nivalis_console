@@ -4,7 +4,7 @@
 
 ## 现状
 
-- 插件版本 0.6.0，**53 条命令**，已发布 Release v0.6.0（dll 的 SHA256 与当前 `main` 的构建产物一致）
+- 插件版本 0.7.0，**53 条命令**。对齐游戏 Update #4（2026-10-09）；最后发布的 Release 还是 v0.6.0，**0.7.0 尚未发布**
 - 游戏 Steam AppID `1488490`，Unity 2020.3.44f1，IL2CPP x64
 - BepInEx **固定在 `6.0.0-be.697`**（commit `53625800`）。IL2CPP 这条线是预发布，interop API 在变，插件和 BepInEx 版本不一致的表现是「插件静默不加载」，极难排查。所以 `scripts/install.ps1` 里写死了这个版本，不要改成「取最新」
 - 仓库是公开的，**文档里不能出现任何存档专属数据**（见下面「公开仓库的约束」）
@@ -68,7 +68,20 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 
 **店铺储物是两个互不相通的容器。** `VenueAreaGhost.JointInventory` 下是 `FridgeInventory`（冷藏）和 `CupboardInventory`（常温），**各自用自己的 `NormalCapacity`**，所以两者的 `coldCap` 都读作 0。两边容量不能相加。食材归哪边看 `ItemType.RequiresRefridgeration`。容量来自摆放家具的 `basicStorage` / `refridgeratedStorage` 累加，升级只是解锁更多摆放位。
 
-**`ShoppingListManager.demandAmount` 是静态字段，值为 10**——每种食材的目标库存。容量 ÷ 10 = 能支撑的食材种数。
+**目标库存是每店一个设置，不是全局常数（游戏 Update #4 改的）。** 老的 `ShoppingListManager.demandAmount`（静态，值 10）**已经从游戏里删掉了**，引用它直接编译不过。现在：
+
+- `VenueAreaGhost.SupplyTarget` 是枚举 `VenueAreaGhost/VenueSupplyTarget`，取值 `Lean` / `Normal`（默认）/ `Extra` / `RecentSales`
+- **`GetSupplyTarget` 和 `demand` 不是一回事，别搞混（踩过）。** `VenueAreaGhost.GetSupplyTarget(ItemType)` 返回的是**该档位的每份基数**，实测 `Normal` 档对所有食材一律返回 **5**；真正的目标库存是 `GetIngredientsDemand()` 给的 `ShoppingListData.demand`，它等于基数乘以菜单对该食材的用量。实测同一家 `Normal` 店：Bacon `demand` 10、Pizza Dough 15、Beef 30、Tomatoes 10，全是 5 的整数倍（**乘数具体是「用到它的菜品数」还是「输入量之和」没验证**）
+- 所以**补货数量要用 `demand` / `MissingItems`，`GetSupplyTarget` 只适合报基数**。曾经反过来用 `GetSupplyTarget` 覆盖 `demand`，结果 restock 少补了一大半
+- `RecentSales` 档下 `GetSupplyTarget` 大概会随食材变化（没实测），所以 restock 报的是基数的区间而不是单值
+- `VenueAreaGhost.DailyRestockBudget` / `CurrentRestockBudget` / `RestockNotificationsEnabled` 是每日补货预算那套设置，`CheckRestockBudgetRaise(int)` 会调整它
+- `RecentSales` 这档按 `VenueAreaGhost.RecentReceipts`（`Dictionary<ItemType, int>`，由 `RefreshRecentReceipts()` 刷新）算，所以同一家店的目标会随经营变动
+- 游戏内设置面板是 `Nivalis.Locale.UI.VenueOverviewTabManagementSettingsSection`（档位选择 + 通知开关 + 预算加减）
+- 还留着的全局字段只有 `ShoppingListManager.itemThreshold`，那是「算不算缺货」的判定线，**不是目标库存**
+
+`Venue.GetIngredientsDemand()` 没变，仍返回 `Dictionary<ItemType, ShoppingListData>`。但 **`ShoppingListManager.ShoppingListData` 从 class 变成了 struct**（base 是 `System.ValueType`），所以 `data?.MissingItems` 和 `data != null` 都不再成立，查不到的 key 会抛异常而不是给 null——必须先 `ContainsKey`。它的 `demand` 字段就是目标库存（见上面对 `GetSupplyTarget` 的区分），`MissingItems` 是缺口。
+
+**`ItemContainer.NormalCapacity` / `RefridgeratedCapacity` 从 `Il2CppSystem.Nullable<int>` 变成了普通 `int`**，「null 表示无上限」这个表达没有了。nullable 搬到了 `ItemContainer.Restriction` 上的 `MaxItems` / `MaxSlots`（`Nivalis.OptionalInt`）。`VenueInventory` 另外新增了 `GetFreeNormalSpace(int)` / `GetFreeRefrigeratedSpace(int)`，比自己做容量减法更可靠（还没在插件里用上）。
 
 **`ItemContainer.TryAdd(Il2CppReferenceArray<ItemTypeAmount>)` 是 void 且全有或全无**，一批放不下就一个都不放。所以每个品类单独调一次并裁剪到剩余空间，而且要在调用前后测量容器来判断实际放进去多少。其他重载返回 `ItemCollectionOperationResult`。
 
@@ -105,7 +118,11 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 
 ## 发布流程
 
-游戏更新后需要重新发 Release，否则安装脚本装的还是旧 dll：
+游戏更新后**先重新构建一次，编译错误就是游戏 API 的变更清单**——interop 没有方法体，但签名变了编译器会直接报出来，这是最省事的变更检测手段。Update #4 就是这样一次报出 15 个错、定位到三处 API 变化的。
+
+另外 Update #4 实测：BepInEx 自己打了 `Detected outdated interop assemblies, will regenerate them now` 并重新生成成功，**没有需要手动改 `BepInEx\interop` 的名字**。README 里那段手动改名的排查步骤是兜底，不是每次都要做。
+
+然后需要重新发 Release，否则安装脚本装的还是旧 dll：
 
 ```powershell
 dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
@@ -124,6 +141,12 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 
 **未验证，不要当成事实**
 
+- 0.7.0 的 `restock` 在游戏里跑过一次（5 家店，读出档位和基数都正常）；**`shoplist` / `buylist` 还没跑过**
+- `demand` 相对基数的乘数是什么没验证（见上）。`RecentSales` 和 `Lean` / `Extra` 档的基数分别是多少也没实测，只确认了 `Normal` = 5
+- `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
+- `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 只打印 `DailyRestockBudget`，没打印它
+- **容量现在是普通 `int`，没法表达「无上限」了。** 插件把 `<= 0` 当成「看不出上限」继续尝试放入（`Fill` 前后都量容器，所以放不下会被如实报出来）。但一家没摆储物家具的店容量就是 0，这时该不该尝试没验证过
+- `restock` 凭空生成食材，**会不会绕过每日补货预算没测**。预算是给游戏自己的自动补货用的，插件直接写容器，推测不受限，但没证
 - `GetBuyPrice` 看起来是「当前估值」（已拥有的店报价远高于条件相近的空店，家具最多的最贵），但公式没读过
 - **租金的结算周期（每天还是每周）不知道**，所以买与租的回本估算不可靠
 - `buylist` 按的是 `BaseMarketPrice`，不是各商人的实时价格

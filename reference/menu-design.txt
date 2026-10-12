@@ -17,12 +17,23 @@ FridgeInventory 收冷藏食材，CupboardInventory 收常温食材。
 NormalCapacity 计数——冷藏与常温的区分体现在「东西进哪个容器」，不是一个容器
 内部分区。
 
-**所以两边容量不能相加。** 冰箱 160 加储物柜 210 不等于能放 37 种食材随便分配，
-而是冷藏 16 种 + 常温 21 种，配比是固定的。食材归哪边看
-ItemType.RequiresRefridgeration（dumpitems 导出里标 chilled）。
+**所以两边容量不能相加。** 一份菜单的冷藏需求和常温需求要分别去和对应容器比，配比是
+固定的，总量够用不代表放得下。食材归哪边看 ItemType.RequiresRefridgeration
+（dumpitems 导出里标 chilled）。
 
-每种食材的目标库存是 10 个（ShoppingListManager.demandAmount，静态字段）。
-所以：**该容器容量 ÷ 10 = 该容器能支撑的食材种数**。
+每种食材的目标库存**由该店的补货档位决定，而且每种食材不一样**（游戏 Update #4 改的；
+原先的全局静态字段 ShoppingListManager.demandAmount 已经不存在了，那时每种都是 10）。
+四档：Lean、Normal（默认）、Extra、RecentSales。
+
+档位给的是**每份基数**（Normal 实测 5），某食材的目标库存是基数乘以菜单对它的用量。
+所以同一家 Normal 店里，只被一道菜用到的食材目标可能是 10，被六道菜用到的是 30。
+
+**这意味着不能再用「容量 ÷ 某个固定数」估品类数。** 一种食材占多少容量取决于多少道菜
+用它，所以同样的容量，菜谱越互相复用食材就越省空间——复用食材不只省采购，也省储物。
+
+要拿真实数字，跑 restock：它逐店打印档位、基数，以及该店菜单的完整目标用量总数
+（wants N units across N kinds）。要按单个食材看，读
+Venue.GetIngredientsDemand() 里的 ShoppingListData.demand。
 
 规划菜单时要分别算两边。一份看起来总量够用的菜单，完全可能因为冷藏食材偏多而放不下。
 

@@ -717,7 +717,6 @@ internal static class Commands
         try { log.LogInfo($"shoplist: dictionary holds {list.Count} entries"); }
         catch (Exception e) { log.LogWarning($"shoplist: Count failed ({e.Message}); continuing"); }
 
-        var fallback = Math.Max(1, ShoppingListManager.demandAmount);
         var entries = new List<(ItemType, int, int)>();
         var scanned = 0;
 
@@ -741,16 +740,26 @@ internal static class Commands
             if (!onList)
                 continue;
 
-            var missing = fallback;
+            // How much of an ingredient a venue keeps is a per-venue setting since Update #4, so
+            // there is no global target left to guess with. An item the game puts on the list but
+            // has no entry for is reported and skipped rather than bought in an invented amount.
+            int missing;
             try
             {
-                var data = list[item];
-                if (data != null)
-                    missing = data.MissingItems;
+                if (!list.ContainsKey(item))
+                {
+                    log.LogWarning($"shoplist: {GameRefs.AssetName(item)} is on the list but has " +
+                                   "no entry; skipping it rather than guessing an amount.");
+                    continue;
+                }
+
+                missing = list[item].MissingItems;
             }
             catch (Exception e)
             {
-                log.LogWarning($"shoplist: no entry for {GameRefs.AssetName(item)} ({e.Message}); using {fallback}");
+                log.LogWarning($"shoplist: could not read the entry for {GameRefs.AssetName(item)} " +
+                               $"({e.Message}); skipping it.");
+                continue;
             }
 
             if (missing <= 0)

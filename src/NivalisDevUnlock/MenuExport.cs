@@ -227,8 +227,8 @@ internal static class MenuExport
             return;
         }
 
-        sb.AppendLine($"  {label}\tcoldCap={Nullable(() => container.RefridgeratedCapacity)}" +
-                      $"\tnormalCap={Nullable(() => container.NormalCapacity)}" +
+        sb.AppendLine($"  {label}\tcoldCap={Num(() => container.RefridgeratedCapacity)}" +
+                      $"\tnormalCap={Num(() => container.NormalCapacity)}" +
                       $"\tcold={S(() => container.RefridgeratedCount.ToString())}" +
                       $"\tnormal={S(() => container.NormalCount.ToString())}" +
                       $"\tstacks={S(() => container.StackCount.ToString())}" +
@@ -268,13 +268,12 @@ internal static class MenuExport
         catch { return "?"; }
     }
 
-    private static string Nullable(Func<Il2CppSystem.Nullable<int>> get)
+    /// <summary>
+    /// Container capacities were nullable, where null meant unlimited; they are plain counts now.
+    /// </summary>
+    private static string Num(Func<int> get)
     {
-        try
-        {
-            var n = get();
-            return n.HasValue ? n.Value.ToString() : "unlimited";
-        }
+        try { return get().ToString(); }
         catch { return "?"; }
     }
 
