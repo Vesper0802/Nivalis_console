@@ -66,7 +66,7 @@ give d324bbb6 1	Bacon	培根	300	ingredient,chilled
 give 5b5f9453 1	Bacon Avocado Salad	培根牛油果沙拉	0	meal,NOT-STORABLE
 give 2dd067c9 1	Bacon Bloody Mary	培根味血腥玛丽	0	meal,drink,chilled,NOT-STORABLE
 give cda1a757 1	Bad Seaweed	坏海苔	200	
-give d7979740 1	Bait3000FishingRod	诱饵 3000 型	120000	equippable
+give d7979740 1	Bait3000FishingRod	诱饵 3000 型鱼竿	120000	equippable
 give 349097ce 1	Baked Ide	烤雅罗鱼	0	meal,useable,NOT-STORABLE
 give 5e952215 1	Balut	毛鸭蛋	0	meal,useable,NOT-STORABLE
 give a25c1ddd 1	Bamboo	竹笋	300	ingredient,plant
@@ -643,7 +643,7 @@ give c4f753ff 1	Ikasumi	墨汁嚢	0	meal,drink,chilled,NOT-STORABLE
 give 9864a8a1 1	Immortalitea	永生之茶	0	meal,drink,chilled,NOT-STORABLE
 give 51746add 1	Insect Milkshake	昆虫奶昔	0	meal,drink,chilled,NOT-STORABLE
 give c04bb804 1	Insect Sushi	昆虫寿司	0	meal,useable,NOT-STORABLE
-give 8448c464 1	IronCastSFishingRod	生锈的鱼竿	50000	equippable
+give 8448c464 1	IronCastSFishingRod	铁抛S鱼竿	50000	equippable
 give 01c81d12 1	Island_W270CM_Set_01	厨房中央岛台	110000	furniture,storage+200
 give 62787fe9 1	Island_W270CM_Set_02	厨房中央岛台	125000	furniture,storage+200
 give fd6cbbd3 1	Island_W270cm_Set_03	厨房中央岛台	100000	furniture,storage+200
@@ -787,7 +787,7 @@ give 16d21c7d 1	Mutant Burger	变种汉堡	0	meal,useable,NOT-STORABLE
 give 1d6f0471 1	Mystery Spores	神秘孢子	500	seed
 give d91d7083 1	Nata-Log	运输局日志	7900	
 give ffd9cb86 1	Neon Tubes	霓虹灯管	2000	
-give c03a7425 1	NeonSign	霓虹灯招牌	100000	
+give c03a7425 1	NeonSign	霓虹灯招牌	100000	furniture
 give 261b9698 1	Nettle	荨麻	180	ingredient,plant
 give 7fbf4259 1	Nettle Seeds	荨麻种子	1000	seed
 give 3f035c70 1	Neutral Oil	中性油	100	ingredient
@@ -1102,7 +1102,7 @@ give d3613416 1	Spinach Seeds	菠菜种子	1000	seed
 give fe7f242f 1	Spirulina	螺旋藻	300	ingredient
 give f1125497 1	Spring Roll Wrappers	春卷皮	150	ingredient
 give 941fb886 1	Squid	鱿鱼	500	ingredient,chilled
-give 40f76c19 1	Squid Ink	墨鱼汁	500	
+give 40f76c19 1	Squid Ink	墨鱼汁	500	ingredient,chilled
 give a12cb773 1	Squid Ink Pasta with Shrimp and Scallop	扇贝虾墨鱼汁意面	0	meal,useable,NOT-STORABLE
 give 6560e98e 1	Squid Stuffed with Rice	鱿鱼酿饭	0	meal,useable,NOT-STORABLE
 give a752500c 1	Stacks	叠叠堡	0	meal,useable,NOT-STORABLE
@@ -1174,12 +1174,12 @@ give c5d430b3 1	Towel_Bar_Bath_Towel	毛巾架	6000	furniture
 give 2a909ac5 1	Towel_Rack	毛巾架	10000	furniture
 give 1e1677fb 1	Trailer_Grill	铁板烧	60000	furniture,storage+100
 give cfd54ec5 1	Trailer_Shelve_1	工业冷藏柜	45000	furniture,cold+100
-give 5fa11f70 1	Trailer_Shelve_2	壁挂储物柜	25000	furniture,storage+50
+give 5fa11f70 1	Trailer_Shelve_2	天花板储物柜	25000	furniture,storage+50
 give 3050c2c8 1	Trailer_Sink	大号水槽	40000	furniture,storage+15
 give efba13b0 1	Tray_Basic		0	NOT-STORABLE
 give a0972930 1	Triangle Light	三角形灯	13000	furniture
 give 7e671d11 1	Trout with Garlic Lemon Butter Herb Sauce	蒜香柠檬黄油鲑鱼	0	meal,useable,NOT-STORABLE
-give c1f37e54 1	TrueCast7XFishingRod	抛必中7X	140000	equippable
+give c1f37e54 1	TrueCast7XFishingRod	抛必中7X鱼竿	140000	equippable
 give b379b9f0 1	TV_Stand_Set_1	电视	50000	furniture
 give 6e982dfa 1	TV_Stand_Set_2	电视	60000	furniture
 give bdb33671 1	TV_Stand_Set_3	电视	70000	furniture
@@ -1319,7 +1319,7 @@ give d1e9dc3c 1	Zander	梭鲈	650	ingredient,fish,chilled
 give a7f609eb 1	Zope	上口欧鳊	650	ingredient,fish,chilled
 give f96f2cc5 1	Zope with Cherry Salsa	樱桃莎莎酱欧鳊鱼	0	meal,useable,NOT-STORABLE
 
-Properties - 140 entries. Paste a COMMAND cell the same way.
+Properties - 143 entries. Paste a COMMAND cell the same way.
 'at=' is the district. 'permit=' is a specific item, not a level, so permit 4
 does not satisfy a property asking for permit 2. NOT-ACQUIREABLE ones are
 NPC-run and can never be yours. PRICE reads '-' because a property's price is
@@ -1370,13 +1370,16 @@ acquire SkyHighGardensApartment	SkyHighGardensApartment	红木尖塔 89c 单元	
 acquire SpireApartment	SpireApartment	天空泊位 49 号最高层	-	apartment,rent=10000,NOT-ACQUIREABLE
 acquire StacksApartment	StacksApartment	叠楼区 1804-C 单元	-	apartment,rent=10000,NOT-ACQUIREABLE
 acquire Greenhouse_Dev	Greenhouse_Dev	温室 2B	-	greenhouse,rent=1000,NOT-ACQUIREABLE
-acquire Greenhouse2B	Greenhouse2B	温室 2B	-	greenhouse,NOT-ACQUIREABLE
-acquire GreenhouseDocks1B	GreenhouseDocks1B	温室 1B	-	greenhouse,rent=1000,NOT-ACQUIREABLE
-acquire GreenhouseDocks3B	GreenhouseDocks3B	温室 3B	-	greenhouse,rent=1000,NOT-ACQUIREABLE
-acquire GreenhouseSkyhighGardens1G	GreenhouseSkyhighGardens1G	温室 1G	-	greenhouse,rent=1000,NOT-ACQUIREABLE
-acquire GreenhouseSkyhighGardens2G	GreenhouseSkyhighGardens2G	温室 2G	-	greenhouse,rent=1000,NOT-ACQUIREABLE
-acquire GreenhouseSkyhighGardens3G	GreenhouseSkyhighGardens3G	温室 3G	-	greenhouse,rent=1000,NOT-ACQUIREABLE
-acquire GreenhouseSpire1S	GreenhouseSpire1S	温室 1S	-	greenhouse,rent=1000,NOT-ACQUIREABLE
+acquire Greenhouse2B	Greenhouse2B	温室 2B	-	greenhouse
+acquire GreenhouseDocks1B	GreenhouseDocks1B	温室 1B	-	greenhouse,rent=1000
+acquire GreenhouseDocks3B	GreenhouseDocks3B	温室 3B	-	greenhouse,rent=1000
+acquire GreenhouseIndustrial1F	GreenhouseIndustrial1F	工业温室 1F	-	greenhouse,rent=1000
+acquire GreenhouseIndustrial2F	GreenhouseIndustrial2F	工业温室 2F	-	greenhouse,rent=1000
+acquire GreenhouseIndustrial3F	GreenhouseIndustrial3F	工业温室 3F	-	greenhouse,rent=1000
+acquire GreenhouseSkyhighGardens1G	GreenhouseSkyhighGardens1G	温室 1G	-	greenhouse,rent=1000
+acquire GreenhouseSkyhighGardens2G	GreenhouseSkyhighGardens2G	温室 2G	-	greenhouse,rent=1000
+acquire GreenhouseSkyhighGardens3G	GreenhouseSkyhighGardens3G	温室 3G	-	greenhouse,rent=1000
+acquire GreenhouseSpire1S	GreenhouseSpire1S	温室 1S	-	greenhouse,rent=1000
 addvenue Venue_Central_Canyon_Ancient_Spirit	Venue_Central_Canyon_Ancient_Spirit	大熔炉	-	venue,at=中央谷地,rent=30000,NOT-ACQUIREABLE
 addvenue Venue_Central_Canyon_Corner_Restaurant	Venue_Central_Canyon_Corner_Restaurant	观景角	-	venue,at=中央谷地,rent=20000,NOT-ACQUIREABLE
 addvenue Venue_Central_Canyon_Deep_Sea_Smoke	Venue_Central_Canyon_Deep_Sea_Smoke	深海烟	-	venue,at=中央谷地,rent=15000,NOT-ACQUIREABLE

@@ -126,7 +126,7 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 - 不能写的：售价（`GetBuyPrice` 是实时估值）、「已拥有的 N 家店」、某个存档的物品数量、具体店铺的推荐菜单、你的等级和储物容量
 - 可以写的：游戏的固定数据（店名、地点、许可、`RentCost`、菜谱评分、人群构成、物品代号、变量名）、机制说明、API 结构
 
-~~`dumpitems` 导出的房产行带 `yours` / `have-permit` 标记~~ —— **这条是错的，已核实并推翻（2026-10-16）**。`Properties.DumpRows()` 写的是 `Kind` / `at=` / `permit=` / `rent=` / `NOT-ACQUIREABLE`，全是 authored 数据；它调的是 `Permit(property, out _)`，`have` 被丢弃，也从不调 `Owned()`，价格一律写 `-`。当前提交的 `reference/items.txt` **确实含房产段**（140 项），里面唯一出现 `yours` 的是表头那句说明文字。**所以 `dumpitems` 的输出可以直接提交。**
+~~`dumpitems` 导出的房产行带 `yours` / `have-permit` 标记~~ —— **这条是错的，已核实并推翻（2026-10-16）**。`Properties.DumpRows()` 写的是 `Kind` / `at=` / `permit=` / `rent=` / `NOT-ACQUIREABLE`，全是 authored 数据；它调的是 `Permit(property, out _)`，`have` 被丢弃，也从不调 `Owned()`，价格一律写 `-`。已提交的 `reference/items.txt` **一直都含房产段**，里面唯一出现 `yours` 的是表头那句说明文字。**所以 `dumpitems` 的输出可以直接提交**，2026-10-16 就是这样重新生成并提交的（1313 物品 + 143 房产）。
 
 真正要留意的是另一件事：`GameRefs.ItemTypes()` 只能看到已经加载进内存的 ScriptableObject，**物品数会随当前加载了哪些区域而变**。所以重新生成之前先看一眼条目数，比已提交的少就说明这次导出不完整，不要覆盖上去。
 
