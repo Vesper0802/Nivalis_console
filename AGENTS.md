@@ -83,7 +83,11 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 
 **`ItemContainer.NormalCapacity` / `RefridgeratedCapacity` 从 `Il2CppSystem.Nullable<int>` 变成了普通 `int`**，「null 表示无上限」这个表达没有了。nullable 搬到了 `ItemContainer.Restriction` 上的 `MaxItems` / `MaxSlots`（`Nivalis.OptionalInt`）。`VenueInventory` 另外新增了 `GetFreeNormalSpace(int)` / `GetFreeRefrigeratedSpace(int)`，比自己做容量减法更可靠（还没在插件里用上）。
 
-**温室储物就是店铺那个 `VenueInventory`，但入口不在 ghost 上（游戏 Update #5 新增）。** `GreenhouseAreaGhost` 没有储物属性，要走 `GreenhouseManager.TryGetOwnedStorage(greenhouse, player, out VenueInventory)`——它只对属于你的温室存在。拿到之后结构和店铺完全对称：`NormalInventory` / `RefridgeratedInventory` 两个 `ItemContainer`，同样两边不互通。另有 `GreenhouseAreaGhost.StorageOverflowContainer` 接放不下的收成，`BaseNormalStorage` / `BaseFridgeStorage` 是建筑自带的那部分容量。所以凡是扫容器的命令（`spoiled` 这类）都要把温室这三个一起算进去，否则作物在看不见的地方烂掉而命令报一切正常。另有 `CountInOwnedGreenhouseStorages(ItemType)` / `TakeFromOwnedGreenhouseStorages(...)` 可以跨全部温室查取。
+**温室储物就是店铺那个 `VenueInventory`，但入口不在 ghost 上（游戏 Update #5 新增）。** `GreenhouseAreaGhost` 没有储物属性，要走 `GreenhouseManager.TryGetOwnedStorage(greenhouse, player, out VenueInventory)`——它只对属于你的温室存在，对从没去过的温室也能返回。拿到之后结构和店铺完全对称：`NormalInventory` / `RefridgeratedInventory` 两个 `ItemContainer`，同样两边不互通。`BaseNormalStorage` / `BaseFridgeStorage` 是建筑自带的那部分容量。另有 `CountInOwnedGreenhouseStorages(ItemType)` / `TakeFromOwnedGreenhouseStorages(...)` 可以跨全部温室查取。
+
+**⚠️ `GreenhouseAreaGhost.StorageOverflowContainer` 就是玩家背包，不要把它当成一个独立地点。** 它是「收成放不下时去哪」，而答案是你的口袋。实测钉死：`spoiled` 同时报了 `your inventory: 10` 和 `GreenhouseSkyhighGardens1G overflow: 10`，`spoiled clear` 先清掉背包那 10 件，轮到温室那份时 10 件**全部 `TryTake` 失败**，容器前后读数 176 → 166 —— 正好少了背包刚清掉的那 10 件。两个不同的温室也会报出完全相同的件数。所以扫它等于把背包按温室个数重复计一遍。
+
+**由此得到一条通用做法：扫容器的命令要按 `Il2CppObjectBase.Pointer` 去重。** 同一个原生对象的两个包装是不同的 .NET 引用（见上面 Il2CppInterop 那节），但 `Pointer` 是同一个值，这就是 AGENTS 一直在找的那种「稳定的键」，对容器身份同样适用。`Spoiled.Distinct()` 是现在的做法。
 
 **店铺动用温室存货是一个开关加一个条件（Update #5）。** `VenueAreaGhost.UseGreenhouseStock`（可读写）是设置，`CanUseGreenhouseStock` 是「现在有没有可取的东西」，两者独立。补货路径变成 `Restock(float discount)` 返回枚举 `VenueAreaGhost/RestockResult`（`None` / `FromGreenhouses` / `FromVendors`），配套 `CanRestockFromGreenhouses()` 和 `TakeIngredientsFromGreenhouses(List<IRecipe>)`。
 
@@ -160,9 +164,9 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 - `demand` 相对基数的乘数是什么没验证（见上）。`RecentSales` 和 `Lean` / `Extra` 档的基数分别是多少也没实测，只确认了 `Normal` = 5
 - `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
 - `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 打印的是 Update #5 新增的 `CurrentRestockSpending`（已花）和 `DailyRestockBudget`（额度），没碰它
-- **`greenhouse auto on` 仍然没有被真正测到。** 跑过，但那个温室 `Modules` 为 0，所以报的是 `Automation on for 0 of 0 modules`——走通了代码路径，没验证过写入。插件绕过了务农等级门槛，游戏完全可能在自己的逻辑里再查一次等级而让它不生效；命令的读回核对只能证明字段写进去了，不能证明游戏会照着做。要验得先在温室里摆出模块
-- **温室的 `StorageOverflowContainer` 里本来就有东西，而且 `TryTake(stack, instance)` 对它全部失败。** 刚收购、从没去过的温室读到 176 件（两次运行之间还会变，另一次是 136），其中 10 件是腐烂食物。`spoiled clear` 如实报了 `10 of 10 would not come out; holding 166 -> 166`——**清理失败被前后测量抓住了，这正是那套纪律的作用**。已加兜底：失败后改用 `TryTake(instance)` 这个自己找 stack 的重载重试一次，**但这个兜底还没在游戏里验证过**。如果仍然失败，下一个怀疑对象是「温室没有加载，容器只是序列化出来的壳」，验法是走进那个温室再跑一次。该属性是实例的不是静态的，所以不存在多温室共用一个容器的风险
-- `spoiled` 扫温室的读取路径已验证（能报出 `GreenhouseSkyhighGardens1G overflow` 这一行），**没有和冰箱/常温格重复计数**
+- **`AutoHarvest` / `AutoPlant` 写进去了，但游戏认不认没验。** `greenhouse auto on` 实测报 `Automation on for 4 of 4 modules`，读回核对通过，所以字段确实写成功了。但插件绕过了务农等级门槛，游戏完全可能在自己的逻辑里再查一次等级；**要证明它真的会自动收割，得种到可收获再看它自己收不收**，这一步没做
+- **`spoiled` 的容器去重只经过编译，没在游戏里跑过。** 修的是上面 `StorageOverflowContainer` 那条重复计数。要验：拥有多个温室时背包的腐坏食物只报一次，且 `spoiled clear` 不再出现 `would not come out`
+- `spoiled` 扫温室储物（`NormalInventory` / `RefridgeratedInventory`）的读取路径**实际上一直没被执行到**，因为测试用的温室储物容量是 0。被验证过的只有 overflow 那条，而那条已经去掉了
 - `GreenhouseAreaGhost.Temperature` / `Humidity` 是 0-1 的滑条刻度，没动过的温室两项都读 0.50。游戏里具体对应多少度、多少湿度没查
 - **容量现在是普通 `int`，没法表达「无上限」了。** 插件把 `<= 0` 当成「看不出上限」继续尝试放入（`Fill` 前后都量容器，所以放不下会被如实报出来）。但一家没摆储物家具的店容量就是 0，这时该不该尝试没验证过
 - `restock` 凭空生成食材，**会不会绕过每日补货预算没测**。预算是给游戏自己的自动补货用的，插件直接写容器，推测不受限，但没证

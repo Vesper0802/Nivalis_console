@@ -47,7 +47,8 @@ internal static class Spoiled
 
         if (total == 0)
         {
-            print("Nothing has gone off. Your inventory and every venue you own are clean.");
+            print("Nothing has gone off. Your inventory and every venue and greenhouse you own " +
+                  "are clean.");
             return;
         }
 
@@ -125,7 +126,43 @@ internal static class Spoiled
 
         AddVenues(list, player, filter, print);
         AddGreenhouses(list, player, filter);
-        return list;
+        return Distinct(list);
+    }
+
+    /// <summary>
+    /// Drops containers already listed under another name. Two interop wrappers of one native
+    /// object are different .NET references, so identity has to be read from the native pointer.
+    ///
+    /// This is not hypothetical. A greenhouse's overflow container is where a harvest goes when
+    /// the storage cannot take it, and that turned out to be the player's own pockets: it
+    /// reported the same ten spoiled items the inventory did, and after the inventory haul
+    /// removed them it measured 176 items before the greenhouse haul and 166 after, having
+    /// refused all ten because they were already gone. Listing it twice also doubled the count
+    /// for every greenhouse owned. The first name wins, and the inventory is added first.
+    /// </summary>
+    private static List<Haul> Distinct(List<Haul> hauls)
+    {
+        var seen = new HashSet<IntPtr>();
+        var result = new List<Haul>();
+
+        foreach (var haul in hauls)
+        {
+            IntPtr pointer;
+            try { pointer = haul.Container.Pointer; }
+            catch
+            {
+                result.Add(haul);
+                continue;
+            }
+
+            if (seen.Add(pointer))
+                result.Add(haul);
+            else
+                Plugin.Instance.Log.LogInfo(
+                    $"spoiled: {haul.Where} is a container already listed under another name; skipping it.");
+        }
+
+        return result;
     }
 
     private static void AddVenues(List<Haul> list, PlayerManager.Player player, string filter,
@@ -242,8 +279,12 @@ internal static class Spoiled
         foreach (var (stack, instance) in haul.Items)
         {
             var value = Int(() => instance.Value);
-            if (Take(haul.Container, stack, instance)) { took++; worth += value; }
-            else failed++;
+            try
+            {
+                if (haul.Container.TryTake(stack, instance)) { took++; worth += value; }
+                else failed++;
+            }
+            catch { failed++; }
         }
 
         // The container keeps its own counts, so it is told to recount rather than trusted to
@@ -256,26 +297,6 @@ internal static class Spoiled
                   $"holding {before} -> {after}.");
 
         return (took, worth);
-    }
-
-    /// <summary>
-    /// Removes one instance. The stack is offered first because that is the container's own
-    /// route, but a greenhouse's overflow container refused every instance that way while
-    /// holding them quite happily, so the overload that looks the stack up itself is tried
-    /// before giving up. Both are asked for the one instance, so neither can take anything
-    /// beyond what was already found spoiled.
-    /// </summary>
-    private static bool Take(ItemContainer container, ItemStack stack, ItemInstanceData instance)
-    {
-        try
-        {
-            if (container.TryTake(stack, instance))
-                return true;
-        }
-        catch { }
-
-        try { return container.TryTake(instance); }
-        catch { return false; }
     }
 
     /// <summary>

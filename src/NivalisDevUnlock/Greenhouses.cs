@@ -160,19 +160,19 @@ internal static class Greenhouses
 
         foreach (var module in modules)
         {
-            var plant = Name(() => module.PlantType);
             var planted = Bool(() => module.Planted);
             if (!planted)
-            {
                 idle++;
-                continue;
-            }
-
-            if (Bool(() => module.ReadyForHarvest))
+            else if (Bool(() => module.ReadyForHarvest))
                 ready++;
 
-            print($"      {Name(() => module.ModuleType)}: {plant} {Progress(module)}" +
-                  $"{Yield(ghost, module)}{Auto(module)}");
+            // Empty modules get a line too. One can be set to tend itself while holding nothing,
+            // and skipping them left 'greenhouse auto on' with nowhere to be checked.
+            var state = planted
+                ? $"{Name(() => module.PlantType)} {Progress(module)}{Yield(ghost, module)}"
+                : "empty";
+
+            print($"      {Name(() => module.ModuleType)}: {state}{Auto(module)}");
         }
 
         print($"    modules: {modules.Count} placed, {ready} ready to harvest, {idle} empty.");
@@ -240,7 +240,6 @@ internal static class Greenhouses
     /// <summary>
     /// Greenhouse storage is a VenueInventory, the same split pair a venue uses, so chilled and
     /// dry are reported apart for the same reason: a crop can only go in the one that suits it.
-    /// Anything that fits in neither spills into the overflow container and then your pockets.
     /// </summary>
     private static string Storage(GreenhouseManager manager, Greenhouse greenhouse,
         PlayerManager.Player player, GreenhouseAreaGhost ghost)
@@ -270,10 +269,9 @@ internal static class Greenhouses
         }
         catch { }
 
-        var overflow = Int(() => ghost.StorageOverflowContainer?.ItemCount ?? 0);
-        if (overflow > 0)
-            parts.Add($"{overflow} items have spilled into the overflow container");
-
+        // StorageOverflowContainer is left out on purpose. It is where a harvest goes when the
+        // storage cannot take it, and that place is the player's own pockets, so reporting its
+        // count here printed the same unrelated figure under every greenhouse.
         return string.Join(", ", parts);
     }
 
