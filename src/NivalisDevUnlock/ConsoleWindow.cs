@@ -159,8 +159,16 @@ public class ConsoleWindow : MonoBehaviour
             return;
         }
 
-        // The prompt is a single line, so flatten any structure in the pasted text.
-        _input += clip.Replace("\r", " ").Replace("\n", " ").Replace("\t", " ").Trim();
+        // A tab only ever arrives from the reference tables, where a row is a command cell
+        // followed by columns describing it. Those columns are not arguments: pasting a venue
+        // row turned into the name repeated twice, which matched nothing. Everything from the
+        // first tab on is dropped, and the prompt shows the result before it is submitted.
+        var tab = clip.IndexOf('\t');
+        if (tab >= 0)
+            clip = clip[..tab];
+
+        // The prompt is a single line, so flatten any structure in what is left.
+        _input += clip.Replace("\r", " ").Replace("\n", " ").Trim();
     }
 
     private void Toggle()
