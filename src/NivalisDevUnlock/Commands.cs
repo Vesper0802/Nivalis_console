@@ -471,9 +471,12 @@ internal static class Commands
             sb.AppendLine();
             sb.AppendLine($"Properties - {properties.Count} entries. Paste a COMMAND cell the same way.");
             sb.AppendLine("'at=' is the district. 'permit=' is a specific item, not a level, so permit 4");
-            sb.AppendLine("does not satisfy a property asking for permit 2. NOT-ACQUIREABLE ones are");
-            sb.AppendLine("NPC-run and can never be yours. PRICE reads '-' because a property's price is");
-            sb.AppendLine("a live valuation; run 'properties' to see it, along with what you already own.");
+            sb.AppendLine("does not satisfy a property asking for permit 2, and it does not decide what");
+            sb.AppendLine("can be bought either: some NPC venues ask for one and can still never be");
+            sb.AppendLine("bought, while one that can be has no permit at all. NOT-ACQUIREABLE ones are");
+            sb.AppendLine("NPC-run, though the story hands a couple of them over. PRICE reads '-' because");
+            sb.AppendLine("a property's price is a live valuation; run 'properties' to see it, along with");
+            sb.AppendLine("what you already own.");
             sb.AppendLine();
             sb.AppendLine("COMMAND\tASSET NAME\tDISPLAY NAME\tPRICE\tFLAGS");
             foreach (var row in properties)
