@@ -164,9 +164,8 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 - `demand` 相对基数的乘数是什么没验证（见上）。`RecentSales` 和 `Lean` / `Extra` 档的基数分别是多少也没实测，只确认了 `Normal` = 5
 - `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
 - `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 打印的是 Update #5 新增的 `CurrentRestockSpending`（已花）和 `DailyRestockBudget`（额度），没碰它
-- **`AutoHarvest` / `AutoPlant` 写进去了，但游戏认不认没验。** `greenhouse auto on` 实测报 `Automation on for 4 of 4 modules`，读回核对通过，所以字段确实写成功了。但插件绕过了务农等级门槛，游戏完全可能在自己的逻辑里再查一次等级；**要证明它真的会自动收割，得种到可收获再看它自己收不收**，这一步没做
-- **`spoiled` 的容器去重只经过编译，没在游戏里跑过。** 修的是上面 `StorageOverflowContainer` 那条重复计数。要验：拥有多个温室时背包的腐坏食物只报一次，且 `spoiled clear` 不再出现 `would not come out`
-- `spoiled` 扫温室储物（`NormalInventory` / `RefridgeratedInventory`）的读取路径**实际上一直没被执行到**，因为测试用的温室储物容量是 0。被验证过的只有 overflow 那条，而那条已经去掉了
+- **`AutoHarvest` / `AutoPlant` 写进去了，而且能存进存档，但游戏认不认仍然没验。** `greenhouse auto on` 实测报 `Automation on for 4 of 4 modules`，存档重进之后四个模块照样显示 `self-tending`——说明游戏把它序列化了，不只是写进了一个临时字段。但插件绕过了务农等级门槛，游戏完全可能在自己的逻辑里再查一次等级；**要证明它真的会自动收割，得种到可收获再看它自己收不收**，这一步没做
+- `spoiled` 扫温室储物（`NormalInventory` / `RefridgeratedInventory`）的读取路径**一次都没被真正执行过**，因为测试用的两个温室储物容量都是 0。被跑到过的只有 overflow 那条，而那条已经确认是背包并去掉了。要验得先给温室摆上储物家具
 - `GreenhouseAreaGhost.Temperature` / `Humidity` 是 0-1 的滑条刻度，没动过的温室两项都读 0.50。游戏里具体对应多少度、多少湿度没查
 - **容量现在是普通 `int`，没法表达「无上限」了。** 插件把 `<= 0` 当成「看不出上限」继续尝试放入（`Fill` 前后都量容器，所以放不下会被如实报出来）。但一家没摆储物家具的店容量就是 0，这时该不该尝试没验证过
 - `restock` 凭空生成食材，**会不会绕过每日补货预算没测**。预算是给游戏自己的自动补货用的，插件直接写容器，推测不受限，但没证
