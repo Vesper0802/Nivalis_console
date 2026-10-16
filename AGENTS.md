@@ -161,7 +161,8 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 - `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
 - `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 打印的是 Update #5 新增的 `CurrentRestockSpending`（已花）和 `DailyRestockBudget`（额度），没碰它
 - **`greenhouse auto on` 仍然没有被真正测到。** 跑过，但那个温室 `Modules` 为 0，所以报的是 `Automation on for 0 of 0 modules`——走通了代码路径，没验证过写入。插件绕过了务农等级门槛，游戏完全可能在自己的逻辑里再查一次等级而让它不生效；命令的读回核对只能证明字段写进去了，不能证明游戏会照着做。要验得先在温室里摆出模块
-- **刚收购、从没去过的温室，`StorageOverflowContainer.ItemCount` 读作 136，原因不明。** 该属性是实例的不是静态的，所以不是多个温室共用一个容器。可能那个温室在世界里本来就有东西。`spoiled` 现在会扫这个容器，但它只动 `Freshness == Spoiled` 或资源名 `RottenFood` 的物品，所以就算里面有别的东西也不会被清掉。**拥有温室之后的 `spoiled` 还没跑过**，温室那条扫描路径实际上没被验证
+- **温室的 `StorageOverflowContainer` 里本来就有东西，而且 `TryTake(stack, instance)` 对它全部失败。** 刚收购、从没去过的温室读到 176 件（两次运行之间还会变，另一次是 136），其中 10 件是腐烂食物。`spoiled clear` 如实报了 `10 of 10 would not come out; holding 166 -> 166`——**清理失败被前后测量抓住了，这正是那套纪律的作用**。已加兜底：失败后改用 `TryTake(instance)` 这个自己找 stack 的重载重试一次，**但这个兜底还没在游戏里验证过**。如果仍然失败，下一个怀疑对象是「温室没有加载，容器只是序列化出来的壳」，验法是走进那个温室再跑一次。该属性是实例的不是静态的，所以不存在多温室共用一个容器的风险
+- `spoiled` 扫温室的读取路径已验证（能报出 `GreenhouseSkyhighGardens1G overflow` 这一行），**没有和冰箱/常温格重复计数**
 - `GreenhouseAreaGhost.Temperature` / `Humidity` 是 0-1 的滑条刻度，没动过的温室两项都读 0.50。游戏里具体对应多少度、多少湿度没查
 - **容量现在是普通 `int`，没法表达「无上限」了。** 插件把 `<= 0` 当成「看不出上限」继续尝试放入（`Fill` 前后都量容器，所以放不下会被如实报出来）。但一家没摆储物家具的店容量就是 0，这时该不该尝试没验证过
 - `restock` 凭空生成食材，**会不会绕过每日补货预算没测**。预算是给游戏自己的自动补货用的，插件直接写容器，推测不受限，但没证

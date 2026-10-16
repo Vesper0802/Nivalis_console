@@ -242,12 +242,8 @@ internal static class Spoiled
         foreach (var (stack, instance) in haul.Items)
         {
             var value = Int(() => instance.Value);
-            try
-            {
-                if (haul.Container.TryTake(stack, instance)) { took++; worth += value; }
-                else failed++;
-            }
-            catch { failed++; }
+            if (Take(haul.Container, stack, instance)) { took++; worth += value; }
+            else failed++;
         }
 
         // The container keeps its own counts, so it is told to recount rather than trusted to
@@ -260,6 +256,26 @@ internal static class Spoiled
                   $"holding {before} -> {after}.");
 
         return (took, worth);
+    }
+
+    /// <summary>
+    /// Removes one instance. The stack is offered first because that is the container's own
+    /// route, but a greenhouse's overflow container refused every instance that way while
+    /// holding them quite happily, so the overload that looks the stack up itself is tried
+    /// before giving up. Both are asked for the one instance, so neither can take anything
+    /// beyond what was already found spoiled.
+    /// </summary>
+    private static bool Take(ItemContainer container, ItemStack stack, ItemInstanceData instance)
+    {
+        try
+        {
+            if (container.TryTake(stack, instance))
+                return true;
+        }
+        catch { }
+
+        try { return container.TryTake(instance); }
+        catch { return false; }
     }
 
     /// <summary>
