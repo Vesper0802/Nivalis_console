@@ -1,7 +1,8 @@
 # Nivalis Nights 控制台插件
 
-给《Nivalis Nights》加一个游戏内控制台，按 `F1` 打开。53 条命令，大部分是游戏自带
-开发选项的包装，少数是自制功能（技能设定、冻结腐败、腐坏食材清理、剧情物品保护等）。
+给《Nivalis Nights》加一个游戏内控制台，按 `F1` 打开。54 条命令，大部分是游戏自带
+开发选项的包装，少数是自制功能（技能设定、冻结腐败、腐坏食材清理、剧情物品保护、
+温室总览等）。
 
 仓库里还有一批逆向整理出来的参考资料：全部物品代号、全部剧情变量、按地点的菜谱评分、
 存档结构、游戏内置开发选项清单。即使不装插件，这些表也能单独查。
@@ -65,7 +66,8 @@ give 04f867e4 10       发放物品，代号查 reference/items.txt
 addmoney 1000000       添加金钱（单位是分，1 元 = 100 分）
 properties             列出可收购的房产，带中文店名、地点和所需许可
 restock                给名下每家店的冰箱和储物柜补满菜单需要的食材
-spoiled clear          清掉背包和各店里腐坏的食材
+greenhouse             列出名下每个温室在种什么、存了什么
+spoiled clear          清掉背包、各店和各温室里腐坏的食材
 skill Skill_Cooking 9  把厨艺提到 9 级
 dumpitems              把全部物品和房产导出成 txt
 dumpmenus              导出菜单规划数据（含 18 个地点的菜谱评分）
@@ -81,7 +83,7 @@ dumpmenus              导出菜单规划数据（含 18 个地点的菜谱评�
 
 | 文件 | 内容 |
 |---|---|
-| [`reference/commands.txt`](reference/commands.txt) | 53 条命令的完整说明和实现细节 |
+| [`reference/commands.txt`](reference/commands.txt) | 54 条命令的完整说明和实现细节 |
 | [`reference/items.txt`](reference/items.txt) | 全部物品，第一列是可直接粘贴的 `give` 命令 |
 | [`reference/recipe-scores.txt`](reference/recipe-scores.txt) | 18 个地点的人群构成，以及每道菜在该地点的评分 |
 | [`reference/menu-design.txt`](reference/menu-design.txt) | 菜单设计与储物规划的机制和方法 |

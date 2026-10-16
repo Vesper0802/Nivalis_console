@@ -545,6 +545,12 @@ internal static class Commands
         Add("skill", "skill [name] [level]", "Shows your skill levels, or raises one to a level.",
             (args, print) => Skills.Run(args, print));
 
+        // Each greenhouse answers for itself at a console you have to walk up to, so there is
+        // nowhere to see what all of them are growing, holding, or tending on their own.
+        Add("greenhouse", "greenhouse [name fragment | auto <on|off> [name]]",
+            "Reports what your greenhouses grow and store, or sets their modules to self-tend.",
+            (args, print) => Greenhouses.Run(args, print));
+
         // The game shows one property at a time at its own console, so there is nowhere to
         // compare prices or see which permit each one wants.
         Add("properties", "properties [filter]",
@@ -558,7 +564,7 @@ internal static class Commands
         // Spoiled stock is worth nothing but still takes up storage, and the game leaves it in
         // place as RottenFood, which no screen clears in bulk.
         Add("spoiled", "spoiled [clear|sell] [venue]",
-            "Reports food that has gone off in your bag and your venues, or bins it.",
+            "Reports food that has gone off in your bag, venues and greenhouses, or bins it.",
             (args, print) => Spoiled.Run(args, print));
 
         // A venue's fridge and cupboard capacities are the sum of its placed furniture, and the

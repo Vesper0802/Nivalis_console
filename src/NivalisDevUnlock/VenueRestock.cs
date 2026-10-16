@@ -271,6 +271,30 @@ internal static class VenueRestock
         catch { return -1; }
     }
 
+    /// <summary>
+    /// Whether the venue draws on your greenhouses before paying a vendor. A venue that can but
+    /// does not is worth pointing out, since produce you grew is sitting unused; one that cannot
+    /// has no greenhouse stocked with anything on its menu, which is not a setting to change.
+    /// </summary>
+    private static string Greenhouse(VenueAreaGhost ghost)
+    {
+        try
+        {
+            if (ghost.UseGreenhouseStock)
+                return ", drawing on greenhouse stock";
+
+            return ghost.CanUseGreenhouseStock
+                ? ", not drawing on greenhouse stock though it could"
+                : "";
+        }
+        catch (Exception e)
+        {
+            Plugin.Instance.Log.LogWarning(
+                $"restock: could not read the greenhouse stock setting: {e.Message}");
+            return "";
+        }
+    }
+
     private static string Shown(ItemContainer container)
     {
         var capacity = Capacity(container);
@@ -301,8 +325,11 @@ internal static class VenueRestock
             Plugin.Instance.Log.LogWarning($"restock: could not read the supply target: {e.Message}");
         }
 
+        // The game shows what has been spent beside what was set, so both are reported rather
+        // than the limit alone: a venue sitting at its budget is short for a different reason
+        // than one whose menu outgrew its storage.
         var budget = "?";
-        try { budget = ghost.DailyRestockBudget.ToString(); }
+        try { budget = $"{ghost.CurrentRestockSpending} of {ghost.DailyRestockBudget} spent"; }
         catch (Exception e)
         {
             Plugin.Instance.Log.LogWarning($"restock: could not read the restock budget: {e.Message}");
@@ -314,7 +341,7 @@ internal static class VenueRestock
                 ? $", {lowBasis} per ingredient use"
                 : $", {lowBasis}-{highBasis} per ingredient use";
 
-        return $"supply target {tier}{basis} (daily restock budget {budget})";
+        return $"supply target {tier}{basis} (daily restock budget {budget}{Greenhouse(ghost)})";
     }
 
     private static string N(Func<int?> read)

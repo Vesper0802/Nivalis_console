@@ -4,7 +4,7 @@
 
 ## 现状
 
-- 插件版本 0.7.0，**53 条命令**，已发布 Release v0.7.0（对齐游戏 Update #4，2026-10-09）。发布后从 `releases/latest` 下回来核对过，附件 SHA256 与本机构建产物一致
+- 插件版本 0.8.0，**54 条命令**（对齐游戏 Update #5，2026-10-15）。上一个已发布的是 v0.7.0（对齐 Update #4），发布后从 `releases/latest` 下回来核对过，附件 SHA256 与本机构建产物一致
 - 游戏 Steam AppID `1488490`，Unity 2020.3.44f1，IL2CPP x64
 - BepInEx **固定在 `6.0.0-be.697`**（commit `53625800`）。IL2CPP 这条线是预发布，interop API 在变，插件和 BepInEx 版本不一致的表现是「插件静默不加载」，极难排查。所以 `scripts/install.ps1` 里写死了这个版本，不要改成「取最新」
 - 仓库是公开的，**文档里不能出现任何存档专属数据**（见下面「公开仓库的约束」）
@@ -74,7 +74,7 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 - **`GetSupplyTarget` 和 `demand` 不是一回事，别搞混（踩过）。** `VenueAreaGhost.GetSupplyTarget(ItemType)` 返回的是**该档位的每份基数**，实测 `Normal` 档对所有食材一律返回 **5**；真正的目标库存是 `GetIngredientsDemand()` 给的 `ShoppingListData.demand`，它等于基数乘以菜单对该食材的用量。实测同一家 `Normal` 店：Bacon `demand` 10、Pizza Dough 15、Beef 30、Tomatoes 10，全是 5 的整数倍（**乘数具体是「用到它的菜品数」还是「输入量之和」没验证**）
 - 所以**补货数量要用 `demand` / `MissingItems`，`GetSupplyTarget` 只适合报基数**。曾经反过来用 `GetSupplyTarget` 覆盖 `demand`，结果 restock 少补了一大半
 - `RecentSales` 档下 `GetSupplyTarget` 大概会随食材变化（没实测），所以 restock 报的是基数的区间而不是单值
-- `VenueAreaGhost.DailyRestockBudget` / `CurrentRestockBudget` / `RestockNotificationsEnabled` 是每日补货预算那套设置，`CheckRestockBudgetRaise(int)` 会调整它
+- `VenueAreaGhost.DailyRestockBudget` / `CurrentRestockBudget` / `RestockNotificationsEnabled` 是每日补货预算那套设置，`CheckRestockBudgetRaise(int)` 会调整它。Update #5 新增了只读的 **`CurrentRestockSpending`**，那才是面板上显示在额度旁边的「已花」，和 `CurrentRestockBudget` 是两个东西（后者具体含义仍未验证）
 - `RecentSales` 这档按 `VenueAreaGhost.RecentReceipts`（`Dictionary<ItemType, int>`，由 `RefreshRecentReceipts()` 刷新）算，所以同一家店的目标会随经营变动
 - 游戏内设置面板是 `Nivalis.Locale.UI.VenueOverviewTabManagementSettingsSection`（档位选择 + 通知开关 + 预算加减）
 - 还留着的全局字段只有 `ShoppingListManager.itemThreshold`，那是「算不算缺货」的判定线，**不是目标库存**
@@ -82,6 +82,16 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 `Venue.GetIngredientsDemand()` 没变，仍返回 `Dictionary<ItemType, ShoppingListData>`。但 **`ShoppingListManager.ShoppingListData` 从 class 变成了 struct**（base 是 `System.ValueType`），所以 `data?.MissingItems` 和 `data != null` 都不再成立，查不到的 key 会抛异常而不是给 null——必须先 `ContainsKey`。它的 `demand` 字段就是目标库存（见上面对 `GetSupplyTarget` 的区分），`MissingItems` 是缺口。
 
 **`ItemContainer.NormalCapacity` / `RefridgeratedCapacity` 从 `Il2CppSystem.Nullable<int>` 变成了普通 `int`**，「null 表示无上限」这个表达没有了。nullable 搬到了 `ItemContainer.Restriction` 上的 `MaxItems` / `MaxSlots`（`Nivalis.OptionalInt`）。`VenueInventory` 另外新增了 `GetFreeNormalSpace(int)` / `GetFreeRefrigeratedSpace(int)`，比自己做容量减法更可靠（还没在插件里用上）。
+
+**温室储物就是店铺那个 `VenueInventory`，但入口不在 ghost 上（游戏 Update #5 新增）。** `GreenhouseAreaGhost` 没有储物属性，要走 `GreenhouseManager.TryGetOwnedStorage(greenhouse, player, out VenueInventory)`——它只对属于你的温室存在。拿到之后结构和店铺完全对称：`NormalInventory` / `RefridgeratedInventory` 两个 `ItemContainer`，同样两边不互通。另有 `GreenhouseAreaGhost.StorageOverflowContainer` 接放不下的收成，`BaseNormalStorage` / `BaseFridgeStorage` 是建筑自带的那部分容量。所以凡是扫容器的命令（`spoiled` 这类）都要把温室这三个一起算进去，否则作物在看不见的地方烂掉而命令报一切正常。另有 `CountInOwnedGreenhouseStorages(ItemType)` / `TakeFromOwnedGreenhouseStorages(...)` 可以跨全部温室查取。
+
+**店铺动用温室存货是一个开关加一个条件（Update #5）。** `VenueAreaGhost.UseGreenhouseStock`（可读写）是设置，`CanUseGreenhouseStock` 是「现在有没有可取的东西」，两者独立。补货路径变成 `Restock(float discount)` 返回枚举 `VenueAreaGhost/RestockResult`（`None` / `FromGreenhouses` / `FromVendors`），配套 `CanRestockFromGreenhouses()` 和 `TakeIngredientsFromGreenhouses(List<IRecipe>)`。
+
+**温室模块的自动化是模块级的两个 bool（Update #5）。** `GreenhouseModuleGhost.AutoHarvest` / `AutoPlant` 可读写，对应游戏里的自动收割机和 RePlanter 4000，配套 `TryAutoHarvestCrop` / `TryAutoPlantCrop` / `TryPlantCropFromStorage(plant, storage)`。游戏按务农等级解锁，但**直接写这两个字段不受等级限制**。`Modules` 是 `GhostReferenceList<GreenhouseModuleGhost>`，有 `Count` 和 `get_Item(int)`，元素是 `GhostReference<T>`——按下标取再 `TryGetValue(out)`，不要 `foreach`。
+
+**产量算法在农业平衡重做时改名了（Update #5）。** `CalculateYield(module)` 没了，换成 `CalculateExpectedYield(module)`（`Single`，期望值）+ `RollYield(module)`（`Int32`，实际掷出）+ `SplitExpectedYield(module, out int whole, out float fraction)`。`CalculateGrowthSpeedInPercents(module)` 保留。
+
+**务农的等级收益不在基类的 `Speed` 上。** `FarmingLevel : SkillLevelData` 自带 `YieldBonus` / `GrowthSpeedBonus`，外加 `ConditionsSetup` / `FarmingUpgrades` 两个 bool 标记哪一级解锁环境调节和升级商店（运行期判定是 `GreenhouseManager.IsConditionsSetupUnlocked()` / `IsFarmingUpgradesUnlocked()` / `IsSkillLevelUnlocked(int)`）。对务农读 `Speed` 说明不了任何问题。`Skills.cs` 整个是从 `skill._levelData` 读的，**等级上限不写死在插件里**，所以这次加等级、改阈值都不用改代码。
 
 **`ItemContainer.TryAdd(Il2CppReferenceArray<ItemTypeAmount>)` 是 void 且全有或全无**，一批放不下就一个都不放。所以每个品类单独调一次并裁剪到剩余空间，而且要在调用前后测量容器来判断实际放进去多少。其他重载返回 `ItemCollectionOperationResult`。
 
@@ -145,7 +155,9 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 - **`shoplist` 报出来的条目数比 `ShoppingList` 字典少，原因没查清。** 实测两次都差 1（字典 1 条报 0 条、字典 2 条报 1 条）。门控顺序是 `IsShoppable` → `IsOnList` → `ContainsKey` → `MissingItems > 0`，日志没区分是哪道门筛掉的；`IsOnList` 这道门在 0.6.0 就有，不是新问题。要查的话在各道门之间加日志
 - `demand` 相对基数的乘数是什么没验证（见上）。`RecentSales` 和 `Lean` / `Extra` 档的基数分别是多少也没实测，只确认了 `Normal` = 5
 - `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
-- `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 只打印 `DailyRestockBudget`，没打印它
+- `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 打印的是 Update #5 新增的 `CurrentRestockSpending`（已花）和 `DailyRestockBudget`（额度），没碰它
+- **0.8.0 的温室改动全部只经过编译，一条都还没在游戏里跑过。** 要验的：`greenhouse` 能否列出温室并读到储物（`TryGetOwnedStorage` 对未加载的温室返不返 false 没测）、`greenhouse auto on` 写进去的开关游戏认不认（插件绕过了务农等级门槛，游戏可能在自己的逻辑里再查一次等级而让它不生效，命令的读回核对只能证明字段写进去了，不能证明游戏会照着做）、`spoiled` 扫温室时三个容器会不会重复计数同一批物品
+- 务农等级上限在 Update #5 之后是多少**没有读回来确认**，所以 `reference/commands.txt` 里还写着 Update #4 时的 0-14。跑一次 `skill Skill_Farming` 就能定，定了要改那一行
 - **容量现在是普通 `int`，没法表达「无上限」了。** 插件把 `<= 0` 当成「看不出上限」继续尝试放入（`Fill` 前后都量容器，所以放不下会被如实报出来）。但一家没摆储物家具的店容量就是 0，这时该不该尝试没验证过
 - `restock` 凭空生成食材，**会不会绕过每日补货预算没测**。预算是给游戏自己的自动补货用的，插件直接写容器，推测不受限，但没证
 - `GetBuyPrice` 看起来是「当前估值」（已拥有的店报价远高于条件相近的空店，家具最多的最贵），但公式没读过

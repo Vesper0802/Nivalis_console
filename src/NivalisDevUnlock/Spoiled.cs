@@ -96,8 +96,10 @@ internal static class Spoiled
     }
 
     /// <summary>
-    /// Your pockets plus both containers of every venue you own. The player inventory is always
-    /// included: a venue filter narrows which venues are visited, not whether you are.
+    /// Your pockets plus both containers of every venue and greenhouse you own. The player
+    /// inventory is always included: a filter narrows which places are visited, not whether you
+    /// are. Greenhouses hold harvested crops since game update #5, so leaving them out meant
+    /// reporting everything clean while produce rotted where nothing looked.
     /// </summary>
     private static List<Haul> Sources(string filter, Action<string> print)
     {
@@ -118,13 +120,24 @@ internal static class Spoiled
         catch (Exception e) { print($"Could not read your inventory: {e.Message}"); }
 
         var player = GameRefs.Find<PlayerManager>()?.LocalPlayer;
-        var manager = GameRefs.Find<VenueManager>();
-        if (player == null || manager == null)
+        if (player == null)
             return list;
+
+        AddVenues(list, player, filter, print);
+        AddGreenhouses(list, player, filter);
+        return list;
+    }
+
+    private static void AddVenues(List<Haul> list, PlayerManager.Player player, string filter,
+        Action<string> print)
+    {
+        var manager = GameRefs.Find<VenueManager>();
+        if (manager == null)
+            return;
 
         var venues = VenueRestock.Owned(player, filter, print);
         if (venues == null)
-            return list;
+            return;
 
         foreach (var venue in venues)
         {
@@ -146,8 +159,48 @@ internal static class Spoiled
                 Plugin.Instance.Log.LogWarning($"spoiled: {venue.name}: {e.Message}");
             }
         }
+    }
 
-        return list;
+    /// <summary>
+    /// Greenhouse storage is reached through the manager and only exists for one that is yours.
+    /// The filter is applied without reporting on it: a name that matches a venue and no
+    /// greenhouse is a normal thing to type, and saying so for every run would be noise.
+    /// </summary>
+    private static void AddGreenhouses(List<Haul> list, PlayerManager.Player player, string filter)
+    {
+        var manager = GameRefs.Find<GreenhouseManager>();
+        if (manager == null)
+            return;
+
+        var greenhouses = Greenhouses.Owned(filter, _ => { });
+        if (greenhouses == null)
+            return;
+
+        foreach (var greenhouse in greenhouses)
+        {
+            try
+            {
+                var storage = Greenhouses.Inventory(manager, greenhouse, player);
+                if (storage != null)
+                {
+                    if (storage.RefridgeratedInventory != null)
+                        list.Add(new Haul($"{greenhouse.name} fridge", storage.RefridgeratedInventory));
+                    if (storage.NormalInventory != null)
+                        list.Add(new Haul($"{greenhouse.name} cupboard", storage.NormalInventory));
+                }
+
+                // Crops the storage could not take end up here before they reach your pockets,
+                // so rot collects in it too.
+                var ghost = Greenhouses.Area(manager, greenhouse);
+                var overflow = ghost?.StorageOverflowContainer;
+                if (overflow != null)
+                    list.Add(new Haul($"{greenhouse.name} overflow", overflow));
+            }
+            catch (Exception e)
+            {
+                Plugin.Instance.Log.LogWarning($"spoiled: {greenhouse.name}: {e.Message}");
+            }
+        }
     }
 
     private static Haul Scan(string where, ItemContainer container, ItemType[] types)

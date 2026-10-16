@@ -84,7 +84,7 @@ internal static class Skills
             var cost = Cost(level);
             running += cost;
             print($"  level {Number(level)}: costs {cost:0.###}, running total {running:0.###}, " +
-                  $"speed {Speed(level):0.###}");
+                  $"{Effect(level)}");
         }
     }
 
@@ -241,6 +241,36 @@ internal static class Skills
     {
         try { return level.Speed; }
         catch { return 0f; }
+    }
+
+    /// <summary>
+    /// What a level actually buys. Most skills put that in the inherited Speed, but farming
+    /// levels carry their own yield and growth figures and gate greenhouse features outright,
+    /// and reading Speed for one of those says nothing about what the level does.
+    /// </summary>
+    private static string Effect(SkillLevelData level)
+    {
+        FarmingLevel farming = null;
+        try { farming = level.TryCast<FarmingLevel>(); }
+        catch { }
+
+        if (farming == null)
+            return $"speed {Speed(level):0.###}";
+
+        var parts = new List<string>();
+        try { parts.Add($"yield +{farming.YieldBonus:0.###}, growth +{farming.GrowthSpeedBonus:0.###}"); }
+        catch { parts.Add($"speed {Speed(level):0.###}"); }
+
+        try
+        {
+            if (farming.ConditionsSetup)
+                parts.Add("unlocks condition control");
+            if (farming.FarmingUpgrades)
+                parts.Add("unlocks greenhouse upgrades");
+        }
+        catch { }
+
+        return string.Join(", ", parts);
     }
 
     /// <summary>

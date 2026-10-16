@@ -1,4 +1,4 @@
-﻿Nivalis Nights 控制台命令表（插件 v0.7.0，共 53 条命令，对齐游戏 Update #4）
+﻿Nivalis Nights 控制台命令表（插件 v0.8.0，共 54 条命令，对齐游戏 Update #5）
 ================================================================================
 
 基本用法
@@ -32,10 +32,10 @@ storyitems                  列出剧情在盯的物品，标出你身上带着�
 storyitems all              连整张表一起列出
 clearitems                  清空背包，但保留剧情物品            ← 不可撤销
 clearitems all              连剧情物品一起清掉                  ← 不可撤销，慎用
-spoiled                     报告背包和各店里腐坏的食材，不改变任何状态
+spoiled                     报告背包、各店和各温室里腐坏的食材，不改变任何状态
 spoiled clear               把腐坏的全部清掉
 spoiled sell                清掉并按残值把钱打给你
-spoiled clear <店名片段>    只清指定的店（背包始终包含在内）
+spoiled clear <名称片段>    只清指定的店或温室（背包始终包含在内）
 
 ItemType 上没有「剧情物品」这种标记，所以光看物品属性分不出来。真正的判据是
 ArticyGlobalInventoryLinker 里的 linkPairs（Articy 剧情变量 ↔ 物品类型映射表），
@@ -62,6 +62,10 @@ EnchiridionFragment 等。四张经营许可都在表内，不会被误删。
 新鲜度。sell 不是真实交易——没有渠道收购腐坏食物，那是插件按残值直接打钱，
 残值通常是 0，这时它会直说一文不值而不是假装卖掉了。
 
+Update #5 给温室加了自己的储物，收成会堆在里面烂掉，所以 spoiled 现在连温室一起扫：
+每个温室的冷藏格、常温格，外加放不下时溢出的那个容器。名称片段对店和温室一起生效，
+只匹配到其中一边是正常的，不会因此报错。
+
 完整物品表见 reference/items.txt，每行第一列就是可直接粘贴的 give 命令。
 带 NOT-STORABLE 标记的无法进入玩家背包；标 chilled 的需要冷藏（决定 restock 时
 进冰箱还是储物柜），标 storage+N / cold+N 的是能给店铺加储物容量的家具。
@@ -84,8 +88,15 @@ restock 的食材是凭空生成的，不动背包也不扣钱，所以有了它
 每家店可以选四档：Lean、Normal（默认）、Extra、RecentSales（按近期销量走）。restock
 会逐店打印该店当前的档位、每份基数和每日补货预算，格式是（数字随店和档位变）：
 
-  <店名>: supply target Normal, 5 per ingredient use (daily restock budget <N>) wants <N>
-  units across <N> kinds, storage holds <N> chilled and <N> dry.
+  <店名>: supply target Normal, 5 per ingredient use (daily restock budget <N> of <N>
+  spent, drawing on greenhouse stock) wants <N> units across <N> kinds, storage holds
+  <N> chilled and <N> dry.
+
+预算报的是「已花 / 额度」两个数，对应 Update #5 在面板上把已用预算显示在额度旁边；
+卡在额度上和菜单撑爆储物是两种不同的缺货，分开看才判断得出是哪种。额度后面还会标
+这家店是否在动用温室存货：开着写 drawing on greenhouse stock，没开但具备条件会写
+not drawing on greenhouse stock though it could（自己种的东西正在闲置，值得一提），
+两个条件都不满足就不写——那不是一个可调的设置。
 
 冷藏和常温分开报，因为两个容器不互通，冷藏食材只能进冰箱，报一个总数会显得比实际灵活。
 
@@ -107,6 +118,37 @@ wants 那个总数：它已经是菜单按当前档位的完整目标用量。�
 打印容器的实际占用和卡住的食材名，而不是笼统说一句空间不足。
 
 注意 buylist 按的是 BaseMarketPrice，不是各商人的实时价格，可能和店里略有出入。
+
+
+温室
+--------------------------------------------------------------------------------
+greenhouse                  列出名下每个温室在种什么、存了什么，不改变任何状态
+greenhouse <名称片段>       只看名字里含这段文字的温室
+greenhouse auto on          把全部模块设成自动收割 + 自动补种
+greenhouse auto off         关掉自动化
+greenhouse auto on <片段>   只设指定的温室
+
+游戏里每个温室只能走到跟前、在它自己的控制台上看，所以没有一处能同时看全部温室的
+状态。这条命令补的是这个：按温室打印环境（温度 / 湿度 / 是否施肥 / 是否在生长）、
+储物占用、每个模块种的作物和生长进度，以及已买的升级。
+
+模块那行的生长进度优先报 ReadyForHarvest——那是游戏自己给的答案，比用 growth 除以
+growthCost 算出来的百分比可靠，所以能收了就直接写 ready。后面跟的预计产量和生长
+速度是 CalculateExpectedYield / CalculateGrowthSpeedInPercents 的结果，产量带小数是
+正常的，游戏实际收获时会按它再掷一次（RollYield）。
+
+储物和店铺一样是冷藏 / 常温两格分开报，装不下的作物会落进一个溢出容器，有东西时
+会单独标出来。温室储物的类型就是店铺那个 VenueInventory，但它挂在
+GreenhouseManager.TryGetOwnedStorage 上而不是 ghost 的属性上，因为它只对属于你的
+温室存在。
+
+auto 两个开关对应 Update #5 的自动收割机和 RePlanter 4000，游戏里要到相应务农等级
+才解锁，这条命令不检查这个门槛——能动到存档还没解锁的设置正是控制台的意义。设完
+会逐个模块读回来核对，报的是「读回来确实是这个值的模块数 / 总模块数」，不是「我写了
+多少次」。
+
+哪一级解锁环境调节和升级商店，用 skill Skill_Farming 看；命令开头那行会直接说你当前
+的务农等级还差哪一项没开。
 
 
 店铺
@@ -219,6 +261,11 @@ skill <英文名> <等级>       把某项技能提到指定等级
 规则是：等级编号从 0 开始（商贸是 0-7，共 8 级），经验为从零累计的总量，累计值达到
 某一级的门槛就是该级。例如商贸 4 级的门槛是 550000 点。命令会算出差额一次性补足，
 并打印加了多少、加完的总量和实际到达的等级。
+
+等级表和上限都是从游戏资源里读的，不是写死在插件里的，所以 Update #5 重做务农平衡、
+加了一级之后，skill 不用改就跟着变了。每一级后面跟的是这一级买到了什么：多数技能是
+继承来的 speed，务农则是它自己的 yield / growth 两个加成，外加哪一级解锁温室的环境
+调节和升级商店——对务农读 speed 说明不了任何问题，所以分开报。
 
 名字用英文资源名，输出里方括号中的中文只是用来对应游戏界面上是哪一项，两种写法
 都能匹配。九项分别是：
