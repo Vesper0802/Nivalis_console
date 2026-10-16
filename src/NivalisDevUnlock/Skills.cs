@@ -79,12 +79,14 @@ internal static class Skills
         }
 
         var running = 0f;
+        SkillLevelData previous = null;
         foreach (var level in levels)
         {
             var cost = Cost(level);
             running += cost;
             print($"  level {Number(level)}: costs {cost:0.###}, running total {running:0.###}, " +
-                  $"{Effect(level)}");
+                  $"{Effect(level, previous)}");
+            previous = level;
         }
     }
 
@@ -247,13 +249,14 @@ internal static class Skills
     /// What a level actually buys. Most skills put that in the inherited Speed, but farming
     /// levels carry their own yield and growth figures and gate greenhouse features outright,
     /// and reading Speed for one of those says nothing about what the level does.
+    ///
+    /// The two gates are flags for whether the feature is available at that level, not for the
+    /// level that granted it, so they stay set on every level above. Only the level where one
+    /// turns on is marked, which is the level worth knowing.
     /// </summary>
-    private static string Effect(SkillLevelData level)
+    private static string Effect(SkillLevelData level, SkillLevelData previous)
     {
-        FarmingLevel farming = null;
-        try { farming = level.TryCast<FarmingLevel>(); }
-        catch { }
-
+        var farming = AsFarming(level);
         if (farming == null)
             return $"speed {Speed(level):0.###}";
 
@@ -261,16 +264,23 @@ internal static class Skills
         try { parts.Add($"yield +{farming.YieldBonus:0.###}, growth +{farming.GrowthSpeedBonus:0.###}"); }
         catch { parts.Add($"speed {Speed(level):0.###}"); }
 
+        var before = previous == null ? null : AsFarming(previous);
         try
         {
-            if (farming.ConditionsSetup)
+            if (farming.ConditionsSetup && !(before?.ConditionsSetup ?? false))
                 parts.Add("unlocks condition control");
-            if (farming.FarmingUpgrades)
+            if (farming.FarmingUpgrades && !(before?.FarmingUpgrades ?? false))
                 parts.Add("unlocks greenhouse upgrades");
         }
         catch { }
 
         return string.Join(", ", parts);
+    }
+
+    private static FarmingLevel AsFarming(SkillLevelData level)
+    {
+        try { return level.TryCast<FarmingLevel>(); }
+        catch { return null; }
     }
 
     /// <summary>

@@ -132,6 +132,9 @@ greenhouse auto on <片段>   只设指定的温室
 状态。这条命令补的是这个：按温室打印环境（温度 / 湿度 / 是否施肥 / 是否在生长）、
 储物占用、每个模块种的作物和生长进度，以及已买的升级。
 
+温度和湿度报的是 0-1 的刻度而不是度数和百分比：游戏里这两项是两个滑条，没动过的温室
+两项都读 0.50，正好在中点。把 0.5 写成「0.5 度」是在编一个不存在的单位。
+
 模块那行的生长进度优先报 ReadyForHarvest——那是游戏自己给的答案，比用 growth 除以
 growthCost 算出来的百分比可靠，所以能收了就直接写 ready。后面跟的预计产量和生长
 速度是 CalculateExpectedYield / CalculateGrowthSpeedInPercents 的结果，产量带小数是
@@ -154,7 +157,7 @@ auto 两个开关对应 Update #5 的自动收割机和 RePlanter 4000，游戏�
 店铺
 --------------------------------------------------------------------------------
 properties                  列出可收购的房产 + 你自己的，带中文店名和中文地点
-properties all              列出全部 140 项
+properties all              列出全部 143 项
 properties <关键词>         筛选，中文名、地点名、资源名都能匹配
 acquire <名字>              直接买下任意房产（不花钱、不消耗许可）← 永久写入存档
 acquire <名字> rent         改成租下
@@ -163,10 +166,13 @@ acquire <名字> rent         改成租下
 的店面，全列出来反而找不到重点。
 
 Venue（店铺）、Apartment（公寓）、Greenhouse（温室）三者都派生自 BaseProperty，
-所以 properties all 一次列全三类：店铺 89 个、公寓 43 个、温室 8 个。店铺数量看着多，
+所以 properties all 一次列全三类：店铺 89 个、公寓 43 个、温室 11 个。店铺数量看着多，
 是因为 Kubo_Bakery、Poccocup、Sunrice、Food_Trailer 这类连锁在十几个区各有一家。
-其中**只有 14 间店铺可收购**（isAcquireable），其余 75 间是 NPC 固定经营、永远拿不到的；
-公寓和温室全部不可收购。addvenue 走的开发选项只认店铺，碰不到另外两类；
+其中**只有 14 间店铺可收购**（isAcquireable），其余 75 间是 NPC 固定经营、永远拿不到的。
+**温室在 Update #5 之后变成可收购了**：11 个里有 10 个能拿，剩下那个 Greenhouse_Dev 是
+开发资源。公寓则仍然一个都不可收购。温室不要求许可，acquire 直接就能拿，
+但 acquire 只按资源名匹配，中文名匹配不上（properties 的筛选中文可以，这两处不一致）。
+addvenue 走的开发选项只认店铺，碰不到另外两类；
 acquire 走 PropertyManager.AddOwnedProperty，三类都能拿，租房也只有这一条路
 （PropertyManager.StartRenting）。
 
@@ -270,7 +276,7 @@ skill <英文名> <等级>       把某项技能提到指定等级
 名字用英文资源名，输出里方括号中的中文只是用来对应游戏界面上是哪一项，两种写法
 都能匹配。九项分别是：
   Skill_Barter（商贸，0-7）      Skill_Boat（船只，0-7）
-  Skill_Farming（务农，0-14）    Skill_Fishing（钓鱼，0-7）
+  Skill_Farming（务农，0-15）    Skill_Fishing（钓鱼，0-7）
   Skill_Player_Managing（经营，0-4）
   Skill_Cooking（厨艺，0-9）     Skill_Serving（服务，0-9）
   Skill_Cleaning（清洁，0-9）    Skill_Staff_Managing（员工管理，0-9）

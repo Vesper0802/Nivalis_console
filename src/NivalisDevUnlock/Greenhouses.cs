@@ -219,10 +219,15 @@ internal static class Greenhouses
         return "";
     }
 
+    /// <summary>
+    /// Both conditions are driven by sliders and sit at 0.5 on an untouched greenhouse, so they
+    /// are fractions of each slider's travel rather than degrees and percent. They are printed
+    /// as the fractions they are: labelling 0.5 as half a degree would be inventing a unit.
+    /// </summary>
     private static string Conditions(GreenhouseAreaGhost ghost)
     {
         var parts = new List<string>();
-        try { parts.Add($"{ghost.Temperature:0.#}\u00b0 / {ghost.Humidity:0.#}% humidity"); }
+        try { parts.Add($"temperature {ghost.Temperature:0.00} and humidity {ghost.Humidity:0.00} of 1"); }
         catch { parts.Add("conditions unreadable"); }
 
         if (Bool(() => ghost.hasCompost))

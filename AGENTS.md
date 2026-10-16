@@ -97,7 +97,9 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 
 **剧情物品没有任何标记。** `ItemType` 上没有 quest 字段。唯一的判据是 `Nivalis.Dialogue.ArticyGlobalInventoryLinker`，它持有 `Links`（`List<VariableItemPair>`，即 Articy 变量名 ↔ 物品类型），并注册了 `OnPlayerInventoryChanged`——**背包里少了物品，剧情变量会被同步改写**。好消息是这个联动是双向的：物品加回去变量也会置回，所以误删在存档前可以救。
 
-**许可是具体物品，不是等级门槛。** `BaseProperty.requiredPermit` 指向某一个 `BusinessPermit`，拿着 4 级也买不了要求 2 级的店。而且 **`requiredPermit` 和 `isAcquireable` 是两套独立开关**：75 家 NPC 固定经营的店铺同样写着 `requiredPermit`，但永远拿不到。140 项房产里只有 14 间店铺可收购。
+**许可是具体物品，不是等级门槛。** `BaseProperty.requiredPermit` 指向某一个 `BusinessPermit`，拿着 4 级也买不了要求 2 级的店。而且 **`requiredPermit` 和 `isAcquireable` 是两套独立开关**：75 家 NPC 固定经营的店铺同样写着 `requiredPermit`，但永远拿不到。
+
+**房产清点（Update #5 实测，143 项）**：店铺 89（可收购 14）、公寓 43（可收购 0）、温室 11（**可收购 10**）。温室是这次变的——Update #4 时是 8 个且全不可收购，现在 10 个能直接 `acquire`，不要许可也不花钱，剩下那个 `Greenhouse_Dev` 是开发资源。要测温室相关的命令，`acquire GreenhouseSkyhighGardens1G` 一条就够。**注意 `acquire` 只按资源名匹配（`p.name.Contains`），`properties` 的筛选却能匹配中文名，这两处不一致**，没改。
 
 **`PropertyManager.GetBuyPrice()` 是实时估值，不是固定标价。** 随店内家具和库存变动，两次运行数字就不一样。资源上的 `BuyCost` 字段给所有可收购店铺写的是同一个数，像占位值。`RentCost` 相反，是写死的。所以**售价不能写进文档**。
 
@@ -124,7 +126,9 @@ if (map.ContainsKey(GameRefs.Guid(itemType))) { ... }
 - 不能写的：售价（`GetBuyPrice` 是实时估值）、「已拥有的 N 家店」、某个存档的物品数量、具体店铺的推荐菜单、你的等级和储物容量
 - 可以写的：游戏的固定数据（店名、地点、许可、`RentCost`、菜谱评分、人群构成、物品代号、变量名）、机制说明、API 结构
 
-⚠️ **`dumpitems` 导出的房产行带 `yours` / `have-permit` 标记**，反映的是运行者的存档。当前提交的 `reference/items.txt` 是旧格式快照、不含房产段，所以没有泄漏；但**重新生成后再提交就会把进度带进仓库**。
+~~`dumpitems` 导出的房产行带 `yours` / `have-permit` 标记~~ —— **这条是错的，已核实并推翻（2026-10-16）**。`Properties.DumpRows()` 写的是 `Kind` / `at=` / `permit=` / `rent=` / `NOT-ACQUIREABLE`，全是 authored 数据；它调的是 `Permit(property, out _)`，`have` 被丢弃，也从不调 `Owned()`，价格一律写 `-`。当前提交的 `reference/items.txt` **确实含房产段**（140 项），里面唯一出现 `yours` 的是表头那句说明文字。**所以 `dumpitems` 的输出可以直接提交。**
+
+真正要留意的是另一件事：`GameRefs.ItemTypes()` 只能看到已经加载进内存的 ScriptableObject，**物品数会随当前加载了哪些区域而变**。所以重新生成之前先看一眼条目数，比已提交的少就说明这次导出不完整，不要覆盖上去。
 
 ## 发布流程
 
@@ -156,8 +160,9 @@ dotnet build src\NivalisDevUnlock\NivalisDevUnlock.csproj -c Release
 - `demand` 相对基数的乘数是什么没验证（见上）。`RecentSales` 和 `Lean` / `Extra` 档的基数分别是多少也没实测，只确认了 `Normal` = 5
 - `ShoppingListManager.itemThreshold` 实测读作 **1**，不再是旧文档暗示的 10
 - `VenueAreaGhost.CurrentRestockBudget` 到底是「今天还剩多少」还是「累计额度」不清楚，所以 `restock` 打印的是 Update #5 新增的 `CurrentRestockSpending`（已花）和 `DailyRestockBudget`（额度），没碰它
-- **0.8.0 的温室改动全部只经过编译，一条都还没在游戏里跑过。** 要验的：`greenhouse` 能否列出温室并读到储物（`TryGetOwnedStorage` 对未加载的温室返不返 false 没测）、`greenhouse auto on` 写进去的开关游戏认不认（插件绕过了务农等级门槛，游戏可能在自己的逻辑里再查一次等级而让它不生效，命令的读回核对只能证明字段写进去了，不能证明游戏会照着做）、`spoiled` 扫温室时三个容器会不会重复计数同一批物品
-- 务农等级上限在 Update #5 之后是多少**没有读回来确认**，所以 `reference/commands.txt` 里还写着 Update #4 时的 0-14。跑一次 `skill Skill_Farming` 就能定，定了要改那一行
+- **`greenhouse auto on` 仍然没有被真正测到。** 跑过，但那个温室 `Modules` 为 0，所以报的是 `Automation on for 0 of 0 modules`——走通了代码路径，没验证过写入。插件绕过了务农等级门槛，游戏完全可能在自己的逻辑里再查一次等级而让它不生效；命令的读回核对只能证明字段写进去了，不能证明游戏会照着做。要验得先在温室里摆出模块
+- **刚收购、从没去过的温室，`StorageOverflowContainer.ItemCount` 读作 136，原因不明。** 该属性是实例的不是静态的，所以不是多个温室共用一个容器。可能那个温室在世界里本来就有东西。`spoiled` 现在会扫这个容器，但它只动 `Freshness == Spoiled` 或资源名 `RottenFood` 的物品，所以就算里面有别的东西也不会被清掉。**拥有温室之后的 `spoiled` 还没跑过**，温室那条扫描路径实际上没被验证
+- `GreenhouseAreaGhost.Temperature` / `Humidity` 是 0-1 的滑条刻度，没动过的温室两项都读 0.50。游戏里具体对应多少度、多少湿度没查
 - **容量现在是普通 `int`，没法表达「无上限」了。** 插件把 `<= 0` 当成「看不出上限」继续尝试放入（`Fill` 前后都量容器，所以放不下会被如实报出来）。但一家没摆储物家具的店容量就是 0，这时该不该尝试没验证过
 - `restock` 凭空生成食材，**会不会绕过每日补货预算没测**。预算是给游戏自己的自动补货用的，插件直接写容器，推测不受限，但没证
 - `GetBuyPrice` 看起来是「当前估值」（已拥有的店报价远高于条件相近的空店，家具最多的最贵），但公式没读过
